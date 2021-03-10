@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
+  m_Name: Slime
+  m_EditorClassIdentifier: 
+  isAlive: 1
+  damage: 10
+  armor: 10
+  maxHealt: 100
+  maxMana: 0
+  manaRegen: 0
+  attackRate: 50
+  image: {fileID: -9017831768941866983, guid: eb9b055243968cc499a18a585371ae4e, type: 3}
+  expirence: 0
+  toNextLevel: 0
+  level: 0
+  stars: 0
+  equipment: {fileID: 0}
+  isAvaliable: 0
+  prefab: {fileID: 8368692026466914327, guid: 9506364e513e842489c52dfd3f25636e, type: 3}

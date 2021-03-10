@@ -1,0 +1,560 @@
+fileFormatVersion: 2
+guid: 202619e0f69eb8c47a7bc422ddf3781e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1025809023776481632
+    second: c00a_09stabbing_0
+  - first:
+      213: 5967994026110151214
+    second: c00a_09stabbing_1
+  - first:
+      213: -8657140419728176572
+    second: c00a_09stabbing_2
+  - first:
+      213: -3329941853289102153
+    second: c00a_09stabbing_3
+  - first:
+      213: -6813816236067451207
+    second: c00a_09stabbing_4
+  - first:
+      213: -5517044447700952735
+    second: c00a_09stabbing_5
+  - first:
+      213: -305007246704209054
+    second: c00a_09stabbing_6
+  - first:
+      213: -2665107743865903308
+    second: c00a_09stabbing_7
+  - first:
+      213: -8657694465938641847
+    second: c00a_09stabbing_8
+  - first:
+      213: 7118484894128728052
+    second: c00a_09stabbing_9
+  - first:
+      213: 1711279067126477517
+    second: c00a_09stabbing_10
+  - first:
+      213: -3614813138955946226
+    second: c00a_09stabbing_11
+  - first:
+      213: -2816482241634187767
+    second: c00a_09stabbing_12
+  - first:
+      213: 7272800313585089341
+    second: c00a_09stabbing_13
+  - first:
+      213: -514836201829755134
+    second: c00a_09stabbing_14
+  - first:
+      213: -7386712481459927788
+    second: c00a_09stabbing_15
+  - first:
+      213: 797525011805586228
+    second: c00a_09stabbing_0
+  - first:
+      213: -7242975714405296244
+    second: c00a_09stabbing_1
+  - first:
+      213: 3884296845700865739
+    second: c00a_09stabbing_2
+  - first:
+      213: 4339023963730146814
+    second: c00a_09stabbing_3
+  - first:
+      213: -9032036165469156939
+    second: c00a_09stabbing_4
+  - first:
+      213: 6393636791674504411
+    second: c00a_09stabbing_5
+  - first:
+      213: -8651834637102174842
+    second: c00a_09stabbing_6
+  - first:
+      213: -1494213067300326778
+    second: c00a_09stabbing_7
+  - first:
+      213: -5057263804877830774
+    second: c00a_09stabbing_8
+  - first:
+      213: 7749370738572492945
+    second: c00a_09stabbing_9
+  - first:
+      213: -4631108415867912625
+    second: c00a_09stabbing_10
+  - first:
+      213: -6477240311358385779
+    second: c00a_09stabbing_11
+  - first:
+      213: 264699404918483435
+    second: c00a_09stabbing_12
+  - first:
+      213: 8137493217918060190
+    second: c00a_09stabbing_13
+  - first:
+      213: 8107183853071856724
+    second: c00a_09stabbing_14
+  - first:
+      213: -8874944963465332186
+    second: c00a_09stabbing_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: c00a_09stabbing_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4334924d5c0611b00800000000000000
+      internalID: 797525011805586228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87571276f7cb7b90800000000000000
+      internalID: -7242975714405296244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce9b2ab66bc7e530800000000000000
+      internalID: 3884296845700865739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5fa0e4e4f473c30800000000000000
+      internalID: 4339023963730146814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1440
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9cab616f2c7a280800000000000000
+      internalID: -9032036165469156939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd480ae79c2cab850800000000000000
+      internalID: 6393636791674504411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68daa18ac328ee780800000000000000
+      internalID: -8651834637102174842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68231d8c12d734be0800000000000000
+      internalID: -1494213067300326778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_8
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 960
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8501de2d5df0d9b0800000000000000
+      internalID: -5057263804877830774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_9
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 960
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1908b69f0ab4b8b60800000000000000
+      internalID: 7749370738572492945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4efed3be6ffabfb0800000000000000
+      internalID: -4631108415867912625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8194a431483c16a0800000000000000
+      internalID: -6477240311358385779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be96c62d4b66ca300800000000000000
+      internalID: 264699404918483435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_13
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e960828a7fe2ee070800000000000000
+      internalID: 8137493217918060190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_14
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 480
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454712bb2c0828070800000000000000
+      internalID: 8107183853071856724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: c00a_09stabbing_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 480
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ab183c39cd5d480800000000000000
+      internalID: -8874944963465332186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3ee5cf84319e6bf4daf3f1930265a73e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
+  m_Name: Dunk
+  m_EditorClassIdentifier: 
+  isAlive: 1
+  damage: 35
+  armor: 5
+  maxHealt: 200
+  maxMana: 100
+  manaRegen: 3
+  attackRate: 70
+  expirence: 0
+  toNextLevel: 100
+  level: 1
+  stars: 1
+  equipment: {fileID: 11400000, guid: 4a4ca65309ff8154e8d81540ef922d72, type: 2}
+  isAvaliable: 1
+  prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d997e7c79e8e41068a423fe5335f6ddb, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 7da8c9e83a1744b4aac48e3f8b31a270, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 6b8e347645084b808329aa18a8d05499, type: 3}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armL: {fileID: 21300004, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmoL: {fileID: 21300010, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armR: {fileID: 21300002, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmR: {fileID: 21300008, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handL: {fileID: 21300016, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handR: {fileID: 21300018, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legL: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  bodyColor: {r: 0.90196085, g: 0.67058825, b: 0.42352945, a: 1}
+  hairColor: {r: 0.4433962, g: 0, b: 0, a: 1}
