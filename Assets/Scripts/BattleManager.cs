@@ -18,6 +18,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    //Use for normal attacks
     public CharacterBattle GetFrontCharacter(string tag)
     {
         if (tag == "Enemy")
@@ -43,6 +44,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    //Use for skills
     public CharacterBattle GetMiddleCharacter(string tag)
     {
         if (tag == "Enemy")
@@ -77,6 +79,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    //Use for skills
     public List<CharacterBattle> GetAllEniemies(string tag)
     {
         if (tag == "Enemy")

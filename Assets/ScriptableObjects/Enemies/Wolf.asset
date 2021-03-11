@@ -16,9 +16,14 @@ MonoBehaviour:
   damage: 20
   armor: 20
   maxHealt: 150
+  hpRegen: 0
   maxMana: 0
   manaRegen: 0
   attackRate: 80
+  critChance: 50
+  critDamageMultiplay: 1.5
+  blockChance: 0
+  dogdeChance: 0
   expirence: 0
   toNextLevel: 0
   level: 0

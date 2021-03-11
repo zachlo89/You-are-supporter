@@ -21,8 +21,11 @@ public class CharacterBattle : MonoBehaviour
         get { return isAlive; }
     }
 
+    private float criticalChance;
+    private float criticalMultiply;
     private int maxHP;
     private int currentHealth;
+    private int hpRegen;
     private int maxMP;
     private int currentMana;
     private int damage;
@@ -70,10 +73,29 @@ public class CharacterBattle : MonoBehaviour
         } 
     }
 
+    private void RegenHP()
+    {
+        if (isAlive)
+        {
+            if(currentHealth < maxHP)
+            {
+                currentHealth += hpRegen;
+                if(currentHealth> maxHP)
+                {
+                    currentHealth = maxHP;
+                }
+            }
+            UpdateHealthBar();
+        }
+    }
+
     public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager)
     {
         this.hero = hero;
         this.battleManager = battleManager;
+        this.hpRegen = hero.hpRegen;
+        this.criticalChance = hero.critChance;
+        this.criticalMultiply = hero.critDamageMultiplay;
         maxHP = hero.maxHealt;
         currentHealth = hero.maxHealt;
         currentMana = hero.maxMana;
@@ -114,7 +136,7 @@ public class CharacterBattle : MonoBehaviour
             CancelInvoke();
         }
 
-        healthBar.fillAmount = (float)currentHealth / maxHP;
+        UpdateHealthBar();
     }
 
     private void NormalAttack()
@@ -122,7 +144,11 @@ public class CharacterBattle : MonoBehaviour
         CharacterBattle temp = battleManager.GetFrontCharacter(gameObject.tag);
         if (temp != null)
         {
-            temp.GetDamage(damage);
+            if (CritAttack())
+            {
+                temp.GetDamage((int)(damage * criticalMultiply));
+            } else temp.GetDamage(damage);
+
             animator.SetTrigger("NormalAttack");
         }
 
@@ -133,7 +159,11 @@ public class CharacterBattle : MonoBehaviour
         CharacterBattle temp = battleManager.GetMiddleCharacter(gameObject.tag);
         if(temp != null)
         {
-            temp.GetDamage(damage);
+            if (CritAttack())
+            {
+                temp.GetDamage((int)(damage * criticalMultiply));
+            }
+            else temp.GetDamage(damage);
             currentMana -= manaCostSkill1;
             animator.SetTrigger("Skill1");
             UpdateManaBar();
@@ -147,7 +177,11 @@ public class CharacterBattle : MonoBehaviour
         {
             if(temp[i].isAlive && temp[i] != null)
             {
-                temp[i].GetDamage(damage);
+                if (CritAttack())
+                {
+                    temp[i].GetDamage((int)(damage * criticalMultiply));
+                }
+                else temp[i].GetDamage(damage);
                 currentMana -= manaCostSkill2;
                 animator.SetTrigger("Skill2");
                 UpdateManaBar();
@@ -200,12 +234,18 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    private void UpdateHealthBar()
     {
-        healthBar.enabled = false;
-        if (manaBar != null)
+        healthBar.fillAmount = (float)currentHealth / maxHP;
+    }
+
+    private bool CritAttack()
+    {
+        int random = Random.Range(0, 100);
+        if (random <= criticalChance)
         {
-            manaBar.enabled = false;
+            return true;
         }
+        else return false;
     }
 }

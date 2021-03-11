@@ -9,9 +9,14 @@ public class ScriptableCharacter : ScriptableObject
     public int damage;
     public int armor;
     public int maxHealt;
+    public int hpRegen;
     public int maxMana;
     public int manaRegen;
     public int attackRate;
+    public float critChance;
+    public float critDamageMultiplay;
+    public int blockChance;
+    public int dogdeChance;
     public int expirence;
     public int toNextLevel;
     public int level;
@@ -19,6 +24,8 @@ public class ScriptableCharacter : ScriptableObject
     public int stars;
     public Equipment equipment;
     public bool isAvaliable;
+
+
     public GameObject prefab;
 
     public Sprite headSprites;
