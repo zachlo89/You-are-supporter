@@ -68,7 +68,7 @@ public class SetItemIcon : MonoBehaviour
         {
             border.sprite = item.border;
         }
-        else Debug.LogError("Missing border");
+
         
         selected.SetActive(false);
     }
