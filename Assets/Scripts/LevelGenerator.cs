@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelGenerator : MonoBehaviour
 {
     private GameManager gameManager;
     private Level level;
     [SerializeField] private Team team;
-    [SerializeField] private SpriteRenderer background;
+    [SerializeField] private Sprite backgroundSprite;
+    [SerializeField] private Image backgroundImage;
+
     //Only for developemnet delete it later
     [SerializeField] private Level levelToGameManager;
     //end
@@ -25,9 +28,9 @@ public class LevelGenerator : MonoBehaviour
         //end
 
         level = gameManager.CurrentLevel;
-        background.sprite = level.background;
+        backgroundSprite = level.background;
 
-        Instantiate(background.gameObject);
+        backgroundImage.sprite = backgroundSprite;
         SpawnPlayers();
         SpawnEnemies();
     }
@@ -39,8 +42,10 @@ public class LevelGenerator : MonoBehaviour
             if(team.heroesList[i] != null)
             {
                 GameObject temp = Instantiate(team.heroesList[i].prefab);
+                temp.transform.localScale /= 100;
                 temp.transform.position = SpwaningPoints[i];
                 temp.tag = "Player";
+                temp.GetComponent<CharacterBattle>().enabled = true;
                 temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager);
             }
         }
@@ -54,7 +59,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 GameObject temp = Instantiate(level.enemiesList[i].prefab);
                 temp.transform.position = new Vector3(-SpwaningPoints[i].x, SpwaningPoints[i].y, SpwaningPoints[i].z);
-                temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager);
+                temp.GetComponentInChildren<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager);
             }
         }
     }

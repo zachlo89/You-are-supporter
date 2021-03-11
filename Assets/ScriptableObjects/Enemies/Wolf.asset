@@ -19,11 +19,31 @@ MonoBehaviour:
   maxMana: 0
   manaRegen: 0
   attackRate: 80
-  image: {fileID: 8641868029354418449, guid: 477f2a26148ccf94cb49eae67dd8e5a7, type: 3}
   expirence: 0
   toNextLevel: 0
   level: 0
   stars: 0
   equipment: {fileID: 0}
   isAvaliable: 0
-  prefab: {fileID: 5216390847177912848, guid: 4c722517640e64845b2fd52c79212d2a, type: 3}
+  prefab: {fileID: 5830986497230366884, guid: 7cfaa6737a8aaf2428abc33ef8ff1737, type: 3}
+  headSprites: {fileID: 0}
+  hairsSprites: {fileID: 0}
+  eyesSprites: {fileID: 0}
+  eyebrowsSprites: {fileID: 0}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 0}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 0}
+  pelvis: {fileID: 0}
+  armL: {fileID: 0}
+  forearmoL: {fileID: 0}
+  armR: {fileID: 0}
+  forearmR: {fileID: 0}
+  handL: {fileID: 0}
+  handR: {fileID: 0}
+  legL: {fileID: 0}
+  legR: {fileID: 0}
+  shinL: {fileID: 0}
+  shinR: {fileID: 0}
+  bodyColor: {r: 0, g: 0, b: 0, a: 0}
+  hairColor: {r: 0, g: 0, b: 0, a: 0}

@@ -13162,7 +13162,7 @@ MonoBehaviour:
           m_StringArgument: FadeIn
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 855352934}
         m_MethodName: SetSubstage
         m_Mode: 2
         m_Arguments:
@@ -69915,6 +69915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855352932}
   - component: {fileID: 855352933}
+  - component: {fileID: 855352934}
   m_Layer: 5
   m_Name: Lobby_Panel_Stage_Select_Type2
   m_TagString: Untagged
@@ -69963,6 +69964,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &855352934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855352931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2409b51693cd202459d1fe61a7c02fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentPosition: {fileID: 1831227944}
+  subStageIcon: {fileID: 5721699447852928955, guid: 16a2736a8691e9f41b52b29a795468a1,
+    type: 3}
+  stageName: {fileID: 1674298220}
 --- !u!1 &860344016
 GameObject:
   m_ObjectHideFlags: 0

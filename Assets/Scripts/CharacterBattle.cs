@@ -7,7 +7,6 @@ public class CharacterBattle : MonoBehaviour
 {
     [SerializeField] private Image healthBar;
     [SerializeField] private Image manaBar;
-    [SerializeField] private SpriteRenderer image;
     private BattleManager battleManager;
     private ScriptableCharacter hero;
     private bool isAlive = true;
@@ -38,8 +37,21 @@ public class CharacterBattle : MonoBehaviour
         StartCoroutine(Attack());
 
         animator = GetComponent<Animator>();
+        if(animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
 
         InvokeRepeating("RegenMana", 1, 1);
+    }
+
+    private void OnEnable()
+    {
+        healthBar.enabled = true;
+        if(manaBar != null)
+        {
+            manaBar.enabled = true;
+        }
     }
 
     private void RegenMana()
@@ -62,7 +74,6 @@ public class CharacterBattle : MonoBehaviour
     {
         this.hero = hero;
         this.battleManager = battleManager;
-        //image.sprite = hero.image;
         maxHP = hero.maxHealt;
         currentHealth = hero.maxHealt;
         currentMana = hero.maxMana;
@@ -164,19 +175,15 @@ public class CharacterBattle : MonoBehaviour
             switch (currentAttack)
             {
                 case 0:
-                    Debug.Log("NormalAttack");
                     NormalAttack();
                     break;
                 case 1:
-                    Debug.Log("Skill1");
                     Skill1();
                     break;
                 case 2:
-                    Debug.Log("Skill2");
                     Skill2();
                     break;
                 default:
-                    Debug.Log("Default");
                     NormalAttack();
                     break;
             }
@@ -190,6 +197,15 @@ public class CharacterBattle : MonoBehaviour
         if(manaBar != null)
         {
             manaBar.fillAmount = (float)currentMana / maxMP;
+        }
+    }
+
+    private void OnDisable()
+    {
+        healthBar.enabled = false;
+        if (manaBar != null)
+        {
+            manaBar.enabled = false;
         }
     }
 }
