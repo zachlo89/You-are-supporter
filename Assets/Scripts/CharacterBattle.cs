@@ -140,24 +140,32 @@ public class CharacterBattle : MonoBehaviour
     {
         this.skillsManager = skillsManager;
         this.hero = hero;
+        this.level = hero.level;
+        this.maxHP = hero.maxHealt;
+        this.maxMP = hero.maxMana;
+        this.damage = hero.damage;
+        this.armor = hero.armor;
+        this.attackRate = hero.attackRate;
+        AdjustStatsToLevel();
+        AdjustStatsToEquipment();
+
         this.battleManager = battleManager;
         this.hpRegen = hero.hpRegen;
         this.criticalChance = hero.critChance;
         this.criticalMultiply = hero.critDamageMultiplay;
         this.skill1Cooldown = 0;
         this.skill2Cooldown = 0;
-        this.level = hero.level;
         this.dodgeChance = hero.dogdeChance;
         this.blockChance = hero.blockChance;
-        this.maxMP = hero.maxMana;
+        
         this.manaRegen = hero.manaRegen;
-        this.maxHP = hero.maxHealt;
+        
 
         this.currentHealth = hero.maxHealt;
         this.currentMana = hero.maxMana;
-        this.damage = hero.damage;
-        this.armor = hero.armor;
-        this.attackRate = hero.attackRate;
+        
+        
+        
         if(hero.equipment != null)
         {
             for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)
@@ -174,6 +182,42 @@ public class CharacterBattle : MonoBehaviour
         }
         battleManager.PopulateList(gameObject.tag, this);
         UpdateManaBar();
+    }
+
+    private void AdjustStatsToLevel()
+    {
+        switch (hero.characterClass)
+        {
+            case CharacterClass.Tank:
+                for(int i = 0; i < level; i++)
+                {
+                    maxHP += (int)(maxHP * 8 / 100);
+                    damage += (int)(damage * 6 / 100);
+                }
+                break;
+            case CharacterClass.Archer:
+                maxHP += (int)(maxHP * 6 / 100);
+                damage += (int)(damage * 8 / 100);
+                break;
+            case CharacterClass.Berserker:
+                maxHP += (int)(maxHP * 7 / 100);
+                damage += (int)(damage * 7 / 100);
+                break;
+        }
+    }
+
+    private void AdjustStatsToEquipment()
+    {
+        for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)
+        {
+            if (hero.equipment.GetEquipment[i] != null)
+            {
+                damage += hero.equipment.GetEquipment[i].damage;
+                armor += hero.equipment.GetEquipment[i].armor;
+                attackRate += hero.equipment.GetEquipment[i].attackRate;
+                maxHP += hero.equipment.GetEquipment[i].hp;
+            }
+        }
     }
 
     public void GetDamage(int recievedDamage, bool crit)

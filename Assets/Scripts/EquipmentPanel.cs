@@ -20,6 +20,10 @@ public class EquipmentPanel : MonoBehaviour
     [SerializeField] private List<GameObject> stars = new List<GameObject>();
     private EquipmentInventory equipmentInventory;
     private GameObject heroPrefab;
+    int damageValue;
+    int armorValue;
+    int attackSpeedValue;
+    int maxHealth;
 
     private void Start()
     {
@@ -88,12 +92,13 @@ public class EquipmentPanel : MonoBehaviour
     private void UpdateStatsUI()
     {
 
-        int damageValue = hero.damage;
-        int armorValue = hero.armor;
-        int attackSpeedValue = hero.attackRate;
-        int maxHealth = hero.maxHealt;
+        damageValue = hero.damage;
+        armorValue = hero.armor;
+        attackSpeedValue = hero.attackRate;
+        maxHealth = hero.maxHealt;
+        AdjustStatsToLevel();
 
-        for(int i = 0; i<hero.equipment.GetEquipment.Count; i++)
+        for (int i = 0; i<hero.equipment.GetEquipment.Count; i++)
         {
             if(hero.equipment.GetEquipment[i] != null)
             {
@@ -110,6 +115,28 @@ public class EquipmentPanel : MonoBehaviour
         maxHP.text = maxHealth.ToString();
         heroPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
         delegator.changeSprites();
+    }
+
+    private void AdjustStatsToLevel()
+    {
+        switch (hero.characterClass)
+        {
+            case CharacterClass.Tank:
+                for (int i = 0; i < hero.level; i++)
+                {
+                    maxHealth += (int)(maxHealth * 8 / 100);
+                    damageValue += (int)(damageValue * 6 / 100);
+                }
+                break;
+            case CharacterClass.Archer:
+                maxHealth += (int)(maxHealth * 6 / 100);
+                damageValue += (int)(damageValue * 8 / 100);
+                break;
+            case CharacterClass.Berserker:
+                maxHealth += (int)(maxHealth * 7 / 100);
+                damageValue += (int)(damageValue * 7 / 100);
+                break;
+        }
     }
 
     public void EquipItem(ItemScriptable item, int index, int indexToRemove)
