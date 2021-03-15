@@ -2,7 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "ScriptableCharacter")]
+public enum CharacterClass
+{
+    Tank,
+    Berserker,
+    Archer
+}
+
+[CreateAssetMenu (menuName = "ScriptableObject/Character")]
 public class ScriptableCharacter : ScriptableObject
 {
     public bool isAlive;
@@ -25,6 +32,8 @@ public class ScriptableCharacter : ScriptableObject
     public Equipment equipment;
     public bool isAvaliable;
 
+
+    public CharacterClass characterClass;
 
     public GameObject prefab;
 

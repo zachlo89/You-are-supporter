@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "Level")]
+[CreateAssetMenu (menuName = "ScriptableObject/Level")]
 public class Level : ScriptableObject
 {
     public List<ScriptableCharacter> enemiesList = new List<ScriptableCharacter>();

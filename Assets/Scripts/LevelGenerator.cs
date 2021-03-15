@@ -17,6 +17,7 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField] private List<Vector3> SpwaningPoints = new List<Vector3>();
     [SerializeField] private BattleManager battleManager;
+    [SerializeField] private SkillsManager skillsManager;
 
 
     private void Start()
@@ -45,8 +46,10 @@ public class LevelGenerator : MonoBehaviour
                 temp.transform.localScale /= 100;
                 temp.transform.position = SpwaningPoints[i];
                 temp.tag = "Player";
+                temp.GetComponent<UpdateFaceAndBody>().SetUpFace(team.heroesList[i]);
+                temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[i].equipment);
                 temp.GetComponent<CharacterBattle>().enabled = true;
-                temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager);
+                temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager, skillsManager);
             }
         }
     }
@@ -58,8 +61,14 @@ public class LevelGenerator : MonoBehaviour
             if(level.enemiesList[i] != null)
             {
                 GameObject temp = Instantiate(level.enemiesList[i].prefab);
+                temp.transform.localScale /= 100;
+                temp.transform.rotation = Quaternion.Euler(0, 180, 0);
                 temp.transform.position = new Vector3(-SpwaningPoints[i].x, SpwaningPoints[i].y, SpwaningPoints[i].z);
-                temp.GetComponentInChildren<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager);
+                temp.tag = "Enemy";
+                temp.GetComponent<UpdateFaceAndBody>().SetUpFace(level.enemiesList[i]);
+                temp.GetComponent<UpdateEquipment>().EquipAll(level.enemiesList[i].equipment);
+                temp.GetComponent<CharacterBattle>().enabled = true;
+                temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager, skillsManager);
             }
         }
     }

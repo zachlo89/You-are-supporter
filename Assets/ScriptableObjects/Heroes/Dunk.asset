@@ -15,7 +15,7 @@ MonoBehaviour:
   isAlive: 1
   damage: 35
   armor: 5
-  maxHealt: 200
+  maxHealt: 2000
   hpRegen: 5
   maxMana: 100
   manaRegen: 3
@@ -30,13 +30,14 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 4a4ca65309ff8154e8d81540ef922d72, type: 2}
   isAvaliable: 1
+  characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
   hairsSprites: {fileID: 21300000, guid: d997e7c79e8e41068a423fe5335f6ddb, type: 3}
   eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
   eyebrowsSprites: {fileID: 21300000, guid: 7da8c9e83a1744b4aac48e3f8b31a270, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 6b8e347645084b808329aa18a8d05499, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 8266d7c75e5a482c9b63c3fad7701980, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}

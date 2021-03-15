@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79ef6c7b193de1e4cbcc7cc99ead0c5e, type: 3}
-  m_Name: Team
+  m_Script: {fileID: 11500000, guid: 002087580065a5b4e93aa16e6c70ad19, type: 3}
+  m_Name: Warrior
   m_EditorClassIdentifier: 
-  heroesList:
-  - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
-  - {fileID: 0}
-  maxTeamSize: 4
-  avaliabeTeamSize: 2
+  skill1Cooldown: 5
+  skill2Cooldown: 10
+  skill1ManaCost: 15
+  skill2ManaCost: 25
+  skill1DamageProcent: 130
+  regenerationTime: 5
+  regenerationProcent: 2
+  increaseArmorPercent: 0

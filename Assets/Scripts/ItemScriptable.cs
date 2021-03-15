@@ -23,7 +23,7 @@ public enum SlotPosition
     accessories
 }
 
-[CreateAssetMenu (menuName = "ItemScriptable")]
+[CreateAssetMenu (menuName = "ScriptableObject/ItemScriptable")]
 public class ItemScriptable : ScriptableObject
 {
     public int damage;

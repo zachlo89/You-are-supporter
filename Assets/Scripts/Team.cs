@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Team")]
+[CreateAssetMenu(menuName = "ScriptableObject/Team")]
 public class Team : ScriptableObject
 {
     public List<ScriptableCharacter> heroesList = new List<ScriptableCharacter>();

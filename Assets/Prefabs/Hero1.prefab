@@ -5376,6 +5376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6854778500898037596}
   - component: {fileID: 6808364176364215854}
+  - component: {fileID: 2428754911341379961}
   m_Layer: 0
   m_Name: Animation
   m_TagString: Untagged
@@ -5410,7 +5411,7 @@ Animator:
   m_GameObject: {fileID: 6857183555438667790}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0acc6d8cc6cc44ce9eafa9ecf65691be, type: 2}
+  m_Controller: {fileID: 9100000, guid: 42c0cb0fe93f6c349a06588c80389510, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5419,6 +5420,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2428754911341379961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857183555438667790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb9594764baf414683ad7a69885e50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackingMouth: {fileID: 21300000, guid: 6b8e347645084b808329aa18a8d05499, type: 3}
+  mouthRenderer: {fileID: 6763473855851649180}
 --- !u!1 &6857189087616132344
 GameObject:
   m_ObjectHideFlags: 0
@@ -15579,7 +15594,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6857344560408636472}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -23997,14 +24012,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6857948205223096856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9adda248837df86419534197d6ed8a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasPanel: {fileID: 7994331905006397223}
   healthBar: {fileID: 1345188500671954602}
   manaBar: {fileID: 6477979530613783436}
-  image: {fileID: 0}
+  damagePopUp: {fileID: 8283021158187679178, guid: f09ae52bcd14e3e47aa45395e91f6716,
+    type: 3}
 --- !u!1 &6857963463095894846
 GameObject:
   m_ObjectHideFlags: 0
@@ -26476,7 +26493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &535029025435026189
 RectTransform:
   m_ObjectHideFlags: 0
