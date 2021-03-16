@@ -151,7 +151,6 @@ public class EquipmentPanel : MonoBehaviour
 
     public void UnEquipItem(ItemScriptable item, int index)
     {
-        Debug.Log("Unequipe: " + item + " " + index);
         hero.equipment.RemoveItem(item, index);
         equipmentInventory.AddItem(item);
         UpdateStatsUI();

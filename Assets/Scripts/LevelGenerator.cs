@@ -50,6 +50,7 @@ public class LevelGenerator : MonoBehaviour
                 temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[i].equipment);
                 temp.GetComponent<CharacterBattle>().enabled = true;
                 temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager, skillsManager);
+                temp.AddComponent<PlayerSkillsEffect>();
             }
         }
     }

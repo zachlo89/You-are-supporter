@@ -349,8 +349,7 @@ public class CharacterBattle : MonoBehaviour
                     NormalAttack();
                     break;
             }
-            float random2 = Random.Range(.2f, 1.5f);
-            yield return new WaitForSeconds((attackRate / 100f)+random2);
+            yield return new WaitForSeconds((100f / attackRate));
         }
     }
 
@@ -375,5 +374,44 @@ public class CharacterBattle : MonoBehaviour
             return true;
         }
         else return false;
+    }
+
+    public void Heal(int value)
+    {
+        if(currentHealth > 0)
+        {
+            currentHealth += value;
+        }
+
+        if(currentHealth > maxHP)
+        {
+            currentHealth = maxHP;
+        }
+
+        UpdateHealthBar();
+    }
+
+    public void Defence(int value, float duration)
+    {
+        StartCoroutine(DefenceBuff(value, duration));
+    }
+
+    IEnumerator DefenceBuff(int value, float duration)
+    {
+        armor += value;
+        yield return new WaitForSeconds(duration);
+        armor -= value;
+    }
+
+    public void Haste(int value, float duration)
+    {
+        StartCoroutine(HasteBuff(value, duration));
+    }
+
+    IEnumerator HasteBuff(int value, float duration)
+    {
+        attackRate += value;
+        yield return new WaitForSeconds(duration);
+        attackRate -= value;
     }
 }

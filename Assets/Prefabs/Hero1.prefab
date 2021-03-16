@@ -23905,6 +23905,7 @@ GameObject:
   - component: {fileID: 6857948205223096857}
   - component: {fileID: 6128589220612319182}
   - component: {fileID: 7505794890738865043}
+  - component: {fileID: 3636413198928027943}
   m_Layer: 0
   m_Name: Hero1
   m_TagString: Untagged
@@ -24022,6 +24023,19 @@ MonoBehaviour:
   manaBar: {fileID: 6477979530613783436}
   damagePopUp: {fileID: 8283021158187679178, guid: f09ae52bcd14e3e47aa45395e91f6716,
     type: 3}
+--- !u!65 &3636413198928027943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857948205223096856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.81, y: 3.29, z: 1}
+  m_Center: {x: 0, y: 1.26, z: 0}
 --- !u!1 &6857963463095894846
 GameObject:
   m_ObjectHideFlags: 0
