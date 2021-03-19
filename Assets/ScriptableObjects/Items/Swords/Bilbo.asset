@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
   m_Name: Bilbo
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 35
   armor: 0
-  attackRate: 0
+  attackRate: 15
   hp: 0
   images:
   - {fileID: 21300000, guid: fb390528d9684d4f920a0e830b81a606, type: 3}
-  border: {fileID: 0}
+  border: {fileID: -628012141879501752, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 2
+  description: When it's time to pierce through obstacle use it
+  sellValue: 170
+  buyValue: 210

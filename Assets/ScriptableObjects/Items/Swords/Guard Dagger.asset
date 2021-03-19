@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
   m_Name: Guard Dagger
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 25
   armor: 0
-  attackRate: 0
+  attackRate: 50
   hp: 0
   images:
   - {fileID: 21300000, guid: f8653344d9ca4ce181931f1c6065eb15, type: 3}
-  border: {fileID: 0}
+  border: {fileID: -628012141879501752, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 2
+  description: To protect palace corridors
+  sellValue: 155
+  buyValue: 195

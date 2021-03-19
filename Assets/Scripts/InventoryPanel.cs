@@ -67,7 +67,7 @@ public class InventoryPanel : MonoBehaviour
             }
             GameObject temp = Instantiate(iconPrefab, spawningPoint);
             temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
-            rarity.text = itemClicked.slotPosition.ToString();
+            rarity.text = itemClicked.rarity.ToString();
             itemName.text = itemClicked.name;
             descritpion.text = itemClicked.description;
             goldValue.text = itemClicked.sellValue.ToString();

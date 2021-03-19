@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
   m_Name: Fire Dagger
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 120
   armor: 0
-  attackRate: 0
+  attackRate: 100
   hp: 0
   images:
   - {fileID: 21300000, guid: b02f19f4463646bc917313a127c0a9e0, type: 3}
-  border: {fileID: 0}
+  border: {fileID: -6591663207565612784, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 5
+  description: Enhanced by essence of hell
+  sellValue: 1200
+  buyValue: 2000

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
   m_Name: Rough Katana
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 70
   armor: 0
-  attackRate: 0
+  attackRate: 20
   hp: 0
   images:
   - {fileID: 21300000, guid: 13ea152918f14de9a082db87cd87c449, type: 3}
-  border: {fileID: 0}
+  border: {fileID: 8262077947868551193, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 3
+  description: Quick and powerful, what else do you need?
+  sellValue: 325
+  buyValue: 405

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
   m_Name: Balanced Sword
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 40
   armor: 0
-  attackRate: 10
+  attackRate: 0
   hp: 0
   images:
   - {fileID: 21300000, guid: d5d8ac770f724d9596951f76e0ad2d33, type: 3}
-  border: {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
+  border: {fileID: -628012141879501752, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 1
+  rarity: 2
   description: Good quality sword, great for novice and expert adventrues
-  sellValue: 200
-  buyValue: 300
+  sellValue: 160
+  buyValue: 200

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
-  m_Name: Milita dagger
+  m_Name: Militia dagger
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 15
   armor: 0
-  attackRate: 0
+  attackRate: 30
   hp: 0
   images:
   - {fileID: 21300000, guid: 8c694485eb8b4690b9db20aa4a178b5e, type: 3}
-  border: {fileID: 0}
+  border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 1
+  description: Basic weapon to defence
+  sellValue: 75
+  buyValue: 115
