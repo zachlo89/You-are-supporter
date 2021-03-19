@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0ccfc8393cca4476ba71df31e56b36d4, type: 3}
   border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 2
-  rarity: 0
+  rarity: 1
   description: It's used to be great weapon, but now ...
   sellValue: 85
   buyValue: 125
