@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
+  m_Name: Skeleton Warrior
+  m_EditorClassIdentifier: 
+  isAlive: 0
+  damage: 60
+  armor: 0
+  maxHealt: 300
+  hpRegen: 0
+  maxMana: 0
+  manaRegen: 0
+  attackRate: 110
+  critChance: 0
+  critDamageMultiplay: 0
+  blockChance: 0
+  dogdeChance: 0
+  expirence: 0
+  toNextLevel: 100
+  level: 1
+  stars: 1
+  equipment: {fileID: 11400000, guid: 23fa99d343b2db94e9a4e1dd28ed128b, type: 2}
+  isAvaliable: 1
+  characterClass: 0
+  prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
+  headSprites: {fileID: 21300000, guid: 37e84c67f06448af988879ae2e0f30b5, type: 3}
+  hairsSprites: {fileID: 0}
+  eyesSprites: {fileID: 21300000, guid: be6fb90474194d2ca4b6ef82bf30eac3, type: 3}
+  eyebrowsSprites: {fileID: 0}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 0}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 21300000, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  pelvis: {fileID: 21300006, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  armL: {fileID: 21300004, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  forearmoL: {fileID: 21300010, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  armR: {fileID: 21300002, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  forearmR: {fileID: 21300008, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  handL: {fileID: 21300016, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  handR: {fileID: 21300018, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  legL: {fileID: 21300012, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  legR: {fileID: 21300012, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  shinL: {fileID: 21300014, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  shinR: {fileID: 21300014, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  bodyColor: {r: 0.81042486, g: 0.8207547, b: 0.48393556, a: 1}
+  hairColor: {r: 0, g: 0, b: 0, a: 0}

@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Advanced Gladiator Shield
   m_EditorClassIdentifier: 
   damage: 0
-  armor: 0
+  armor: 8
   attackRate: 0
-  hp: 0
+  hp: 5
+  blockChance: 12
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
   images:
   - {fileID: 21300000, guid: 76cdb673e26446eca7290d7f8e9d0701, type: 3}
-  border: {fileID: 0}
+  border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 4
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 1
+  description: Used on arenas
+  sellValue: 48
+  buyValue: 73

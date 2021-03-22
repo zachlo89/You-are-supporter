@@ -11,6 +11,7 @@ public class SetItemIcon : MonoBehaviour
     [SerializeField] private List<SpriteRenderer> itemImages = new List<SpriteRenderer>();
     private GameObject rightPanel;
 
+
     private void Start()
     {
         inventoryPanel = GameObject.FindObjectOfType<InventoryPanel>();

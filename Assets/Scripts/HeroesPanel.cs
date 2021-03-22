@@ -39,6 +39,7 @@ public class HeroesPanel : MonoBehaviour
         heroesCount.text = "Heroes " + counter + "/7";
     }
 
+    /*
     public void PopulateAvaliableCharacters(int teamSlotIndex, Team team)
     {
         counter = 0;
@@ -59,5 +60,6 @@ public class HeroesPanel : MonoBehaviour
         }
         heroesCount.text = "Heroes " + counter + "/7";
     } 
+    */
 
 }

@@ -16,15 +16,21 @@ MonoBehaviour:
   damage: 40
   armor: 0
   maxHealt: 200
+  hpRegen: 0
   maxMana: 0
   manaRegen: 0
   attackRate: 100
+  critChance: 0
+  critDamageMultiplay: 0
+  blockChance: 0
+  dogdeChance: 0
   expirence: 0
   toNextLevel: 100
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 045ecb00b4f74da438dab57884547845, type: 2}
-  isAvaliable: 0
+  isAvaliable: 1
+  characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 37e84c67f06448af988879ae2e0f30b5, type: 3}
   hairsSprites: {fileID: 0}
@@ -33,17 +39,17 @@ MonoBehaviour:
   earsSprites: {fileID: 0}
   mouthSprites: {fileID: 0}
   beardSprites: {fileID: 0}
-  torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  armL: {fileID: 21300004, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  forearmoL: {fileID: 21300010, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  armR: {fileID: 21300002, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  forearmR: {fileID: 21300008, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  handL: {fileID: 21300016, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  handR: {fileID: 21300018, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  legL: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 1}
+  torso: {fileID: 21300000, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  pelvis: {fileID: 21300006, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  armL: {fileID: 21300004, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  forearmoL: {fileID: 21300010, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  armR: {fileID: 21300002, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  forearmR: {fileID: 21300008, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  handL: {fileID: 21300016, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  handR: {fileID: 21300018, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  legL: {fileID: 21300012, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  legR: {fileID: 21300012, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  shinL: {fileID: 21300014, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  shinR: {fileID: 21300014, guid: 3073a04309934ada890f7ae452b865f4, type: 3}
+  bodyColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
   hairColor: {r: 0, g: 0, b: 0, a: 0}

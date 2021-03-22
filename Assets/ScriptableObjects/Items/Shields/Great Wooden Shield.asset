@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
+  m_Name: Great Wooden Shield
+  m_EditorClassIdentifier: 
+  damage: 0
+  armor: 15
+  attackRate: -5
+  hp: 0
+  blockChance: 10
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
+  images:
+  - {fileID: 21300000, guid: c840f3d9fc5f47dd941b39b900def588, type: 3}
+  border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
+  slotPosition: 4
+  rarity: 1
+  description: Great but slighty uncofortable shield
+  sellValue: 49
+  buyValue: 74

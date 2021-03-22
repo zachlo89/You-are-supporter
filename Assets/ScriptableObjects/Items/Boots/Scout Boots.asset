@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
+  m_Name: Scout Boots
+  m_EditorClassIdentifier: 
+  damage: 0
+  armor: 6
+  attackRate: 1
+  hp: 2
+  blockChance: 0
+  dodgeChance: 2
+  critChance: 0
+  critDamage: 0
+  images:
+  - {fileID: 21300012, guid: 0b9e5b6d9aab44218a1b4b753c931c43, type: 3}
+  - {fileID: 21300014, guid: 0b9e5b6d9aab44218a1b4b753c931c43, type: 3}
+  border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
+  slotPosition: 6
+  rarity: 1
+  description: Tup, tup, tup and you know everything
+  sellValue: 37
+  buyValue: 54

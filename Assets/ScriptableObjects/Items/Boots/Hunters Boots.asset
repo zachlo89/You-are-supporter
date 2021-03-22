@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
+  m_Name: Hunters Boots
+  m_EditorClassIdentifier: 
+  damage: 0
+  armor: 8
+  attackRate: 0
+  hp: 5
+  blockChance: 2
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
+  images:
+  - {fileID: 21300012, guid: 826dd529b47a488b922eb5ed3c044fce, type: 3}
+  - {fileID: 21300014, guid: 826dd529b47a488b922eb5ed3c044fce, type: 3}
+  border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
+  slotPosition: 6
+  rarity: 1
+  description: Shhhh... Do not alert animals
+  sellValue: 34
+  buyValue: 51

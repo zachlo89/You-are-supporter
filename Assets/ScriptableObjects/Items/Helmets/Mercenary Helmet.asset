@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Mercenary Helmet
   m_EditorClassIdentifier: 
   damage: 0
-  armor: 0
+  armor: 35
   attackRate: 0
   hp: 0
+  blockChance: 7
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
   images:
-  - {fileID: 21300000, guid: 2a2a008fca554f9d88e735dbf6091146, type: 3}
-  border: {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
+  - {fileID: 21300000, guid: d75363f7bbeb40cb8f1f6fa975f2f764, type: 3}
+  border: {fileID: 8262077947868551193, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 0
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 3
+  description: For right price, right equipment
+  sellValue: 123
+  buyValue: 163

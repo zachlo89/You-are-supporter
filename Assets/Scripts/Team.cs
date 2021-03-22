@@ -11,7 +11,10 @@ public class Team : ScriptableObject
     
     public void AddCharacter(ScriptableCharacter hero, int position)
     {
-        heroesList[position] = hero;
+        if(position <= avaliabeTeamSize && position <= maxTeamSize)
+        {
+            heroesList[position] = hero;
+        }
     }
 
     public void RemoveCharacter(int position)

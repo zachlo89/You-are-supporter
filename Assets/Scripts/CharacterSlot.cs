@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//This should be splited for 2 classes, but forgot to do that
 public class CharacterSlot : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI nameText;
@@ -18,7 +19,7 @@ public class CharacterSlot : MonoBehaviour
     private Team team;
     private int index;
 
-
+// Used by HeroesPanel
     public void PopulateHeroPanel(ScriptableCharacter hero, GameObject equipmentPanel, GameObject heroSelectPanel)
     {
         for(int i = 0; i < starsList.Count; i++)
@@ -43,6 +44,16 @@ public class CharacterSlot : MonoBehaviour
         temp.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
     }
 
+    // Called when pressed (move from HeroesPanel to EquipmentPanel)
+    public void SetEquipmentPanel()
+    {
+        heroSelectPanel.GetComponent<Animator>().SetTrigger("FadeOutRight");
+        equipmentPanel.GetComponent<Animator>().SetTrigger("FadeIn");
+        equipmentPanel.GetComponent<EquipmentPanel>().UpdateUI(hero);
+    }
+
+
+    //Used by DispalyAndAddToTheTeam
     public void PopulateHeroPanel(ScriptableCharacter hero, Team team, int index)
     {
         this.hero = hero;
@@ -75,25 +86,9 @@ public class CharacterSlot : MonoBehaviour
 
     }
 
-    public void SetEquipmentPanel()
-    {
-        heroSelectPanel.GetComponent<Animator>().SetTrigger("FadeOutRight");
-        equipmentPanel.GetComponent<Animator>().SetTrigger("FadeIn");
-        equipmentPanel.GetComponent<EquipmentPanel>().UpdateUI(hero);
-    }
-
-    public void UpdateUIForTeam(int index, Team team)
-    {
-        Button button = GetComponent<Button>();
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(() => AddToTeam(index, team));
-        
-    }
-
+// Used when you want to add avaliable hero to the team in DispalyAndAddToTheTeam
     private void AddToTeam(int index, Team team)
     {
-        Debug.Log("Team name: " + team.name);
-        Debug.Log("Index: " + index);
         team.AddCharacter(hero, index);
         SelectHeroes selectHeroPanel = FindObjectOfType<SelectHeroes>();
         selectHeroPanel.PopulatePanel();

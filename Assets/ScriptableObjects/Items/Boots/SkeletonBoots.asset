@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   armor: 5
-  attackRate: 5
-  hp: 5
+  attackRate: -2
+  hp: -2
   images:
   - {fileID: 21300012, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   - {fileID: 21300014, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   border: {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
   slotPosition: 6
   rarity: 0
-  description: Curse shoes
-  sellValue: 10
-  buyValue: 20
+  description: Is there any sense of wearing it?
+  sellValue: 17
+  buyValue: 37

@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Spearman Helmet
   m_EditorClassIdentifier: 
   damage: 0
-  armor: 0
-  attackRate: 0
+  armor: 10
+  attackRate: 10
   hp: 0
+  blockChance: 0
+  dodgeChance: 2
+  critChance: 0
+  critDamage: 0
   images:
-  - {fileID: 21300000, guid: 5684f5f38ddb46b1843030bd9b644c95, type: 3}
-  border: {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
+  - {fileID: 21300000, guid: 64db7735559f45f081d6e7f591d82c69, type: 3}
+  border: {fileID: -628012141879501752, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 0
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 2
+  description: Balanced protection for you'r head
+  sellValue: 60
+  buyValue: 80

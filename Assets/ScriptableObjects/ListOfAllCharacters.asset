@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroesList:
   - {fileID: 11400000, guid: 33f85084cfe30104582ac94154a838b7, type: 2}
-  - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
+  - {fileID: 11400000, guid: c29eb29def349814da04a726dc990f87, type: 2}
   - {fileID: 11400000, guid: 3f0f52dcc66e3e04684aa472eb937ea3, type: 2}
-  - {fileID: 11400000, guid: f62448373dd7d974d972b36970218e27, type: 2}
+  - {fileID: 11400000, guid: c2536962d4566dc4fb2d6015299ff70d, type: 2}

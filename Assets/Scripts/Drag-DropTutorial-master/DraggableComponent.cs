@@ -127,6 +127,7 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
 		//equipmentPanel.UnEquipItem(item, index);
 		OnEndDragHandler?.Invoke(eventData, false);
 		
+		
 	}
 
 	public void OnInitializePotentialDrag(PointerEventData eventData)

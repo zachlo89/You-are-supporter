@@ -30,6 +30,10 @@ public class ItemScriptable : ScriptableObject
     public int armor;
     public int attackRate;
     public int hp;
+    public int blockChance;
+    public int dodgeChance;
+    public float critChance;
+    public float critDamage;
     public List<Sprite> images = new List<Sprite>();
     public Sprite border;
     public SlotPosition slotPosition;

@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   armor: 10
-  attackRate: 10
-  hp: 10
+  attackRate: -5
+  hp: -5
+  blockChance: 0
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
   images:
   - {fileID: 21300000, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   - {fileID: 21300004, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
@@ -25,9 +29,9 @@ MonoBehaviour:
   - {fileID: 21300016, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   - {fileID: 21300018, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   - {fileID: 21300006, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
-  border: {fileID: 0}
+  border: {fileID: -7779772245507925811, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 1
   rarity: 0
-  description: Curse armor
-  sellValue: 50
-  buyValue: 100
+  description: Strench of death isn't it?
+  sellValue: 60
+  buyValue: 75

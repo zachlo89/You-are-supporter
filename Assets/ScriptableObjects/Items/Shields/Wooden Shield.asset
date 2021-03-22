@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Wooden Shield
   m_EditorClassIdentifier: 
   damage: 0
-  armor: 0
-  attackRate: 0
+  armor: 5
+  attackRate: -2
   hp: 0
+  blockChance: 5
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
   images:
   - {fileID: 21300000, guid: dddb0f28220142f2b4f6b2b0b6854ae0, type: 3}
-  border: {fileID: 0}
+  border: {fileID: -7779772245507925811, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 4
   rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  description: Used to be a part of fence
+  sellValue: 25
+  buyValue: 45
