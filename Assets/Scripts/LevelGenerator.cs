@@ -11,10 +11,6 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Sprite backgroundSprite;
     [SerializeField] private Image backgroundImage;
 
-    //Only for developemnet delete it later
-    [SerializeField] private Level levelToGameManager;
-    //end
-
     [SerializeField] private List<Vector3> SpwaningPoints = new List<Vector3>();
     [SerializeField] private BattleManager battleManager;
     [SerializeField] private SkillsManager skillsManager;
@@ -23,10 +19,6 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
-
-        //To delete, only for development
-        gameManager.SetCurrentLevel(levelToGameManager);
-        //end
 
         level = gameManager.CurrentLevel;
         backgroundSprite = level.background;

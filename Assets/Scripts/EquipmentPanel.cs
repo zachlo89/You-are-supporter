@@ -18,18 +18,17 @@ public class EquipmentPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damage, armor, attackSpeed, maxHP;
     [SerializeField] private GameObject itemPanel;
     [SerializeField] private List<GameObject> stars = new List<GameObject>();
-    private EquipmentInventory equipmentInventory;
+    [SerializeField] private EquipmentInventory equipmentInventory;
     private GameObject heroPrefab;
     int damageValue;
     int armorValue;
     int attackSpeedValue;
     int maxHealth;
 
-    private void Start()
+    public ScriptableCharacter GetHero()
     {
-        equipmentInventory = GetComponent<EquipmentInventory>();
+        return hero;
     }
-
 
     public void UpdateUI(ScriptableCharacter hero)
     {
@@ -40,34 +39,8 @@ public class EquipmentPanel : MonoBehaviour
         this.hero = hero;
         heroPrefab = hero.prefab;
 
-        for (int i = 0; i < equipmentList.Count; i++)
-        {
-            try
-            {
-                GameObject iconToRemove = equipmentList[i].gameObject.GetComponentInChildren<SetItemIcon>().gameObject;
-                if (iconToRemove != null)
-                {
-                    Destroy(iconToRemove);
-                }
-            }
-            catch
-            {
-            }
-        }
-        
-
-        for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)
-        {
-            if(hero.equipment.GetEquipment[i] != null)
-            {
-                GameObject item = Instantiate(itemPanel, equipmentList[i].transform);
-                item.GetComponent<SetItemIcon>().UpdateIconUI(hero.equipment.GetEquipment[i]);
-                item.AddComponent<DraggableComponent>();
-                Destroy(item.GetComponent<Button>());
-                Destroy(item.GetComponent<EventTrigger>());
-            }
-            
-        }
+        UpdateEquipment();
+       
         foreach (Transform child in spawningPoint)
         {
             GameObject.Destroy(child.gameObject);
@@ -86,6 +59,42 @@ public class EquipmentPanel : MonoBehaviour
         for(int i=0; i< hero.stars; i++)
         {
             stars[i].SetActive(true);
+        }
+        equipmentInventory.PopulateInventory();
+
+    }
+
+    private void UpdateEquipment()
+    {
+        for (int i = 0; i < equipmentList.Count; i++)
+        {
+            try
+            {
+                GameObject iconToRemove = equipmentList[i].gameObject.GetComponentInChildren<SetItemIcon>().gameObject;
+                if (iconToRemove != null)
+                {
+                    Destroy(iconToRemove);
+                }
+            }
+            catch
+            {
+            }
+        }
+
+
+        for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)
+        {
+            if (hero.equipment.GetEquipment[i] != null)
+            {
+                GameObject item = Instantiate(itemPanel, equipmentList[i].transform);
+                item.GetComponent<SetItemIcon>().UpdateIconUI(hero.equipment.GetEquipment[i]);
+                item.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(hero.equipment.GetEquipment[i], hero, this);
+
+                //item.AddComponent<DraggableComponent>();
+                //Destroy(item.GetComponent<Button>());
+                //Destroy(item.GetComponent<EventTrigger>());
+            }
+
         }
     }
 
@@ -145,14 +154,32 @@ public class EquipmentPanel : MonoBehaviour
         {
             hero.equipment.AddItem(item, index);
             equipmentInventory.RemoveItem(indexToRemove);
+            UpdateEquipment();
             UpdateStatsUI();
         }
     }
 
     public void UnEquipItem(ItemScriptable item, int index)
     {
-        hero.equipment.RemoveItem(item, index);
+        GameObject iconToRemove = equipmentList[index].gameObject.GetComponentInChildren<SetItemIcon>().gameObject;
+        hero.equipment.RemoveItem(index);
         equipmentInventory.AddItem(item);
+        Destroy(iconToRemove);
         UpdateStatsUI();
     }
+
+    public void EquipAndUnEquip(ItemScriptable itemToEquip, ItemScriptable itemToUnEquip, int equipmentIndex, int inventoryIndex)
+    {
+        hero.equipment.RemoveItem(equipmentIndex);
+        hero.equipment.AddItem(itemToEquip, equipmentIndex);
+        equipmentInventory.SwapItems(itemToUnEquip, inventoryIndex);
+        UpdateEquipment();
+        UpdateStatsUI();
+    }
+
+    public void SellItem(int index)
+    {
+        equipmentInventory.SellItem(index);
+    }
+
 }

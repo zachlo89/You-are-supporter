@@ -35,7 +35,6 @@ public class LoadingScript : MonoBehaviour
             loadingText.text = "Loading... " + ((int)(current * 20)).ToString() + "%";
             current += Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
-            Debug.Log(current);
         }
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(2);
 

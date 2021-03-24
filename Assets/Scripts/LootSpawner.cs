@@ -7,6 +7,8 @@ public class LootSpawner : MonoBehaviour
     [SerializeField] private ScriptableItemManager listOfAllItems;
     [SerializeField] private int stageLevel;
     [SerializeField] private GameObject spawningPoint;
+    [SerializeField] private EndDetailedPanel endDetailPanel;
+    [SerializeField] private GameObject panelDetails;
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private int spawnItemMaxCount;
@@ -16,10 +18,18 @@ public class LootSpawner : MonoBehaviour
     private List<ItemScriptable> epicItems = new List<ItemScriptable>();
     private List<ItemScriptable> mythicalItems = new List<ItemScriptable>();
     private List<ItemScriptable> legendaryItems = new List<ItemScriptable>();
+
+    private List<ItemScriptable> droopedItems = new List<ItemScriptable>();
+    private int goldDropped;
+
+    private GameManager gameManager;
+
     private void Start()
     {
-        //TO DO load level 
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+        stageLevel = gameManager.CurrentLevel.itemsRarityDrop;
         LoadItems();
+        goldDropped = 0;
     }
 
     private void LoadItems()
@@ -171,9 +181,27 @@ public class LootSpawner : MonoBehaviour
         for(int i = 0; i < random; i++)
         {
             GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
-            temp.GetComponent<SetItemIcon>().UpdateIconUI(GetRandomItems());
+            ItemScriptable item = GetRandomItems();
+            droopedItems.Add(item);
+            temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
+            temp.GetComponent<CommunicateWitEndPanel>().SetUpCommunciationWithEndPanel(endDetailPanel, item);
         }
-        int randomGold = Random.Range(10 * stageLevel, 100 * stageLevel);
-        goldValue.text = randomGold.ToString();
+        goldDropped = Random.Range(10 * stageLevel, 100 * stageLevel);
+        goldValue.text = goldDropped.ToString();
+    }
+
+    public void RemoveDroopedItem(ItemScriptable item)
+    {
+        droopedItems.Remove(item);
+    }
+
+    public List<ItemScriptable> GetDroppedItems()
+    {
+        return droopedItems;
+    }
+
+    public int GetDroppedGold()
+    {
+        return goldDropped;
     }
 }

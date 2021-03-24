@@ -6,6 +6,7 @@ using UnityEngine;
 public class Level : ScriptableObject
 {
     public List<ScriptableCharacter> enemiesList = new List<ScriptableCharacter>();
+    public int itemsRarityDrop;
     public Sprite background;
     public bool isPassed;
     [Range(0,3)]

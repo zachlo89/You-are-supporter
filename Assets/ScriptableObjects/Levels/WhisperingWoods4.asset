@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: WhisperingWoods4
   m_EditorClassIdentifier: 
   enemiesList:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c2536962d4566dc4fb2d6015299ff70d, type: 2}
+  - {fileID: 11400000, guid: c2536962d4566dc4fb2d6015299ff70d, type: 2}
+  - {fileID: 11400000, guid: c2536962d4566dc4fb2d6015299ff70d, type: 2}
+  itemsRarityDrop: 1
   background: {fileID: 21300000, guid: 2437969a2b17b41b0a10bef95252a284, type: 3}
   isPassed: 0
   stars: 0

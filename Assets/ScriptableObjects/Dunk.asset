@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002087580065a5b4e93aa16e6c70ad19, type: 3}
-  m_Name: Warrior
+  m_Script: {fileID: 11500000, guid: 1594d8c9015cff148a0f44b326beb91b, type: 3}
+  m_Name: Dunk
   m_EditorClassIdentifier: 
-  skill1Cooldown: 5
-  skill2Cooldown: 10
-  skill1ManaCost: 15
-  skill2ManaCost: 25
-  skill1DamageProcent: 130
-  regenerationTime: 5
-  regenerationProcent: 2
-  increaseArmorPercent: 0
+  equipment:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 522f20f543c9bc14a8d61dfd5b76c312, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

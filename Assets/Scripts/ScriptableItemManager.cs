@@ -17,13 +17,17 @@ public class ScriptableItemManager : ScriptableObject
     }
     public void AddItem(ItemScriptable item)
     {
-        inventory.Add(item);
+        inventory.Insert(0, item);
+    }
+
+    public void SwapItems(ItemScriptable item, int index)
+    {
+        inventory[index] = item;
     }
 
     public void RemoveItem(int index)
     {
         inventory.RemoveAt(index);
-        
     }
 
     public void BuyItem(ItemScriptable item)
@@ -35,9 +39,9 @@ public class ScriptableItemManager : ScriptableObject
         }
     }
 
-    public void SellItem(ItemScriptable item)
+    public void SellItem(int index)
     {
-        gold.value += item.sellValue;
-        inventory.Remove(item);
+        gold.value += inventory[index].sellValue;
+        inventory.Remove(inventory[index]);
     }
 }

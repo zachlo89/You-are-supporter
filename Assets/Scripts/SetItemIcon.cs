@@ -11,7 +11,6 @@ public class SetItemIcon : MonoBehaviour
     [SerializeField] private List<SpriteRenderer> itemImages = new List<SpriteRenderer>();
     private GameObject rightPanel;
 
-
     private void Start()
     {
         inventoryPanel = GameObject.FindObjectOfType<InventoryPanel>();
@@ -37,6 +36,7 @@ public class SetItemIcon : MonoBehaviour
     public void UpdateIconUI(ItemScriptable item)
     {
         this.item = item;
+        
         ClearIcon();
         switch (item.slotPosition)
         {
@@ -70,7 +70,6 @@ public class SetItemIcon : MonoBehaviour
             border.sprite = item.border;
         }
 
-        
         selected.SetActive(false);
     }
 

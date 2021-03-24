@@ -242,7 +242,6 @@ public class CharacterBattle : MonoBehaviour
         if(currentHealth <= 0)
         {
             currentHealth = 0;
-            Debug.Log(name + " Died");
             isAlive = false;
             animator.SetTrigger("Death");
             CancelInvoke();
@@ -266,17 +265,19 @@ public class CharacterBattle : MonoBehaviour
     public void NormalAttackEffect()
     {
         CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
-        if (CritAttack())
+        if(enemy != null)
         {
-            enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
+            if (CritAttack())
+            {
+                enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
+            }
+            else enemy.GetDamage(damage, false);
         }
-        else enemy.GetDamage(damage, false);
     }
 
     private void Skill1()
     {
         animator.SetTrigger("Skill1");
-        
     }
 
     public void Skill1Effect()
@@ -320,8 +321,8 @@ public class CharacterBattle : MonoBehaviour
     IEnumerator Attack()
     {
         float random = Random.Range(0f, 1f);
-        yield return new WaitForSeconds((attackRate / 100f) + random);
-        while (isAlive)
+        yield return new WaitForSeconds((100/ attackRate) + random);
+        while (isAlive && battleManager.CheckIfEnd())
         {
             int possibleAttacks = 1;
             if (currentMana > manaCostSkill2 && skill2Cooldown <= 0)

@@ -51,4 +51,18 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString("Level", level.name);
     }
 
+    public void SetNextLevel()
+    {
+        int index = levelList.IndexOf(currentLevel);
+        this.currentLevel = levelList[index + 1];
+    }
+
+    public void MarkAsCompleted()
+    {
+        this.currentLevel.stars = 3;
+        this.currentLevel.isPassed = true;
+        int index = levelList.IndexOf(currentLevel);
+        levelList[index + 1].isAvaliable = true;
+    }
+
 }

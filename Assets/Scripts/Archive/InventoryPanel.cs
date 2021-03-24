@@ -103,7 +103,7 @@ public class InventoryPanel : MonoBehaviour
     {
         if(itemClicked != null)
         {
-            inventory.SellItem(itemClicked);
+            //inventory.SellItem(itemClicked);
             Destroy(iconClicked);
             UpdateRightPanel(null, null);
             goldText.text = inventory.Gold.value.ToString();

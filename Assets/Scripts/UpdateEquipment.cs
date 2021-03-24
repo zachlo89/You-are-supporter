@@ -6,8 +6,9 @@ public class UpdateEquipment : MonoBehaviour
 {
     [SerializeField] private Equipment equipment;
     [SerializeField] private List<SpriteRenderer> armor = new List<SpriteRenderer>();
-    [SerializeField] private List<SpriteRenderer> weaponLeft = new List<SpriteRenderer>();
-    [SerializeField] private SpriteRenderer weapoenRight;
+    [SerializeField] private SpriteRenderer weaponRight;
+    [SerializeField] private SpriteRenderer shield;
+    [SerializeField] private SpriteRenderer twoHandedWeapon;
     [SerializeField] private List<SpriteRenderer> legs = new List<SpriteRenderer>();
     [SerializeField] private SpriteRenderer helment;
     [SerializeField] private SpriteRenderer hair;
@@ -31,19 +32,13 @@ public class UpdateEquipment : MonoBehaviour
                     }
                     break;
                 case 2:
-                    if (item.slotPosition == SlotPosition.meelWeapon)
-                    {
-                        weaponLeft[0].sprite = item.images[0];
-                        weaponLeft[1].sprite = null;
-                    }
-                    else
-                    {
-                        weaponLeft[1].sprite = item.images[0];
-                        weaponLeft[0].sprite = null;
-                    }
+                    weaponRight.sprite = item.images[0];
                     break;
                 case 3:
-                    weapoenRight.sprite = item.images[0];
+                    shield.sprite = item.images[0];
+                    break;
+                case 99:
+                    twoHandedWeapon.sprite = item.images[0];
                     break;
                 case 4:
                     legs[0].sprite = item.images[0];
@@ -69,12 +64,13 @@ public class UpdateEquipment : MonoBehaviour
                     }
                     break;
                 case 2:
-                    weaponLeft[0].sprite = null;
-                    weaponLeft[1].sprite = null;
-
+                    weaponRight.sprite = null;
                     break;
                 case 3:
-                    weapoenRight.sprite = null;
+                    shield.sprite = null;
+                    break;
+                case 99:
+                    twoHandedWeapon.sprite = null;
                     break;
                 case 4:
                     legs[0].sprite = defaultEquipment[8];

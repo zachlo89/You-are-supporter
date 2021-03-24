@@ -17,7 +17,7 @@ public class Equipment : ScriptableObject
         equipment[itemIndex] = item;
     }
     
-    public void RemoveItem(ItemScriptable item, int index)
+    public void RemoveItem(int index)
     {
         equipment[index] = null;
     }
