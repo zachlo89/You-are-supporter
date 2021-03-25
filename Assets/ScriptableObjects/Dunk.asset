@@ -15,7 +15,7 @@ MonoBehaviour:
   equipment:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 522f20f543c9bc14a8d61dfd5b76c312, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

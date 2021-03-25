@@ -13,6 +13,8 @@ public class EquipmentInventory : MonoBehaviour
     [SerializeField] private GameObject parentLocation;
     [SerializeField] private TextMeshProUGUI inventoryCount;
     [SerializeField] private EquipmentPanel equipmentPanel;
+    [SerializeField] private TextMeshProUGUI goldValue;
+
     private int sortMetod;
 
     public void PopulateInventory()
@@ -43,6 +45,7 @@ public class EquipmentInventory : MonoBehaviour
 
             inventoryCount.text = inventory.GetInvevtory.Count + "/200";
         }
+        goldValue.text = inventory.Gold.value.ToString();
     }
 
     public void SortItems(int j)
@@ -133,5 +136,9 @@ public class EquipmentInventory : MonoBehaviour
     public void SellItem(int index)
     {
         inventory.SellItem(index);
+        Transform temp = parentLocation.transform.GetChild(index);
+        Destroy(temp.gameObject);
+        inventoryCount.text = inventory.GetInvevtory.Count + "/200";
+        goldValue.text = inventory.Gold.value.ToString();
     }
 }

@@ -13,7 +13,8 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private TextMeshProUGUI expirience;
     [SerializeField] private Slider slider;
     [SerializeField] private Transform spawningPoint;
-
+    [SerializeField] private TextMeshProUGUI goldValue;
+    [SerializeField] private ScriptableItemManager inventory;
     private void Start()
     {
         UpdateLobby();
@@ -34,5 +35,6 @@ public class LobbyUpdateExpirence : MonoBehaviour
         temp.transform.localScale *= 1.5f;
         temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[0]);
         temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[0].equipment);
+        goldValue.text = inventory.Gold.value.ToString();
     }
 }

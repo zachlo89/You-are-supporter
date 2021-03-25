@@ -180,6 +180,7 @@ public class EquipmentPanel : MonoBehaviour
     public void SellItem(int index)
     {
         equipmentInventory.SellItem(index);
+        delegator.changeSprites();
     }
 
 }
