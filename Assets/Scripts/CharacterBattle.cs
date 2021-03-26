@@ -13,6 +13,10 @@ public class CharacterBattle : MonoBehaviour
     private BattleManager battleManager;
     private SkillsManager skillsManager;
     private ScriptableCharacter hero;
+    public ScriptableCharacter Hero
+    {
+        get { return hero; }
+    }
     private bool isAlive = true;
 
     //Add animator controller from hero
@@ -146,7 +150,7 @@ public class CharacterBattle : MonoBehaviour
         this.damage = hero.damage;
         this.armor = hero.armor;
         this.attackRate = hero.attackRate;
-        AdjustStatsToLevel();
+        //AdjustStatsToLevel();
         AdjustStatsToEquipment();
 
         this.battleManager = battleManager;

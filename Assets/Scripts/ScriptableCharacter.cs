@@ -12,6 +12,9 @@ public enum CharacterClass
 [CreateAssetMenu (menuName = "ScriptableObject/Character")]
 public class ScriptableCharacter : ScriptableObject
 {
+    public int expToGiveToThePlayers;
+    public string characterName;
+    public int buyValue;
     public bool isAlive;
     public int damage;
     public int armor;

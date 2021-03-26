@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
-  m_Name: Shri
+  m_Name: Character 12
   m_EditorClassIdentifier: 
+  expToGiveToThePlayers: 0
+  characterName: Cyrin
+  buyValue: 205
   isAlive: 1
   damage: 35
   armor: 5
@@ -28,17 +31,17 @@ MonoBehaviour:
   toNextLevel: 100
   level: 1
   stars: 1
-  equipment: {fileID: 11400000, guid: 240e0f729de6d864cae4f06b49029039, type: 2}
+  equipment: {fileID: 11400000, guid: e22461a360da91e4eb41dd09fbe0bafc, type: 2}
   isAvaliable: 0
-  characterClass: 1
+  characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 5792d08041554a6e8522be53b45e4577, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 3802004455bc4328a5f621fc79e65ed8, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 6fab29d8f7584a1ebc87268574886938, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 388f1dac72bb4d9c8e3bb34861a156bf, type: 3}
-  beardSprites: {fileID: 21300000, guid: 1f2b084a74c04429a70053bcd8cc0080, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 316239bd91334733929c4e2e5426b13d, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: d3acd862a54c4750a8f934507e1b9269, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: c60aecb4659348ac850f7cd372de0d0e, type: 3}
+  beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   armL: {fileID: 21300004, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -51,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.9245283, g: 0.8254053, b: 0.7195621, a: 1}
-  hairColor: {r: 1, g: 1, b: 1, a: 1}
+  bodyColor: {r: 0.077361465, g: 0.33097476, b: 0.90376115, a: 1}
+  hairColor: {r: 0.8915212, g: 0.6094095, b: 0.860168, a: 1}

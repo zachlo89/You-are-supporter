@@ -7,14 +7,9 @@ using UnityEngine.EventSystems;
 public class SetItemIcon : MonoBehaviour
 {
     private ItemScriptable item;
-    private InventoryPanel inventoryPanel;
     [SerializeField] private List<SpriteRenderer> itemImages = new List<SpriteRenderer>();
     private GameObject rightPanel;
 
-    private void Start()
-    {
-        inventoryPanel = GameObject.FindObjectOfType<InventoryPanel>();
-    }
     public ItemScriptable GetItem
     {
         get { return item; }
@@ -71,14 +66,6 @@ public class SetItemIcon : MonoBehaviour
         }
 
         selected.SetActive(false);
-    }
-
-    public void UpdateRightPanel()
-    {
-        if(inventoryPanel != null)
-        {
-            inventoryPanel.UpdateRightPanel(item, gameObject);
-        }
     }
 
     private void ClearIcon()

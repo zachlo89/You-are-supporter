@@ -27,7 +27,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
-        characterName.text = team.heroesList[0].name;
+        characterName.text = team.heroesList[0].characterName;
         level.text = team.heroesList[0].level.ToString();
         expirience.text = team.heroesList[0].expirence + "/" + team.heroesList[0].toNextLevel;
         slider.value = team.heroesList[0].expirence / team.heroesList[0].toNextLevel;

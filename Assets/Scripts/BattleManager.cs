@@ -139,6 +139,7 @@ public class BattleManager : MonoBehaviour
         {
             endText.text = "You won";
             lootSpawner.SpawnItems();
+            AddExpToThePlayer();
         } else
         {
             endText.text = "You lost";
@@ -153,5 +154,18 @@ public class BattleManager : MonoBehaviour
     public void UnPause()
     {
         Time.timeScale = 1;
+    }
+
+    private void AddExpToThePlayer()
+    {
+        int sumOfExpirence = 0;
+        foreach(CharacterBattle character in enemiesCharacters)
+        {
+            sumOfExpirence += character.Hero.expToGiveToThePlayers;
+        }
+        foreach(CharacterBattle character1 in playerCharacters)
+        {
+            character1.Hero.expirence += (int)(sumOfExpirence / playerCharacters.Count);
+        }
     }
 }

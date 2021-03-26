@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
+  m_Name: Character 20
+  m_EditorClassIdentifier: 
+  expToGiveToThePlayers: 0
+  characterName: Crix
+  buyValue: 205
+  isAlive: 1
+  damage: 35
+  armor: 5
+  maxHealt: 400
+  hpRegen: 2
+  maxMana: 100
+  manaRegen: 3
+  attackRate: 70
+  critChance: 2
+  critDamageMultiplay: 2
+  blockChance: 2
+  dogdeChance: 2
+  expirence: 0
+  toNextLevel: 100
+  level: 1
+  stars: 1
+  equipment: {fileID: 11400000, guid: 26229cb95374dea41abff4d7212d12e8, type: 2}
+  isAvaliable: 0
+  characterClass: 0
+  prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d57c3f5fedf646f0aad587e9914b351f, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 568b0544b9aa49c5827b767199fe103e, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: e69fabaf2f2c4847a360900c759e7a81, type: 3}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armL: {fileID: 21300004, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmoL: {fileID: 21300010, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armR: {fileID: 21300002, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmR: {fileID: 21300008, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handL: {fileID: 21300016, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handR: {fileID: 21300018, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legL: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  bodyColor: {r: 0.99304795, g: 0.6593523, b: 0.7809223, a: 1}
+  hairColor: {r: 0.16682088, g: 0.96733713, b: 0.3826353, a: 1}

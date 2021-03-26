@@ -69,6 +69,8 @@ public class EndPanel : MonoBehaviour
                 inventory.Gold.value += lootSpawner.GetDroppedGold();
             }
             else Debug.Log("End panel something went wrong");
+
+            gm.UpdateTeamCharactersAfterBattle();
         }
     }
 

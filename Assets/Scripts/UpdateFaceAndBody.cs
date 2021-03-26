@@ -79,6 +79,7 @@ public class UpdateFaceAndBody : MonoBehaviour
         legR.color = bodyColor;
         shinL.color = bodyColor;
         shinR.color = bodyColor;
+        earsSprites.color = bodyColor;
 
         hairsSprites.color = hairColor;
         beardSprites.color = hairColor;

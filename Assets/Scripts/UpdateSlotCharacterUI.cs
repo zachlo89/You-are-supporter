@@ -21,7 +21,7 @@ public class UpdateSlotCharacterUI : MonoBehaviour
     {
         this.hero = hero;
         characterPrefab = hero.prefab;
-        characterName.text = hero.name;
+        characterName.text = hero.characterName;
         expirience.text = hero.expirence + "/" + hero.toNextLevel;
         level.text = hero.level.ToString();
         characterPrefab = Instantiate(hero.prefab, spawningPoint);

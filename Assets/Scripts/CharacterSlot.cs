@@ -29,7 +29,7 @@ public class CharacterSlot : MonoBehaviour
         this.heroSelectPanel = heroSelectPanel;
         this.equipmentPanel = equipmentPanel;
         this.hero = hero;
-        nameText.text = hero.name;
+        nameText.text = hero.characterName;
         levelText.text = hero.level.ToString();
         expirenceText.text = hero.expirence.ToString() + "/" + hero.toNextLevel.ToString();
         expirienceSlider.value = (float)hero.expirence / (float)hero.toNextLevel;
@@ -65,7 +65,7 @@ public class CharacterSlot : MonoBehaviour
             {
                 starsList[i].SetActive(false);
             }
-            nameText.text = hero.name;
+            nameText.text = hero.characterName;
             levelText.text = hero.level.ToString();
             expirenceText.text = hero.expirence.ToString() + "/" + hero.toNextLevel.ToString();
             expirienceSlider.value = (float)hero.expirence / (float)hero.toNextLevel;

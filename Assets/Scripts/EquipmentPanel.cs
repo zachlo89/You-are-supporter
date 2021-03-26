@@ -15,7 +15,7 @@ public class EquipmentPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI expirenceText;
     [SerializeField] private Slider expirienceSlider;
-    [SerializeField] private TextMeshProUGUI damage, armor, attackSpeed, maxHP;
+    [SerializeField] private TextMeshProUGUI damage, armor, attackSpeed, maxHP, critChanceText, critDamageText, blockChanceText, dodgeChanceText;
     [SerializeField] private GameObject itemPanel;
     [SerializeField] private List<GameObject> stars = new List<GameObject>();
     [SerializeField] private EquipmentInventory equipmentInventory;
@@ -24,6 +24,10 @@ public class EquipmentPanel : MonoBehaviour
     int armorValue;
     int attackSpeedValue;
     int maxHealth;
+    float critChance;
+    float critDamageMultiplay;
+    int blockChance;
+    int dodgeChance;
 
     public ScriptableCharacter GetHero()
     {
@@ -49,7 +53,7 @@ public class EquipmentPanel : MonoBehaviour
         heroPrefab.GetComponent<UpdateFaceAndBody>().SetUpFace(hero);
         heroPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
         heroPrefab.transform.localScale *= 2;
-        heroName.text = hero.name;
+        heroName.text = hero.characterName;
         levelText.text = hero.level.ToString();
         expirenceText.text = hero.expirence.ToString() + "/" + hero.toNextLevel.ToString();
         expirienceSlider.value = (float)hero.expirence / (float)hero.toNextLevel;
@@ -100,12 +104,15 @@ public class EquipmentPanel : MonoBehaviour
 
     private void UpdateStatsUI()
     {
-
         damageValue = hero.damage;
         armorValue = hero.armor;
         attackSpeedValue = hero.attackRate;
         maxHealth = hero.maxHealt;
-        AdjustStatsToLevel();
+        critChance = hero.critChance;
+        critDamageMultiplay = hero.critDamageMultiplay;
+        blockChance = hero.blockChance;
+        dodgeChance = hero.dogdeChance;
+        //AdjustStatsToLevel();
 
         for (int i = 0; i<hero.equipment.GetEquipment.Count; i++)
         {
@@ -115,6 +122,10 @@ public class EquipmentPanel : MonoBehaviour
                 armorValue += hero.equipment.GetEquipment[i].armor;
                 attackSpeedValue += hero.equipment.GetEquipment[i].attackRate;
                 maxHealth += hero.equipment.GetEquipment[i].hp;
+                critChance += hero.equipment.GetEquipment[i].critChance;
+                critDamageMultiplay += hero.equipment.GetEquipment[i].critDamage;
+                blockChance += hero.equipment.GetEquipment[i].blockChance;
+                dodgeChance += hero.equipment.GetEquipment[i].dodgeChance;
             }
         }
 
@@ -122,6 +133,10 @@ public class EquipmentPanel : MonoBehaviour
         armor.text = armorValue.ToString();
         attackSpeed.text = ((float) attackSpeedValue / 100).ToString();
         maxHP.text = maxHealth.ToString();
+        critChanceText.text = critChance.ToString();
+        critDamageText.text = critDamageMultiplay.ToString();
+        blockChanceText.text = blockChance.ToString(); ;
+        dodgeChanceText.text = dodgeChance.ToString();
         heroPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
         delegator.changeSprites();
     }

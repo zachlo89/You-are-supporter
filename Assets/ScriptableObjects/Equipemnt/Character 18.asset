@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1594d8c9015cff148a0f44b326beb91b, type: 3}
-  m_Name: Shri
+  m_Name: Character 18
   m_EditorClassIdentifier: 
   equipment:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 7dbaee6d591044a4081163874ab5b4c0, type: 2}
-  - {fileID: 11400000, guid: e2aef6d3bffabb645a3f0727e54324d7, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

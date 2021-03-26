@@ -43,12 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0e851283142434d9cae6e8baeefccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listOfHeroes: {fileID: 11400000, guid: 91a883448d3afc249a7aea0753c1b2d9, type: 2}
   levelList:
   - {fileID: 11400000, guid: 64268d42fd301c24aa28be6bd972b2c1, type: 2}
   - {fileID: 11400000, guid: 7df82cb10b1e1b3478ce7a70e7671d2d, type: 2}
   - {fileID: 11400000, guid: 9563e07b9af0b304e8f6c1de5f6cd348, type: 2}
   - {fileID: 11400000, guid: 16e7ffc59b0193a4aa1da924cc928e66, type: 2}
-  levelGenerator: {fileID: 4460556902696023030, guid: ff5d3efbf13032341a1f7ca2d3feb180,
-    type: 3}
-  battleManager: {fileID: 6526154130457152672, guid: 15882e9ad5622734d8f41b3a3a13929a,
-    type: 3}
+  team: {fileID: 11400000, guid: 5900bd9d491da5340be377694e6361d1, type: 2}

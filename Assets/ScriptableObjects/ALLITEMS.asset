@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c1dcb92884c8e747b1888746ab79fa5, type: 2}
   - {fileID: 11400000, guid: e482478d32c93c342b0fda2e01329853, type: 2}
   - {fileID: 11400000, guid: d06f7da6d892cea43b80c0c3f3296223, type: 2}
-  - {fileID: 11400000, guid: ebe2b58eb3f4db04983b9a6f7a824cfc, type: 2}
+  - {fileID: 11400000, guid: 3828631a76d761f4b913d0d8be8a8d38, type: 2}
   - {fileID: 11400000, guid: 9d7719fc726f4a34492b1b41d877118c, type: 2}
   - {fileID: 11400000, guid: 157cc62a7f50bb14d88c494e0d6d45b6, type: 2}
   - {fileID: 11400000, guid: 801c2fd5f93c63f4d87354acc4adae37, type: 2}
@@ -88,5 +88,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4bf78baa1cdf6148a82f87edf467e23, type: 2}
   - {fileID: 11400000, guid: 00e6bb818074074478ffc30973ebd877, type: 2}
   - {fileID: 11400000, guid: f6e5a6a7d0024674087499f5e3d82d00, type: 2}
-  - {fileID: 11400000, guid: 3828631a76d761f4b913d0d8be8a8d38, type: 2}
   gold: {fileID: 11400000, guid: 6e52cd4856bed7e4fbd6ca18cea6e4d9, type: 2}
