@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Dunk
   m_EditorClassIdentifier: 
   equipment:
-  - {fileID: 11400000, guid: a32754e8ad673a648b6144436b32b28c, type: 2}
-  - {fileID: 11400000, guid: c67270b1058825c4caed8dcd3cf70660, type: 2}
-  - {fileID: 11400000, guid: d591b9065aac3b14d908f461bc676a2e, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: d06f7da6d892cea43b80c0c3f3296223, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}

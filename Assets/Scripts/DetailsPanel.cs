@@ -21,6 +21,7 @@ public class DetailsPanel : MonoBehaviour
     private ItemScriptable item;
     private int slotIndex;
 
+
     private void Start()
     {
         cam = Camera.main;
@@ -31,12 +32,26 @@ public class DetailsPanel : MonoBehaviour
         this.hero = hero;
     }
 
+    private Vector3 SetPosition()
+    {
+        Vector3 newPosition;
+        float halfWidth = Input.mousePosition.x - Screen.width / 2;
+        float multiplyerX = 3040 / Screen.width;
+        float halfHeight = Input.mousePosition.y - Screen.height / 2;
+        float offsetX = (GetComponent<RectTransform>().sizeDelta.x / 2) + (compareAndDisplayDetails.GetComponent<RectTransform>().sizeDelta.x / 2);
+        if (halfWidth < 0)
+        {
+            newPosition = new Vector3(halfWidth * multiplyerX + offsetX, Mathf.Clamp(halfHeight, -180, 320), 0);
+        }
+        else newPosition = new Vector3(halfWidth * multiplyerX - offsetX, Mathf.Clamp(halfHeight, -180, 320), 0);
+        return newPosition;
+    }
 
     public void EquipmentDetails(ItemScriptable item, CompareAndDisplayDetails compareAndDisplayDetails)
     {
         this.item = item;
         this.compareAndDisplayDetails = compareAndDisplayDetails;
-        transform.position = compareAndDisplayDetails.transform.position;
+        transform.localPosition = SetPosition();
         buttonUnEquip.SetActive(true);
         buttonEquip.SetActive(false);
         buttonSell.SetActive(false);
@@ -83,7 +98,7 @@ public class DetailsPanel : MonoBehaviour
     {
         this.item = item;
         this.compareAndDisplayDetails = compareAndDisplayDetails;
-        transform.position = compareAndDisplayDetails.transform.position;
+        transform.localPosition = SetPosition();
         buttonUnEquip.SetActive(false);
         buttonEquip.SetActive(true);
         buttonSell.SetActive(true);
