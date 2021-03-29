@@ -46,7 +46,7 @@ public class DisplayAndAddToTeam : MonoBehaviour
         GameObject panel1 = Instantiate(panelPrefab, spawnPanelParent);
         panel1.GetComponent<CharacterSlot>().PopulateHeroPanel(null, team, index);
 
-        heroesCount.text = "Heroes " + counter + "/7";
+        heroesCount.text = "Heroes " + counter + "/" + listOfAvaliableHeroes.heroesList.Count;
     }
 
 }

@@ -47,7 +47,6 @@ public class CharacterSlot : MonoBehaviour
     // Called when pressed (move from HeroesPanel to EquipmentPanel)
     public void SetEquipmentPanel()
     {
-        heroSelectPanel.GetComponent<Animator>().SetTrigger("FadeOutRight");
         equipmentPanel.GetComponent<Animator>().SetTrigger("FadeIn");
         equipmentPanel.GetComponent<EquipmentPanel>().UpdateUI(hero);
     }

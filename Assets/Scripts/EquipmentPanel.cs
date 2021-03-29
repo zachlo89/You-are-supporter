@@ -163,7 +163,7 @@ public class EquipmentPanel : MonoBehaviour
         }
     }
 
-    public void EquipItem(ItemScriptable item, int index, int indexToRemove)
+    public void EquipItem(ItemScriptable item, int index, int indexToRemove, GameObject detailsPanel)
     {
         if(item != null)
         {
@@ -172,6 +172,7 @@ public class EquipmentPanel : MonoBehaviour
             UpdateEquipment();
             UpdateStatsUI();
         }
+        detailsPanel.SetActive(false);
     }
 
     public void UnEquipItem(ItemScriptable item, int index)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.Rendering;
 public class LobbyUpdateExpirence : MonoBehaviour
 {
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
@@ -35,6 +35,38 @@ public class LobbyUpdateExpirence : MonoBehaviour
         temp.transform.localScale *= 1.5f;
         temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[0]);
         temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[0].equipment);
+        /*foreach (Transform child in temp.transform.GetChild(0))
+        {
+            if(child.GetComponent<SpriteRenderer>() != null)
+            {
+                child.GetComponent<SpriteRenderer>().sortingOrder /= 10;
+            }
+            foreach(Transform grandChild in child)
+            {
+                if (grandChild.GetComponent<SpriteRenderer>() != null)
+                {
+                    grandChild.GetComponent<SpriteRenderer>().sortingOrder /= 10;
+                }
+                foreach (Transform grandgrandChild in grandChild)
+                {
+                    if (grandgrandChild.GetComponent<SpriteRenderer>() != null)
+                    {
+                        grandgrandChild.GetComponent<SpriteRenderer>().sortingOrder /= 10;
+                    }
+                    foreach (Transform grandgrandgrandChild in grandgrandChild)
+                    {
+                        if (grandgrandgrandChild.GetComponent<SpriteRenderer>() != null)
+                        {
+                            grandgrandgrandChild.GetComponent<SpriteRenderer>().sortingOrder /= 10;
+                        }
+                    }
+                }
+            }
+        }
+        */
+        temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
+
         goldValue.text = inventory.Gold.value.ToString();
     }
+
 }

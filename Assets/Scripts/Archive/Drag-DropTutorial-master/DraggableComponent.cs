@@ -106,7 +106,7 @@ public class DraggableComponent : MonoBehaviour, IInitializePotentialDragHandler
 				dropArea.Drop(this);
 				OnEndDragHandler?.Invoke(eventData, true);
 				transform.SetParent(dropArea.transform);
-                equipmentPanel.EquipItem(item, index, positionIndex);
+                //equipmentPanel.EquipItem(item, index, positionIndex);
 
 				return;
 			}

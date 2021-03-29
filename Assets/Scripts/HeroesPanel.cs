@@ -20,7 +20,7 @@ public class HeroesPanel : MonoBehaviour
         delegator.changeSprites += PopulatePanel;
     }
 
-    private void PopulatePanel()
+    public void PopulatePanel()
     {
         counter = 0;
         foreach (Transform child in spawnPanelParent.transform)
@@ -36,7 +36,7 @@ public class HeroesPanel : MonoBehaviour
                 ++counter;
             }
         }
-        heroesCount.text = "Heroes " + counter + "/7";
+        heroesCount.text = "Heroes " + counter + "/" + listOfAvaliableHeroes.heroesList.Count;
     }
 
     /*

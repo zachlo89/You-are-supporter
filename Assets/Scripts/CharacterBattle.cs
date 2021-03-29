@@ -188,28 +188,6 @@ public class CharacterBattle : MonoBehaviour
         UpdateManaBar();
     }
 
-    private void AdjustStatsToLevel()
-    {
-        switch (hero.characterClass)
-        {
-            case CharacterClass.Tank:
-                for(int i = 0; i < level; i++)
-                {
-                    maxHP += (int)(maxHP * 8 / 100);
-                    damage += (int)(damage * 6 / 100);
-                }
-                break;
-            case CharacterClass.Archer:
-                maxHP += (int)(maxHP * 6 / 100);
-                damage += (int)(damage * 8 / 100);
-                break;
-            case CharacterClass.Berserker:
-                maxHP += (int)(maxHP * 7 / 100);
-                damage += (int)(damage * 7 / 100);
-                break;
-        }
-    }
-
     private void AdjustStatsToEquipment()
     {
         for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)

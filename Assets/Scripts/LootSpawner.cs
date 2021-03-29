@@ -5,10 +5,8 @@ using TMPro;
 public class LootSpawner : MonoBehaviour
 {
     [SerializeField] private ScriptableItemManager listOfAllItems;
-    [SerializeField] private int stageLevel;
+    private int stageLevel;
     [SerializeField] private GameObject spawningPoint;
-    [SerializeField] private EndDetailedPanel endDetailPanel;
-    [SerializeField] private GameObject panelDetails;
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private int spawnItemMaxCount;
@@ -19,7 +17,7 @@ public class LootSpawner : MonoBehaviour
     private List<ItemScriptable> mythicalItems = new List<ItemScriptable>();
     private List<ItemScriptable> legendaryItems = new List<ItemScriptable>();
 
-    private List<ItemScriptable> droopedItems = new List<ItemScriptable>();
+    [SerializeField] private ScriptableItemManager inventory;
     private int goldDropped;
 
     private GameManager gameManager;
@@ -182,26 +180,12 @@ public class LootSpawner : MonoBehaviour
         {
             GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
             ItemScriptable item = GetRandomItems();
-            droopedItems.Add(item);
-            temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
-            temp.GetComponent<CommunicateWitEndPanel>().SetUpCommunciationWithEndPanel(endDetailPanel, item);
+            temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(item);
+            inventory.AddItem(item);
         }
         goldDropped = Random.Range(10 * stageLevel, 100 * stageLevel);
         goldValue.text = goldDropped.ToString();
+        inventory.Gold.value += goldDropped;
     }
 
-    public void RemoveDroopedItem(ItemScriptable item)
-    {
-        droopedItems.Remove(item);
-    }
-
-    public List<ItemScriptable> GetDroppedItems()
-    {
-        return droopedItems;
-    }
-
-    public int GetDroppedGold()
-    {
-        return goldDropped;
-    }
 }

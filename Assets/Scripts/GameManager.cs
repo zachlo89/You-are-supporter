@@ -64,12 +64,15 @@ public class GameManager : MonoBehaviour
         this.currentLevel = levelList[index + 1];
     }
 
-    public void MarkAsCompleted()
+    public void MarkAsCompleted(int stars)
     {
-        this.currentLevel.stars = 3;
+        this.currentLevel.stars = stars;
         this.currentLevel.isPassed = true;
         int index = levelList.IndexOf(currentLevel);
-        levelList[index + 1].isAvaliable = true;
+        if(levelList[index + 1] != null)
+        {
+            levelList[index + 1].isAvaliable = true;
+        }
     }
 
     private void UpdateCharactersLevel()
@@ -79,7 +82,7 @@ public class GameManager : MonoBehaviour
             if (character.isAvaliable && character.expirence > 0)
             {
                 int toNextLevel = character.toNextLevel;
-                int newLevel = 1;
+                int newLevel = character.level;
                 for(int i = 0; i < 11; i++)
                 {
                     if(character.expirence >= toNextLevel)
@@ -122,7 +125,7 @@ public class GameManager : MonoBehaviour
             if(team.heroesList[j] != null)
             {
                 int toNextLevel = team.heroesList[j].toNextLevel;
-                int newLevel = 1;
+                int newLevel = team.heroesList[j].level;
                 for (int i = 0; i < 11; i++)
                 {
                     if (team.heroesList[j].expirence >= toNextLevel)

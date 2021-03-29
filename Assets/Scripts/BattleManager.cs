@@ -6,15 +6,18 @@ public class BattleManager : MonoBehaviour
 {
     private List<CharacterBattle> playerCharacters = new List<CharacterBattle>();
     private List<CharacterBattle> enemiesCharacters = new List<CharacterBattle>();
-    [SerializeField] private GameObject endPanel;
+    [SerializeField] private GameObject losePanel;
+    [SerializeField] private GameObject winPanel;
     [SerializeField] private TextMeshProUGUI endText;
     [SerializeField] private LootSpawner lootSpawner;
     private bool isWon;
+    private bool panelOn;
     private void Start()
     {
+        panelOn = false;
         Time.timeScale = 1;
         isWon = false;
-        endPanel.SetActive(false);
+        winPanel.SetActive(false);
     }
     public void PopulateList(string tag, CharacterBattle hero)
     {
@@ -133,16 +136,17 @@ public class BattleManager : MonoBehaviour
 
     private void TurnOnEndPanel(bool win)
     {
-        endPanel.SetActive(true);
-        endPanel.GetComponent<EndPanel>().SetWon(win);
-        if (win)
+        if (!panelOn)
         {
-            endText.text = "You won";
-            lootSpawner.SpawnItems();
-            AddExpToThePlayer();
-        } else
-        {
-            endText.text = "You lost";
+            if (win)
+            {
+                winPanel.SetActive(true);
+                winPanel.GetComponent<WinPanel>().WinPanelConstructor();
+            } else
+            {
+                losePanel.SetActive(true);
+            }
+            panelOn = true;
         }
     }
 
@@ -156,16 +160,18 @@ public class BattleManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    private void AddExpToThePlayer()
+    public int GetEnemiesExpirience()
     {
         int sumOfExpirence = 0;
-        foreach(CharacterBattle character in enemiesCharacters)
+        foreach (CharacterBattle character in enemiesCharacters)
         {
             sumOfExpirence += character.Hero.expToGiveToThePlayers;
         }
-        foreach(CharacterBattle character1 in playerCharacters)
-        {
-            character1.Hero.expirence += (int)(sumOfExpirence / playerCharacters.Count);
-        }
+        sumOfExpirence = (int)(sumOfExpirence / playerCharacters.Count);
+        return sumOfExpirence;
+    }
+    public List<CharacterBattle> GetAllPlayersCharacters()
+    {
+        return playerCharacters;
     }
 }

@@ -61,4 +61,47 @@ public class ScriptableCharacter : ScriptableObject
     public Sprite shinR;
     public Color bodyColor;
     public Color hairColor;
+
+    public int GainExpirience(int expirence)
+    {
+        int gainedExpirience = expirence / level;
+        this.expirence += gainedExpirience;
+        while (CheckIfLevelUp())
+        {
+            AdjustStatsToLevel();
+        }
+
+        return gainedExpirience;
+    }
+
+    private bool CheckIfLevelUp()
+    {
+        if (expirence >= toNextLevel)
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    private void AdjustStatsToLevel()
+    {
+        expirence -= toNextLevel;
+        toNextLevel = (int)(toNextLevel * 1.5f);
+        ++level;
+        switch (characterClass)
+        {
+            case CharacterClass.Tank:
+                maxHealt += (int)(maxHealt * 8 / 100);
+                damage += (int)(damage * 6 / 100);
+                break;
+            case CharacterClass.Archer:
+                maxHealt += (int)(maxHealt * 6 / 100);
+                damage += (int)(damage * 8 / 100);
+                break;
+            case CharacterClass.Berserker:
+                maxHealt += (int)(maxHealt * 7 / 100);
+                damage += (int)(damage * 7 / 100);
+                break;
+        }
+    }
 }

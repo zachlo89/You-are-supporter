@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Character 15
   m_EditorClassIdentifier: 
-  characterName: Orncolb
+  expToGiveToThePlayers: 0
+  characterName: Fophni
   buyValue: 205
   isAlive: 1
   damage: 35
   armor: 5
-  maxHealt: 400
+  maxHealt: 200
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -34,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 6181b06aa9024c3f898271b472d8010f, type: 3}
-  eyesSprites: {fileID: 21300000, guid: b1b914daccf84083841ce4ead5aac920, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 0ce029fad9514d70a629d25b52f4d188, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 76364475103941d6b6f19c683d298790, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 8f56eaf0fc23438d83f7247e8b51def3, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c429fa5fbcb94c37bdab733468d04a27, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ab6df8c889ab401f8e04c42b87efa8e9, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 3f539b25934b4705bac60ea1a0e36f39, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -53,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.6186797, g: 0.72590816, b: 0.40373594, a: 1}
-  hairColor: {r: 0.9333433, g: 0.75970256, b: 0.5409815, a: 1}
+  bodyColor: {r: 0.30880684, g: 0.4232039, b: 0.18848729, a: 1}
+  hairColor: {r: 0.19836748, g: 0.32522136, b: 0.47385412, a: 1}

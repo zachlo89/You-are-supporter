@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Character 3
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Linto
+  characterName: Rizxer
   buyValue: 205
   isAlive: 1
   damage: 35
   armor: 5
-  maxHealt: 400
+  maxHealt: 200
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -36,11 +36,11 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 064d30b495434ba89cc66b68ae6c0551, type: 3}
-  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 71d1e46b2e3d4b67a4592ab929344ec7, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 5792d08041554a6e8522be53b45e4577, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 6586aa6b6c32444b89d47bf2558c5b3a, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: c73bdc8b53c446bda616430dc365da7c, type: 3}
   earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 007f4bac96d04f8ea41d8204e62261b8, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.006881714, g: 0.008619666, b: 0.5361449, a: 1}
-  hairColor: {r: 0.6643822, g: 0.8319423, b: 0.77104557, a: 1}
+  bodyColor: {r: 0.7445291, g: 0.88877225, b: 0.0060070753, a: 1}
+  hairColor: {r: 0.47292274, g: 0.41534775, b: 0.33423597, a: 1}
