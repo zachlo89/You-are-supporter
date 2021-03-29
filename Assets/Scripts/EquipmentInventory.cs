@@ -7,6 +7,7 @@ using TMPro;
 
 public class EquipmentInventory : MonoBehaviour
 {
+    [SerializeField] private GameObject detailsPanel;
     [SerializeField] private ScriptableItemManager inventory;
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] private GameObject emptyPrefab;
@@ -37,7 +38,7 @@ public class EquipmentInventory : MonoBehaviour
             {
                 GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                 temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
-                temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel);
+                temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
                 //temp.AddComponent<DraggableComponent>();
                 //Destroy(temp.GetComponent<Button>());
                 //Destroy(temp.GetComponent<EventTrigger>());
@@ -64,7 +65,7 @@ public class EquipmentInventory : MonoBehaviour
                     {
                         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                         temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
-                        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel);
+                        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
                         //temp.AddComponent<DraggableComponent>();
                         //Destroy(temp.GetComponent<Button>());
                         //Destroy(temp.GetComponent<EventTrigger>());
@@ -80,7 +81,7 @@ public class EquipmentInventory : MonoBehaviour
                     {
                         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                         temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
-                        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel);
+                        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
                         //temp.AddComponent<DraggableComponent>();
                         //Destroy(temp.GetComponent<Button>());
                         //Destroy(temp.GetComponent<EventTrigger>());
@@ -94,7 +95,7 @@ public class EquipmentInventory : MonoBehaviour
                     {
                         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                         temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
-                        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel);
+                        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
                         //temp.AddComponent<DraggableComponent>();
                         //Destroy(temp.GetComponent<Button>());
                         //Destroy(temp.GetComponent<EventTrigger>());
@@ -112,7 +113,7 @@ public class EquipmentInventory : MonoBehaviour
         inventory.AddItem(item);
         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
         temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
-        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(item, equipmentPanel.GetHero(), equipmentPanel);
+        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(item, equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
         temp.transform.SetSiblingIndex(0);
         inventoryCount.text = inventory.GetInvevtory.Count + "/200";
     }
@@ -122,7 +123,7 @@ public class EquipmentInventory : MonoBehaviour
         inventory.SwapItems(item, index);
         GameObject temp = parentLocation.transform.GetChild(index).gameObject;
         temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
-        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(item, equipmentPanel.GetHero(), equipmentPanel);
+        temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(item, equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
     }
 
     public void RemoveItem(int index)

@@ -12,7 +12,6 @@ public class DisplayEquipmenyDetails : MonoBehaviour
 
         if(compareAndDisplayDetails != null)
         {
-            compareAndDisplayDetails.SetItem(GetComponentInChildren<SetItemIcon>().GetItem);
             compareAndDisplayDetails.EquipmentDetails();
         }
     }
@@ -21,7 +20,6 @@ public class DisplayEquipmenyDetails : MonoBehaviour
     {
         if(compareAndDisplayDetails != null)
         {
-            compareAndDisplayDetails.HideDetailsPanel();
         }
     }
 

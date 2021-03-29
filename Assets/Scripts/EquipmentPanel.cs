@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class EquipmentPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject detailsPanel;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     private ScriptableCharacter hero;
     [SerializeField] private List<GameObject> equipmentList = new List<GameObject>();
@@ -36,6 +37,7 @@ public class EquipmentPanel : MonoBehaviour
 
     public void UpdateUI(ScriptableCharacter hero)
     {
+        detailsPanel.GetComponent<DetailsPanel>().SetUpDetailsPanel(hero);
         for(int i = 0; i < stars.Count; i++)
         {
             stars[i].SetActive(false);
@@ -92,8 +94,8 @@ public class EquipmentPanel : MonoBehaviour
             {
                 GameObject item = Instantiate(itemPanel, equipmentList[i].transform);
                 item.GetComponent<SetItemIcon>().UpdateIconUI(hero.equipment.GetEquipment[i]);
-                item.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(hero.equipment.GetEquipment[i], hero, this);
-
+                item.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(hero.equipment.GetEquipment[i], hero, this, detailsPanel);
+                
                 //item.AddComponent<DraggableComponent>();
                 //Destroy(item.GetComponent<Button>());
                 //Destroy(item.GetComponent<EventTrigger>());
@@ -163,7 +165,7 @@ public class EquipmentPanel : MonoBehaviour
         }
     }
 
-    public void EquipItem(ItemScriptable item, int index, int indexToRemove, GameObject detailsPanel)
+    public void EquipItem(ItemScriptable item, int index, int indexToRemove)
     {
         if(item != null)
         {
@@ -172,7 +174,6 @@ public class EquipmentPanel : MonoBehaviour
             UpdateEquipment();
             UpdateStatsUI();
         }
-        detailsPanel.SetActive(false);
     }
 
     public void UnEquipItem(ItemScriptable item, int index)
