@@ -69,10 +69,18 @@ public class GameManager : MonoBehaviour
         this.currentLevel.stars = stars;
         this.currentLevel.isPassed = true;
         int index = levelList.IndexOf(currentLevel);
-        if(levelList[index + 1] != null)
+        try
         {
-            levelList[index + 1].isAvaliable = true;
+            if (levelList[index + 1] != null && levelList.Count > index + 1)
+            {
+                levelList[index + 1].isAvaliable = true;
+            }
         }
+        catch
+        {
+            Debug.Log("Ups something wrong with Game Manager function MarkAsCompleted");
+        }
+        
     }
 
     private void UpdateCharactersLevel()
