@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 10
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Orncolb
+  characterName: Zike
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -36,11 +36,11 @@ MonoBehaviour:
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 89b0b52a7b4d45448d5cb77f09daadf7, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 255aabca8d3540309160a197140f6584, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 007f4bac96d04f8ea41d8204e62261b8, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 6181b06aa9024c3f898271b472d8010f, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c429fa5fbcb94c37bdab733468d04a27, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: a6322f50596f429889812f5f3ad23916, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: f92e9ef275934c9da5096dd5b3b0da0c, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.0015617609, g: 0.76240385, b: 0.69295955, a: 1}
-  hairColor: {r: 0.2771563, g: 0.78633106, b: 0.24963582, a: 1}
+  bodyColor: {r: 0.45755225, g: 0.117411256, b: 0.59828514, a: 1}
+  hairColor: {r: 0.81250274, g: 0.1577071, b: 0.57568747, a: 1}

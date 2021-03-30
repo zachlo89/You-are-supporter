@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 11
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Jeffrick
+  characterName: Geron
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: ad9da5af68a542848494cd0905aba20b, type: 3}
-  eyesSprites: {fileID: 21300000, guid: f8b750706502462da0c9cdb378eb28ff, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 334b86a048fc4651a618e411bb4b9bcf, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 6f4e64f0d219437098c7a36a04149a56, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 5e156ab1626d4c13a5397c902c228c58, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: f5ef33a9d6b34416b12a7870e77fd0fa, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: dbe5af76dc2c49fbbc9f81705434657a, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.5102444, g: 0.79313576, b: 0.8332714, a: 1}
-  hairColor: {r: 0.9556714, g: 0.74389553, b: 0.36059648, a: 1}
+  bodyColor: {r: 0.17996633, g: 0.44692928, b: 0.9466237, a: 1}
+  hairColor: {r: 0.06519306, g: 0.4345469, b: 0.366736, a: 1}

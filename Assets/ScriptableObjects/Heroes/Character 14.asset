@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 14
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Henca
+  characterName: Zike
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -32,15 +32,15 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 57fe3255dbf6a9540a13ebb0d914a051, type: 2}
-  isAvaliable: 0
+  isAvaliable: 1
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3c5718446b1f4eb795beabb39d7762e0, type: 3}
-  eyesSprites: {fileID: 21300000, guid: da9a1aed608040728e7066b0538decb1, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 255aabca8d3540309160a197140f6584, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 016b51906ed84b29a6834b8115f5ba3b, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 073f358905d14220a3c132cdd92b2451, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ab6df8c889ab401f8e04c42b87efa8e9, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: 34c4cbf6a3374fda8cb2d8c91e7d2b2d, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.6449784, g: 0.1811341, b: 0.49066395, a: 1}
-  hairColor: {r: 0.3871079, g: 0.8912251, b: 0.62457854, a: 1}
+  bodyColor: {r: 0.64633477, g: 0.362562, b: 0.8527154, a: 1}
+  hairColor: {r: 0.11161673, g: 0.08364487, b: 0.23720169, a: 1}

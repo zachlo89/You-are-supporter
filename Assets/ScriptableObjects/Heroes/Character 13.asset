@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 13
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Hintiz
+  characterName: Varlog
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
   hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
-  eyesSprites: {fileID: 21300000, guid: c8f5893530e14cb3b7cef889de254efa, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 6fab29d8f7584a1ebc87268574886938, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 6fe50e152624414d97efadf5155e4cb6, type: 3}
+  eyesSprites: {fileID: 21300000, guid: e69486cc4c6447c1a0bf69662fe3d8d6, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: b18765057a3a4f728d75c7d74bf36b6a, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: 016b51906ed84b29a6834b8115f5ba3b, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.26602298, g: 0.80748045, b: 0.9173696, a: 1}
-  hairColor: {r: 0.3320976, g: 0.54332274, b: 0.27982062, a: 1}
+  bodyColor: {r: 0.86408126, g: 0.87300384, b: 0.022664547, a: 1}
+  hairColor: {r: 0.17977011, g: 0.6837231, b: 0.39934844, a: 1}

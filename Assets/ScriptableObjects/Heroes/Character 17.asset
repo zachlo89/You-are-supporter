@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 17
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Qhit
+  characterName: Woulfen
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3a4f56c9e6a147a5aa2abb009a3cd04e, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 8869a8f2f8834c92b17fc996d332dd61, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: b18765057a3a4f728d75c7d74bf36b6a, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 51fbeda28e0d421b9210cdb6f6fbc442, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
+  eyesSprites: {fileID: 21300000, guid: de601e997cfb460398b2a629315670d9, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: c9d211e491314116a005138cfcf15a92, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: f92e9ef275934c9da5096dd5b3b0da0c, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.8004514, g: 0.45966262, b: 0.6451348, a: 1}
-  hairColor: {r: 0.26321465, g: 0.51584846, b: 0.3362878, a: 1}
+  bodyColor: {r: 0.04725206, g: 0.71951854, b: 0.38343173, a: 1}
+  hairColor: {r: 0.88432, g: 0.6526265, b: 0.89811444, a: 1}
