@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 6
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Baskez
+  characterName: Gothred
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 6f72ce9ddd3c42ec9b9d7d16fe8d664d, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 334b86a048fc4651a618e411bb4b9bcf, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 016b51906ed84b29a6834b8115f5ba3b, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: cd4b02af7c574c24b56c203b178101b7, type: 3}
+  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ff2125667e764565a68631a14f83fdfb, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: 2b72e93bec044e2e86e752db599205ad, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.06275654, g: 0.56489915, b: 0.9940784, a: 1}
-  hairColor: {r: 0.2536257, g: 0.7257707, b: 0.13651204, a: 1}
+  bodyColor: {r: 0.6907691, g: 0.8324399, b: 0.8255123, a: 1}
+  hairColor: {r: 0.28446335, g: 0.48805207, b: 0.39762634, a: 1}

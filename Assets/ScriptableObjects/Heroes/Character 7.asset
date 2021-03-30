@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 7
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Haggalder
+  characterName: Timian
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3c5718446b1f4eb795beabb39d7762e0, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9fb20787124c478ca7223deb84370ce3, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 78e9ad35529c4051b29728186bcf864b, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: b6d5cb29020a41c382199afb9138439e, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 4e3d022125a44bd194802be13c5c608f, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ab6df8c889ab401f8e04c42b87efa8e9, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 4ee93db48e0d43daae472962473e1d23, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.6071817, g: 0.26413387, b: 0.7695519, a: 1}
-  hairColor: {r: 0.14767134, g: 0.72945046, b: 0.9442723, a: 1}
+  bodyColor: {r: 0.06614554, g: 0.34686357, b: 0.48803264, a: 1}
+  hairColor: {r: 0.40627402, g: 0.12413812, b: 0.7243391, a: 1}

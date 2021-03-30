@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 5
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Cyrin
+  characterName: Haggalder
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -36,11 +36,11 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d57c3f5fedf646f0aad587e9914b351f, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 37991c643f404818a7895b83facf8c62, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: c769eeb489ca4efd911e48d34c81ae6a, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: bd9830c468084850ad0c470ce5bca091, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 92251016f5da44f781e5b000479463ee, type: 3}
+  eyesSprites: {fileID: 21300000, guid: ab8ce33a207146c08197b150b8aadf2f, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: b18765057a3a4f728d75c7d74bf36b6a, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: b6d5cb29020a41c382199afb9138439e, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.92653954, g: 0.43722874, b: 0.089554906, a: 1}
-  hairColor: {r: 0.077898264, g: 0.089989185, b: 0.82904935, a: 1}
+  bodyColor: {r: 0.2988525, g: 0.9328325, b: 0.050917506, a: 1}
+  hairColor: {r: 0.12973464, g: 0.39463, b: 0.4168567, a: 1}
