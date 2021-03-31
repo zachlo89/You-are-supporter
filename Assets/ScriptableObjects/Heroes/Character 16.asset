@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 16
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Baskez
+  characterName: Tordan
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -36,11 +36,11 @@ MonoBehaviour:
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3cf352e64a654f11bde351e0ba740a18, type: 3}
-  eyesSprites: {fileID: 21300000, guid: ab8ce33a207146c08197b150b8aadf2f, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: c769eeb489ca4efd911e48d34c81ae6a, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 9b4944d27ae14619a5bf5c0aa8708b3b, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 1ad4b61218924dc5b659e55f517a82fe, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: a6322f50596f429889812f5f3ad23916, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 007f4bac96d04f8ea41d8204e62261b8, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 5707582b262b48a6a9807f75aa3778f7, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.47784573, g: 0.9382999, b: 0.04812503, a: 1}
-  hairColor: {r: 0.70023453, g: 0.8204826, b: 0.65302277, a: 1}
+  bodyColor: {r: 0.27974504, g: 0.62818897, b: 0.60231024, a: 1}
+  hairColor: {r: 0.15031576, g: 0.9983274, b: 0.35404187, a: 1}

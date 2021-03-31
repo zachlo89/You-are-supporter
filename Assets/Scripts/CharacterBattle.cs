@@ -43,6 +43,10 @@ public class CharacterBattle : MonoBehaviour
     private int dodgeChance;
     private int blockChance;
     private int level;
+    public int Level
+    {
+        get { return level; }
+    }
     private float criticalChance;
     public float CriticalChance
     {
@@ -86,6 +90,7 @@ public class CharacterBattle : MonoBehaviour
         }
         canvasPanel.SetActive(true);
         InvokeRepeating("RegenMana", 1, 1);
+        InvokeRepeating("RegenHP", 1, 1);
     }
 
     public void AddRegeneration(int regeneration)
@@ -150,7 +155,6 @@ public class CharacterBattle : MonoBehaviour
         this.damage = hero.damage;
         this.armor = hero.armor;
         this.attackRate = hero.attackRate;
-        //AdjustStatsToLevel();
         AdjustStatsToEquipment();
 
         this.battleManager = battleManager;
@@ -396,5 +400,22 @@ public class CharacterBattle : MonoBehaviour
         attackRate += value;
         yield return new WaitForSeconds(duration);
         attackRate -= value;
+    }
+
+    public void AttackBuff(int value, float duration)
+    {
+        StartCoroutine(AttackIncrease(value, duration));
+    }
+
+    IEnumerator AttackIncrease(int value, float duration)
+    {
+        damage += value;
+        yield return new WaitForSeconds(duration);
+        damage -= value;
+    }
+
+    public void Dispel()
+    {
+        //TO DO remove all negative buffs
     }
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8beeb46ed670b0498a867efa37f2591, type: 3}
+  m_Name: BufferSkillTree
+  m_EditorClassIdentifier: 
+  skillTree:
+  - {fileID: 11400000, guid: 3257a869ccf960f44b97cf4993c5b263, type: 2}
+  - {fileID: 11400000, guid: 473148c6baad3c74dafb71bcec3c4b93, type: 2}
+  - {fileID: 11400000, guid: b5fe6f380fc165c45b87b8a1a004ed9f, type: 2}
+  - {fileID: 11400000, guid: bdd2915418729124184a84a08942be21, type: 2}
+  counter: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 9
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Crix
+  characterName: Henca
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 27fc2780c0364e2889a735d49e360509, type: 3}
-  eyesSprites: {fileID: 21300000, guid: b7c4e5d2afaa4db4ae8eac999513ce4a, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: b18765057a3a4f728d75c7d74bf36b6a, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: e69fabaf2f2c4847a360900c759e7a81, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 0eab5ad0fc5043babb8559a8bb6cbbe5, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9b5d8a04eefd4e29a08c70770cfdb3d0, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 1f8f6a255b0e404d85f94955da2efb1c, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 8fa752b4052845d5bc3696fa55967802, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.5987783, g: 0.560703, b: 0.9998504, a: 1}
-  hairColor: {r: 0.6079841, g: 0.89635885, b: 0.55385536, a: 1}
+  bodyColor: {r: 0.6639737, g: 0.8874744, b: 0.4204219, a: 1}
+  hairColor: {r: 0.6168135, g: 0.8869052, b: 0.34172922, a: 1}

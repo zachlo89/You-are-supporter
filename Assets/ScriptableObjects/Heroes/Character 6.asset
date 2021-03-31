@@ -36,11 +36,11 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: cd4b02af7c574c24b56c203b178101b7, type: 3}
-  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: ff2125667e764565a68631a14f83fdfb, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 3c5718446b1f4eb795beabb39d7762e0, type: 3}
+  eyesSprites: {fileID: 21300000, guid: b63a39b22ab64fa7921087b037aa5b2f, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 150f561c910541ebbbceda551a5e9b22, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 2b72e93bec044e2e86e752db599205ad, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 34c4cbf6a3374fda8cb2d8c91e7d2b2d, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.6907691, g: 0.8324399, b: 0.8255123, a: 1}
-  hairColor: {r: 0.28446335, g: 0.48805207, b: 0.39762634, a: 1}
+  bodyColor: {r: 0.9038528, g: 0.8815789, b: 0.69940495, a: 1}
+  hairColor: {r: 0.65228367, g: 0.19325364, b: 0.4854414, a: 1}

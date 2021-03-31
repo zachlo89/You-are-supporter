@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 1
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Cyrin
+  characterName: Fophni
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -36,11 +36,11 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: a6d4e6d111f34868b52b31fa94b76b5d, type: 3}
-  eyesSprites: {fileID: 21300000, guid: c490fb2fdd2e48889bbe3832c191d6a7, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: e0a727d44c1340d3bb56aad49d922e26, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 117b02fbbf92420fae5f0c3d75e447a0, type: 3}
+  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 0ce98b122b4048a0988bf48b4559e76e, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 2b72e93bec044e2e86e752db599205ad, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.48957735, g: 0.819872, b: 0.5276633, a: 1}
-  hairColor: {r: 0.12123859, g: 0.91092825, b: 0.5357823, a: 1}
+  bodyColor: {r: 0.5086066, g: 0.41910022, b: 0.4049334, a: 1}
+  hairColor: {r: 0.90769887, g: 0.23921287, b: 0.27841538, a: 1}

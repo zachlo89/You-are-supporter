@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character 4
   m_EditorClassIdentifier: 
   expToGiveToThePlayers: 0
-  characterName: Henca
+  characterName: Linto
   buyValue: 205
   isAlive: 1
   damage: 35
@@ -35,12 +35,12 @@ MonoBehaviour:
   isAvaliable: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 27fc2780c0364e2889a735d49e360509, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 6c2ad03e840c4349ac8e0d6af681e06e, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: d3acd862a54c4750a8f934507e1b9269, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: e5ea4022544e42b7abe9c438a20fe8f4, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: c6acdd9abafd4eb5be5a09db0d4583e3, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 7b2fd396007845a089fa944c1c5962d5, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: c9d211e491314116a005138cfcf15a92, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: aa856b5bcd87407498e1285f296ecaf6, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +54,5 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.8309121, g: 0.08391583, b: 0.84676754, a: 1}
-  hairColor: {r: 0.9565362, g: 0.84068096, b: 0.07303047, a: 1}
+  bodyColor: {r: 0.36574692, g: 0.14286816, b: 0.5559947, a: 1}
+  hairColor: {r: 0.32093447, g: 0.5910016, b: 0.4859236, a: 1}

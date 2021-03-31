@@ -1,73 +1,60 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 enum PlayerSkill
 {
-    Heal,
-    Defence,
-    Haste
+    Skill1,
+    Skill2,
+    Skill3,
+    Skill4
 }
 
 public class PlayerSKills : MonoBehaviour
 {
+    [SerializeField] private Team team;
     private PlayerSkill selectedSkill;
-    private Camera cam;
+    [SerializeField] private GameObject skill1Button, skill2Button, skill3Button, skill4Button;
     [SerializeField] private int healAmount;
     [SerializeField] private float buffDuration;
     [SerializeField] private int defenceIncrease;
     [SerializeField] private int hasteValue;
 
-    private void Start()
+    public void SelectSkill1()
     {
-        cam = Camera.main;
+        selectedSkill = PlayerSkill.Skill1;
     }
-    public void SelectHeal()
+    public void SelectSkill2()
     {
-        selectedSkill = PlayerSkill.Heal;
+        selectedSkill = PlayerSkill.Skill2;
     }
-    public void SelectDefence()
+    public void SelectSkill3()
     {
-        selectedSkill = PlayerSkill.Defence;
+        selectedSkill = PlayerSkill.Skill3;
     }
-    public void SelectHaste()
+    public void SelectSkill4()
     {
-        selectedSkill = PlayerSkill.Haste;
-    }
-
-    public void ChangeEffect(int i)
-    {
-        switch (i)
-        {
-            case 0:
-                selectedSkill = PlayerSkill.Heal;
-                break;
-            case 1:
-                selectedSkill = PlayerSkill.Defence;
-                break;
-            case 2:
-                selectedSkill = PlayerSkill.Haste;
-                break;
-            default:
-                break;
-        }
+        selectedSkill = PlayerSkill.Skill4;
     }
 
     public void UseSkill(CharacterBattle character)
     {
         switch (selectedSkill)
         {
-            case PlayerSkill.Heal:
+            case PlayerSkill.Skill1:
                 character.Heal(healAmount);
                 break;
-            case PlayerSkill.Defence:
+            case PlayerSkill.Skill2:
                 character.Defence(defenceIncrease, buffDuration);
                 break;
-            case PlayerSkill.Haste:
+            case PlayerSkill.Skill3:
                 character.Haste(hasteValue, buffDuration);
                 break;
             default:
                 return;
         }
     }
+
+
+    
 }

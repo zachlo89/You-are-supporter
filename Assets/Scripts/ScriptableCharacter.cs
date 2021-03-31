@@ -12,6 +12,7 @@ public enum CharacterClass
 [CreateAssetMenu (menuName = "ScriptableObject/Character")]
 public class ScriptableCharacter : ScriptableObject
 {
+    public bool isMainCharacter;
     public int expToGiveToThePlayers;
     public string characterName;
     public int buyValue;
@@ -34,6 +35,7 @@ public class ScriptableCharacter : ScriptableObject
     public int stars;
     public Equipment equipment;
     public bool isAvaliable;
+    public int avaliableSkillPoints;
 
 
     public CharacterClass characterClass;
@@ -62,6 +64,67 @@ public class ScriptableCharacter : ScriptableObject
     public Color bodyColor;
     public Color hairColor;
 
+    public List<PlayerSkillTree> playerSkillTree;
+    public List<PlayerScriptableSkill> activeSkills = new List<PlayerScriptableSkill>();
+
+    public void AddSkill(PlayerScriptableSkill skill)
+    {
+        
+        if (isMainCharacter)
+        {
+            if (skill != null && !CheckIfContainsSkill(skill) && activeSkills.Count < 5)
+            {
+                if(activeSkills.Count < 4)
+                {
+                    activeSkills.Add(skill);
+                } else
+                {
+                    for(int i = 0; i < activeSkills.Count; i++)
+                    {
+                        if(activeSkills[i] == null)
+                        {
+                            activeSkills[i] = skill;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public int CheckIndex(PlayerScriptableSkill skill)
+    {
+        int temp = -1;
+        if (CheckIfContainsSkill(skill))
+        {
+            temp = activeSkills.IndexOf(skill);
+        }
+        return temp;
+    }
+    public void RemoveSkill(int index)
+    {
+        activeSkills.RemoveAt(index);
+    }
+
+    public bool CheckIfContainsSkill(PlayerScriptableSkill skill)
+    {
+        if (activeSkills.Contains(skill))
+        {
+            return true;
+        }
+        else return false;
+    }
+
+    public bool HasAvaliableSkillSlot()
+    {
+        if (activeSkills.Count > 4)
+        {
+            return false;
+        }
+        else return true;
+    }
+        
+   
+
     public int GainExpirience(int expirence)
     {
         int gainedExpirience = expirence / level;
@@ -85,6 +148,7 @@ public class ScriptableCharacter : ScriptableObject
 
     private void AdjustStatsToLevel()
     {
+        ++avaliableSkillPoints;
         expirence -= toNextLevel;
         toNextLevel = (int)(toNextLevel * 1.5f);
         ++level;
