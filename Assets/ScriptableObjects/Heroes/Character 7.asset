@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Character 7
   m_EditorClassIdentifier: 
+  isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Hintiz
+  characterName: Baskez
   buyValue: 205
   isAlive: 1
-  damage: 39
+  damage: 40
   armor: 5
-  maxHealt: 224
+  maxHealt: 250
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -27,20 +28,21 @@ MonoBehaviour:
   critDamageMultiplay: 2
   blockChance: 2
   dogdeChance: 2
-  expirence: 200
-  toNextLevel: 225
-  level: 3
+  expirence: 0
+  toNextLevel: 100
+  level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: f67a16f37293eb644aa4c9f7699c3e57, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
+  avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 6f4e64f0d219437098c7a36a04149a56, type: 3}
-  eyesSprites: {fileID: 21300000, guid: ce485bfa622e466195e9703de5748121, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 71d1e46b2e3d4b67a4592ab929344ec7, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: e69fabaf2f2c4847a360900c759e7a81, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c490fb2fdd2e48889bbe3832c191d6a7, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: c9d211e491314116a005138cfcf15a92, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +56,7 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.61833054, g: 0.428922, b: 0.17192757, a: 1}
-  hairColor: {r: 0.69878376, g: 0.21875036, b: 0.10263574, a: 1}
+  bodyColor: {r: 0.9043374, g: 0.9836395, b: 0.5769674, a: 1}
+  hairColor: {r: 0.8395846, g: 0.46352977, b: 0.29539818, a: 1}
+  playerSkillTree: []
+  activeSkills: []

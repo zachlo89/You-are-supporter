@@ -10,7 +10,12 @@ public class CharacterBattle : MonoBehaviour
     [SerializeField] private Image healthBar;
     [SerializeField] private Image manaBar;
     [SerializeField] private GameObject damagePopUp;
+    private PlayerSKills playerSKills;
     private BattleManager battleManager;
+    public BattleManager BattleManager
+    {
+        get { return battleManager; }
+    }
     private SkillsManager skillsManager;
     private ScriptableCharacter hero;
     public ScriptableCharacter Hero
@@ -61,6 +66,10 @@ public class CharacterBattle : MonoBehaviour
     private int currentHealth;
     private int hpRegen;
     private int maxMP;
+    public int MaxMP
+    {
+        get { return maxMP; }
+    }
     private int currentMana;
     private int damage;
     public int Damage
@@ -78,6 +87,7 @@ public class CharacterBattle : MonoBehaviour
     private int manaCostSkill2 = 70;
     private float skill1Cooldown;
     private float skill2Cooldown;
+    private bool isMainHero;
 
     private void Start()
     {
@@ -91,6 +101,12 @@ public class CharacterBattle : MonoBehaviour
         canvasPanel.SetActive(true);
         InvokeRepeating("RegenMana", 1, 1);
         InvokeRepeating("RegenHP", 1, 1);
+    }
+
+    public void SetUpPlayerSkills(PlayerSKills playerSKills)
+    {
+        this.playerSKills = playerSKills;
+        playerSKills.SetUpMainCharacter(this);
     }
 
     public void AddRegeneration(int regeneration)
@@ -126,6 +142,10 @@ public class CharacterBattle : MonoBehaviour
                 }
                 UpdateManaBar();
             }
+            if (isMainHero && playerSKills!= null)
+            {
+                playerSKills.SetCurrentMana(currentMana);
+            }
         } 
     }
 
@@ -143,6 +163,14 @@ public class CharacterBattle : MonoBehaviour
             }
             UpdateHealthBar();
         }
+    }
+
+    public void MainHeroSetUpManaBar(Image manabar)
+    {
+        manaBar.fillAmount = 0;
+        manaBar = manabar;
+        manaBar.fillAmount = 1;
+        manabar.gameObject.SetActive(true);
     }
 
     public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager, SkillsManager skillsManager)
@@ -171,7 +199,7 @@ public class CharacterBattle : MonoBehaviour
 
         this.currentHealth = hero.maxHealt;
         this.currentMana = hero.maxMana;
-        
+        this.isMainHero = hero.isMainCharacter;
         
         
         if(hero.equipment != null)
@@ -190,6 +218,10 @@ public class CharacterBattle : MonoBehaviour
         }
         battleManager.PopulateList(gameObject.tag, this);
         UpdateManaBar();
+        if (isMainHero && playerSKills != null)
+        {
+            playerSKills.SetCurrentMana(currentMana);
+        }
     }
 
     private void AdjustStatsToEquipment()
@@ -320,7 +352,10 @@ public class CharacterBattle : MonoBehaviour
                 possibleAttacks = 2;
             }
             int currentAttack = Random.Range(0, possibleAttacks);
-
+            if (isMainHero)
+            {
+                currentAttack = 0;
+            }
             switch (currentAttack)
             {
                 case 0:
@@ -340,6 +375,12 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
+    public void MainPlayerUseMana(int mana)
+    {
+        currentMana -= mana;
+        UpdateManaBar();
+        playerSKills.SetCurrentMana(currentMana);
+    }
     private void UpdateManaBar()
     {
         if(manaBar != null)
@@ -418,4 +459,27 @@ public class CharacterBattle : MonoBehaviour
     {
         //TO DO remove all negative buffs
     }
+
+    public void ManaRegen(int mana)
+    {
+        manaRegen += mana;
+    }
+
+    public void HpRegenBuff(int value, float duration)
+    {
+        StartCoroutine(RegenHPBuff(value, duration));
+    }
+
+    IEnumerator RegenHPBuff(int value, float duration)
+    {
+        hpRegen += value;
+        yield return new WaitForSeconds(duration);
+        hpRegen -= value;
+    }
+
+    public void InreaseMaxMana(int value)
+    {
+        maxMP += value;
+    }
+
 }

@@ -8,7 +8,7 @@ public class DamageBuff : PlayerScriptableSkill
     public float buffDuration;
     public override string StatsDescription()
     {
-        string stats = "";
+        string stats = "Single target";
         if (level < 1)
         {
             stats = "Increase attack: <color=red>" + effectValue + "</color> single target for " + buffDuration + " seconds";

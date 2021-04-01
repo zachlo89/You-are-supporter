@@ -22,6 +22,10 @@ public class SkillsPanel : MonoBehaviour
     [SerializeField] private List<Button> buttonsList;
     [SerializeField] private TextMeshProUGUI upgradeButtonText;
     [SerializeField] private List<Transform> activeSkillsSpawningPoint = new List<Transform>();
+    [SerializeField] private TextMeshProUGUI avaliablePointText;
+    [SerializeField] private TextMeshProUGUI requrimentsText;
+
+    [SerializeField] private List<int> tresholds = new List<int>();
     private PlayerScriptableSkill currentSkill;
 
     private List<PlayerScriptableSkill> skillsAtHand = new List<PlayerScriptableSkill>();
@@ -31,6 +35,10 @@ public class SkillsPanel : MonoBehaviour
     private bool isAvaliable;
     private int mainCharacterSkillsTree = 0;
 
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
     private void OnEnable()
     {
         listOfActiveHeroes.Clear();
@@ -69,55 +77,59 @@ public class SkillsPanel : MonoBehaviour
         }
         if (listOfActiveHeroes[charactersCounter].isMainCharacter)
         {
-            int counter = listOfActiveHeroes[charactersCounter].playerSkillTree[mainCharacterSkillsTree].SetCounter();
-            if (listOfActiveHeroes[charactersCounter].playerSkillTree[mainCharacterSkillsTree] != null)
+           
+            if (mainCharacterSkillsTree <= listOfActiveHeroes[charactersCounter].playerSkillTree.Count - 1)
             {
+                int counter = listOfActiveHeroes[charactersCounter].playerSkillTree[mainCharacterSkillsTree].SetCounter();
                 foreach (PlayerScriptableSkill skill in listOfActiveHeroes[charactersCounter].playerSkillTree[mainCharacterSkillsTree].skillTree)
                 {
-                    switch (skill.skillDifficultyLevel)
+                    if(skill != null)
                     {
-                        case SkillDifficultyLevel.Novice:
-                            GameObject temp = Instantiate(skillPrefab, skillsSpawningPositions[0]);
-                            temp.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, true);
-                            break;
-                        case SkillDifficultyLevel.Apprentice:
-                            GameObject temp1 = Instantiate(skillPrefab, skillsSpawningPositions[1]);
-                            if (counter > 4)
-                            {
-                                isAvaliable = true;
-                            }
-                            else isAvaliable = false;
-                            temp1.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
-                            break;
-                        case SkillDifficultyLevel.Adept:
-                            GameObject temp2 = Instantiate(skillPrefab, skillsSpawningPositions[2]);
-                            if (counter > 8)
-                            {
-                                isAvaliable = true;
-                            }
-                            else isAvaliable = false;
-                            temp2.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
-                            break;
-                        case SkillDifficultyLevel.Expert:
-                            if (counter > 12)
-                            {
-                                isAvaliable = true;
-                            }
-                            else isAvaliable = false;
-                            GameObject temp3 = Instantiate(skillPrefab, skillsSpawningPositions[3]);
-                            temp3.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
-                            break;
-                        case SkillDifficultyLevel.Master:
-                            if (counter > 16)
-                            {
-                                isAvaliable = true;
-                            }
-                            else isAvaliable = false;
-                            GameObject temp4 = Instantiate(skillPrefab, skillsSpawningPositions[4]);
-                            temp4.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
-                            break;
-                        default:
-                            break;
+                        switch (skill.skillDifficultyLevel)
+                        {
+                            case SkillDifficultyLevel.Novice:
+                                GameObject temp = Instantiate(skillPrefab, skillsSpawningPositions[0]);
+                                temp.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, true);
+                                break;
+                            case SkillDifficultyLevel.Apprentice:
+                                GameObject temp1 = Instantiate(skillPrefab, skillsSpawningPositions[1]);
+                                if (counter > tresholds[0])
+                                {
+                                    isAvaliable = true;
+                                }
+                                else isAvaliable = false;
+                                temp1.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                                break;
+                            case SkillDifficultyLevel.Adept:
+                                GameObject temp2 = Instantiate(skillPrefab, skillsSpawningPositions[2]);
+                                if (counter > tresholds[1])
+                                {
+                                    isAvaliable = true;
+                                }
+                                else isAvaliable = false;
+                                temp2.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                                break;
+                            case SkillDifficultyLevel.Expert:
+                                if (counter > tresholds[2])
+                                {
+                                    isAvaliable = true;
+                                }
+                                else isAvaliable = false;
+                                GameObject temp3 = Instantiate(skillPrefab, skillsSpawningPositions[3]);
+                                temp3.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                                break;
+                            case SkillDifficultyLevel.Master:
+                                if (counter > tresholds[3])
+                                {
+                                    isAvaliable = true;
+                                }
+                                else isAvaliable = false;
+                                GameObject temp4 = Instantiate(skillPrefab, skillsSpawningPositions[4]);
+                                temp4.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
             }
@@ -126,6 +138,7 @@ public class SkillsPanel : MonoBehaviour
             //To do team member
         }
         SpawnActiveSkills();
+        avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
     }
 
     public void GetAnotherCharacter(int i)
@@ -163,9 +176,18 @@ public class SkillsPanel : MonoBehaviour
         if(skill.isAvaliable && skill.level < skill.maxLevel)
         {
             buttonsList[0].gameObject.SetActive(true);
-            if(skill.level < skill.maxLevel)
+            if(skill.level == 0)
             {
-                upgradeButtonText.text = "Lvl" + skill.level + 1 + " Upgrade";
+                buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "BUY";
+            } else buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "UPGRADE";
+            if (skill.level < skill.maxLevel)
+            {
+                upgradeButtonText.text = "Lvl " + (skill.level + 1) + " Upgrade";
+                if (listOfActiveHeroes[charactersCounter].avaliableSkillPoints <= 0)
+                {
+                    buttonsList[0].interactable = false;
+                }
+                else buttonsList[0].interactable = true;
             }
         }
         if(skill.isBought && !skill.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot())
@@ -175,15 +197,44 @@ public class SkillsPanel : MonoBehaviour
             buttonsList[2].gameObject.SetActive(true);
         }
 
+        if (!buttonsList[0].gameObject.activeInHierarchy && !buttonsList[1].gameObject.activeInHierarchy && !buttonsList[2].gameObject.activeInHierarchy)
+        {
+            requrimentsText.gameObject.SetActive(true);
+            int temp = 0;
+            switch (currentSkill.skillDifficultyLevel)
+            {
+                case SkillDifficultyLevel.Apprentice:
+                    temp = tresholds[0];
+                    break;
+                case SkillDifficultyLevel.Adept:
+                    temp = tresholds[1];
+                    break;
+                case SkillDifficultyLevel.Expert:
+                    temp = tresholds[2];
+                    break;
+                case SkillDifficultyLevel.Master:
+                    temp = tresholds[3];
+                    break;
+                default:
+                    break;
+
+            }
+            requrimentsText.text = "Require " + temp + " skill points invested in this skill tree";
+        }
+        else requrimentsText.gameObject.SetActive(false);
+
         SpawnActiveSkills();
+        avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
     }
 
     public void Upgrade()
     {
         if(listOfActiveHeroes[charactersCounter].avaliableSkillPoints > 0 && currentSkill.level < currentSkill.maxLevel)
         {
+            --listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
             ++currentSkill.level;
             currentSkill.isBought = true;
+            PopulateSkillTree();
         }
         UpdateLeftSide(currentSkill);
     }
@@ -225,6 +276,15 @@ public class SkillsPanel : MonoBehaviour
                 temp.GetComponent<PopulateSkillsPrefab>().Constructor(listOfActiveHeroes[charactersCounter].activeSkills[i], this, true);
             }
             else Debug.Log("Ups something went wrond SpawnActive skills");
+        }
+    }
+
+    public void ChangeTab(int i)
+    {
+        if(i > -1 && i < 4)
+        {
+            mainCharacterSkillsTree = i;
+            PopulateSkillTree();
         }
     }
 }

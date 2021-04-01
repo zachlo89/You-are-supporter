@@ -64,7 +64,7 @@ public class ScriptableCharacter : ScriptableObject
     public Color bodyColor;
     public Color hairColor;
 
-    public List<PlayerSkillTree> playerSkillTree;
+    public List<PlayerSkillTree> playerSkillTree = new List<PlayerSkillTree>();
     public List<PlayerScriptableSkill> activeSkills = new List<PlayerScriptableSkill>();
 
     public void AddSkill(PlayerScriptableSkill skill)

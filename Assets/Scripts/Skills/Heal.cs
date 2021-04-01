@@ -7,14 +7,14 @@ public class Heal : PlayerScriptableSkill
 {
     public override string StatsDescription()
     {
-        string stats = "";
+        string stats = "Single target";
         if (level < 1)
         {
-            stats = "Heal: <color=green>" + effectValue + "</color> single target";
+            stats = "Heal: <color=green>" + effectValue + "</color>";
         }
         else
         {
-            stats = "Heal: <color=green>" + effectValue + "</color> single target\n";
+            stats = "Heal: <color=green>" + effectValue + "</color>\n";
             stats += "Next level: <color=green>" + nextLevelValue + "</color>";
         }
 

@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Increase Damage
   m_EditorClassIdentifier: 
   isPassive: 0
-  isBought: 1
+  isBought: 0
   isAvaliable: 0
   isBuff: 1
-  skillName: Damage Buff
-  skillBorder: {fileID: 21300000, guid: 97015b9c8e41d49de9b3b84779bcf5a7, type: 3}
-  skillDifficultyLevel: 1
+  skillName: Attack  Buff
+  skillBorder: {fileID: 21300000, guid: 55ab78bb5705a45efbdba0f372c1469e, type: 3}
+  skillDifficultyLevel: 3
   description: Heat fire inside your team member, increase attack for short duration
-  level: 3
+  level: 0
   maxLevel: 5
   coolDown: 30
   manaCost: 20
   notOwnSprite: {fileID: 21300000, guid: 58b4b0657ad1f4473b181614294c2252, type: 3}
   icon: {fileID: 21300000, guid: f5a9593619cae42d3a04061c5e684d47, type: 3}
   defaultEffectValue: 5
-  effectValue: 15
-  nextLevelValue: 20
+  effectValue: 5
+  nextLevelValue: 5
   buffDuration: 10

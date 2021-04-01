@@ -15,6 +15,8 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private BattleManager battleManager;
     [SerializeField] private SkillsManager skillsManager;
 
+    [SerializeField] private Image manabar;
+    [SerializeField] private PlayerSKills playerSKills;
 
     private void Start()
     {
@@ -43,6 +45,11 @@ public class LevelGenerator : MonoBehaviour
                 temp.GetComponent<CharacterBattle>().enabled = true;
                 temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager, skillsManager);
                 temp.AddComponent<PlayerSkillsEffect>();
+                if (team.heroesList[i].isMainCharacter)
+                {
+                    temp.GetComponent<CharacterBattle>().MainHeroSetUpManaBar(manabar);
+                    temp.GetComponent<CharacterBattle>().SetUpPlayerSkills(playerSKills);
+                }
             }
         }
     }

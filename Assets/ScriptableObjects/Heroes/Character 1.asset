@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Character 1
   m_EditorClassIdentifier: 
+  isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Fophni
+  characterName: Cyrin
   buyValue: 205
   isAlive: 1
-  damage: 35
+  damage: 40
   armor: 5
-  maxHealt: 200
+  maxHealt: 250
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -33,14 +34,15 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 3d01e33f4d6264e42a1dd0923cad00ac, type: 2}
   isAvaliable: 0
+  avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 117b02fbbf92420fae5f0c3d75e447a0, type: 3}
-  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 2b72e93bec044e2e86e752db599205ad, type: 3}
+  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 3802004455bc4328a5f621fc79e65ed8, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: bdfcb25ed54b4848add8f4a0ffbf4a54, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 016b51906ed84b29a6834b8115f5ba3b, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +56,7 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.5086066, g: 0.41910022, b: 0.4049334, a: 1}
-  hairColor: {r: 0.90769887, g: 0.23921287, b: 0.27841538, a: 1}
+  bodyColor: {r: 0.49569887, g: 0.38431996, b: 0.15615404, a: 1}
+  hairColor: {r: 0.43019754, g: 0.76302195, b: 0.91070426, a: 1}
+  playerSkillTree: []
+  activeSkills: []

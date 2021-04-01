@@ -8,7 +8,6 @@ public class BattleManager : MonoBehaviour
     private List<CharacterBattle> enemiesCharacters = new List<CharacterBattle>();
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject winPanel;
-    [SerializeField] private TextMeshProUGUI endText;
     [SerializeField] private LootSpawner lootSpawner;
     private bool isWon;
     private bool panelOn;

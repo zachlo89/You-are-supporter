@@ -6,7 +6,7 @@ public class Dispel : PlayerScriptableSkill
 {
     public override string StatsDescription()
     {
-        return "";
+        return "Single target";
     }
 
     public override void Use(List<CharacterBattle> characters)

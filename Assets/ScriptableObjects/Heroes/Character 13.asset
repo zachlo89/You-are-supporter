@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Character 13
   m_EditorClassIdentifier: 
+  isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Geron
+  characterName: Linto
   buyValue: 205
   isAlive: 1
-  damage: 35
+  damage: 40
   armor: 5
-  maxHealt: 200
+  maxHealt: 250
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -33,14 +34,15 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 51a86efe1703dd44e838f35deea734fd, type: 2}
   isAvaliable: 0
+  avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 9b4944d27ae14619a5bf5c0aa8708b3b, type: 3}
-  eyesSprites: {fileID: 21300000, guid: b63a39b22ab64fa7921087b037aa5b2f, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 85462366a68b4e299562f2f1fa080285, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: a85607132bfc4f82972fa8a41ec8f36c, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c797087fab7c45699c6243b39a05d2dc, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 1f8f6a255b0e404d85f94955da2efb1c, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: 34c4cbf6a3374fda8cb2d8c91e7d2b2d, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +56,7 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.50866073, g: 0.16679442, b: 0.041122198, a: 1}
-  hairColor: {r: 0.74874437, g: 0.6368331, b: 0.833024, a: 1}
+  bodyColor: {r: 0.29980904, g: 0.03629875, b: 0.96940863, a: 1}
+  hairColor: {r: 0.63938177, g: 0.3999266, b: 0.8213768, a: 1}
+  playerSkillTree: []
+  activeSkills: []

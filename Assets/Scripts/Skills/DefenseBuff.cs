@@ -8,10 +8,10 @@ public class DefenseBuff : PlayerScriptableSkill
     public float buffDuration;
     public override string StatsDescription()
     {
-        string stats = "";
+        string stats = "Single target";
         if (level < 1)
         {
-            stats = "Increase defense: <color=blue>" + effectValue + "</color> single target for " + buffDuration + " seconds";
+            stats = "Increase defense: <color=yellow>" + effectValue + "</color> single target for " + buffDuration + " seconds";
         }
         else
         {

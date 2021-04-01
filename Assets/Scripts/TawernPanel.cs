@@ -32,6 +32,11 @@ public class TawernPanel : MonoBehaviour
         rightPanel.SetActive(false);
         goldValue.text = inventory.Gold.value.ToString();
     }
+
+    public void UpdateGoldValue()
+    {
+        goldValue.text = inventory.Gold.value.ToString();
+    }
     public void PopulateTawern()
     {
         for(int i = 0; i < newCharactersCount; i++)

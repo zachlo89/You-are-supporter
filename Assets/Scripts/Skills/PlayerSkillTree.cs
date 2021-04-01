@@ -12,7 +12,15 @@ public class PlayerSkillTree : ScriptableObject
         counter = 0;
         foreach(PlayerScriptableSkill skill in skillTree)
         {
-            counter += skill.level;
+            try
+            {
+                counter += skill.level;
+            } catch
+            {
+                Debug.Log("No skills avaliable");
+            }
+                
+
         }
         return counter;
     }

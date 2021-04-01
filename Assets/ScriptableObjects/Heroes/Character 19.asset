@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Character 19
   m_EditorClassIdentifier: 
+  isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Zaamaar
+  characterName: Fragg
   buyValue: 205
   isAlive: 1
-  damage: 35
+  damage: 40
   armor: 5
-  maxHealt: 200
+  maxHealt: 250
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -33,14 +34,15 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 07173b6fe9b37df4bb29669082fb4ea6, type: 2}
   isAvaliable: 0
+  avaliableSkillPoints: 0
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: a6d4e6d111f34868b52b31fa94b76b5d, type: 3}
-  eyesSprites: {fileID: 21300000, guid: feb226543f3d41d3b51e810770e91f90, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 0ce029fad9514d70a629d25b52f4d188, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 8fa752b4052845d5bc3696fa55967802, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d6bcee7aeea94be6ad83fc4300527d9c, type: 3}
+  eyesSprites: {fileID: 21300000, guid: b0ba65702abb4b6383621cbf0f223761, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: dbe5af76dc2c49fbbc9f81705434657a, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -54,5 +56,7 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.7828847, g: 0.73605216, b: 0.6426443, a: 1}
-  hairColor: {r: 0.4806425, g: 0.4335218, b: 0.51610464, a: 1}
+  bodyColor: {r: 0.24673545, g: 0.2200005, b: 0.54391235, a: 1}
+  hairColor: {r: 0.677946, g: 0.2522499, b: 0.05051899, a: 1}
+  playerSkillTree: []
+  activeSkills: []
