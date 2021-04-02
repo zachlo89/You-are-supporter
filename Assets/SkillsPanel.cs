@@ -27,6 +27,7 @@ public class SkillsPanel : MonoBehaviour
 
     [SerializeField] private List<int> tresholds = new List<int>();
     private PlayerScriptableSkill currentSkill;
+    private CharacterSkill currentSkill1;
 
     private List<PlayerScriptableSkill> skillsAtHand = new List<PlayerScriptableSkill>();
     private List<ScriptableCharacter> listOfActiveHeroes = new List<ScriptableCharacter>();
@@ -135,7 +136,58 @@ public class SkillsPanel : MonoBehaviour
             }
         } else
         {
-            //To do team member
+            int counter = listOfActiveHeroes[charactersCounter].characterSkillTree[mainCharacterSkillsTree].SetCounter();
+            foreach (CharacterSkill skill in listOfActiveHeroes[charactersCounter].characterSkillTree[mainCharacterSkillsTree].skillTree)
+            {
+                if (skill != null)
+                {
+                    switch (skill.skillDifficultyLevel)
+                    {
+                        case SkillDifficultyLevel.Novice:
+                            GameObject temp = Instantiate(skillPrefab, skillsSpawningPositions[0]);
+                            temp.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, true);
+                            break;
+                        case SkillDifficultyLevel.Apprentice:
+                            GameObject temp1 = Instantiate(skillPrefab, skillsSpawningPositions[1]);
+                            if (counter > tresholds[0])
+                            {
+                                isAvaliable = true;
+                            }
+                            else isAvaliable = false;
+                            temp1.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                            break;
+                        case SkillDifficultyLevel.Adept:
+                            GameObject temp2 = Instantiate(skillPrefab, skillsSpawningPositions[2]);
+                            if (counter > tresholds[1])
+                            {
+                                isAvaliable = true;
+                            }
+                            else isAvaliable = false;
+                            temp2.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                            break;
+                        case SkillDifficultyLevel.Expert:
+                            if (counter > tresholds[2])
+                            {
+                                isAvaliable = true;
+                            }
+                            else isAvaliable = false;
+                            GameObject temp3 = Instantiate(skillPrefab, skillsSpawningPositions[3]);
+                            temp3.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                            break;
+                        case SkillDifficultyLevel.Master:
+                            if (counter > tresholds[3])
+                            {
+                                isAvaliable = true;
+                            }
+                            else isAvaliable = false;
+                            GameObject temp4 = Instantiate(skillPrefab, skillsSpawningPositions[4]);
+                            temp4.GetComponent<PopulateSkillsPrefab>().Constructor(skill, this, isAvaliable);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
         }
         SpawnActiveSkills();
         avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
@@ -190,7 +242,7 @@ public class SkillsPanel : MonoBehaviour
                 else buttonsList[0].interactable = true;
             }
         }
-        if(skill.isBought && !skill.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot())
+        if(skill.isBought && !skill.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot(true))
         {
             buttonsList[1].gameObject.SetActive(true);
         } else if (listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && skill.isBought && !skill.isPassive){
@@ -227,56 +279,194 @@ public class SkillsPanel : MonoBehaviour
         avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
     }
 
+    public void UpdateLeftSide(CharacterSkill skill)
+    {
+        for (int i = 0; i < buttonsList.Count; i++)
+        {
+            buttonsList[i].gameObject.SetActive(false);
+        }
+        skill.Initialize(listOfActiveHeroes[charactersCounter]);
+        currentSkill1 = skill;
+        groupLeft.SetActive(true);
+        skillRarityImage.sprite = currentSkill1.skillBorder;
+        skillLevel.text = currentSkill1.level.ToString();
+        skillLevelSlider.value = (float)currentSkill1.level / (float)currentSkill1.maxLevel;
+        skillLevelSliderText.text = currentSkill1.level + "/" + currentSkill1.maxLevel;
+        skillName.text = currentSkill1.skillName;
+        skillRarityText.text = currentSkill1.skillDifficultyLevel.ToString();
+        effectDescription.text = currentSkill1.description;
+        skillStats.text = currentSkill1.StatsDescription();
+        if (skill.isAvaliable && skill.level < skill.maxLevel)
+        {
+            buttonsList[0].gameObject.SetActive(true);
+            if (skill.level == 0)
+            {
+                buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "BUY";
+            }
+            else buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "UPGRADE";
+            if (skill.level < skill.maxLevel)
+            {
+                upgradeButtonText.text = "Lvl " + (skill.level + 1) + " Upgrade";
+                if (listOfActiveHeroes[charactersCounter].avaliableSkillPoints <= 0)
+                {
+                    buttonsList[0].interactable = false;
+                }
+                else buttonsList[0].interactable = true;
+            }
+        }
+        if (skill.isBought && !skill.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot(true))
+        {
+            buttonsList[1].gameObject.SetActive(true);
+        }
+        else if (listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && skill.isBought && !skill.isPassive)
+        {
+            buttonsList[2].gameObject.SetActive(true);
+        }
+
+        if (!buttonsList[0].gameObject.activeInHierarchy && !buttonsList[1].gameObject.activeInHierarchy && !buttonsList[2].gameObject.activeInHierarchy)
+        {
+            requrimentsText.gameObject.SetActive(true);
+            int temp = 0;
+            switch (currentSkill1.skillDifficultyLevel)
+            {
+                case SkillDifficultyLevel.Apprentice:
+                    temp = tresholds[0];
+                    break;
+                case SkillDifficultyLevel.Adept:
+                    temp = tresholds[1];
+                    break;
+                case SkillDifficultyLevel.Expert:
+                    temp = tresholds[2];
+                    break;
+                case SkillDifficultyLevel.Master:
+                    temp = tresholds[3];
+                    break;
+                default:
+                    break;
+
+            }
+            requrimentsText.text = "Require " + temp + " skill points invested in this skill tree";
+        }
+        else requrimentsText.gameObject.SetActive(false);
+
+        SpawnActiveSkills();
+        avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
+    }
+
     public void Upgrade()
     {
-        if(listOfActiveHeroes[charactersCounter].avaliableSkillPoints > 0 && currentSkill.level < currentSkill.maxLevel)
+        if (listOfActiveHeroes[charactersCounter].isMainCharacter)
         {
-            --listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
-            ++currentSkill.level;
-            currentSkill.isBought = true;
-            PopulateSkillTree();
+            if (listOfActiveHeroes[charactersCounter].avaliableSkillPoints > 0 && currentSkill.level < currentSkill.maxLevel)
+            {
+                --listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
+                ++currentSkill.level;
+                currentSkill.isBought = true;
+                PopulateSkillTree();
+            }
+            UpdateLeftSide(currentSkill);
+        } else
+        {
+            if (listOfActiveHeroes[charactersCounter].avaliableSkillPoints > 0 && currentSkill1.level < currentSkill1.maxLevel)
+            {
+                --listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
+                ++currentSkill1.level;
+                currentSkill1.isBought = true;
+                PopulateSkillTree();
+            }
+            UpdateLeftSide(currentSkill1);
         }
-        UpdateLeftSide(currentSkill);
+            
     }
 
     public void EquipSkill()
     {
-        if(currentSkill.isBought && !currentSkill.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(currentSkill) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot())
+        if (listOfActiveHeroes[charactersCounter].isMainCharacter)
         {
-            listOfActiveHeroes[charactersCounter].AddSkill(currentSkill);
-            UpdateLeftSide(currentSkill);
+            if (currentSkill != null)
+            {
+                if (currentSkill.isBought && !currentSkill.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(currentSkill) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot(true))
+                {
+                    listOfActiveHeroes[charactersCounter].AddSkill(currentSkill);
+                    UpdateLeftSide(currentSkill);
+                }
+            }
         }
+        else if(!listOfActiveHeroes[charactersCounter].isMainCharacter)
+        {
+            if (currentSkill1.isBought && !currentSkill1.isPassive && !listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(currentSkill1) && listOfActiveHeroes[charactersCounter].HasAvaliableSkillSlot(false))
+            {
+                listOfActiveHeroes[charactersCounter].AddSkill(currentSkill1);
+                UpdateLeftSide(currentSkill1);
+            }
+        }
+        
     }
 
     public void UnequipSkill()
     {
-        int index = listOfActiveHeroes[charactersCounter].CheckIndex(currentSkill);
-        if (index != -1)
+        if (listOfActiveHeroes[charactersCounter].isMainCharacter)
         {
-            listOfActiveHeroes[charactersCounter].RemoveSkill(index);
+            int index = listOfActiveHeroes[charactersCounter].CheckIndex(currentSkill);
+            if (index != -1)
+            {
+                listOfActiveHeroes[charactersCounter].RemoveSkill(index);
+            }
+            else Debug.Log("Ups something went wrong Skill Panel Unequip Item");
+            UpdateLeftSide(currentSkill);
+        } else
+        {
+            int index = listOfActiveHeroes[charactersCounter].CheckIndex(currentSkill1);
+            if (index != -1)
+            {
+                listOfActiveHeroes[charactersCounter].RemoveSkill(true,index);
+            }
+            else Debug.Log("Ups something went wrong Skill Panel Unequip Item");
+            UpdateLeftSide(currentSkill1);
         }
-        else Debug.Log("Ups something went wrong Skill Panel Unequip Item");
-        UpdateLeftSide(currentSkill);
+            
     }
 
     public void SpawnActiveSkills()
     {
-        for (int i = 0; i < activeSkillsSpawningPoint.Count; i++)
+        if (listOfActiveHeroes[charactersCounter].isMainCharacter)
         {
-            foreach (Transform child in activeSkillsSpawningPoint[i])
+            for (int i = 0; i < activeSkillsSpawningPoint.Count; i++)
             {
-                GameObject.Destroy(child.gameObject);
+                foreach (Transform child in activeSkillsSpawningPoint[i])
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
+            }
+            for (int i = 0; i < listOfActiveHeroes[charactersCounter].activeSkills.Count; i++)
+            {
+                if (listOfActiveHeroes[charactersCounter].activeSkills[i] != null)
+                {
+                    GameObject temp = Instantiate(skillPrefab, activeSkillsSpawningPoint[i]);
+                    temp.GetComponent<PopulateSkillsPrefab>().Constructor(listOfActiveHeroes[charactersCounter].activeSkills[i], this, true);
+                }
+                else Debug.Log("Ups something went wrond SpawnActive skills");
+            }
+        } else
+        {
+            for (int i = 0; i < activeSkillsSpawningPoint.Count; i++)
+            {
+                foreach (Transform child in activeSkillsSpawningPoint[i])
+                {
+                    GameObject.Destroy(child.gameObject);
+                }
+            }
+            for (int i = 0; i < listOfActiveHeroes[charactersCounter].characterActiveSkills.Count; i++)
+            {
+                if (listOfActiveHeroes[charactersCounter].characterActiveSkills[i] != null)
+                {
+                    GameObject temp = Instantiate(skillPrefab, activeSkillsSpawningPoint[i]);
+                    temp.GetComponent<PopulateSkillsPrefab>().Constructor(listOfActiveHeroes[charactersCounter].characterActiveSkills[i], this, true);
+                }
+                else Debug.Log("Ups something went wrond SpawnActive skills");
             }
         }
-        for (int i = 0; i < listOfActiveHeroes[charactersCounter].activeSkills.Count; i++)
-        {
-            if (listOfActiveHeroes[charactersCounter].activeSkills[i] != null)
-            {
-                GameObject temp = Instantiate(skillPrefab, activeSkillsSpawningPoint[i]);
-                temp.GetComponent<PopulateSkillsPrefab>().Constructor(listOfActiveHeroes[charactersCounter].activeSkills[i], this, true);
-            }
-            else Debug.Log("Ups something went wrond SpawnActive skills");
-        }
+        
     }
 
     public void ChangeTab(int i)

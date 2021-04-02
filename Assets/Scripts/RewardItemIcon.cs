@@ -21,28 +21,34 @@ public class RewardItemIcon : MonoBehaviour
                 armL.sprite = item.images[1];
                 armR.sprite = item.images[2];
                 pelvis.sprite = item.images[7];
+                border.sprite = item.border;
                 break;
             case SlotPosition.meelWeapon:
                 weapon.enabled = true;
                 weapon.sprite = item.images[0];
+                border.sprite = item.border;
                 break;
             case SlotPosition.twoHandedWeapon:
                 weapon.enabled = true;
                 weapon.sprite = item.images[0];
+                border.sprite = item.border;
                 break;
             case SlotPosition.shield:
                 shield.enabled = true;
                 shield.sprite = item.images[0];
+                border.sprite = item.border;
                 break;
             case SlotPosition.head:
                 helmet.enabled = true;
                 helmet.sprite = item.images[0];
+                border.sprite = item.border;
                 break;
             case SlotPosition.shoes:
                 shoeL.enabled = true;
                 shoeR.enabled = true;
                 shoeL.sprite = item.images[1];
                 shoeR.sprite = item.images[1];
+                border.sprite = item.border;
                 break;
 
         }

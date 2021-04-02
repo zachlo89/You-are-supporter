@@ -123,6 +123,32 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    public CharacterBattle GetLastEnemy(string tag)
+    {
+        if (tag == "Enemy")
+        {
+            for (int i = playerCharacters.Count-1; i > -1; i--)
+            {
+                if (playerCharacters[i].IsAlive)
+                {
+                    return playerCharacters[i];
+                }
+            }
+            return null;
+        }
+        else
+        {
+            for (int i = enemiesCharacters.Count -1; i > 0; i--)
+            {
+                if (enemiesCharacters[i].IsAlive)
+                {
+                    return enemiesCharacters[i];
+                }
+            }
+            return null;
+        }
+    }
+
     //Use for skills
     public List<CharacterBattle> GetAllEniemies(string tag)
     {

@@ -7,16 +7,17 @@ using TMPro;
 public class CharacterBattle : MonoBehaviour
 {
     [SerializeField] private GameObject canvasPanel;
-    [SerializeField] private Image healthBar;
-    [SerializeField] private Image manaBar;
+    [SerializeField] private Slider healthBar;
+    [SerializeField] private Slider manaBar;
     [SerializeField] private GameObject damagePopUp;
     private PlayerSKills playerSKills;
+    private List<CharacterSkill> activeSkills;
     private BattleManager battleManager;
     public BattleManager BattleManager
     {
         get { return battleManager; }
     }
-    private SkillsManager skillsManager;
+   // private SkillsManager skillsManager;
     private ScriptableCharacter hero;
     public ScriptableCharacter Hero
     {
@@ -46,6 +47,10 @@ public class CharacterBattle : MonoBehaviour
         }
     }
     private int dodgeChance;
+    public int DodgeChance
+    {
+        get { return dodgeChance; }
+    }
     private int blockChance;
     private int level;
     public int Level
@@ -82,12 +87,17 @@ public class CharacterBattle : MonoBehaviour
         get { return armor; }
     }
     private int attackRate;
+    public int AttackRate
+    {
+        get { return attackRate; }
+    }
     private int manaRegen;
-    private int manaCostSkill1 = 50;
-    private int manaCostSkill2 = 70;
-    private float skill1Cooldown;
-    private float skill2Cooldown;
+    private List<float> skillsCooldowns = new List<float>();
     private bool isMainHero;
+
+    //List of varaible to possible use with diespealing negative effects
+    private bool stunned = false;
+    private bool blinded = false;
 
     private void Start()
     {
@@ -119,6 +129,12 @@ public class CharacterBattle : MonoBehaviour
         return maxHP;
     }
 
+    public void SetHP(int value)
+    {
+        this.maxHP = value;
+        this.currentHealth = value;
+    }
+
     public void SetArmor(int armor)
     {
         this.armor = armor;
@@ -131,7 +147,7 @@ public class CharacterBattle : MonoBehaviour
 
     private void RegenMana()
     {
-        if (isAlive)
+        if (isAlive && maxMP > 0)
         {
             if (currentMana < maxMP)
             {
@@ -165,17 +181,17 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
-    public void MainHeroSetUpManaBar(Image manabar)
+    public void MainHeroSetUpManaBar(Slider manabar)
     {
-        manaBar.fillAmount = 0;
+        manaBar.gameObject.SetActive(false);
         manaBar = manabar;
-        manaBar.fillAmount = 1;
-        manabar.gameObject.SetActive(true);
+        manaBar.gameObject.SetActive(true);
+        manaBar.value = 1;
     }
 
     public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager, SkillsManager skillsManager)
     {
-        this.skillsManager = skillsManager;
+       // this.skillsManager = skillsManager;
         this.hero = hero;
         this.level = hero.level;
         this.maxHP = hero.maxHealt;
@@ -189,8 +205,6 @@ public class CharacterBattle : MonoBehaviour
         this.hpRegen = hero.hpRegen;
         this.criticalChance = hero.critChance;
         this.criticalMultiply = hero.critDamageMultiplay;
-        this.skill1Cooldown = 0;
-        this.skill2Cooldown = 0;
         this.dodgeChance = hero.dogdeChance;
         this.blockChance = hero.blockChance;
         
@@ -200,6 +214,12 @@ public class CharacterBattle : MonoBehaviour
         this.currentHealth = hero.maxHealt;
         this.currentMana = hero.maxMana;
         this.isMainHero = hero.isMainCharacter;
+        
+
+        if(maxMP <= 0)
+        {
+            manaBar.gameObject.SetActive(false);
+        }
         
         
         if(hero.equipment != null)
@@ -221,6 +241,21 @@ public class CharacterBattle : MonoBehaviour
         if (isMainHero && playerSKills != null)
         {
             playerSKills.SetCurrentMana(currentMana);
+        }
+        if (!hero.isMainCharacter)
+        {
+            activeSkills = hero.characterActiveSkills;
+            activeSkills.Sort(delegate (CharacterSkill x, CharacterSkill y)
+            {
+                return string.Compare(x.manaCost.ToString(), y.manaCost.ToString());
+            });
+
+            for(int i = 0; i < activeSkills.Count; i++)
+            {
+                activeSkills[i].SetUpHero(this);
+                activeSkills[i].SetUpBattleManager(battleManager);
+                skillsCooldowns.Add(0f);
+            }
         }
     }
 
@@ -267,9 +302,9 @@ public class CharacterBattle : MonoBehaviour
 
         if (crit)
         {
-            tempDamage.GetComponentInChildren<TextMeshPro>().color = Color.red;
+            tempDamage.GetComponentInChildren<TextMeshPro>().outlineColor = Color.red;
         }
-        tempDamage.GetComponentInChildren<TextMeshPro>().text = attack.ToString();
+        tempDamage.GetComponentInChildren<TextMeshPro>().text = (-attack).ToString();
         Destroy(tempDamage, 1f);
 
         UpdateHealthBar();
@@ -300,17 +335,18 @@ public class CharacterBattle : MonoBehaviour
 
     public void Skill1Effect()
     {
-        skill1Cooldown = skillsManager.Skill1(this);
-        currentMana -= manaCostSkill1;
+        activeSkills[0].Use();
+        currentMana -= activeSkills[0].manaCost;
         UpdateManaBar();
         StartCoroutine(Skill1Avaliable());
     }
 
     IEnumerator Skill1Avaliable()
     {
-        while(skill1Cooldown > 0)
+        skillsCooldowns[0] = activeSkills[0].coolDown;
+        while(skillsCooldowns[0] > 0)
         {
-            skill1Cooldown -= Time.deltaTime;
+            skillsCooldowns[0] -= Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
@@ -322,16 +358,18 @@ public class CharacterBattle : MonoBehaviour
 
     public void Skill2Effect()
     {
-        currentMana -= manaCostSkill1;
+        activeSkills[0].Use();
+        currentMana -= activeSkills[0].manaCost;
         UpdateManaBar();
         StartCoroutine(Skill2Avaliable());
     }
 
     IEnumerator Skill2Avaliable()
     {
-        while (skill2Cooldown > 0)
+        skillsCooldowns[1] = activeSkills[1].coolDown;
+        while (skillsCooldowns[1] > 0)
         {
-            skill2Cooldown -= Time.deltaTime;
+            skillsCooldowns[1] -= Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
@@ -343,29 +381,43 @@ public class CharacterBattle : MonoBehaviour
         while (isAlive && battleManager.CheckIfEnd())
         {
             int possibleAttacks = 1;
-            if (currentMana > manaCostSkill2 && skill2Cooldown <= 0)
+            if (!isMainHero)
             {
-                possibleAttacks = 3;
-            }
-            else if (currentMana > manaCostSkill1 && skill1Cooldown <= 0)
-            {
-                possibleAttacks = 2;
+                possibleAttacks += activeSkills.Count;
             }
             int currentAttack = Random.Range(0, possibleAttacks);
-            if (isMainHero)
-            {
-                currentAttack = 0;
-            }
             switch (currentAttack)
             {
                 case 0:
                     NormalAttack();
                     break;
                 case 1:
-                    Skill1();
+                    if (activeSkills[0].manaCost <= currentMana && skillsCooldowns[0] <= 0)
+                    {
+                        Skill1();
+                    }
+                    else NormalAttack();
                     break;
                 case 2:
-                    Skill2();
+                    if (activeSkills[1].manaCost <= currentMana && skillsCooldowns[1] <= 0)
+                    {
+                        Skill2();
+                    }
+                    else NormalAttack();
+                    break;
+                case 3:
+                    if (activeSkills[2].manaCost <= currentMana && skillsCooldowns[2] <= 0)
+                    {
+                        Skill2();
+                    }
+                    else NormalAttack();
+                    break;
+                case 4:
+                    if (activeSkills[3].manaCost <= currentMana && skillsCooldowns[3] <= 0)
+                    {
+                        Skill2();
+                    }
+                    else NormalAttack();
                     break;
                 default:
                     NormalAttack();
@@ -385,13 +437,13 @@ public class CharacterBattle : MonoBehaviour
     {
         if(manaBar != null)
         {
-            manaBar.fillAmount = (float)currentMana / maxMP;
+            manaBar.value = (float)currentMana / maxMP;
         }
     }
 
     private void UpdateHealthBar()
     {
-        healthBar.fillAmount = (float)currentHealth / maxHP;
+        healthBar.value = (float)currentHealth / maxHP;
     }
 
     private bool CritAttack()
@@ -417,7 +469,12 @@ public class CharacterBattle : MonoBehaviour
         }
 
         UpdateHealthBar();
-    }
+
+        GameObject temp = Instantiate(damagePopUp, transform.position, Quaternion.identity);
+        temp.GetComponentInChildren<TextMeshPro>().outlineColor = Color.green;
+        temp.GetComponentInChildren<TextMeshPro>().text = value.ToString();
+
+}
 
     public void Defence(int value, float duration)
     {
@@ -482,4 +539,64 @@ public class CharacterBattle : MonoBehaviour
         maxMP += value;
     }
 
+    public void IncreaseBlockChance(int value, float duration)
+    {
+        StartCoroutine(BlockChanceBuff(value, duration));
+    }
+
+    IEnumerator BlockChanceBuff(int value, float duration)
+    {
+        blockChance += value;
+        yield return new WaitForSeconds(duration);
+        blockChance -= value;
+    }
+
+    public void Stunned(float duration)
+    {
+        StartCoroutine(StunningEffects(duration));
+    }
+
+    IEnumerator StunningEffects(float duration)
+    {
+        stunned = true;
+        while (stunned)
+        {
+            StopCoroutine(Attack());
+            yield return new WaitForSeconds(duration);
+            stunned = false;
+            StartCoroutine(Attack());
+        }
+    }
+
+    public void SetNewCriticalDamage(float value)
+    {
+        criticalMultiply = value;
+    }
+
+    public void SetNewDodgeChance(int value)
+    {
+        dodgeChance = value;
+    }
+
+    public void SetNewCriticalChance(float value)
+    {
+        criticalChance = value;
+    }
+    
+    public void Blind(float duration)
+    {
+        StartCoroutine(LoseSight(duration));
+    }
+
+    IEnumerator LoseSight(float duration)
+    {
+        blinded = true;
+        while (stunned)
+        {
+            StopCoroutine(Attack());
+            yield return new WaitForSeconds(duration);
+            blinded = false;
+            StartCoroutine(Attack());
+        }
+    }
 }

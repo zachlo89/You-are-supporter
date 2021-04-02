@@ -33,8 +33,8 @@ public abstract class PlayerScriptableSkill : ScriptableObject
     public float nextLevelValue;
     public void Initialize(ScriptableCharacter character)
     {
-        effectValue = (1 + (character.level / 10)) * defaultEffectValue * Mathf.Clamp(level, 1, maxLevel);
-        nextLevelValue = (1 + (character.level / 10)) * defaultEffectValue * (level+1);
+        effectValue = (1 + (character.level / 10f)) * defaultEffectValue * Mathf.Clamp(level, 1, maxLevel);
+        nextLevelValue = (1 + (character.level / 10f)) * defaultEffectValue * (level+1);
     }
 
     public abstract void Use(List<CharacterBattle> characters);

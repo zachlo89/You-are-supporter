@@ -7,6 +7,7 @@ public class PopulateSkillsPrefab : MonoBehaviour
 {
     private SkillsPanel skillsPanel;
     private PlayerScriptableSkill skill;
+    private CharacterSkill skill1;
     [SerializeField] private Image image;
 
 
@@ -22,8 +23,26 @@ public class PopulateSkillsPrefab : MonoBehaviour
         this.skillsPanel = skillsPanel;
     }
 
+    public void Constructor(CharacterSkill skill1, SkillsPanel skillsPanel, bool isAvaliable)
+    {
+        this.skill1 = skill1;
+        this.skill1.isAvaliable = isAvaliable;
+        if (skill1.isBought)
+        {
+            image.sprite = skill1.icon;
+        }
+        else image.sprite = skill1.notOwnSprite;
+        this.skillsPanel = skillsPanel;
+    }
+
     public void UpdateDetails()
     {
-        skillsPanel.UpdateLeftSide(skill);
+        if(skill != null)
+        {
+            skillsPanel.UpdateLeftSide(skill);
+        } else {
+            skillsPanel.UpdateLeftSide(skill1);
+        }
+        
     }
 }

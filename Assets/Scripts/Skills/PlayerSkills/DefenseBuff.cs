@@ -11,11 +11,11 @@ public class DefenseBuff : PlayerScriptableSkill
         string stats = "Single target";
         if (level < 1)
         {
-            stats = "Increase defense: <color=yellow>" + effectValue + "</color> single target for " + buffDuration + " seconds";
+            stats = "Increase defense: <color=yellow>" + effectValue + "</color> for " + buffDuration + " seconds";
         }
         else
         {
-            stats = "Increase defense: <color=yellow>" + effectValue + "</color> single target for " + buffDuration + " seconds\n";
+            stats = "Increase defense: <color=yellow>" + effectValue + "</color> for " + buffDuration + " seconds\n";
             if(level < maxLevel)
             {
                 stats += "Next level: <color=yellow>" + nextLevelValue + "</color>";

@@ -67,6 +67,9 @@ public class ScriptableCharacter : ScriptableObject
     public List<PlayerSkillTree> playerSkillTree = new List<PlayerSkillTree>();
     public List<PlayerScriptableSkill> activeSkills = new List<PlayerScriptableSkill>();
 
+    public List<CharacterSkillTree> characterSkillTree = new List<CharacterSkillTree>();
+    public List<CharacterSkill> characterActiveSkills = new List<CharacterSkill>();
+
     public void AddSkill(PlayerScriptableSkill skill)
     {
         
@@ -91,6 +94,30 @@ public class ScriptableCharacter : ScriptableObject
         }
     }
 
+    public void AddSkill(CharacterSkill skill)
+    {
+        if (!isMainCharacter)
+        {
+            if (skill != null && !CheckIfContainsSkill(skill) && characterActiveSkills.Count < 5)
+            {
+                if (characterActiveSkills.Count < 4)
+                {
+                    characterActiveSkills.Add(skill);
+                }
+                else
+                {
+                    for (int i = 0; i < characterActiveSkills.Count; i++)
+                    {
+                        if (characterActiveSkills[i] == null)
+                        {
+                            characterActiveSkills[i] = skill;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public int CheckIndex(PlayerScriptableSkill skill)
     {
         int temp = -1;
@@ -100,9 +127,27 @@ public class ScriptableCharacter : ScriptableObject
         }
         return temp;
     }
+
+    public int CheckIndex(CharacterSkill skill)
+    {
+        int temp = -1;
+        if (CheckIfContainsSkill(skill))
+        {
+            temp = characterActiveSkills.IndexOf(skill);
+        }
+        return temp;
+    }
     public void RemoveSkill(int index)
     {
         activeSkills.RemoveAt(index);
+    }
+
+    public void RemoveSkill(bool normalCharacter, int index)
+    {
+        if (normalCharacter)
+        {
+            characterActiveSkills.RemoveAt(index);
+        }
     }
 
     public bool CheckIfContainsSkill(PlayerScriptableSkill skill)
@@ -114,17 +159,36 @@ public class ScriptableCharacter : ScriptableObject
         else return false;
     }
 
-    public bool HasAvaliableSkillSlot()
+    public bool CheckIfContainsSkill(CharacterSkill skill)
     {
-        if (activeSkills.Count > 4)
+        if (characterActiveSkills.Contains(skill))
         {
-            return false;
+            return true;
         }
-        else return true;
+        else return false;
+    }
+
+
+    public bool HasAvaliableSkillSlot(bool mainCharacter)
+    {
+        if (mainCharacter)
+        {
+            if (activeSkills.Count > 4)
+            {
+                return false;
+            }
+            else return true;
+        } else
+        {
+            if (characterActiveSkills.Count > 4)
+            {
+                return false;
+            }
+            else return true;
+        }
+        
     }
         
-   
-
     public int GainExpirience(int expirence)
     {
         int gainedExpirience = expirence / level;
