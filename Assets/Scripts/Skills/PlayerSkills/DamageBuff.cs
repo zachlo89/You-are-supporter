@@ -28,6 +28,8 @@ public class DamageBuff : PlayerScriptableSkill
             if(hero != null && hero.IsAlive)
             {
                 hero.AttackBuff((int)effectValue, buffDuration);
+                GameObject temp = Instantiate(particleEffect, hero.transform);
+                Destroy(temp, buffDuration);
             }
         }
     }
@@ -37,6 +39,8 @@ public class DamageBuff : PlayerScriptableSkill
         if(character != null)
         {
             character.AttackBuff((int)effectValue, buffDuration);
+            GameObject temp = Instantiate(particleEffect, character.transform);
+            Destroy(temp, buffDuration);
         }
     }
 

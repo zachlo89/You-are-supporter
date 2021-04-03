@@ -31,6 +31,8 @@ public class DefenseBuff : PlayerScriptableSkill
             if (hero != null && hero.IsAlive)
             {
                 hero.Defence((int)effectValue, buffDuration);
+                GameObject temp = Instantiate(particleEffect, hero.transform);
+                Destroy(temp, buffDuration);
             }
         }
     }
@@ -40,6 +42,8 @@ public class DefenseBuff : PlayerScriptableSkill
         if (character != null && character.IsAlive)
         {
             character.Defence((int)effectValue, buffDuration);
+            GameObject temp = Instantiate(particleEffect, character.transform);
+            Destroy(temp, buffDuration);
         }
     }
 }

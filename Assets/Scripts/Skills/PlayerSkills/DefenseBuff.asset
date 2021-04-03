@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5571fdd899cb9cd45b062ae417e2cdac, type: 3}
   m_Name: DefenseBuff
   m_EditorClassIdentifier: 
+  particleEffect: {fileID: 2907607712158617624, guid: 99592b8ca17ba46498ab52606756ece4,
+    type: 3}
   isPassive: 0
   isBought: 0
-  isAvaliable: 0
+  isAvaliable: 1
   isBuff: 1
   skillName: Defense Buff
   skillBorder: {fileID: 21300000, guid: 6e89577c7208241f8b2e979f467525d9, type: 3}
@@ -26,7 +28,7 @@ MonoBehaviour:
   manaCost: 30
   notOwnSprite: {fileID: 21300000, guid: 0caa71e4ef80eff459bee6c76287ee09, type: 3}
   icon: {fileID: 21300000, guid: 4c528c391fc1b7246a7045a76e89269d, type: 3}
-  defaultEffectValue: 5
-  effectValue: 5
-  nextLevelValue: 5
+  defaultEffectValue: 10
+  effectValue: 13
+  nextLevelValue: 26
   buffDuration: 10

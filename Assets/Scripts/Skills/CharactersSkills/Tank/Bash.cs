@@ -14,14 +14,14 @@ public class Bash : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Attack enemy for: <color=red>200%\n " + stunDuration + "</color> second stun chance: <color=red>" + effectValue + "%</color>";
+            stats += "Attack enemy for: <color=red>200%\n " + stunDuration + "</color> second stun chance: <color=red>" + effectValue + "%</color>";
         }
         else
         {
-            stats = "Attack enemy for: <color=red>200%\n " + stunDuration + "</color> second stun chance: <color=red>" + effectValue + "%</color>\n";
+            stats += "Attack enemy for: <color=red>200%\n " + stunDuration + "</color> second stun chance: <color=red>" + effectValue + "%</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level stun chance: <color=yellow>" + nextLevelValue + "%</color>";

@@ -13,14 +13,14 @@ public class Precission : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Passive skill";
+        string stats = "Passive skill\n";
         if (level < 1)
         {
-            stats = "Increase critical damage by: <color=red>" + effectValue + "%</color>";
+            stats += "Increase critical damage by: <color=red>" + effectValue + "%</color>";
         }
         else
         {
-            stats = "Increase critical damage by: <color=red>" + effectValue + "%</color>\n";
+            stats += "Increase critical damage by: <color=red>" + effectValue + "%</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=red>" + nextLevelValue + "%</color>";

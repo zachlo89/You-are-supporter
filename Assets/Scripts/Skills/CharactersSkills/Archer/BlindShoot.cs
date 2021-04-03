@@ -14,14 +14,14 @@ public class BlindShoot : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Attack random enemy for: <color=red>" + effectValue + "%</color> of attack power\n Blind it for:  <color=red>" + duration + " </color>";
+            stats += "Attack random enemy for: <color=red>" + effectValue + "%</color> of attack power\n Blind it for:  <color=red>" + duration + " </color>";
         }
         else
         {
-            stats = "Attack random enemy for: <color=red>" + effectValue + "%</color> of attack power\n Blind it for:  <color=red>" + duration + " </color>\n";
+            stats += "Attack random enemy for: <color=red>" + effectValue + "%</color> of attack power\n Blind it for:  <color=red>" + duration + " </color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=red>" + nextLevelValue + "%</color>";

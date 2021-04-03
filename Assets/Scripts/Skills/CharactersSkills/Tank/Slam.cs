@@ -13,14 +13,14 @@ public class Slam : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Attack enemy: <color=red>" + effectValue + "%</color>";
+            stats += "Attack enemy: <color=red>" + effectValue + "%</color>";
         }
         else
         {
-            stats = "Attack enemy: <color=red>" + effectValue + "%</color>\n";
+            stats += "Attack enemy: <color=red>" + effectValue + "%</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=red>" + nextLevelValue + "%</color>";

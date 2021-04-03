@@ -13,14 +13,14 @@ public class ShadowStep : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Passive skill";
+        string stats = "Passive skill\n";
         if (level < 1)
         {
-            stats = "Increase dodge chance: <color=cyan>" + effectValue + "</color>";
+            stats += "Increase dodge chance: <color=cyan>" + effectValue + "</color>";
         }
         else
         {
-            stats = "Increase dodge chance: <color=cyan>" + effectValue + "</color>\n";
+            stats += "Increase dodge chance: <color=cyan>" + effectValue + "</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=cyan>" + nextLevelValue + "%</color>";

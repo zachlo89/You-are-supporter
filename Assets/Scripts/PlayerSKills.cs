@@ -52,8 +52,8 @@ public class PlayerSKills : MonoBehaviour
         {
             if(skillsCost[i] <= currentMana)
             {
-                skillsListButtons[i].SetActive(true);
-            } else skillsListButtons[i].SetActive(false);
+                skillsListButtons[i].GetComponent<Button>().interactable = true;
+            } else skillsListButtons[i].GetComponent<Button>().interactable = false;
         }
     }
 
@@ -107,6 +107,12 @@ public class PlayerSKills : MonoBehaviour
             case PlayerSkill.Skill3:
                 mainCharacter.MainPlayerUseMana(skillsCost[2]);
                 activeSkills[2].Use(character);
+                selectedSkill = PlayerSkill.Inactive;
+                CheckIfSufficentMana(currentMana);
+                break;
+            case PlayerSkill.Skill4:
+                mainCharacter.MainPlayerUseMana(skillsCost[3]);
+                activeSkills[3].Use(character);
                 selectedSkill = PlayerSkill.Inactive;
                 CheckIfSufficentMana(currentMana);
                 break;

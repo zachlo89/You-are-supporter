@@ -14,14 +14,14 @@ public class Regeneration : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Target self";
+        string stats = "Target self\n";
         if (level < 1)
         {
-            stats = "Increase hp regeneration: <color=green>" + effectValue + "%</color>";
+            stats += "Increase hp regeneration: <color=green>" + effectValue + "%</color>";
         }
         else
         {
-            stats = "Increase hp regeneration: <color=green>" + effectValue + "%</color>\n";
+            stats += "Increase hp regeneration: <color=green>" + effectValue + "%</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=green>" + nextLevelValue + "%</color>";

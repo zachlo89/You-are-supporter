@@ -24269,6 +24269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adda248837df86419534197d6ed8a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalHitsParticlePrefab: {fileID: 100000, guid: bb24fa1a8c34a19499547533720cea99,
+    type: 3}
+  animationFunctions: {fileID: 2428754911341379961}
   canvasPanel: {fileID: 7994331905006397223}
   healthBar: {fileID: 747525363881392158}
   manaBar: {fileID: 1594025969590868409}

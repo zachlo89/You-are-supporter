@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObject/PlayerScriptableSkill/MassHeal")]
 public class MassHeal : PlayerScriptableSkill
 {
-    private List<CharacterBattle> teamMembers = new List<CharacterBattle>();
     public override string StatsDescription()
     {
         string stats = "Multitarget";
@@ -24,15 +23,14 @@ public class MassHeal : PlayerScriptableSkill
 
     public override void Use(CharacterBattle character)
     {
-        if(teamMembers.Count < 1)
-        {
-            teamMembers = character.BattleManager.GetAllEniemies("Enemy");
-        }
+        List<CharacterBattle> teamMembers = new List<CharacterBattle>();
+        teamMembers = character.BattleManager.GetAllEniemies("Enemy");
         foreach (CharacterBattle hero in teamMembers)
         {
             if (hero != null && hero.IsAlive)
             {
                 hero.Heal((int)effectValue);
+                Instantiate(particleEffect, hero.transform);
             }
         }
     }
@@ -44,6 +42,7 @@ public class MassHeal : PlayerScriptableSkill
             if (hero != null && hero.IsAlive)
             {
                 hero.Heal((int)effectValue);
+                Instantiate(particleEffect, hero.transform);
             }
         }
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Baskez
+  characterName: Timian
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -35,14 +35,14 @@ MonoBehaviour:
   equipment: {fileID: 11400000, guid: f67a16f37293eb644aa4c9f7699c3e57, type: 2}
   isAvaliable: 0
   avaliableSkillPoints: 0
-  characterClass: 2
+  characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
-  eyesSprites: {fileID: 21300000, guid: c490fb2fdd2e48889bbe3832c191d6a7, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: c9d211e491314116a005138cfcf15a92, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 020889504fab43249b054df5703019e1, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 6f72ce9ddd3c42ec9b9d7d16fe8d664d, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: d0b08b4a08f1459da468991cf0077514, type: 3}
   earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 2b72e93bec044e2e86e752db599205ad, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,7 +56,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.9043374, g: 0.9836395, b: 0.5769674, a: 1}
-  hairColor: {r: 0.8395846, g: 0.46352977, b: 0.29539818, a: 1}
+  bodyColor: {r: 0.18014967, g: 0.49270314, b: 0.056928396, a: 1}
+  hairColor: {r: 0.77562654, g: 0.9302869, b: 0.5083379, a: 1}
   playerSkillTree: []
   activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: dc3b2cf4af792d34086b112bb0d9d60d, type: 2}
+  characterActiveSkills: []

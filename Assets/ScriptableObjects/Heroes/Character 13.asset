@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Linto
+  characterName: Estron
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -35,14 +35,14 @@ MonoBehaviour:
   equipment: {fileID: 11400000, guid: 51a86efe1703dd44e838f35deea734fd, type: 2}
   isAvaliable: 0
   avaliableSkillPoints: 0
-  characterClass: 2
+  characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: a85607132bfc4f82972fa8a41ec8f36c, type: 3}
-  eyesSprites: {fileID: 21300000, guid: c797087fab7c45699c6243b39a05d2dc, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 1f8f6a255b0e404d85f94955da2efb1c, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d997e7c79e8e41068a423fe5335f6ddb, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 568b0544b9aa49c5827b767199fe103e, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ac6704f167ff464fab94a433607272ad, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 34c4cbf6a3374fda8cb2d8c91e7d2b2d, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 2b72e93bec044e2e86e752db599205ad, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,7 +56,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.29980904, g: 0.03629875, b: 0.96940863, a: 1}
-  hairColor: {r: 0.63938177, g: 0.3999266, b: 0.8213768, a: 1}
+  bodyColor: {r: 0.2600966, g: 0.8659233, b: 0.92093134, a: 1}
+  hairColor: {r: 0.6736591, g: 0.56060725, b: 0.30344218, a: 1}
   playerSkillTree: []
   activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: c11e6514a67e90547814cf3705eab6f5, type: 2}
+  characterActiveSkills: []

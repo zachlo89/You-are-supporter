@@ -28,15 +28,15 @@ MonoBehaviour:
   critDamageMultiplay: 2
   blockChance: 2
   dogdeChance: 2
-  expirence: 0
+  expirence: 37
   toNextLevel: 100
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: c6c9469b5ab2a304c9136bdef3b842f1, type: 2}
   isAvaliable: 0
   avaliableSkillPoints: 0
-  characterClass: 1
-  prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
+  characterClass: 0
+  prefab: {fileID: 6857948205223096856, guid: a78794de3c429fb4c8098f2835176eb6, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
   hairsSprites: {fileID: 21300000, guid: a85607132bfc4f82972fa8a41ec8f36c, type: 3}
   eyesSprites: {fileID: 21300000, guid: 26a6385ecd0d4efba009dd0f6ca7cba8, type: 3}
@@ -60,3 +60,10 @@ MonoBehaviour:
   hairColor: {r: 0.40946454, g: 0.45087105, b: 0.7904334, a: 1}
   playerSkillTree: []
   activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: dc3b2cf4af792d34086b112bb0d9d60d, type: 2}
+  characterActiveSkills:
+  - {fileID: 11400000, guid: 08955d8fe6667c14fa622429ce955fda, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 92d3d0517dd9edb43b343c1a10f104b4, type: 2}
+  - {fileID: 11400000, guid: 0fe8cf7e7622aed45be1124dedd67aba, type: 2}

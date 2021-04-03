@@ -30,3 +30,4 @@ MonoBehaviour:
   effectValue: 15
   nextLevelValue: 15
   stunDuration: 3
+  skillEnum: 3

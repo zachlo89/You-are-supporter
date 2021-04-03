@@ -14,14 +14,14 @@ public class Quickness : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Target self";
+        string stats = "Target self\n";
         if (level < 1)
         {
-            stats = "Increase attack speed by: <color=yellow>" + effectValue + "%</color>";
+            stats += "Increase attack speed by: <color=yellow>" + effectValue + "%</color>";
         }
         else
         {
-            stats = "Increase attack speed by: <color=yellow>" + effectValue + "%</color>\n";
+            stats += "Increase attack speed by: <color=yellow>" + effectValue + "%</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=yellow>" + nextLevelValue + "%</color>";

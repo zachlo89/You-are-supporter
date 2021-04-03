@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Cyrin
+  characterName: Varlog
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -35,14 +35,14 @@ MonoBehaviour:
   equipment: {fileID: 11400000, guid: 3d01e33f4d6264e42a1dd0923cad00ac, type: 2}
   isAvaliable: 0
   avaliableSkillPoints: 0
-  characterClass: 1
+  characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 3802004455bc4328a5f621fc79e65ed8, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: bdfcb25ed54b4848add8f4a0ffbf4a54, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 016b51906ed84b29a6834b8115f5ba3b, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 2e842cd7daba41a392f535774e8096b3, type: 3}
+  eyesSprites: {fileID: 21300000, guid: f8b750706502462da0c9cdb378eb28ff, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 334b86a048fc4651a618e411bb4b9bcf, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: eb0485dc0d6e43ffb4ef1a4ebc996d15, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,7 +56,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.49569887, g: 0.38431996, b: 0.15615404, a: 1}
-  hairColor: {r: 0.43019754, g: 0.76302195, b: 0.91070426, a: 1}
+  bodyColor: {r: 0.12913942, g: 0.839705, b: 0.81656134, a: 1}
+  hairColor: {r: 0.33869332, g: 0.50624996, b: 0.19223058, a: 1}
   playerSkillTree: []
   activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: aeb6d3966d0962e43bf510bab1eba024, type: 2}
+  characterActiveSkills: []

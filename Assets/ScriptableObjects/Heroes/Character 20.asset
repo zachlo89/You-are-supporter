@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Tattrin
+  characterName: Crix
   buyValue: 205
   isAlive: 1
   damage: 40
   armor: 5
   maxHealt: 250
   hpRegen: 2
-  maxMana: 100
+  maxMana: 1000
   manaRegen: 3
   attackRate: 70
   critChance: 2
@@ -33,16 +33,16 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 26229cb95374dea41abff4d7212d12e8, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: a85607132bfc4f82972fa8a41ec8f36c, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 6f72ce9ddd3c42ec9b9d7d16fe8d664d, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 0ce029fad9514d70a629d25b52f4d188, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d6bcee7aeea94be6ad83fc4300527d9c, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 4c918f851b31465daaaebdaf842bf668, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ab6df8c889ab401f8e04c42b87efa8e9, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 76364475103941d6b6f19c683d298790, type: 3}
+  mouthSprites: {fileID: 21300000, guid: bd5df489a4834799be8356458417f891, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.86489177, g: 0.8537922, b: 0.908484, a: 1}
-  hairColor: {r: 0.26304513, g: 0.37886387, b: 0.22607839, a: 1}
+  bodyColor: {r: 0.7030566, g: 0.517693, b: 0.73139405, a: 1}
+  hairColor: {r: 0.5112092, g: 0.96644676, b: 0.93491447, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

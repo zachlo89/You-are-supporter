@@ -32,6 +32,8 @@ public class AttackSpeedBuff : PlayerScriptableSkill
             if (hero != null && hero.IsAlive)
             {
                 hero.Haste((int)effectValue, buffDuration);
+                GameObject temp = Instantiate(particleEffect, hero.transform);
+                Destroy(temp, buffDuration);
             }
         }
     }
@@ -41,6 +43,8 @@ public class AttackSpeedBuff : PlayerScriptableSkill
         if (character != null && character.IsAlive)
         {
             character.Haste((int)effectValue, buffDuration);
+            GameObject temp = Instantiate(particleEffect, character.transform);
+            Destroy(temp, buffDuration);
         }
     }
 }

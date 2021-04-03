@@ -19,7 +19,7 @@ MonoBehaviour:
   isAlive: 1
   damage: 35
   armor: 5
-  maxHealt: 270
+  maxHealt: 350
   hpRegen: 5
   maxMana: 100
   manaRegen: 3
@@ -34,7 +34,7 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 4a4ca65309ff8154e8d81540ef922d72, type: 2}
   isAvaliable: 1
-  avaliableSkillPoints: 0
+  avaliableSkillPoints: 3
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
@@ -60,4 +60,10 @@ MonoBehaviour:
   hairColor: {r: 0.4433962, g: 0, b: 0, a: 1}
   playerSkillTree:
   - {fileID: 11400000, guid: ba1d5a25bda316a40a76a553ef6a88f7, type: 2}
-  activeSkills: []
+  activeSkills:
+  - {fileID: 11400000, guid: 3257a869ccf960f44b97cf4993c5b263, type: 2}
+  - {fileID: 11400000, guid: b5fe6f380fc165c45b87b8a1a004ed9f, type: 2}
+  - {fileID: 11400000, guid: 31fe8977851fe7e4298f2867680df96d, type: 2}
+  - {fileID: 11400000, guid: 04cb0dcb65f570747aa33fb9c341077e, type: 2}
+  characterSkillTree: []
+  characterActiveSkills: []

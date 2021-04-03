@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Narek
+  characterName: Enaham
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -33,16 +33,16 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 240e0f729de6d864cae4f06b49029039, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
   avaliableSkillPoints: 0
-  characterClass: 0
+  characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: ad9da5af68a542848494cd0905aba20b, type: 3}
-  eyesSprites: {fileID: 21300000, guid: da9a1aed608040728e7066b0538decb1, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 1f8f6a255b0e404d85f94955da2efb1c, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: a6d4e6d111f34868b52b31fa94b76b5d, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9fb20787124c478ca7223deb84370ce3, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 334b86a048fc4651a618e411bb4b9bcf, type: 3}
   earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: e5ea4022544e42b7abe9c438a20fe8f4, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 4ee93db48e0d43daae472962473e1d23, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,11 +56,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.28735584, g: 0.2569403, b: 0.10171974, a: 1}
-  hairColor: {r: 0.1763345, g: 0.29826063, b: 0.1619935, a: 1}
+  bodyColor: {r: 0.70064425, g: 0.89812005, b: 0.9985037, a: 1}
+  hairColor: {r: 0.12569416, g: 0.19707215, b: 0.5528279, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:
-  - {fileID: 11400000, guid: dc3b2cf4af792d34086b112bb0d9d60d, type: 2}
-  characterActiveSkills:
-  - {fileID: 11400000, guid: a6e8316cf327a0446ac742787ee7e1cd, type: 2}
+  - {fileID: 11400000, guid: aeb6d3966d0962e43bf510bab1eba024, type: 2}
+  characterActiveSkills: []

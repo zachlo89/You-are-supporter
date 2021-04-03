@@ -26,6 +26,7 @@ public class Heal : PlayerScriptableSkill
         if(character != null)
         {
             character.Heal((int)effectValue);
+            Instantiate(particleEffect, character.transform);
         }
     }
 
@@ -36,6 +37,7 @@ public class Heal : PlayerScriptableSkill
             if(hero!= null && hero.IsAlive)
             {
                 hero.Heal((int)effectValue);
+                Instantiate(particleEffect, hero.transform);
             }
         }
     }

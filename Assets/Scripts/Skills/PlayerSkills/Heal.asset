@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e78c68c1bd9cc439e8f06e5cac1830, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
+  particleEffect: {fileID: 100006, guid: 4b96e0d8d9e130042b36e3d4a2a647d6, type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 1
@@ -27,5 +28,5 @@ MonoBehaviour:
   notOwnSprite: {fileID: 21300000, guid: 532b473d3117a4bfea1c0a9b6ddc1cc2, type: 3}
   icon: {fileID: 21300000, guid: 2485c9e6454994b36a896bc87d27d1b3, type: 3}
   defaultEffectValue: 20
-  effectValue: 22
-  nextLevelValue: 22
+  effectValue: 26
+  nextLevelValue: 52

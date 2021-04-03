@@ -13,14 +13,14 @@ public class MultiShoot : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Multi target";
+        string stats = "Multi target\n";
         if (level < 1)
         {
-            stats = "Attack all enemies by: <color=red>" + effectValue + "%</color> of attack power";
+            stats += "Attack all enemies by: <color=red>" + effectValue + "%</color> of attack power";
         }
         else
         {
-            stats = "Attack all enemies by: <color=red>" + effectValue + "%</color> of attack power\n";
+            stats += "Attack all enemies by: <color=red>" + effectValue + "%</color> of attack power\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=red>" + nextLevelValue + "%</color>";

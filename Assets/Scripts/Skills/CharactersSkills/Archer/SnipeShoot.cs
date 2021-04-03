@@ -13,14 +13,14 @@ public class SnipeShoot : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Attack enemy for: <color=red>" + effectValue + "%</color> of attack power\n Crit guarateed";
+            stats += "Attack enemy for: <color=red>" + effectValue + "%</color> of attack power\n Crit guarateed";
         }
         else
         {
-            stats = "Attack enemy for: <color=red>" + effectValue + "%</color> of attack power\n Crit guarateed\n";
+            stats += "Attack enemy for: <color=red>" + effectValue + "%</color> of attack power\n Crit guarateed\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=red>" + nextLevelValue + "%</color>";

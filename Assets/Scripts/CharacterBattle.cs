@@ -6,6 +6,8 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+    [SerializeField] private GameObject normalHitsParticlePrefab;
+    [SerializeField] private AnimationFunctions animationFunctions;
     [SerializeField] private GameObject canvasPanel;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Slider manaBar;
@@ -98,6 +100,16 @@ public class CharacterBattle : MonoBehaviour
     //List of varaible to possible use with diespealing negative effects
     private bool stunned = false;
     private bool blinded = false;
+    private bool bleeding = false;
+
+
+    //List of buffs useful with animation
+    private bool isBlockIncrease = false;
+    
+    private bool bloodLust = false;
+    private float bloodLustEffect = 0;
+
+    private int defaultAttack = 0;
 
     private void Start()
     {
@@ -252,6 +264,7 @@ public class CharacterBattle : MonoBehaviour
 
             for(int i = 0; i < activeSkills.Count; i++)
             {
+                activeSkills[i].Initialize(hero);
                 activeSkills[i].SetUpHero(this);
                 activeSkills[i].SetUpBattleManager(battleManager);
                 skillsCooldowns.Add(0f);
@@ -318,62 +331,44 @@ public class CharacterBattle : MonoBehaviour
     public void NormalAttackEffect()
     {
         CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
-        if(enemy != null)
+        if (enemy != null)
         {
             if (CritAttack())
             {
                 enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
+                Instantiate(normalHitsParticlePrefab, enemy.transform);
             }
-            else enemy.GetDamage(damage, false);
+            else
+            {
+                enemy.GetDamage(damage, false);
+                Instantiate(normalHitsParticlePrefab, enemy.transform);
+            }
         }
     }
 
-    private void Skill1()
+    private void UseSkillAnimation(int i)
     {
-        animator.SetTrigger("Skill1");
+        animationFunctions.SetSkill(i);
+        animator.SetTrigger(activeSkills[i].skillName);
     }
 
-    public void Skill1Effect()
+    public void UseSkill(int skillCount)
     {
-        activeSkills[0].Use();
+        activeSkills[skillCount].Use();
         currentMana -= activeSkills[0].manaCost;
         UpdateManaBar();
-        StartCoroutine(Skill1Avaliable());
+        StartCoroutine(SkillCooldown(skillCount));
     }
 
-    IEnumerator Skill1Avaliable()
+    IEnumerator SkillCooldown(int i)
     {
-        skillsCooldowns[0] = activeSkills[0].coolDown;
-        while(skillsCooldowns[0] > 0)
+        skillsCooldowns[i] = activeSkills[0].coolDown;
+        while(skillsCooldowns[i] > 0)
         {
-            skillsCooldowns[0] -= Time.deltaTime;
+            skillsCooldowns[i] -= Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
-
-    private void Skill2()
-    {
-        animator.SetTrigger("Skill2");
-    }
-
-    public void Skill2Effect()
-    {
-        activeSkills[0].Use();
-        currentMana -= activeSkills[0].manaCost;
-        UpdateManaBar();
-        StartCoroutine(Skill2Avaliable());
-    }
-
-    IEnumerator Skill2Avaliable()
-    {
-        skillsCooldowns[1] = activeSkills[1].coolDown;
-        while (skillsCooldowns[1] > 0)
-        {
-            skillsCooldowns[1] -= Time.deltaTime;
-            yield return new WaitForSeconds(Time.deltaTime);
-        }
-    }
-
     IEnumerator Attack()
     {
         float random = Random.Range(0f, 1f);
@@ -394,28 +389,28 @@ public class CharacterBattle : MonoBehaviour
                 case 1:
                     if (activeSkills[0].manaCost <= currentMana && skillsCooldowns[0] <= 0)
                     {
-                        Skill1();
+                        UseSkillAnimation(0);
                     }
                     else NormalAttack();
                     break;
                 case 2:
                     if (activeSkills[1].manaCost <= currentMana && skillsCooldowns[1] <= 0)
                     {
-                        Skill2();
+                        UseSkillAnimation(1);
                     }
                     else NormalAttack();
                     break;
                 case 3:
                     if (activeSkills[2].manaCost <= currentMana && skillsCooldowns[2] <= 0)
                     {
-                        Skill2();
+                        UseSkillAnimation(2);
                     }
                     else NormalAttack();
                     break;
                 case 4:
                     if (activeSkills[3].manaCost <= currentMana && skillsCooldowns[3] <= 0)
                     {
-                        Skill2();
+                        UseSkillAnimation(3);
                     }
                     else NormalAttack();
                     break;
@@ -444,6 +439,10 @@ public class CharacterBattle : MonoBehaviour
     private void UpdateHealthBar()
     {
         healthBar.value = (float)currentHealth / maxHP;
+        if (bloodLust)
+        {
+            EffectOfBloodLust();
+        }
     }
 
     private bool CritAttack()
@@ -529,9 +528,14 @@ public class CharacterBattle : MonoBehaviour
 
     IEnumerator RegenHPBuff(int value, float duration)
     {
-        hpRegen += value;
-        yield return new WaitForSeconds(duration);
-        hpRegen -= value;
+        Debug.Log("Start coroutine");
+        while (duration > 0)
+        {
+            Heal(value);
+            yield return new WaitForSeconds(1f);
+            duration -= 1f;
+        }
+        
     }
 
     public void InreaseMaxMana(int value)
@@ -591,7 +595,7 @@ public class CharacterBattle : MonoBehaviour
     IEnumerator LoseSight(float duration)
     {
         blinded = true;
-        while (stunned)
+        while (blinded)
         {
             StopCoroutine(Attack());
             yield return new WaitForSeconds(duration);
@@ -599,4 +603,37 @@ public class CharacterBattle : MonoBehaviour
             StartCoroutine(Attack());
         }
     }
+
+    public void BloodLust(float effectValue)
+    {
+        bloodLust = true;
+        defaultAttack = damage;
+        this.bloodLustEffect = effectValue;
+    }
+
+    private void EffectOfBloodLust()
+    {
+        damage = defaultAttack + (int)(maxHP / currentHealth * bloodLustEffect);
+    }
+
+    public void Bleed(float duration)
+    {
+        StartCoroutine(BleedStatus(duration));
+    }
+
+    IEnumerator BleedStatus(float duration)
+    {
+        bleeding = true;
+        while (bleeding)
+        {
+            this.GetDamage((int)(maxHP * .5 / 100), false);
+            yield return new WaitForSeconds(1f);
+            duration -= 1;
+            if(duration <= 0)
+            {
+                bleeding = false;
+            }
+        }
+    }
+
 }

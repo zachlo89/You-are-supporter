@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Fragg
+  characterName: Qhit
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -35,14 +35,14 @@ MonoBehaviour:
   equipment: {fileID: 11400000, guid: 07173b6fe9b37df4bb29669082fb4ea6, type: 2}
   isAvaliable: 0
   avaliableSkillPoints: 0
-  characterClass: 0
+  characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d6bcee7aeea94be6ad83fc4300527d9c, type: 3}
-  eyesSprites: {fileID: 21300000, guid: b0ba65702abb4b6383621cbf0f223761, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: dbe5af76dc2c49fbbc9f81705434657a, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 6f4e64f0d219437098c7a36a04149a56, type: 3}
+  eyesSprites: {fileID: 21300000, guid: ca39936a21104ecd977d6330bc93c1b3, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 6fab29d8f7584a1ebc87268574886938, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 20e574079bb844de8202fbee9526d2e9, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,7 +56,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.24673545, g: 0.2200005, b: 0.54391235, a: 1}
-  hairColor: {r: 0.677946, g: 0.2522499, b: 0.05051899, a: 1}
+  bodyColor: {r: 0.6088261, g: 0.49165064, b: 0.004704714, a: 1}
+  hairColor: {r: 0.9276849, g: 0.042947292, b: 0.5283086, a: 1}
   playerSkillTree: []
   activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: aeb6d3966d0962e43bf510bab1eba024, type: 2}
+  characterActiveSkills: []

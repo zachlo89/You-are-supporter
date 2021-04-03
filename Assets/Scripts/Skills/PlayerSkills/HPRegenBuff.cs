@@ -29,6 +29,8 @@ public class HPRegenBuff : PlayerScriptableSkill
             if (hero != null && hero.IsAlive)
             {
                 hero.HpRegenBuff((int)effectValue, duration);
+                GameObject temp = Instantiate(particleEffect, hero.transform);
+                Destroy(temp, duration);
             }
         }
     }
@@ -38,6 +40,8 @@ public class HPRegenBuff : PlayerScriptableSkill
         if (character != null && character.IsAlive)
         {
             character.HpRegenBuff((int)effectValue, duration);
+            GameObject temp = Instantiate(particleEffect, character.transform);
+            Destroy(temp, duration);
         }
     }
 }

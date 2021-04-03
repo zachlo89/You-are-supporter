@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba73752e313101b4d851fed6d9afd61a, type: 3}
   m_Name: HP Regen
   m_EditorClassIdentifier: 
+  particleEffect: {fileID: 100006, guid: a8e17c3ffdf33a4479f82e4af7fb5580, type: 3}
   isPassive: 0
   isBought: 0
-  isAvaliable: 0
+  isAvaliable: 1
   isBuff: 1
   skillName: HP Regen
   skillBorder: {fileID: 21300000, guid: 97015b9c8e41d49de9b3b84779bcf5a7, type: 3}
@@ -26,7 +27,7 @@ MonoBehaviour:
   manaCost: 20
   notOwnSprite: {fileID: 21300000, guid: 716c5c569c9049042845fbb5aac99f5d, type: 3}
   icon: {fileID: 21300000, guid: 82182c20a9ccc55449d15f8407602d45, type: 3}
-  defaultEffectValue: 5
-  effectValue: 5
-  nextLevelValue: 5
+  defaultEffectValue: 15
+  effectValue: 19.5
+  nextLevelValue: 39
   duration: 10

@@ -13,14 +13,14 @@ public class Toughness : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Passive skill";
+        string stats = "Passive skill\n";
         if (level < 1)
         {
-            stats = "Increase armor by: <color=yellow>" + effectValue + "%</color>";
+            stats += "Increase armor by: <color=yellow>" + effectValue + "%</color>";
         }
         else
         {
-            stats = "Increase armor by: <color=yellow>" + effectValue + "%</color>\n";
+            stats += "Increase armor by: <color=yellow>" + effectValue + "%</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=yellow>" + nextLevelValue + "%</color>";

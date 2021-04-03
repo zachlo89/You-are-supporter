@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d280b819ac4be44f800153ae9365867, type: 3}
   m_Name: Haste
   m_EditorClassIdentifier: 
+  particleEffect: {fileID: 8197433914150080023, guid: 768e051a05ce8a641a55162ac081181a,
+    type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 0
@@ -27,6 +29,6 @@ MonoBehaviour:
   notOwnSprite: {fileID: 21300000, guid: 704f4abaf4b40604b9b3a387241d0620, type: 3}
   icon: {fileID: 21300000, guid: 5e2c6dafe8807394fb4193fd660305da, type: 3}
   defaultEffectValue: 20
-  effectValue: 20
-  nextLevelValue: 20
+  effectValue: 26
+  nextLevelValue: 52
   buffDuration: 15

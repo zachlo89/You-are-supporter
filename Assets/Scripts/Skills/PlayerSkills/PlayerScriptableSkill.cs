@@ -14,6 +14,7 @@ public enum SkillDifficultyLevel
 [CreateAssetMenu(menuName = "ScriptableObject/PlayerScriptableSkill")]
 public abstract class PlayerScriptableSkill : ScriptableObject
 {
+    public GameObject particleEffect;
     public bool isPassive;
     public bool isBought;
     public bool isAvaliable;

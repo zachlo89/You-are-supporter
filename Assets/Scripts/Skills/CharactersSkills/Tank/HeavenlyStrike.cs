@@ -13,14 +13,14 @@ public class HeavenlyStrike : CharacterSkill
 
     public override string StatsDescription()
     {
-        string stats = "Multi target";
+        string stats = "Multi target\n";
         if (level < 1)
         {
-            stats = "Attack all enemy for: <color=red>200%\n " + effectValue + "</color>";
+            stats += "Attack all enemy for: <color=red>200%\n " + effectValue + "</color>";
         }
         else
         {
-            stats = "Attack all enemy for: <color=red>200%\n " + effectValue + "</color>\n";
+            stats += "Attack all enemy for: <color=red>200%\n " + effectValue + "</color>\n";
             if (level < maxLevel)
             {
                 stats += "Next level: <color=yellow>" + nextLevelValue + "%</color>";
