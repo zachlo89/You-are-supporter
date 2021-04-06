@@ -17,6 +17,6 @@ MonoBehaviour:
   itemsRarityDrop: 1
   background: {fileID: 21300000, guid: 2437969a2b17b41b0a10bef95252a284, type: 3}
   isPassed: 0
-  stars: 3
+  stars: 0
   isAvaliable: 1
   hasGoldLevel: 0

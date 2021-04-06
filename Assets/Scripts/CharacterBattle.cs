@@ -6,11 +6,13 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+    [SerializeField] private GameObject shadow;
     [SerializeField] private GameObject normalHitsParticlePrefab;
     [SerializeField] private AnimationFunctions animationFunctions;
     [SerializeField] private GameObject canvasPanel;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Slider manaBar;
+    [SerializeField] private Slider attackRateSlider;
     [SerializeField] private GameObject damagePopUp;
     private PlayerSKills playerSKills;
     private List<CharacterSkill> activeSkills;
@@ -123,8 +125,26 @@ public class CharacterBattle : MonoBehaviour
         canvasPanel.SetActive(true);
         InvokeRepeating("RegenMana", 1, 1);
         InvokeRepeating("RegenHP", 1, 1);
+        if (!isMainHero)
+        {
+            attackRateSlider.value = 0;
+            StartCoroutine(AttackRateSlider());
+        }
+        else attackRateSlider.gameObject.SetActive(false);
+        
     }
 
+    
+
+    IEnumerator AttackRateSlider()
+    {
+        Debug.Log(gameObject.name + " attack slider rate " + ((100f / attackRate) / 100f));
+        while(isAlive)
+        {
+            yield return new WaitForSeconds((100f / attackRate)/100f);
+            attackRateSlider.value += 0.014f;
+        }
+    }
     public void SetUpPlayerSkills(PlayerSKills playerSKills)
     {
         this.playerSKills = playerSKills;
@@ -310,6 +330,13 @@ public class CharacterBattle : MonoBehaviour
             currentHealth = 0;
             isAlive = false;
             animator.SetTrigger("Death");
+            if (!isMainHero)
+            {
+                manaBar.gameObject.SetActive(false);
+            }
+            healthBar.gameObject.SetActive(false);
+            attackRateSlider.gameObject.SetActive(false);
+            shadow.SetActive(false);
             CancelInvoke();
         }
 
@@ -354,7 +381,7 @@ public class CharacterBattle : MonoBehaviour
 
     public void UseSkill(int skillCount)
     {
-        if(battleManager != null)
+        if(battleManager != null && activeSkills[skillCount] != null)
         {
             activeSkills[skillCount].Use();
             currentMana -= activeSkills[0].manaCost;
@@ -374,9 +401,11 @@ public class CharacterBattle : MonoBehaviour
     }
     IEnumerator Attack()
     {
-        yield return new WaitForSeconds((100/ attackRate));
+        float random = Random.Range(0.5f, 1.5f);
+        yield return new WaitForSeconds((100/ attackRate) + random);
         while (isAlive && battleManager.CheckIfEnd())
         {
+            attackRateSlider.value = 0.1f;
             int possibleAttacks = 0;
             if (!isMainHero)
             {
@@ -396,21 +425,21 @@ public class CharacterBattle : MonoBehaviour
                     }
                     else NormalAttack();
                     break;
-                case 2:
+                case 4:
                     if (activeSkills[1].manaCost <= currentMana && skillsCooldowns[1] <= 0)
                     {
                         UseSkillAnimation(1);
                     }
                     else NormalAttack();
                     break;
-                case 3:
+                case 7:
                     if (activeSkills[2].manaCost <= currentMana && skillsCooldowns[2] <= 0)
                     {
                         UseSkillAnimation(2);
                     }
                     else NormalAttack();
                     break;
-                case 4:
+                case 10:
                     if (activeSkills[3].manaCost <= currentMana && skillsCooldowns[3] <= 0)
                     {
                         UseSkillAnimation(3);
@@ -420,6 +449,8 @@ public class CharacterBattle : MonoBehaviour
                 default:
                     NormalAttack();
                     break;
+
+                    
             }
             yield return new WaitForSeconds((100f / attackRate));
         }

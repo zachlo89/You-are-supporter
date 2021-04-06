@@ -46,6 +46,18 @@ public class PopulateSkillsPrefab : MonoBehaviour
         if(skill1 != null)
         {
             skillsPanel.PlaySkillAnimation(skill1.skillName);
+            if (skill1.isBuff && skill1.particleEffects != null)
+            {
+                GameObject temp = Instantiate(skill1.particleEffects, skillsPanel.CharacterSpawningPoint.GetChild(0));
+                try
+                {
+                    Destroy(temp, 1);
+                }
+                catch
+                {
+                    Debug.Log("Particles already destroyed");
+                }
+            }
         } else
         {
             if(skill.particleEffect != null)

@@ -15,11 +15,12 @@ public class PlayerSKills : MonoBehaviour
 {
     [SerializeField] private Team team;
     private PlayerSkill selectedSkill;
-    [SerializeField] private List<GameObject> skillsListButtons = new List<GameObject>();
+    [SerializeField] private List<Button> skillsListButtons = new List<Button>();
     private List<PlayerScriptableSkill> activeSkills = new List<PlayerScriptableSkill>();
     private List<int> skillsCost = new List<int>();
     private int currentMana;
     private CharacterBattle mainCharacter;
+    private List<bool> canInterac = new List<bool>();
 
     private void Start()
     {
@@ -50,10 +51,10 @@ public class PlayerSKills : MonoBehaviour
         this.currentMana = currentMana;
         for(int i = 0; i < skillsCost.Count; i++)
         {
-            if(skillsCost[i] <= currentMana)
+            if(skillsCost[i] <= currentMana && canInterac[i])
             {
-                skillsListButtons[i].GetComponent<Button>().interactable = true;
-            } else skillsListButtons[i].GetComponent<Button>().interactable = false;
+                skillsListButtons[i].interactable = true;
+            } else skillsListButtons[i].interactable = false;
         }
     }
 
@@ -63,11 +64,13 @@ public class PlayerSKills : MonoBehaviour
         {
             if (activeSkills[i] != null)
             {
-                skillsListButtons[i].SetActive(true);
-                skillsListButtons[i].GetComponent<Image>().sprite = activeSkills[i].icon;
+                skillsListButtons[i].transform.parent.gameObject.SetActive(true);
+                skillsListButtons[i].gameObject.GetComponent<Image>().sprite = activeSkills[i].icon;
+                skillsListButtons[i].transform.parent.GetComponent<Image>().sprite = activeSkills[i].icon;
                 skillsCost.Add(activeSkills[i].manaCost);
+                canInterac.Add(true);
             }
-            else skillsListButtons[i].SetActive(false);
+            else skillsListButtons[i].gameObject.SetActive(false);
         }
     }
 
@@ -97,30 +100,47 @@ public class PlayerSKills : MonoBehaviour
                 activeSkills[0].Use(character);
                 selectedSkill = PlayerSkill.Inactive;
                 CheckIfSufficentMana(currentMana);
+                StartCoroutine(ButtonCooldown(0));
                 break;
             case PlayerSkill.Skill2:
                 mainCharacter.MainPlayerUseMana(skillsCost[1]);
                 activeSkills[1].Use(character);
                 selectedSkill = PlayerSkill.Inactive;
                 CheckIfSufficentMana(currentMana);
+                StartCoroutine(ButtonCooldown(1));
                 break;
             case PlayerSkill.Skill3:
                 mainCharacter.MainPlayerUseMana(skillsCost[2]);
                 activeSkills[2].Use(character);
                 selectedSkill = PlayerSkill.Inactive;
                 CheckIfSufficentMana(currentMana);
+                StartCoroutine(ButtonCooldown(2));
                 break;
             case PlayerSkill.Skill4:
                 mainCharacter.MainPlayerUseMana(skillsCost[3]);
                 activeSkills[3].Use(character);
                 selectedSkill = PlayerSkill.Inactive;
                 CheckIfSufficentMana(currentMana);
+                StartCoroutine(ButtonCooldown(3));
                 break;
             default:
                 return;
         }
     }
 
-
+    IEnumerator ButtonCooldown(int i)
+    {
+        canInterac[i] = false;
+        skillsListButtons[i].interactable = false;
+        skillsListButtons[i].gameObject.GetComponent<Image>().fillAmount = 0;
+        float timer = activeSkills[i].coolDown / 100;
+        for(int j = 0; j < 100; j++)
+        {
+            yield return new WaitForSeconds(timer);
+            skillsListButtons[i].gameObject.GetComponent<Image>().fillAmount += 0.01f;
+        }
+        skillsListButtons[i].gameObject.GetComponent<Button>().interactable = true;
+        canInterac[i] = true;
+    }
     
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class DetailsPanel : MonoBehaviour
 {
@@ -101,6 +102,10 @@ public class DetailsPanel : MonoBehaviour
         transform.localPosition = SetPosition();
         buttonUnEquip.SetActive(false);
         buttonEquip.SetActive(true);
+        if (item.slotPosition == SlotPosition.shield && (hero.characterClass == CharacterClass.Berserker || hero.characterClass == CharacterClass.Archer))
+        {
+            buttonEquip.GetComponent<Button>().interactable = false;
+        } else buttonEquip.GetComponent<Button>().interactable = true;
         buttonSell.SetActive(true);
         List<ItemScriptable> itemsToCheck = new List<ItemScriptable>();
         itemsToCheck.Clear();

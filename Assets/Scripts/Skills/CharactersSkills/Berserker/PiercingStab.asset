@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93367fa7a0caa544fa0da8faab88193b, type: 3}
   m_Name: PiercingStab
   m_EditorClassIdentifier: 
-  particleEffects: {fileID: 0}
+  particleEffects: {fileID: 100000, guid: f71e7641f4394c44095cabfbc0c46ef9, type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 0
@@ -29,4 +29,4 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
   defaultEffectValue: 275
   effectValue: 300
-  nextLevelValue: 325
+  nextLevelValue: 300

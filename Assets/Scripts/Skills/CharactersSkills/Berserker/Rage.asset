@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0ab5bef68320a4890f1822fec800a9, type: 3}
   m_Name: Rage
   m_EditorClassIdentifier: 
-  particleEffects: {fileID: 0}
+  particleEffects: {fileID: 100000, guid: 5afdb99db7d704443bfe5c2d479e5864, type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 1

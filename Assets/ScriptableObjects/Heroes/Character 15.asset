@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Jeffrick
+  characterName: Estron
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -33,16 +33,16 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 8c30ae4d65458724284d2f7f2561b226, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 8f56eaf0fc23438d83f7247e8b51def3, type: 3}
-  eyesSprites: {fileID: 21300000, guid: c07613e82e2649c288ff72f1948907da, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: d7adb3ba88f143958bd0fafaa803ba8d, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 21394407d57a46f986da64499893f5d1, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
+  eyesSprites: {fileID: 21300000, guid: feb226543f3d41d3b51e810770e91f90, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: d3acd862a54c4750a8f934507e1b9269, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: d4d135e5f9a04297be2d3e4761878bdf, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.40589362, g: 0.4597488, b: 0.16855073, a: 1}
-  hairColor: {r: 0.9767729, g: 0.7297205, b: 0.3026814, a: 1}
+  bodyColor: {r: 0.9438938, g: 0.38861018, b: 0.21805048, a: 1}
+  hairColor: {r: 0.6956042, g: 0.89597344, b: 0.19155109, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

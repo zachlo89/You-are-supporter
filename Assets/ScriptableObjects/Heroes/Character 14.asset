@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Geron
+  characterName: Zike
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -33,16 +33,16 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 57fe3255dbf6a9540a13ebb0d914a051, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d11298d729a54a82a2abc3e65294fcba, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 5e156ab1626d4c13a5397c902c228c58, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: c9d211e491314116a005138cfcf15a92, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 27fc2780c0364e2889a735d49e360509, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 83a88ad01ab542368f89253fa6e63917, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 0ce029fad9514d70a629d25b52f4d188, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 6a9f2aab5be6403d9d5976cbc72a88a4, type: 3}
+  mouthSprites: {fileID: 21300000, guid: bd9830c468084850ad0c470ce5bca091, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.6879835, g: 0.46657342, b: 0.24770582, a: 1}
-  hairColor: {r: 0.67672074, g: 0.35942143, b: 0.46661502, a: 1}
+  bodyColor: {r: 0.12255943, g: 0.49964458, b: 0.7293426, a: 1}
+  hairColor: {r: 0.5413477, g: 0.61969393, b: 0.40541667, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

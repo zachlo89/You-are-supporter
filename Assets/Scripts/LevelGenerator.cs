@@ -11,7 +11,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Sprite backgroundSprite;
     [SerializeField] private Image backgroundImage;
 
-    [SerializeField] private List<Vector3> SpwaningPoints = new List<Vector3>();
+    [SerializeField] private List<Vector3> spwaningPoints = new List<Vector3>();
     [SerializeField] private BattleManager battleManager;
     [SerializeField] private SkillsManager skillsManager;
 
@@ -32,13 +32,14 @@ public class LevelGenerator : MonoBehaviour
 
     private void SpawnPlayers()
     {
-        for(int i = 0; i < team.heroesList.Count; i++)
+        int counter = 0;
+        for(int i = team.heroesList.Count; i > -1; i--)
         {
-            if(team.heroesList[i] != null)
+            try
             {
                 GameObject temp = Instantiate(team.heroesList[i].prefab);
                 temp.transform.localScale /= 100;
-                temp.transform.position = SpwaningPoints[i];
+                temp.transform.position = spwaningPoints[counter++];
                 temp.tag = "Player";
                 temp.GetComponent<UpdateFaceAndBody>().SetUpFace(team.heroesList[i]);
                 temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[i].equipment);
@@ -50,6 +51,9 @@ public class LevelGenerator : MonoBehaviour
                     temp.GetComponent<CharacterBattle>().MainHeroSetUpManaBar(manabar);
                     temp.GetComponent<CharacterBattle>().SetUpPlayerSkills(playerSKills);
                 }
+            } catch
+            {
+                Debug.Log("Missing hero");
             }
         }
     }
@@ -63,7 +67,7 @@ public class LevelGenerator : MonoBehaviour
                 GameObject temp = Instantiate(level.enemiesList[i].prefab);
                 temp.transform.localScale /= 100;
                 temp.transform.rotation = Quaternion.Euler(0, 180, 0);
-                temp.transform.position = new Vector3(-SpwaningPoints[i].x, SpwaningPoints[i].y, SpwaningPoints[i].z);
+                temp.transform.position = new Vector3(-spwaningPoints[i].x, spwaningPoints[i].y, spwaningPoints[i].z);
                 temp.tag = "Enemy";
                 temp.GetComponent<UpdateFaceAndBody>().SetUpFace(level.enemiesList[i]);
                 temp.GetComponent<UpdateEquipment>().EquipAll(level.enemiesList[i].equipment);

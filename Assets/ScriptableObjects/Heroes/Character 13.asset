@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Jaltin
+  characterName: Baskez
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -33,16 +33,16 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: 51a86efe1703dd44e838f35deea734fd, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 2e842cd7daba41a392f535774e8096b3, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 54aff06675984fb1abbc7e48c743f717, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: bdfcb25ed54b4848add8f4a0ffbf4a54, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 4e3d022125a44bd194802be13c5c608f, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9b5d8a04eefd4e29a08c70770cfdb3d0, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 1f8f6a255b0e404d85f94955da2efb1c, type: 3}
   earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: d4d135e5f9a04297be2d3e4761878bdf, type: 3}
+  mouthSprites: {fileID: 21300000, guid: eb0485dc0d6e43ffb4ef1a4ebc996d15, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.6874373, g: 0.62766016, b: 0.058352232, a: 1}
-  hairColor: {r: 0.15829456, g: 0.5513399, b: 0.12488127, a: 1}
+  bodyColor: {r: 0.4228993, g: 0.06484187, b: 0.9623985, a: 1}
+  hairColor: {r: 0.6547538, g: 0.5884519, b: 0.7229161, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

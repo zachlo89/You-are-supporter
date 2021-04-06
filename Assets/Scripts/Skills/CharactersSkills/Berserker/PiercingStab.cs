@@ -35,6 +35,7 @@ public class PiercingStab : CharacterSkill
     {
         int damage = hero.Damage;
         CharacterBattle enemy = battleManager.GetFrontCharacter(hero.tag);
+        Instantiate(particleEffects, enemy.transform);
         if (CritAttack())
         {
             enemy.GetDamage((int)(damage * effectValue / 100 * hero.CriticalMultiply), true);

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e77674806fd67a4cbe933d56765c0d8, type: 3}
   m_Name: QuickSlash
   m_EditorClassIdentifier: 
-  particleEffects: {fileID: 0}
+  particleEffects: {fileID: 1954474933419612, guid: f213a31b42cd11e47aabf175095777d1,
+    type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 1
@@ -28,6 +29,6 @@ MonoBehaviour:
   notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
   icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
   defaultEffectValue: 35
-  effectValue: 60
-  nextLevelValue: 85
+  effectValue: 45
+  nextLevelValue: 50
   slashesCount: 3

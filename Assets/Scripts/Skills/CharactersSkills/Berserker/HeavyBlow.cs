@@ -32,9 +32,11 @@ public class HeavyBlow : CharacterSkill
 
     public override void Use()
     {
+        
         int damage = hero.Damage;
         CharacterBattle enemy = battleManager.GetFrontCharacter(hero.tag);
         enemy.GetDamage(damage * 2, false);
         enemy.Bleed(effectValue);
+        Instantiate(particleEffects, enemy.transform);
     }
 }

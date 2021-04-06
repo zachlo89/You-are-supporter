@@ -13,7 +13,10 @@ public class Team : ScriptableObject
     {
         if(position <= avaliabeTeamSize && position <= maxTeamSize)
         {
-            heroesList[position] = hero;
+            if(position >= heroesList.Count)
+            {
+                heroesList.Add(hero);
+            } else heroesList[position] = hero;
         }
     }
 

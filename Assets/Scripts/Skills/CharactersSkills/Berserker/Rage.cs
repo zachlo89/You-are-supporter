@@ -34,9 +34,11 @@ public class Rage : CharacterSkill
 
     public override void Use()
     {
-        float attackIncrease = hero.Damage * effectValue;
-        float defenceDecrease = hero.Armor * effectValue;
+        float attackIncrease = hero.Damage * effectValue / 100;
+        float defenceDecrease = hero.Armor * effectValue / 100;
         hero.SetArmor(hero.Armor - (int)defenceDecrease);
         hero.SetDamage(hero.Damage + (int)attackIncrease);
+        GameObject effects = Instantiate(particleEffects, hero.transform);
+        Destroy(effects, duration);
     }
 }

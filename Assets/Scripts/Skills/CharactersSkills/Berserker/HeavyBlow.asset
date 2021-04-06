@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bd2949d6573b542bfa2f73e07be498, type: 3}
   m_Name: HeavyBlow
   m_EditorClassIdentifier: 
-  particleEffects: {fileID: 0}
+  particleEffects: {fileID: 100002, guid: 94d68b1b34324d44698e0e4ed7d69032, type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 0
@@ -29,4 +29,4 @@ MonoBehaviour:
   icon: {fileID: 0}
   defaultEffectValue: 5
   effectValue: 10
-  nextLevelValue: 15
+  nextLevelValue: 10

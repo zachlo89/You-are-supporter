@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Haggalder
+  characterName: Fophni
   buyValue: 205
   isAlive: 1
   damage: 40
   armor: 5
   maxHealt: 250
   hpRegen: 2
-  maxMana: 1000
+  maxMana: 100
   manaRegen: 3
   attackRate: 70
   critChance: 2
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: a78794de3c429fb4c8098f2835176eb6, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3cf352e64a654f11bde351e0ba740a18, type: 3}
-  eyesSprites: {fileID: 21300000, guid: ab8ce33a207146c08197b150b8aadf2f, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: c769eeb489ca4efd911e48d34c81ae6a, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 71d21773d4634fc9b0f11106e002a1a9, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 9b4944d27ae14619a5bf5c0aa8708b3b, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 89b0b52a7b4d45448d5cb77f09daadf7, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 78e9ad35529c4051b29728186bcf864b, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 02a8b0a9d1ee42a59b340b69dc863dd7, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,14 +56,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.50462264, g: 0.5854171, b: 0.82044125, a: 1}
-  hairColor: {r: 0.80007935, g: 0.26804382, b: 0.34011048, a: 1}
+  bodyColor: {r: 0.7276877, g: 0.34585303, b: 0.85724235, a: 1}
+  hairColor: {r: 0.14431822, g: 0.18191075, b: 0.35394794, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:
   - {fileID: 11400000, guid: dc3b2cf4af792d34086b112bb0d9d60d, type: 2}
-  characterActiveSkills:
-  - {fileID: 11400000, guid: a6e8316cf327a0446ac742787ee7e1cd, type: 2}
-  - {fileID: 11400000, guid: 08955d8fe6667c14fa622429ce955fda, type: 2}
-  - {fileID: 11400000, guid: 92d3d0517dd9edb43b343c1a10f104b4, type: 2}
-  - {fileID: 11400000, guid: 0fe8cf7e7622aed45be1124dedd67aba, type: 2}
+  characterActiveSkills: []

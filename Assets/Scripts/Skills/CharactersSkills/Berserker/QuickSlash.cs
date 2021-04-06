@@ -9,8 +9,8 @@ public class QuickSlash : CharacterSkill
     public int slashesCount;
     public override void Initialize(ScriptableCharacter character)
     {
-        effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 25);
-        nextLevelValue = defaultEffectValue + (level + 1) * 25;
+        effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 5);
+        nextLevelValue = defaultEffectValue + (level + 1) * 5;
     }
 
     public override string StatsDescription()
@@ -33,7 +33,7 @@ public class QuickSlash : CharacterSkill
 
     public override void Use()
     {
-        float value = hero.Damage * effectValue;
+        float value = hero.Damage * effectValue / 100;
         CharacterBattle enemy = battleManager.GetFrontCharacter(hero.tag);
         try
         {
@@ -42,6 +42,7 @@ public class QuickSlash : CharacterSkill
                 enemy.GetDamage((int)(value * hero.CriticalMultiply), true);
             }
             else enemy.GetDamage((int)(value), true);
+            Instantiate(particleEffects, enemy.transform);
         } catch
         {
             Debug.Log("Enemy is dead");
