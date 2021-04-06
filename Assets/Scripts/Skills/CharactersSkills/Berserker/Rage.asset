@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f0ab5bef68320a4890f1822fec800a9, type: 3}
   m_Name: Rage
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 0}
   isPassive: 0
   isBought: 0
-  isAvaliable: 0
+  isAvaliable: 1
   isBuff: 1
   skillName: Rage
   skillBorder: {fileID: 21300000, guid: f4f151a5ee5d4481aa3b02b2d79d33b2, type: 3}
@@ -23,10 +24,10 @@ MonoBehaviour:
   level: 0
   maxLevel: 5
   coolDown: 20
-  manaCost: 0
+  manaCost: 15
   notOwnSprite: {fileID: 0}
   icon: {fileID: 0}
   defaultEffectValue: 40
-  effectValue: 0
-  nextLevelValue: 0
+  effectValue: 50
+  nextLevelValue: 60
   duration: 15

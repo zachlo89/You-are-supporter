@@ -13,7 +13,7 @@ public class UpdateEquipment : MonoBehaviour
     [SerializeField] private SpriteRenderer helment;
     [SerializeField] private SpriteRenderer hair;
     [SerializeField] private List<Sprite> defaultEquipment = new List<Sprite>();
-
+    [SerializeField] private UpdateFaceAndBody updateFaceAndBody;
 
     public void Equip(ItemScriptable item, int slotPosition)
     {
@@ -29,6 +29,12 @@ public class UpdateEquipment : MonoBehaviour
                     for (int i = 0; i < item.images.Count; i++)
                     {
                         armor[i].sprite = item.images[i];
+                    }
+                    if(updateFaceAndBody != null)
+                    {
+                        armor[1].sprite = item.images[2];
+                        armor[3].sprite = item.images[4];
+                        armor[5].sprite = item.images[6];
                     }
                     break;
                 case 2:
@@ -61,6 +67,11 @@ public class UpdateEquipment : MonoBehaviour
                     for (int i = 0; i < 8; i++)
                     {
                         armor[i].sprite = defaultEquipment[i];
+                    }
+                    {
+                        armor[1].sprite = defaultEquipment[2];
+                        armor[3].sprite = defaultEquipment[4];
+                        armor[5].sprite = defaultEquipment[6];
                     }
                     break;
                 case 2:

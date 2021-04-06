@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deaaeda1f358ee946a77ec558f9234dd, type: 3}
   m_Name: Heavenly Strike
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 7849791404790678207, guid: 42913e44bd86c194f80b76492e6fe2fd,
+    type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 0

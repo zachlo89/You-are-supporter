@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 951205811c0e22348b0174d7bb15a0a3, type: 3}
   m_Name: Taunt
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 0}
   isPassive: 0
-  isBought: 0
+  isBought: 1
   isAvaliable: 0
   isBuff: 0
   skillName: Taunt
@@ -27,6 +28,6 @@ MonoBehaviour:
   notOwnSprite: {fileID: 0}
   icon: {fileID: 0}
   defaultEffectValue: 20
-  effectValue: 0
-  nextLevelValue: 0
+  effectValue: 25
+  nextLevelValue: 25
   duration: 20

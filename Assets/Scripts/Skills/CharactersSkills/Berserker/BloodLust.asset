@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc8c0a8715579a4e990d4cbe844c005, type: 3}
   m_Name: BloodLust
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 0}
   isPassive: 1
   isBought: 0
   isAvaliable: 0
@@ -23,7 +24,7 @@ MonoBehaviour:
   level: 0
   maxLevel: 5
   coolDown: 0
-  manaCost: 0
+  manaCost: 40
   notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
   icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
   defaultEffectValue: 0.4

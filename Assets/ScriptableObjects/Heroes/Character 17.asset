@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Jaltin
+  characterName: Gothred
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: c6acdd9abafd4eb5be5a09db0d4583e3, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 30bd983403a74c98a229a5dbe97e2140, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 1f8f6a255b0e404d85f94955da2efb1c, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 064d30b495434ba89cc66b68ae6c0551, type: 3}
+  eyesSprites: {fileID: 21300000, guid: feb226543f3d41d3b51e810770e91f90, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: a6322f50596f429889812f5f3ad23916, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: bd9830c468084850ad0c470ce5bca091, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 016b51906ed84b29a6834b8115f5ba3b, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.36700112, g: 0.08376074, b: 0.9330429, a: 1}
-  hairColor: {r: 0.46946627, g: 0.391833, b: 0.82976544, a: 1}
+  bodyColor: {r: 0.10142243, g: 0.1640631, b: 0.42335898, a: 1}
+  hairColor: {r: 0.36369783, g: 0.8788203, b: 0.1700871, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

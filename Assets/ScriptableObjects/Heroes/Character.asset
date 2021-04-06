@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Enaham
+  characterName: Lexyu
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: a6d4e6d111f34868b52b31fa94b76b5d, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9fb20787124c478ca7223deb84370ce3, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 334b86a048fc4651a618e411bb4b9bcf, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 5bcf46e3a2ca407ea933865f6194ae42, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: f5ef33a9d6b34416b12a7870e77fd0fa, type: 3}
   earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 4ee93db48e0d43daae472962473e1d23, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 20e574079bb844de8202fbee9526d2e9, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.70064425, g: 0.89812005, b: 0.9985037, a: 1}
-  hairColor: {r: 0.12569416, g: 0.19707215, b: 0.5528279, a: 1}
+  bodyColor: {r: 0.36549395, g: 0.34319538, b: 0.711686, a: 1}
+  hairColor: {r: 0.24645865, g: 0.77487767, b: 0.45324105, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

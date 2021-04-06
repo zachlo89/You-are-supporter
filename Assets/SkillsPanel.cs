@@ -8,6 +8,10 @@ public class SkillsPanel : MonoBehaviour
 {
     [SerializeField] private ListOfHeroes listOfHeroes;
     [SerializeField] private Transform characterSpawningPoint;
+    public Transform CharacterSpawningPoint
+    {
+        get { return characterSpawningPoint; }
+    }
     [SerializeField] private GameObject groupLeft;
     [SerializeField] private Image skillRarityImage;
     [SerializeField] private TextMeshProUGUI skillRarityText;
@@ -475,6 +479,17 @@ public class SkillsPanel : MonoBehaviour
         {
             mainCharacterSkillsTree = i;
             PopulateSkillTree();
+        }
+    }
+
+    public void PlaySkillAnimation(string skillName)
+    {
+        try
+        {
+            characterAnimator.SetTrigger(skillName);
+        } catch
+        {
+            Debug.Log("Animation missing");
         }
     }
 }

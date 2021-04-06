@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c461d291e22129046bddf9007b8a5567, type: 3}
   m_Name: Bash
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 3308840082544497919, guid: af0ef20d9a41ee7479f76ea5c49918cf,
+    type: 3}
   isPassive: 0
   isBought: 0
-  isAvaliable: 0
+  isAvaliable: 1
   isBuff: 0
   skillName: Bash
   skillBorder: {fileID: 21300000, guid: 6e89577c7208241f8b2e979f467525d9, type: 3}
@@ -30,4 +32,3 @@ MonoBehaviour:
   effectValue: 15
   nextLevelValue: 15
   stunDuration: 3
-  skillEnum: 3

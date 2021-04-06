@@ -35,6 +35,7 @@ public class Bash : CharacterSkill
         int attackValue = hero.Damage * 2;
         CharacterBattle enemy = battleManager.GetFrontCharacter(hero.tag);
         enemy.GetDamage(attackValue, false);
+        Instantiate(particleEffects, enemy.transform);
         if (ShouldStunned())
         {
             enemy.Stunned(stunDuration);

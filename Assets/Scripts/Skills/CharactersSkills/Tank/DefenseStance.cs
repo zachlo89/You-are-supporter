@@ -33,5 +33,6 @@ public class DefenseStance : CharacterSkill
     public override void Use()
     {
         hero.IncreaseBlockChance((int)effectValue, duration);
+        Instantiate(particleEffects, hero.transform);
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Haggalder
+  characterName: Linto
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -38,11 +38,11 @@ MonoBehaviour:
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 92251016f5da44f781e5b000479463ee, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 8eed6c1992ac4882a3d598deff5535c4, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: a6322f50596f429889812f5f3ad23916, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 21394407d57a46f986da64499893f5d1, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d6bcee7aeea94be6ad83fc4300527d9c, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c490fb2fdd2e48889bbe3832c191d6a7, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 036508a6c5394691b075a361f46c6061, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: d4d135e5f9a04297be2d3e4761878bdf, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.07042229, g: 0.13237953, b: 0.581858, a: 1}
-  hairColor: {r: 0.234671, g: 0.037531495, b: 0.7629914, a: 1}
+  bodyColor: {r: 0.8618767, g: 0.8354056, b: 0.7703873, a: 1}
+  hairColor: {r: 0.09641981, g: 0.2087071, b: 0.6199047, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

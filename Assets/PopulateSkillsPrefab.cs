@@ -43,6 +43,24 @@ public class PopulateSkillsPrefab : MonoBehaviour
         } else {
             skillsPanel.UpdateLeftSide(skill1);
         }
+        if(skill1 != null)
+        {
+            skillsPanel.PlaySkillAnimation(skill1.skillName);
+        } else
+        {
+            if(skill.particleEffect != null)
+            {
+                GameObject temp = Instantiate(skill.particleEffect, skillsPanel.CharacterSpawningPoint.GetChild(0));
+                try
+                {
+                    Destroy(temp, 1);
+                }
+                catch
+                {
+                    Debug.Log("Particles already destroyed");
+                }
+            }
+        }
         
     }
 }

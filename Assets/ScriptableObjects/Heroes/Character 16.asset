@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Waris
+  characterName: Zike
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -38,11 +38,11 @@ MonoBehaviour:
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d11298d729a54a82a2abc3e65294fcba, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 073f358905d14220a3c132cdd92b2451, type: 3}
+  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 1840d47cd8a84dacacc971f92ecfdff4, type: 3}
   eyebrowsSprites: {fileID: 21300000, guid: c769eeb489ca4efd911e48d34c81ae6a, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: bd9830c468084850ad0c470ce5bca091, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.44446045, g: 0.62723863, b: 0.94344974, a: 1}
-  hairColor: {r: 0.36955458, g: 0.766209, b: 0.35231525, a: 1}
+  bodyColor: {r: 0.119919896, g: 0.9804728, b: 0.011080027, a: 1}
+  hairColor: {r: 0.98693097, g: 0.11804962, b: 0.24132335, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

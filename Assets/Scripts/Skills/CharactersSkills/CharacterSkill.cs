@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class CharacterSkill : ScriptableObject
 {
+    public GameObject particleEffects;
     public bool isPassive;
     public bool isBought;
     public bool isAvaliable;

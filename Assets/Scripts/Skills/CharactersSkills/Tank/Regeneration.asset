@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bafb4ebebf68642b5c5bb9c4e64efd, type: 3}
   m_Name: Regeneration
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 100006, guid: a8e17c3ffdf33a4479f82e4af7fb5580, type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 0

@@ -28,6 +28,10 @@ public class UpdateFaceAndBody : MonoBehaviour
 
     private ScriptableCharacter character;
 
+    public ScriptableCharacter Characte
+    {
+        get { return character; }
+    }
     private void Start()
     {
         if(character != null)
@@ -63,6 +67,13 @@ public class UpdateFaceAndBody : MonoBehaviour
         legR.sprite = character.legR;
         shinL.sprite = character.shinL;
         shinR.sprite = character.shinR;
+
+        if(character.characterClass == CharacterClass.Berserker)
+        {
+            handL.sprite = handR.sprite;
+            forearmoL.sprite = forearmR.sprite;
+            armL.sprite = armR.sprite;
+        }
 
         bodyColor = character.bodyColor;
         hairColor = character.hairColor;

@@ -38,6 +38,7 @@ public class Slam : CharacterSkill
             damage *= hero.CriticalMultiply;
             enemy.GetDamage((int)damage, true);
         } else enemy.GetDamage((int)damage, false);
+        Instantiate(particleEffects, enemy.transform);
     }
 
     private bool CritAttack()

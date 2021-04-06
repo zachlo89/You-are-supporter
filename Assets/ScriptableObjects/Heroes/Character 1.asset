@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Varlog
+  characterName: Crix
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,11 +37,11 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 2e842cd7daba41a392f535774e8096b3, type: 3}
-  eyesSprites: {fileID: 21300000, guid: f8b750706502462da0c9cdb378eb28ff, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 334b86a048fc4651a618e411bb4b9bcf, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 0eab5ad0fc5043babb8559a8bb6cbbe5, type: 3}
+  eyesSprites: {fileID: 21300000, guid: b1b914daccf84083841ce4ead5aac920, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 0ce029fad9514d70a629d25b52f4d188, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
   mouthSprites: {fileID: 21300000, guid: eb0485dc0d6e43ffb4ef1a4ebc996d15, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.12913942, g: 0.839705, b: 0.81656134, a: 1}
-  hairColor: {r: 0.33869332, g: 0.50624996, b: 0.19223058, a: 1}
+  bodyColor: {r: 0.06069255, g: 0.9964931, b: 0.24998164, a: 1}
+  hairColor: {r: 0.039399505, g: 0.8538188, b: 0.8981062, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

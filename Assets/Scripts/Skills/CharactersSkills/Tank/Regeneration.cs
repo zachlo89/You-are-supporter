@@ -34,5 +34,6 @@ public class Regeneration : CharacterSkill
     {
         float value = hero.GetMaxHP() * effectValue / 100;
         hero.HpRegenBuff((int)value, duration);
+        Instantiate(particleEffects, hero.transform);
     }
 }

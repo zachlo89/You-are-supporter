@@ -34,10 +34,19 @@ public class QuickSlash : CharacterSkill
     public override void Use()
     {
         float value = hero.Damage * effectValue;
-        for(int i = 0; i < slashesCount; i++)
+        CharacterBattle enemy = battleManager.GetFrontCharacter(hero.tag);
+        try
         {
-            OneSlash(value);
+            if (CritAttack())
+            {
+                enemy.GetDamage((int)(value * hero.CriticalMultiply), true);
+            }
+            else enemy.GetDamage((int)(value), true);
+        } catch
+        {
+            Debug.Log("Enemy is dead");
         }
+        
     }
     private bool CritAttack()
     {
@@ -47,14 +56,5 @@ public class QuickSlash : CharacterSkill
             return true;
         }
         else return false;
-    }
-
-    private void OneSlash(float value)
-    {
-        CharacterBattle enemy = battleManager.GetFrontCharacter(hero.tag);
-        if (CritAttack())
-        {
-            enemy.GetDamage((int)(value * hero.CriticalMultiply), true);
-        } else enemy.GetDamage((int)(value), true);
     }
 }

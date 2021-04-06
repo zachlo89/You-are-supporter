@@ -219,7 +219,7 @@ public class CharacterBattle : MonoBehaviour
         this.criticalMultiply = hero.critDamageMultiplay;
         this.dodgeChance = hero.dogdeChance;
         this.blockChance = hero.blockChance;
-        
+        this.characterClass = hero.characterClass;
         this.manaRegen = hero.manaRegen;
         
 
@@ -354,10 +354,13 @@ public class CharacterBattle : MonoBehaviour
 
     public void UseSkill(int skillCount)
     {
-        activeSkills[skillCount].Use();
-        currentMana -= activeSkills[0].manaCost;
-        UpdateManaBar();
-        StartCoroutine(SkillCooldown(skillCount));
+        if(battleManager != null)
+        {
+            activeSkills[skillCount].Use();
+            currentMana -= activeSkills[0].manaCost;
+            UpdateManaBar();
+            StartCoroutine(SkillCooldown(skillCount));
+        }
     }
 
     IEnumerator SkillCooldown(int i)
@@ -371,15 +374,15 @@ public class CharacterBattle : MonoBehaviour
     }
     IEnumerator Attack()
     {
-        float random = Random.Range(0f, 1f);
-        yield return new WaitForSeconds((100/ attackRate) + random);
+        yield return new WaitForSeconds((100/ attackRate));
         while (isAlive && battleManager.CheckIfEnd())
         {
-            int possibleAttacks = 1;
+            int possibleAttacks = 0;
             if (!isMainHero)
             {
                 possibleAttacks += activeSkills.Count;
             }
+            possibleAttacks *= 3;
             int currentAttack = Random.Range(0, possibleAttacks);
             switch (currentAttack)
             {

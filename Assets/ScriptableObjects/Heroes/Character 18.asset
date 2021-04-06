@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Rizxer
+  characterName: Zaamaar
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -38,11 +38,11 @@ MonoBehaviour:
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d6bcee7aeea94be6ad83fc4300527d9c, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 4c918f851b31465daaaebdaf842bf668, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 78e9ad35529c4051b29728186bcf864b, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: bd9830c468084850ad0c470ce5bca091, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d57c3f5fedf646f0aad587e9914b351f, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 5e156ab1626d4c13a5397c902c228c58, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 71d1e46b2e3d4b67a4592ab929344ec7, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 4492047b4ebd4d86bacbf448770d2569, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.8211479, g: 0.95539355, b: 0.97122586, a: 1}
-  hairColor: {r: 0.92856157, g: 0.46506494, b: 0.9208633, a: 1}
+  bodyColor: {r: 0.14736366, g: 0.60661966, b: 0.21884215, a: 1}
+  hairColor: {r: 0.85505855, g: 0.59196573, b: 0.6110198, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

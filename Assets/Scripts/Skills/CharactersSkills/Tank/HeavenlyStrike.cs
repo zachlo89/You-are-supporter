@@ -45,6 +45,7 @@ public class HeavenlyStrike : CharacterSkill
             if (enemiesList[i].IsAlive)
             {
                 enemiesList[i].GetDamage((int)value, crit);
+                Instantiate(particleEffects, enemiesList[i].transform);
             }
         }
     }

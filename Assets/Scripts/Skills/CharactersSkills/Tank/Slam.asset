@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd494c0443d723945b5ceb0da4af9418, type: 3}
   m_Name: Slam
   m_EditorClassIdentifier: 
+  particleEffects: {fileID: 6168487065481255599, guid: 6941df3d4c582f741bb063afb34967c1,
+    type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 1
