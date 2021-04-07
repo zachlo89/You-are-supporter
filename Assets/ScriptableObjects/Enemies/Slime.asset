@@ -12,18 +12,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Slime
   m_EditorClassIdentifier: 
+  isMainCharacter: 0
+  expToGiveToThePlayers: 40
+  characterName: 
+  buyValue: 0
   isAlive: 1
-  damage: 10
+  damage: 30
   armor: 10
   maxHealt: 100
+  hpRegen: 0
   maxMana: 0
   manaRegen: 0
   attackRate: 50
-  image: {fileID: -9017831768941866983, guid: eb9b055243968cc499a18a585371ae4e, type: 3}
+  critChance: 0
+  critDamageMultiplay: 0
+  blockChance: 0
+  dogdeChance: 0
   expirence: 0
   toNextLevel: 0
   level: 0
   stars: 0
   equipment: {fileID: 0}
   isAvaliable: 0
-  prefab: {fileID: 8368692026466914327, guid: 9506364e513e842489c52dfd3f25636e, type: 3}
+  avaliableSkillPoints: 0
+  characterClass: 0
+  prefab: {fileID: 5355877831215658778, guid: 2fd8037ad2dd306408389338d3c8bfde, type: 3}
+  headSprites: {fileID: 0}
+  hairsSprites: {fileID: 0}
+  eyesSprites: {fileID: 0}
+  eyebrowsSprites: {fileID: 0}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 0}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 0}
+  pelvis: {fileID: 0}
+  armL: {fileID: 0}
+  forearmoL: {fileID: 0}
+  armR: {fileID: 0}
+  forearmR: {fileID: 0}
+  handL: {fileID: 0}
+  handR: {fileID: 0}
+  legL: {fileID: 0}
+  legR: {fileID: 0}
+  shinL: {fileID: 0}
+  shinR: {fileID: 0}
+  bodyColor: {r: 0, g: 0, b: 0, a: 0}
+  hairColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSkillTree: []
+  activeSkills: []
+  characterSkillTree: []
+  characterActiveSkills: []

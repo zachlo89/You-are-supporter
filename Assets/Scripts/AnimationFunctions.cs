@@ -12,9 +12,12 @@ public class AnimationFunctions : MonoBehaviour
     private int skillCount;
     private void Start()
     {
-        changeExpresion = true;
         characterBattle = GetComponentInParent<CharacterBattle>();
-        defaultMouth = mouthRenderer.sprite;
+        changeExpresion = true;
+        if(defaultMouth != null)
+        {
+            defaultMouth = mouthRenderer.sprite;
+        }
     }
 
     public void SetSkill(int skill)

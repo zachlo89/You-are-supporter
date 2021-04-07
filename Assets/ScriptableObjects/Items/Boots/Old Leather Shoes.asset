@@ -20,11 +20,13 @@ MonoBehaviour:
   dodgeChance: -2
   critChance: 0
   critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300030, guid: 60e5c5e7023240f5a0259b277d5cc66a, type: 3}
   - {fileID: 21300032, guid: 60e5c5e7023240f5a0259b277d5cc66a, type: 3}
   border: {fileID: -7779772245507925811, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 0
   description: Ouch! Tight!
   sellValue: 19

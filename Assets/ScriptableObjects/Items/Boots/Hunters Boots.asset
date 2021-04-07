@@ -20,11 +20,13 @@ MonoBehaviour:
   dodgeChance: 0
   critChance: 0
   critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300012, guid: 826dd529b47a488b922eb5ed3c044fce, type: 3}
   - {fileID: 21300014, guid: 826dd529b47a488b922eb5ed3c044fce, type: 3}
   border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 1
   description: Shhhh... Do not alert animals
   sellValue: 34

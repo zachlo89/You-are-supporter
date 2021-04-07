@@ -115,7 +115,8 @@ public class CharacterBattle : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Attack());
+        attackRateSlider.value = Random.Range(0f, 0.2f);
+        StartCoroutine(AttackRateSlider());
 
         animator = GetComponent<Animator>();
         if(animator == null)
@@ -125,25 +126,26 @@ public class CharacterBattle : MonoBehaviour
         canvasPanel.SetActive(true);
         InvokeRepeating("RegenMana", 1, 1);
         InvokeRepeating("RegenHP", 1, 1);
-        if (!isMainHero)
-        {
-            attackRateSlider.value = 0;
-            StartCoroutine(AttackRateSlider());
-        }
-        else attackRateSlider.gameObject.SetActive(false);
-        
     }
 
+    public void ResetSlider()
+    {
+        attackRateSlider.value = 0;
+    }
     
 
     IEnumerator AttackRateSlider()
     {
-        Debug.Log(gameObject.name + " attack slider rate " + ((100f / attackRate) / 100f));
-        while(isAlive)
+        while(isAlive && battleManager.CheckIfEnd())
         {
             yield return new WaitForSeconds((100f / attackRate)/100f);
-            attackRateSlider.value += 0.014f;
+            attackRateSlider.value += 0.01f;
+            if(attackRateSlider.value == 1)
+            {
+                Attack();
+            }
         }
+
     }
     public void SetUpPlayerSkills(PlayerSKills playerSKills)
     {
@@ -231,7 +233,11 @@ public class CharacterBattle : MonoBehaviour
         this.damage = hero.damage;
         this.armor = hero.armor;
         this.attackRate = hero.attackRate;
-        AdjustStatsToEquipment();
+        if(hero.equipment != null)
+        {
+            AdjustStatsToEquipment();
+        }
+
 
         this.battleManager = battleManager;
         this.hpRegen = hero.hpRegen;
@@ -314,12 +320,12 @@ public class CharacterBattle : MonoBehaviour
         if(aboidMiss <= dodgeChance)
         {
             tempDamage.GetComponentInChildren<TextMeshPro>().text = "Dodged";
-            Destroy(tempDamage, 1f);
+            Destroy(tempDamage, .5f);
             return;
         } else if (avoidBlock <=  blockChance)
         {
             tempDamage.GetComponentInChildren<TextMeshPro>().text = "Blocked";
-            Destroy(tempDamage, 1f);
+            Destroy(tempDamage, .5f);
             return;
         }
         int attack = recievedDamage - armor;
@@ -336,7 +342,11 @@ public class CharacterBattle : MonoBehaviour
             }
             healthBar.gameObject.SetActive(false);
             attackRateSlider.gameObject.SetActive(false);
-            shadow.SetActive(false);
+            if(shadow != null)
+            {
+                shadow.SetActive(false);
+            }
+            
             CancelInvoke();
         }
 
@@ -345,30 +355,33 @@ public class CharacterBattle : MonoBehaviour
             tempDamage.GetComponentInChildren<TextMeshPro>().outlineColor = Color.red;
         }
         tempDamage.GetComponentInChildren<TextMeshPro>().text = (-attack).ToString();
-        Destroy(tempDamage, 1f);
+        Destroy(tempDamage, .5f);
 
         UpdateHealthBar();
     }
 
-    private void NormalAttack()
+    public void NormalAttack()
     {
         animator.SetTrigger("NormalAttack");
     }
 
     public void NormalAttackEffect()
     {
-        CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
-        if (enemy != null)
+        if (!isMainHero)
         {
-            if (CritAttack())
+            CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
+            if (enemy != null)
             {
-                enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
-                Instantiate(normalHitsParticlePrefab, enemy.transform);
-            }
-            else
-            {
-                enemy.GetDamage(damage, false);
-                Instantiate(normalHitsParticlePrefab, enemy.transform);
+                if (CritAttack())
+                {
+                    enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
+                    Instantiate(normalHitsParticlePrefab, enemy.transform);
+                }
+                else
+                {
+                    enemy.GetDamage(damage, false);
+                    Instantiate(normalHitsParticlePrefab, enemy.transform);
+                }
             }
         }
     }
@@ -399,18 +412,24 @@ public class CharacterBattle : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
-    IEnumerator Attack()
+    private void Attack()
     {
-        float random = Random.Range(0.5f, 1.5f);
-        yield return new WaitForSeconds((100/ attackRate) + random);
-        while (isAlive && battleManager.CheckIfEnd())
+        if(!hero.isMainCharacter)
         {
-            attackRateSlider.value = 0.1f;
+            attackRateSlider.value = 0;
             int possibleAttacks = 0;
-            if (!isMainHero)
+            try
             {
-                possibleAttacks += activeSkills.Count;
+                if (!isMainHero && hero.equipment.GetEquipment[2] != null)
+                {
+                    possibleAttacks += activeSkills.Count;
+                }
             }
+            catch
+            {
+                Debug.Log("Missin equipment");
+            }
+            
             possibleAttacks *= 3;
             int currentAttack = Random.Range(0, possibleAttacks);
             switch (currentAttack)
@@ -449,11 +468,12 @@ public class CharacterBattle : MonoBehaviour
                 default:
                     NormalAttack();
                     break;
-
-                    
             }
-            yield return new WaitForSeconds((100f / attackRate));
+        } else
+        {
+            playerSKills.CanAttack(true);
         }
+        
     }
 
     public void MainPlayerUseMana(int mana)
@@ -599,10 +619,10 @@ public class CharacterBattle : MonoBehaviour
         stunned = true;
         while (stunned)
         {
-            StopCoroutine(Attack());
+            StopCoroutine(AttackRateSlider());
             yield return new WaitForSeconds(duration);
             stunned = false;
-            StartCoroutine(Attack());
+            StartCoroutine(AttackRateSlider());
         }
     }
 
@@ -631,10 +651,10 @@ public class CharacterBattle : MonoBehaviour
         blinded = true;
         while (blinded)
         {
-            StopCoroutine(Attack());
+            StopCoroutine(AttackRateSlider());
             yield return new WaitForSeconds(duration);
             blinded = false;
-            StartCoroutine(Attack());
+            StartCoroutine(AttackRateSlider());
         }
     }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Haggalder
+  characterName: Hyou
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 9b4944d27ae14619a5bf5c0aa8708b3b, type: 3}
-  eyesSprites: {fileID: 21300000, guid: c429fa5fbcb94c37bdab733468d04a27, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: ab6df8c889ab401f8e04c42b87efa8e9, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 32262144aa4643c2be32b9b414120052, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 0eab5ad0fc5043babb8559a8bb6cbbe5, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c07613e82e2649c288ff72f1948907da, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ff2125667e764565a68631a14f83fdfb, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: aa856b5bcd87407498e1285f296ecaf6, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.33540457, g: 0.46631938, b: 0.8733579, a: 1}
-  hairColor: {r: 0.65945566, g: 0.12185764, b: 0.79567397, a: 1}
+  bodyColor: {r: 0.80543876, g: 0.38371426, b: 0.44239205, a: 1}
+  hairColor: {r: 0.9200107, g: 0.6488606, b: 0.7046453, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

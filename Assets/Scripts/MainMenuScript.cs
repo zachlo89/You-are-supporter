@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    void Update()
+    public void NewGame()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadSceneAsync(1);
-        }
+        PlayerPrefs.SetInt("Tutorial1", 0);
+        PlayerPrefs.SetInt("Tutorial2", 0);
+        PlayerPrefs.SetInt("Tutorial3", 0);
+        PlayerPrefs.SetInt("Tutorial4", 0);
+        SceneManager.LoadSceneAsync(1);
+    }
+
+    public void Continue()
+    {
+        SceneManager.LoadSceneAsync(1);
     }
 }

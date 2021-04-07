@@ -17,6 +17,7 @@ public enum SlotPosition
     armor,
     meelWeapon,
     twoHandedWeapon,
+    staff,
     shield,
     bow,
     shoes,
@@ -34,6 +35,8 @@ public class ItemScriptable : ScriptableObject
     public int dodgeChance;
     public float critChance;
     public float critDamage;
+    public int mana;
+    public int manaRegen;
     public List<Sprite> images = new List<Sprite>();
     public Sprite border;
     public SlotPosition slotPosition;

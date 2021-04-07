@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Narek
+  characterName: Pondas
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 117b02fbbf92420fae5f0c3d75e447a0, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 3802004455bc4328a5f621fc79e65ed8, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: cdbf54258c2845e6879b2af45e2ecb3a, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 20e574079bb844de8202fbee9526d2e9, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 020889504fab43249b054df5703019e1, type: 3}
+  eyesSprites: {fileID: 21300000, guid: da9a1aed608040728e7066b0538decb1, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 036508a6c5394691b075a361f46c6061, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: b6d5cb29020a41c382199afb9138439e, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.057107925, g: 0.024828792, b: 0.011743069, a: 1}
-  hairColor: {r: 0.51659125, g: 0.37609404, b: 0.14669347, a: 1}
+  bodyColor: {r: 0.12554789, g: 0.0052223206, b: 0.4671834, a: 1}
+  hairColor: {r: 0.9879855, g: 0.45593494, b: 0.58306795, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

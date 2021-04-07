@@ -16,11 +16,17 @@ MonoBehaviour:
   armor: 0
   attackRate: 0
   hp: 0
+  blockChance: 0
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300000, guid: f08adea329d90474489e0575b55000dc, type: 3}
   - {fileID: 21300000, guid: f08adea329d90474489e0575b55000dc, type: 3}
   border: {fileID: -7779772245507925811, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 0
   description: 
   sellValue: 0

@@ -7,6 +7,10 @@ using UnityEngine.EventSystems;
 
 public class EquipmentPanel : MonoBehaviour
 {
+    [SerializeField] private TutorialManager tutorialManager;
+    [SerializeField] private Image armR, armL, accessories;
+    [SerializeField] private List<Sprite> iconsList = new List<Sprite>();
+    [SerializeField] private Sprite possibleEquipment, disabledEquipment;
     [SerializeField] private GameObject detailsPanel;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     private ScriptableCharacter hero;
@@ -44,6 +48,26 @@ public class EquipmentPanel : MonoBehaviour
         }
         this.hero = hero;
         heroPrefab = hero.prefab;
+
+        if(hero.characterClass == CharacterClass.Archer)
+        {
+            armR.sprite = iconsList[3];
+            armR.transform.parent.GetComponent<Image>().sprite = disabledEquipment;
+            armL.sprite = iconsList[0];
+            armL.transform.parent.GetComponent<Image>().sprite = possibleEquipment;
+        } else if (hero.characterClass == CharacterClass.Berserker || hero.characterClass == CharacterClass.Supporter)
+        {
+            armL.sprite = iconsList[3];
+            armL.transform.parent.GetComponent<Image>().sprite = disabledEquipment;
+            armR.sprite = iconsList[0];
+            armR.transform.parent.GetComponent<Image>().sprite = possibleEquipment;
+        } else
+        {
+            armL.sprite = iconsList[1];
+            armL.transform.parent.GetComponent<Image>().sprite = possibleEquipment;
+            armR.sprite = iconsList[0];
+            armR.transform.parent.GetComponent<Image>().sprite = possibleEquipment;
+        }
 
         UpdateEquipment();
        
@@ -167,6 +191,10 @@ public class EquipmentPanel : MonoBehaviour
 
     public void EquipItem(ItemScriptable item, int index, int indexToRemove)
     {
+        if(tutorialManager != null)
+        {
+            tutorialManager.NextStep3();
+        }
         if(item != null)
         {
             hero.equipment.AddItem(item, index);

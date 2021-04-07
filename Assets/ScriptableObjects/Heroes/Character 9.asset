@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Jaltin
+  characterName: Btorik
   buyValue: 205
   isAlive: 1
-  damage: 53
+  damage: 56
   armor: 5
-  maxHealt: 347
+  maxHealt: 371
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -34,15 +34,15 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 5b871ef1960f4744883fccb707ffe0e3, type: 2}
   isAvaliable: 0
-  avaliableSkillPoints: 2
+  avaliableSkillPoints: 1
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 020889504fab43249b054df5703019e1, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 6b244d16d7f247a880463e84b901caf0, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: ac6704f167ff464fab94a433607272ad, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 2fe13f78cbe648edb11eea503cd69814, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 54aff06675984fb1abbc7e48c743f717, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 09c1cb5a04ca4f7fae6c1d86790f2086, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 341f3e891e9043568a64e78b4c2b32c3, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 5707582b262b48a6a9807f75aa3778f7, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,10 +56,14 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.4698159, g: 0.45242852, b: 0.49965256, a: 1}
-  hairColor: {r: 0.82387364, g: 0.8915136, b: 0.93318665, a: 1}
+  bodyColor: {r: 0.35430616, g: 0.21115899, b: 0.8452753, a: 1}
+  hairColor: {r: 0.36057025, g: 0.9472102, b: 0.30091137, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:
   - {fileID: 11400000, guid: c11e6514a67e90547814cf3705eab6f5, type: 2}
-  characterActiveSkills: []
+  characterActiveSkills:
+  - {fileID: 11400000, guid: 15275851fb1abd547bec1477dcca2718, type: 2}
+  - {fileID: 11400000, guid: 7f3ca7d96d1a8844bb020f3770e783f5, type: 2}
+  - {fileID: 11400000, guid: 02af67efbac8a3d478022d56d0f2e9b7, type: 2}
+  - {fileID: 11400000, guid: 3c5a4bed6f10cf6499f2869313bef642, type: 2}

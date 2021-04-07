@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Orncolb
+  characterName: Baskez
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3c5718446b1f4eb795beabb39d7762e0, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 117b02fbbf92420fae5f0c3d75e447a0, type: 3}
   eyesSprites: {fileID: 21300000, guid: 37608e2014754f0dae09b375d947d94a, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: a6322f50596f429889812f5f3ad23916, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 2cbb874f14d74b03bccda307d7ace60a, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 62416a2f95874017abcf4943fb0b1e3f, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 4382e6492b6c4d60962548292839a894, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.37729698, g: 0.33282822, b: 0.9990728, a: 1}
-  hairColor: {r: 0.46723813, g: 0.5496877, b: 0.2794736, a: 1}
+  bodyColor: {r: 0.05708146, g: 0.52512354, b: 0.81194437, a: 1}
+  hairColor: {r: 0.8545356, g: 0.56484, b: 0.48742908, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

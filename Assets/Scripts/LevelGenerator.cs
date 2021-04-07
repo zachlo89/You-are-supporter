@@ -69,10 +69,18 @@ public class LevelGenerator : MonoBehaviour
                 temp.transform.rotation = Quaternion.Euler(0, 180, 0);
                 temp.transform.position = new Vector3(-spwaningPoints[i].x, spwaningPoints[i].y, spwaningPoints[i].z);
                 temp.tag = "Enemy";
-                temp.GetComponent<UpdateFaceAndBody>().SetUpFace(level.enemiesList[i]);
-                temp.GetComponent<UpdateEquipment>().EquipAll(level.enemiesList[i].equipment);
+                try
+                {
+                    temp.GetComponent<UpdateFaceAndBody>().SetUpFace(level.enemiesList[i]);
+                    temp.GetComponent<UpdateEquipment>().EquipAll(level.enemiesList[i].equipment);
+                } catch
+                {
+                    Debug.Log("Missing components");
+                }
+
                 temp.GetComponent<CharacterBattle>().enabled = true;
                 temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager, skillsManager);
+                temp.AddComponent<PlayerNegativeEffects>();
             }
         }
     }

@@ -47,24 +47,67 @@ public class CompareAndDisplayDetails : MonoBehaviour
             equipmentPanel.EquipItem(item, slotIndex, itemInventoryIndex);
         } else if (slotIndex == 99)
         {
-            if (hero.equipment.GetEquipment[slotIndex] != null)
+            if (hero.equipment.GetEquipment[2] != null)
             {
-                equipmentPanel.EquipAndUnEquip(item, hero.equipment.GetEquipment[slotIndex], slotIndex, itemInventoryIndex);
+                equipmentPanel.EquipAndUnEquip(item, hero.equipment.GetEquipment[2], 2, itemInventoryIndex);
             }
-            if (hero.equipment.GetEquipment[slotIndex] != null)
+            if (hero.equipment.GetEquipment[3] != null)
             {
-                equipmentPanel.UnEquipItem(item, slotIndex);
+                equipmentPanel.UnEquipItem(item, 3);
                 return;
             }
-            if(hero.equipment.GetEquipment[slotIndex] == null)
+            if(hero.equipment.GetEquipment[2] == null)
             {
                 equipmentPanel.EquipItem(item, 2, itemInventoryIndex);
             }  
+        } else if (slotIndex == 98)
+        {
+            if (hero.equipment.GetEquipment[3] != null)
+            {
+                equipmentPanel.EquipAndUnEquip(item, hero.equipment.GetEquipment[3], 3, itemInventoryIndex);
+            }
+            if (hero.equipment.GetEquipment[2] != null)
+            {
+                equipmentPanel.UnEquipItem(item, 2);
+                return;
+            }
+            if (hero.equipment.GetEquipment[3] == null)
+            {
+                equipmentPanel.EquipItem(item, 3, itemInventoryIndex);
+            }
+        }
+        else if (slotIndex == 97)
+        {
+            if (hero.equipment.GetEquipment[2] != null)
+            {
+                equipmentPanel.EquipAndUnEquip(item, hero.equipment.GetEquipment[2], 2, itemInventoryIndex);
+            }
+            if (hero.equipment.GetEquipment[3] != null)
+            {
+                equipmentPanel.UnEquipItem(item, 3);
+                return;
+            }
+            if (hero.equipment.GetEquipment[2] == null)
+            {
+                equipmentPanel.EquipItem(item, 2, itemInventoryIndex);
+            }
         }
     }
 
     public void UnEquip(int slotIndex)
     {
+        if(slotIndex == 99)
+        {
+            slotIndex = 2;
+        }
+        if (slotIndex == 98)
+        {
+            slotIndex = 3;
+        }
+        if (slotIndex == 97)
+        {
+            slotIndex = 2;
+        }
         equipmentPanel.UnEquipItem(item, slotIndex);
     }
 

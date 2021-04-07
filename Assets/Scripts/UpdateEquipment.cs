@@ -9,11 +9,13 @@ public class UpdateEquipment : MonoBehaviour
     [SerializeField] private SpriteRenderer weaponRight;
     [SerializeField] private SpriteRenderer shield;
     [SerializeField] private SpriteRenderer twoHandedWeapon;
+    [SerializeField] private SpriteRenderer staff;
+    [SerializeField] private List<SpriteRenderer> bow = new List<SpriteRenderer>();
     [SerializeField] private List<SpriteRenderer> legs = new List<SpriteRenderer>();
     [SerializeField] private SpriteRenderer helment;
     [SerializeField] private SpriteRenderer hair;
     [SerializeField] private List<Sprite> defaultEquipment = new List<Sprite>();
-    [SerializeField] private UpdateFaceAndBody updateFaceAndBody;
+    [SerializeField] private Animator animator;
 
     public void Equip(ItemScriptable item, int slotPosition)
     {
@@ -30,21 +32,33 @@ public class UpdateEquipment : MonoBehaviour
                     {
                         armor[i].sprite = item.images[i];
                     }
-                    if(updateFaceAndBody != null)
-                    {
-                        armor[1].sprite = item.images[2];
-                        armor[3].sprite = item.images[4];
-                        armor[5].sprite = item.images[6];
-                    }
+                    armor[8].sprite = armor[3].sprite;
+                    armor[9].sprite = armor[2].sprite;
+                    armor[10].sprite = armor[4].sprite;
+                    armor[11].sprite = armor[5].sprite;
+                    armor[12].sprite = armor[6].sprite;
                     break;
                 case 2:
-                    weaponRight.sprite = item.images[0];
+                    animator.SetBool("hasWeapon", true);
+                    if (item.slotPosition == SlotPosition.meelWeapon)
+                    {
+                        weaponRight.sprite = item.images[0];
+                    }
+                    else if (item.slotPosition == SlotPosition.staff) {
+                        staff.sprite = item.images[0];
+                    } else twoHandedWeapon.sprite = item.images[0];
                     break;
                 case 3:
-                    shield.sprite = item.images[0];
-                    break;
-                case 99:
-                    twoHandedWeapon.sprite = item.images[0];
+                    animator.SetBool("hasWeapon", true);
+                    if(item.slotPosition == SlotPosition.bow)
+                    {
+                        bow[0].sprite = item.images[0];
+                        bow[1].sprite = item.images[1];
+                        bow[2].sprite = item.images[1];
+                    } else
+                    {
+                        shield.sprite = item.images[0];
+                    }
                     break;
                 case 4:
                     legs[0].sprite = item.images[0];
@@ -75,13 +89,41 @@ public class UpdateEquipment : MonoBehaviour
                     }
                     break;
                 case 2:
+                    if(equipment.GetEquipment[3] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                    }
                     weaponRight.sprite = null;
                     break;
                 case 3:
+                    if (equipment.GetEquipment[2] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                    }
                     shield.sprite = null;
                     break;
                 case 99:
+                    if (equipment.GetEquipment[3] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                    }
                     twoHandedWeapon.sprite = null;
+                    break;
+                case 98:
+                    if (equipment.GetEquipment[2] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                    }
+                    bow[0].sprite = null;
+                    bow[1].sprite = null;
+                    bow[2].sprite = null;
+                    break;
+                case 97:
+                    if (equipment.GetEquipment[3] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                    }
+                    staff.sprite = null;
                     break;
                 case 4:
                     legs[0].sprite = defaultEquipment[8];

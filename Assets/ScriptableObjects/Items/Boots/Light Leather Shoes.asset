@@ -20,11 +20,13 @@ MonoBehaviour:
   dodgeChance: 0
   critChance: 0
   critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300030, guid: 42aaec58eb8e414ba95c163402c61156, type: 3}
   - {fileID: 21300032, guid: 42aaec58eb8e414ba95c163402c61156, type: 3}
   border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 1
   description: Bruhh, again?
   sellValue: 36

@@ -19,6 +19,7 @@ public abstract class PlayerScriptableSkill : ScriptableObject
     public bool isBought;
     public bool isAvaliable;
     public bool isBuff;
+    public bool isDebuf;
     public string skillName;
     public Sprite skillBorder;
     public SkillDifficultyLevel skillDifficultyLevel;

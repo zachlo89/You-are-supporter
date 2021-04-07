@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Level> levelList = new List<Level>();
     [SerializeField] private Team team;
 
-
     private int counter;
 
     private void Awake()
@@ -44,6 +43,7 @@ public class GameManager : MonoBehaviour
             _instance = this;
         }
         DontDestroyOnLoad(gameObject);
+        
     }
 
     private void Start()

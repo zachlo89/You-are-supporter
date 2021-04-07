@@ -6,7 +6,8 @@ public enum CharacterClass
 {
     Tank,
     Berserker,
-    Archer
+    Archer,
+    Supporter
 }
 
 [CreateAssetMenu (menuName = "ScriptableObject/Character")]

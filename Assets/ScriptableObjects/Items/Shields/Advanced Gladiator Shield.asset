@@ -20,10 +20,12 @@ MonoBehaviour:
   dodgeChance: 0
   critChance: 0
   critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300000, guid: 76cdb673e26446eca7290d7f8e9d0701, type: 3}
   border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 4
+  slotPosition: 5
   rarity: 1
   description: Used on arenas
   sellValue: 48

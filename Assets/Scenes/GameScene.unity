@@ -683,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1020, y: -125.62561}
+  m_AnchoredPosition: {x: 1020, y: -125.62549}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75072754
@@ -6207,12 +6207,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcebee4f95dd544182b5afbea6cbfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalHitParticleEffects: {fileID: 1954474933419612, guid: f213a31b42cd11e47aabf175095777d1,
+    type: 3}
+  critHitParticleEffects: {fileID: 100000, guid: 136682ab43d9f574183c3ee7dbe076fc,
+    type: 3}
   team: {fileID: 11400000, guid: 5900bd9d491da5340be377694e6361d1, type: 2}
   skillsListButtons:
   - {fileID: 1345870123}
   - {fileID: 1874059116}
   - {fileID: 110954617}
   - {fileID: 2081764180}
+  attackRate: 0
 --- !u!4 &168407420
 Transform:
   m_ObjectHideFlags: 0
@@ -27313,6 +27318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d716b6502807e08409ac9a1fa104a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTutorial: {fileID: 11400000, guid: 6bf667ac5412a3b4893c48d6a69404fd, type: 2}
+  staff: {fileID: 11400000, guid: aea9d706ea3286944b563ddf645de486, type: 2}
   listOfAllItems: {fileID: 11400000, guid: 48a4d8fb725a5f9489e5b4e845d1fc88, type: 2}
   spawningPoint: {fileID: 1992468724}
   iconPrefab: {fileID: 2575191572376427512, guid: 7a4d4a5f33f6bae4f9d84c14cc19a5aa,
@@ -42882,6 +42889,53 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &785965363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785965365}
+  - component: {fileID: 785965364}
+  m_Layer: 0
+  m_Name: TutorialSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &785965364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785965363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf2f0da463d5ec4cbc880bdfb1b0bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas1: {fileID: 844776761}
+  tutorialPanel: {fileID: 3617385174366988742, guid: 1f16b6de3f9122b4d91c3cfb6b5435af,
+    type: 3}
+  isTutorial1: {fileID: 11400000, guid: 6bf667ac5412a3b4893c48d6a69404fd, type: 2}
+--- !u!4 &785965365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785965363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.339935, y: 1.9381896, z: 342.63086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821181029
 GameObject:
   m_ObjectHideFlags: 0
@@ -80720,7 +80774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 620, y: -125.62561}
+  m_AnchoredPosition: {x: 620, y: -125.62549}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112924545

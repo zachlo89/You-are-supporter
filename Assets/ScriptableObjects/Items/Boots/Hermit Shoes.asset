@@ -20,11 +20,13 @@ MonoBehaviour:
   dodgeChance: 0
   critChance: 0
   critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300012, guid: 41ad2c1d10e74e6eae919687457ae41c, type: 3}
   - {fileID: 21300014, guid: 41ad2c1d10e74e6eae919687457ae41c, type: 3}
   border: {fileID: -7779772245507925811, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 0
   description: Forest boots
   sellValue: 18

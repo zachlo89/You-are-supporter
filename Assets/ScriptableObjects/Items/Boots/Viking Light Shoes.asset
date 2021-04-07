@@ -20,11 +20,13 @@ MonoBehaviour:
   dodgeChance: 2
   critChance: 0
   critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300012, guid: 49fdcbb3b109408bb558af2e02d02e0a, type: 3}
   - {fileID: 21300014, guid: 49fdcbb3b109408bb558af2e02d02e0a, type: 3}
   border: {fileID: 716929634459042934, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 1
   description: To the Vallhaly and beyond
   sellValue: 38

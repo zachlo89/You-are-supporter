@@ -16,11 +16,17 @@ MonoBehaviour:
   armor: 5
   attackRate: -2
   hp: -2
+  blockChance: 0
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300012, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   - {fileID: 21300014, guid: 80d6c1b542974d2d9c58b93b855e5f84, type: 3}
   border: {fileID: 21300000, guid: dd77367546bf4433dbbb2317a935df54, type: 3}
-  slotPosition: 6
+  slotPosition: 7
   rarity: 0
   description: Is there any sense of wearing it?
   sellValue: 17

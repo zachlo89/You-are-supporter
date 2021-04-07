@@ -81,7 +81,11 @@ public class DetailsPanel : MonoBehaviour
                 ChangeText();
                 break;
             case SlotPosition.bow:
-                slotIndex = 99;
+                slotIndex = 98;
+                ChangeText();
+                break;
+            case SlotPosition.staff:
+                slotIndex = 97;
                 ChangeText();
                 break;
             case SlotPosition.shoes:
@@ -102,10 +106,14 @@ public class DetailsPanel : MonoBehaviour
         transform.localPosition = SetPosition();
         buttonUnEquip.SetActive(false);
         buttonEquip.SetActive(true);
-        if (item.slotPosition == SlotPosition.shield && (hero.characterClass == CharacterClass.Berserker || hero.characterClass == CharacterClass.Archer))
+        if (item.slotPosition == SlotPosition.shield && (hero.characterClass == CharacterClass.Berserker || hero.characterClass == CharacterClass.Archer || hero.characterClass == CharacterClass.Supporter))
         {
             buttonEquip.GetComponent<Button>().interactable = false;
         } else buttonEquip.GetComponent<Button>().interactable = true;
+        if(item.slotPosition == SlotPosition.staff && hero.characterClass != CharacterClass.Supporter)
+        {
+            buttonEquip.GetComponent<Button>().interactable = false;
+        }
         buttonSell.SetActive(true);
         List<ItemScriptable> itemsToCheck = new List<ItemScriptable>();
         itemsToCheck.Clear();
@@ -143,6 +151,13 @@ public class DetailsPanel : MonoBehaviour
                 AddToText(itemsToCheck);
                 break;
             case SlotPosition.bow:
+                slotIndex = 98;
+                ChangeText();
+                itemsToCheck.Add(hero.equipment.GetEquipment[3]);
+                itemsToCheck.Add(hero.equipment.GetEquipment[2]);
+                AddToText(itemsToCheck);
+                break;
+            case SlotPosition.staff:
                 slotIndex = 99;
                 ChangeText();
                 itemsToCheck.Add(hero.equipment.GetEquipment[2]);
@@ -524,12 +539,36 @@ public class DetailsPanel : MonoBehaviour
 
     public void Equip()
     {
+        if (slotIndex == 99)
+        {
+            slotIndex = 2;
+        }
+        if (slotIndex == 98)
+        {
+            slotIndex = 3;
+        }
+        if (slotIndex == 97)
+        {
+            slotIndex = 2;
+        }
         compareAndDisplayDetails.EquipItem(slotIndex);
         gameObject.SetActive(false);
     }
 
     public void Unequip()
     {
+        if(slotIndex == 99)
+        {
+            slotIndex = 2;
+        }
+        if (slotIndex == 98)
+        {
+            slotIndex = 3;
+        }
+        if (slotIndex == 97)
+        {
+            slotIndex = 2;
+        }
         compareAndDisplayDetails.UnEquip(slotIndex);
         gameObject.SetActive(false);
     }

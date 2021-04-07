@@ -13,6 +13,8 @@ enum PlayerSkill
 
 public class PlayerSKills : MonoBehaviour
 {
+    [SerializeField] private GameObject normalHitParticleEffects;
+    [SerializeField] private GameObject critHitParticleEffects;
     [SerializeField] private Team team;
     private PlayerSkill selectedSkill;
     [SerializeField] private List<Button> skillsListButtons = new List<Button>();
@@ -21,7 +23,17 @@ public class PlayerSKills : MonoBehaviour
     private int currentMana;
     private CharacterBattle mainCharacter;
     private List<bool> canInterac = new List<bool>();
+    private float criticalChance;
+    private float criticalDamage;
+    private int damage;
+    [SerializeField] private float attackRate;
+    private bool canAttack;
+    private Animator heroAnimator;
 
+    public void CanAttack(bool canAttack)
+    {
+        this.canAttack = canAttack;
+    }
     private void Start()
     {
         for(int i = 0; i < team.heroesList.Count; i++)
@@ -33,11 +45,13 @@ public class PlayerSKills : MonoBehaviour
             }
         }
         SwapItemIcons();
+        selectedSkill = PlayerSkill.Inactive;
     }
 
     public void SetUpMainCharacter(CharacterBattle mainCharacter)
     {
         this.mainCharacter = mainCharacter;
+        this.heroAnimator = mainCharacter.HeroAnimator;
     }
 
     public void SetCurrentMana(int currentMana)
@@ -96,36 +110,133 @@ public class PlayerSKills : MonoBehaviour
         switch (selectedSkill)
         {
             case PlayerSkill.Skill1:
-                mainCharacter.MainPlayerUseMana(skillsCost[0]);
-                activeSkills[0].Use(character);
-                selectedSkill = PlayerSkill.Inactive;
-                CheckIfSufficentMana(currentMana);
-                StartCoroutine(ButtonCooldown(0));
+                if (!activeSkills[0].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[0]);
+                    activeSkills[0].Use(character);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(0));
+                }
                 break;
             case PlayerSkill.Skill2:
-                mainCharacter.MainPlayerUseMana(skillsCost[1]);
-                activeSkills[1].Use(character);
-                selectedSkill = PlayerSkill.Inactive;
-                CheckIfSufficentMana(currentMana);
-                StartCoroutine(ButtonCooldown(1));
+                if (!activeSkills[1].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[1]);
+                    activeSkills[1].Use(character);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(1));
+                }
                 break;
             case PlayerSkill.Skill3:
-                mainCharacter.MainPlayerUseMana(skillsCost[2]);
-                activeSkills[2].Use(character);
-                selectedSkill = PlayerSkill.Inactive;
-                CheckIfSufficentMana(currentMana);
-                StartCoroutine(ButtonCooldown(2));
+                if (!activeSkills[2].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[2]);
+                    activeSkills[2].Use(character);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(2));
+                }
                 break;
             case PlayerSkill.Skill4:
-                mainCharacter.MainPlayerUseMana(skillsCost[3]);
-                activeSkills[3].Use(character);
-                selectedSkill = PlayerSkill.Inactive;
-                CheckIfSufficentMana(currentMana);
-                StartCoroutine(ButtonCooldown(3));
+                if (!activeSkills[2].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[3]);
+                    activeSkills[3].Use(character);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(3));
+                }
                 break;
             default:
                 return;
         }
+        selectedSkill = PlayerSkill.Inactive;
+    }
+
+    public void UseNegativeSkill(CharacterBattle enemy)
+    {
+        switch (selectedSkill)
+        {
+            case PlayerSkill.Skill1:
+                if (activeSkills[0].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[0]);
+                    activeSkills[0].Use(enemy);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(0));
+                }
+                break;
+            case PlayerSkill.Skill2:
+                if (activeSkills[1].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[1]);
+                    activeSkills[1].Use(enemy);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(1));
+                }
+                break;
+            case PlayerSkill.Skill3:
+                if (activeSkills[2].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[2]);
+                    activeSkills[2].Use(enemy);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(2));
+                }
+                break;
+            case PlayerSkill.Skill4:
+                if (activeSkills[2].isDebuf)
+                {
+                    mainCharacter.MainPlayerUseMana(skillsCost[3]);
+                    activeSkills[3].Use(enemy);
+                    selectedSkill = PlayerSkill.Inactive;
+                    CheckIfSufficentMana(currentMana);
+                    StartCoroutine(ButtonCooldown(3));
+                }
+                break;
+            default:
+                if (canAttack)
+                {
+                    NormalAttack(enemy);
+                }
+                return;
+        }
+        selectedSkill = PlayerSkill.Inactive;
+    }
+
+    private void NormalAttack(CharacterBattle enemy)
+    {
+        canAttack = false;
+        this.criticalChance = mainCharacter.CriticalChance;
+        this.damage = mainCharacter.Damage;
+        this.criticalDamage = mainCharacter.CriticalMultiply;
+        if (CritAttack())
+        {
+            Instantiate(critHitParticleEffects, enemy.transform);
+            enemy.GetDamage((int)(damage * criticalDamage), true);
+        }
+        else
+        {
+            Instantiate(normalHitParticleEffects, enemy.transform);
+            enemy.GetDamage(damage, false);
+        }
+        mainCharacter.HeroAnimator.SetTrigger("NormalAttack");
+        mainCharacter.ResetSlider();
+    }
+
+    private bool CritAttack()
+    {
+        int random = Random.Range(0, 100);
+        if (random <= criticalChance)
+        {
+            return true;
+        }
+        else return false;
     }
 
     IEnumerator ButtonCooldown(int i)

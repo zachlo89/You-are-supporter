@@ -33,7 +33,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -108,9 +108,9 @@ RectTransform:
   m_Father: {fileID: 535029025435026189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.9558144, y: -1.1448958}
   m_SizeDelta: {x: 15.911629, y: 1144.8958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2260246811780481772
@@ -234,9 +234,9 @@ RectTransform:
   m_Father: {fileID: 535029025435026189}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.9558144, y: -6.4344788}
   m_SizeDelta: {x: 15.911629, y: 1150.8958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7742022509148021107
@@ -360,9 +360,9 @@ RectTransform:
   m_Father: {fileID: 535029025435026189}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.9558144, y: -3.7866874}
   m_SizeDelta: {x: 15.911629, y: 1176.8958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6836585905678506732
@@ -485,7 +485,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6854744265001923188
 Transform:
   m_ObjectHideFlags: 0
@@ -17796,7 +17796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6862925406976089422
 Transform:
   m_ObjectHideFlags: 0
@@ -24402,12 +24402,18 @@ MonoBehaviour:
   beardSprites: {fileID: 6763362070547522726}
   torso: {fileID: 6763967187390611132}
   pelvis: {fileID: 6763433189469118342}
-  armL: {fileID: 6763365603990829874}
-  forearmoL: {fileID: 7322408277961037820}
+  armL: {fileID: 6763813417510349872}
+  forearmoL: {fileID: 6763980320144600058}
+  armL2: {fileID: 6763813417510349872}
+  forearmoL2: {fileID: 6763274684070103480}
   armR: {fileID: 6763735205738816672}
   forearmR: {fileID: 6763680837191139654}
-  handL: {fileID: 7322290052546612288}
+  armR2: {fileID: 6763365603990829874}
+  forearmR2: {fileID: 7322408277961037820}
+  handL: {fileID: 6764007335826668412}
+  handL2: {fileID: 7322196419991508694}
   handR: {fileID: 6763615829959051126}
+  handR2: {fileID: 7322290052546612288}
   legL: {fileID: 6763287866273241946}
   legR: {fileID: 6763594836603645248}
   shinL: {fileID: 6764071287744749970}
@@ -24429,16 +24435,23 @@ MonoBehaviour:
   equipment: {fileID: 11400000, guid: 4a4ca65309ff8154e8d81540ef922d72, type: 2}
   armor:
   - {fileID: 6763236420243927022}
-  - {fileID: 7322334132546584336}
-  - {fileID: 6763209956289359548}
-  - {fileID: 7322154258912466722}
+  - {fileID: 6763807381568816710}
+  - {fileID: 6763735205738816672}
+  - {fileID: 6763240812293440700}
   - {fileID: 6763856472662574746}
-  - {fileID: 7322338683814600998}
+  - {fileID: 7322728773288152712}
   - {fileID: 6763250319799069970}
   - {fileID: 6763313981923803684}
+  - {fileID: 7322473064585632850}
+  - {fileID: 6763209956289359548}
+  - {fileID: 6763856472662574746}
+  - {fileID: 7322728773288152712}
+  - {fileID: 7322338683814600998}
   weaponRight: {fileID: 7322187995522434438}
   shield: {fileID: 6763355156119653790}
   twoHandedWeapon: {fileID: 7322187995522434438}
+  staff: {fileID: 7322187995522434438}
+  bow: []
   legs:
   - {fileID: 6763745648021668502}
   - {fileID: 7322558109012571586}
@@ -24457,7 +24470,7 @@ MonoBehaviour:
   - {fileID: 21300006, guid: dda5b2f6248a41f4ad33a5fe210c331c, type: 3}
   - {fileID: 21300030, guid: dda5b2f6248a41f4ad33a5fe210c331c, type: 3}
   - {fileID: 21300032, guid: dda5b2f6248a41f4ad33a5fe210c331c, type: 3}
-  updateFaceAndBody: {fileID: 6857948205223096857}
+  animator: {fileID: 6808364176364215854}
 --- !u!114 &7505794890738865043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24607,7 +24620,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -26965,7 +26978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &535029025435026189
 RectTransform:
   m_ObjectHideFlags: 0

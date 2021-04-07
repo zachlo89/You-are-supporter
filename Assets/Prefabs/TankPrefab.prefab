@@ -33,7 +33,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -107,7 +107,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -181,7 +181,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -256,9 +256,9 @@ RectTransform:
   m_Father: {fileID: 6006533759146351035}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.9558144, y: -3.7866874}
   m_SizeDelta: {x: 15.911629, y: 1176.8958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &498929635512362777
@@ -382,9 +382,9 @@ RectTransform:
   m_Father: {fileID: 6006533759146351035}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.9558144, y: -6.4344788}
   m_SizeDelta: {x: 15.911629, y: 1150.8958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5895850698389482353
@@ -24352,10 +24352,16 @@ MonoBehaviour:
   pelvis: {fileID: 6763433189469118342}
   armL: {fileID: 6763813417510349872}
   forearmoL: {fileID: 6763980320144600058}
+  armL2: {fileID: 6763813417510349872}
+  forearmoL2: {fileID: 6763274684070103480}
   armR: {fileID: 6763735205738816672}
   forearmR: {fileID: 6763680837191139654}
+  armR2: {fileID: 6763365603990829874}
+  forearmR2: {fileID: 7322408277961037820}
   handL: {fileID: 6764007335826668412}
+  handL2: {fileID: 7322196419991508694}
   handR: {fileID: 6763615829959051126}
+  handR2: {fileID: 7322290052546612288}
   legL: {fileID: 6763287866273241946}
   legR: {fileID: 6763594836603645248}
   shinL: {fileID: 6764071287744749970}
@@ -24384,9 +24390,16 @@ MonoBehaviour:
   - {fileID: 6763510669278272382}
   - {fileID: 6763250319799069970}
   - {fileID: 6763313981923803684}
+  - {fileID: 7322473064585632850}
+  - {fileID: 7322334132546584336}
+  - {fileID: 7322154258912466722}
+  - {fileID: 7322728773288152712}
+  - {fileID: 7322338683814600998}
   weaponRight: {fileID: 7322187995522434438}
   shield: {fileID: 6763355156119653790}
   twoHandedWeapon: {fileID: 7322187995522434438}
+  staff: {fileID: 7322187995522434438}
+  bow: []
   legs:
   - {fileID: 6763745648021668502}
   - {fileID: 7322558109012571586}
@@ -24405,7 +24418,7 @@ MonoBehaviour:
   - {fileID: 21300006, guid: dda5b2f6248a41f4ad33a5fe210c331c, type: 3}
   - {fileID: 21300030, guid: dda5b2f6248a41f4ad33a5fe210c331c, type: 3}
   - {fileID: 21300032, guid: dda5b2f6248a41f4ad33a5fe210c331c, type: 3}
-  updateFaceAndBody: {fileID: 0}
+  animator: {fileID: 6808364176364215854}
 --- !u!114 &7505794890738865043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24541,7 +24554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6006533759146351035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26981,9 +26994,9 @@ RectTransform:
   m_Father: {fileID: 6006533759146351035}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 7.9558144, y: -1.1448958}
   m_SizeDelta: {x: 15.911629, y: 1144.8958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &350016743191481797

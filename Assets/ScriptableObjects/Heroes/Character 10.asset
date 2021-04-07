@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Yoz
+  characterName: Lexyu
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d11298d729a54a82a2abc3e65294fcba, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: b10c593362bc49e7853d665ed7f2aa78, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: e69fabaf2f2c4847a360900c759e7a81, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 2fe13f78cbe648edb11eea503cd69814, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 568b0544b9aa49c5827b767199fe103e, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: e0a727d44c1340d3bb56aad49d922e26, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 5707582b262b48a6a9807f75aa3778f7, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.89751565, g: 0.7077544, b: 0.34971875, a: 1}
-  hairColor: {r: 0.36249107, g: 0.22456384, b: 0.20147991, a: 1}
+  bodyColor: {r: 0.91493773, g: 0.21891272, b: 0.85966575, a: 1}
+  hairColor: {r: 0.3370344, g: 0.23641896, b: 0.22535586, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

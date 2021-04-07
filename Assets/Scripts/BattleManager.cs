@@ -14,7 +14,6 @@ public class BattleManager : MonoBehaviour
     private void Start()
     {
         panelOn = false;
-        Time.timeScale = 1;
         isWon = false;
         winPanel.SetActive(false);
     }

@@ -57,7 +57,14 @@ public class SetItemIcon : MonoBehaviour
                 itemImages[7].sprite = item.images[1];
                 itemImages[8].sprite = item.images[1];
                 break;
-
+            case SlotPosition.bow:
+                itemImages[9].sprite = item.images[0];
+                itemImages[10].sprite = item.images[1];
+                itemImages[11].sprite = item.images[1];
+                break;
+            case SlotPosition.staff:
+                itemImages[12].sprite = item.images[0];
+                break;
         }
 
         if (item.border != null)
