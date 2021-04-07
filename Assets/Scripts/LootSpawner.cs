@@ -179,7 +179,7 @@ public class LootSpawner : MonoBehaviour
 
     public void SpawnItems()
     {
-        if (PlayerPrefs.GetInt("Tutorail2", -1) == 0)
+        if (PlayerPrefs.GetInt("Tutorial2", -1) == -1)
         {
             int random = Random.Range(1, spawnItemMaxCount);
             for (int i = 0; i < random; i++)

@@ -60,6 +60,7 @@ MonoBehaviour:
   hairColor: {r: 0.4433962, g: 0, b: 0, a: 1}
   playerSkillTree:
   - {fileID: 11400000, guid: ba1d5a25bda316a40a76a553ef6a88f7, type: 2}
-  activeSkills: []
+  activeSkills:
+  - {fileID: 11400000, guid: 3257a869ccf960f44b97cf4993c5b263, type: 2}
   characterSkillTree: []
   characterActiveSkills: []

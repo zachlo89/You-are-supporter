@@ -31,21 +31,21 @@ public class TutorialManager : MonoBehaviour
     }
     private void Start()
     {
-        if (PlayerPrefs.GetInt("Tutorail1", -1) == 0)
+        if (PlayerPrefs.GetInt("Tutorial1", -1) == 0)
         {
             PlayerPrefs.SetInt("Tutorial1", -1);
             panel = Instantiate(tutorailPanel, canvas1);
             panel.GetComponent<TutorialS1>().S1Constructor(stageTransform, stageTransform2Parent);
             t1Buttons.BlockButtons1();
         }
-        else if (PlayerPrefs.GetInt("Tutorail3", -1) == 0)
+        else if (PlayerPrefs.GetInt("Tutorial3", -1) == 0)
         {
             PlayerPrefs.SetInt("Tutorial3", -1);
             panel = Instantiate(tutorailPanel, canvas1);
             panel.GetComponent<TutorialS1>().S3Constructor();
             t1Buttons.BlockButtons2();
         }
-        else if (PlayerPrefs.GetInt("Tutorail4", -1) == 0)
+        else if (PlayerPrefs.GetInt("Tutorial4", -1) == 0)
         {
             panel = Instantiate(tutorailPanel, canvas1);
             panel.GetComponent<TutorialS1>().S4Constructor(healSkill, rightArrow, buySkill, equipSkill, skillPanel);
