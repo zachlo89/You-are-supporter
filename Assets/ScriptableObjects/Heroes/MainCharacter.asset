@@ -17,7 +17,7 @@ MonoBehaviour:
   characterName: Dunk
   buyValue: 200
   isAlive: 1
-  damage: 45
+  damage: 5
   armor: 5
   maxHealt: 400
   hpRegen: 5
@@ -29,12 +29,12 @@ MonoBehaviour:
   blockChance: 5
   dogdeChance: 5
   expirence: 0
-  toNextLevel: 100
-  level: 1
+  toNextLevel: 225
+  level: 3
   stars: 1
   equipment: {fileID: 11400000, guid: 4a4ca65309ff8154e8d81540ef922d72, type: 2}
   isAvaliable: 1
-  avaliableSkillPoints: 0
+  avaliableSkillPoints: 2
   characterClass: 3
   prefab: {fileID: 6857948205223096856, guid: 296efa15346af364581dead6ab7a818b, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}

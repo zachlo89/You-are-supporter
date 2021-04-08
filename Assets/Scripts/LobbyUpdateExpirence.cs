@@ -14,6 +14,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Transform spawningPoint;
     [SerializeField] private TextMeshProUGUI goldValue;
+    [SerializeField] private TextMeshProUGUI rubinsValue;
     [SerializeField] private ScriptableItemManager inventory;
     private void Start()
     {
@@ -67,6 +68,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
         temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
 
         goldValue.text = inventory.Gold.value.ToString();
+        rubinsValue.text = inventory.Rubins.value.ToString();
     }
 
 }

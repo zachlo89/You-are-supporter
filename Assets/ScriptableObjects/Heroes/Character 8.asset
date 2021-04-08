@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Estron
+  characterName: Fophni
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: a78794de3c429fb4c8098f2835176eb6, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 71d1e46b2e3d4b67a4592ab929344ec7, type: 3}
-  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: aa856b5bcd87407498e1285f296ecaf6, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 8f56eaf0fc23438d83f7247e8b51def3, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 5bcf46e3a2ca407ea933865f6194ae42, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: b10c593362bc49e7853d665ed7f2aa78, type: 3}
+  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 6a9f2aab5be6403d9d5976cbc72a88a4, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.3621381, g: 0.4614169, b: 0.580272, a: 1}
-  hairColor: {r: 0.77267516, g: 0.027482867, b: 0.823913, a: 1}
+  bodyColor: {r: 0.45183212, g: 0.44924384, b: 0.9474001, a: 1}
+  hairColor: {r: 0.60179776, g: 0.77149737, b: 0.5351092, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

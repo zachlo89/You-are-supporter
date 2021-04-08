@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine.UI;
 public class TawernPanel : MonoBehaviour
 {
+    [SerializeField] private Image characterClassLogo;
+    [SerializeField] private List<Sprite> characterClassesIcons = new List<Sprite>();
     [SerializeField] private Button buyButton;
     [SerializeField] private RandomGenerateBodies randomGenerator;
     [SerializeField] private ScriptableItemManager inventory;
@@ -130,6 +132,23 @@ public class TawernPanel : MonoBehaviour
 
         yield return new WaitForSeconds(.11f);
         rightPanel.SetActive(true);
+
+        switch (character.characterClass)
+        {
+            case CharacterClass.Tank:
+                characterClassLogo.sprite = characterClassesIcons[0];
+                break;
+            case CharacterClass.Berserker:
+                characterClassLogo.sprite = characterClassesIcons[1];
+                break;
+            case CharacterClass.Archer:
+                characterClassLogo.sprite = characterClassesIcons[2];
+                break;
+            default:
+                characterClassLogo.sprite = characterClassesIcons[0];
+                break;
+        }
+
         damageText.text = damage.ToString();
         armorText.text = armor.ToString();
         attackRateText.text = (100/ attackRate).ToString();
@@ -153,7 +172,6 @@ public class TawernPanel : MonoBehaviour
 
     private void AdjustStatsToLevel(ScriptableCharacter hero)
     {
-        Debug.Log("Adjust stats");
         switch (hero.characterClass)
         {
             case CharacterClass.Tank:

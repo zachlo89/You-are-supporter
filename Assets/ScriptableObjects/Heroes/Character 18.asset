@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Fragg
+  characterName: Crix
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
   hairsSprites: {fileID: 21300000, guid: 5792d08041554a6e8522be53b45e4577, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 5ede9bde629743b194abe6ecdac87e9a, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: ff2125667e764565a68631a14f83fdfb, type: 3}
+  eyesSprites: {fileID: 21300000, guid: c07613e82e2649c288ff72f1948907da, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: b10c593362bc49e7853d665ed7f2aa78, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 71d21773d4634fc9b0f11106e002a1a9, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 6fe50e152624414d97efadf5155e4cb6, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.5150003, g: 0.95546305, b: 0.49541122, a: 1}
-  hairColor: {r: 0.50676244, g: 0.063354015, b: 0.13413548, a: 1}
+  bodyColor: {r: 0.2668982, g: 0.16121972, b: 0.3453979, a: 1}
+  hairColor: {r: 0.5193166, g: 0.44489974, b: 0.035298586, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

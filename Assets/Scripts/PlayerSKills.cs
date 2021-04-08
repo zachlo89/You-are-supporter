@@ -200,43 +200,10 @@ public class PlayerSKills : MonoBehaviour
                 }
                 break;
             default:
-                if (canAttack)
-                {
-                    NormalAttack(enemy);
-                }
+                mainCharacter.NormalAttack();
                 return;
         }
         selectedSkill = PlayerSkill.Inactive;
-    }
-
-    private void NormalAttack(CharacterBattle enemy)
-    {
-        canAttack = false;
-        this.criticalChance = mainCharacter.CriticalChance;
-        this.damage = mainCharacter.Damage;
-        this.criticalDamage = mainCharacter.CriticalMultiply;
-        if (CritAttack())
-        {
-            Instantiate(critHitParticleEffects, enemy.transform);
-            enemy.GetDamage((int)(damage * criticalDamage), true);
-        }
-        else
-        {
-            Instantiate(normalHitParticleEffects, enemy.transform);
-            enemy.GetDamage(damage, false);
-        }
-        mainCharacter.HeroAnimator.SetTrigger("NormalAttack");
-        mainCharacter.ResetSlider();
-    }
-
-    private bool CritAttack()
-    {
-        int random = Random.Range(0, 100);
-        if (random <= criticalChance)
-        {
-            return true;
-        }
-        else return false;
     }
 
     IEnumerator ButtonCooldown(int i)

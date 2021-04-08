@@ -13,11 +13,5 @@ MonoBehaviour:
   m_Name: Cloudy Beach
   m_EditorClassIdentifier: 
   levelsList:
-  - {fileID: 11400000, guid: 64268d42fd301c24aa28be6bd972b2c1, type: 2}
-  - {fileID: 11400000, guid: 7df82cb10b1e1b3478ce7a70e7671d2d, type: 2}
-  - {fileID: 11400000, guid: 9563e07b9af0b304e8f6c1de5f6cd348, type: 2}
-  - {fileID: 11400000, guid: 16e7ffc59b0193a4aa1da924cc928e66, type: 2}
-  - {fileID: 11400000, guid: 16e7ffc59b0193a4aa1da924cc928e66, type: 2}
-  - {fileID: 11400000, guid: 16e7ffc59b0193a4aa1da924cc928e66, type: 2}
-  - {fileID: 11400000, guid: 16e7ffc59b0193a4aa1da924cc928e66, type: 2}
+  - {fileID: 11400000, guid: 5e13cd57a25e3b443bfca11f3226b4bc, type: 2}
   image: {fileID: 21300000, guid: bc4a084373ec44b99b49e7a2a4f5da2d, type: 3}

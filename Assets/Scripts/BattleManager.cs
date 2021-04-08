@@ -160,13 +160,20 @@ public class BattleManager : MonoBehaviour
 
     private void TurnOnEndPanel(bool win)
     {
+        StartCoroutine(EndPanelCoroutine(win));
+    }
+
+    IEnumerator EndPanelCoroutine(bool win)
+    {
+        yield return new WaitForSeconds(1.5f);
         if (!panelOn)
         {
             if (win)
             {
                 winPanel.SetActive(true);
                 winPanel.GetComponent<WinPanel>().WinPanelConstructor();
-            } else
+            }
+            else
             {
                 losePanel.SetActive(true);
             }

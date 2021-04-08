@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Rizxer
+  characterName: Timian
   buyValue: 205
   isAlive: 1
   damage: 56
@@ -38,11 +38,11 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9fb20787124c478ca7223deb84370ce3, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: ff2125667e764565a68631a14f83fdfb, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: b6d5cb29020a41c382199afb9138439e, type: 3}
+  hairsSprites: {fileID: 21300000, guid: ad9da5af68a542848494cd0905aba20b, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 96f5631b564b4e4e8304ee02021868be, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: d3acd862a54c4750a8f934507e1b9269, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 02a8b0a9d1ee42a59b340b69dc863dd7, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.06859338, g: 0.18670702, b: 0.78563344, a: 1}
-  hairColor: {r: 0.17402959, g: 0.46396202, b: 0.67622304, a: 1}
+  bodyColor: {r: 0.84852576, g: 0.9713596, b: 0.5776486, a: 1}
+  hairColor: {r: 0.4681657, g: 0.6021771, b: 0.9339956, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

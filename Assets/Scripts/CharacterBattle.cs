@@ -116,7 +116,13 @@ public class CharacterBattle : MonoBehaviour
     private void Start()
     {
         attackRateSlider.value = Random.Range(0f, 0.2f);
-        StartCoroutine(AttackRateSlider());
+        if (!isMainHero)
+        {
+            StartCoroutine(AttackRateSlider());
+        } else
+        {
+            attackRateSlider.gameObject.SetActive(false);
+        }
 
         animator = GetComponent<Animator>();
         if(animator == null)
@@ -328,8 +334,8 @@ public class CharacterBattle : MonoBehaviour
             Destroy(tempDamage, .5f);
             return;
         }
-        int attack = recievedDamage - armor;
-        attack = attack > 0 ? attack : 0;
+        int attack = recievedDamage - (int)(recievedDamage * armor / 100);
+        attack = attack > 0 ? attack : 5;
         currentHealth -= attack;
         if(currentHealth <= 0)
         {
@@ -367,22 +373,23 @@ public class CharacterBattle : MonoBehaviour
 
     public void NormalAttackEffect()
     {
-        if (!isMainHero)
+        CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
+        if (enemy != null)
         {
-            CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
-            if (enemy != null)
+            if (CritAttack())
             {
-                if (CritAttack())
-                {
-                    enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
-                    Instantiate(normalHitsParticlePrefab, enemy.transform);
-                }
-                else
-                {
-                    enemy.GetDamage(damage, false);
-                    Instantiate(normalHitsParticlePrefab, enemy.transform);
-                }
+                enemy.GetDamage(damage + (int)(damage * criticalMultiply), true);
+                Instantiate(normalHitsParticlePrefab, enemy.transform);
             }
+            else
+            {
+                enemy.GetDamage(damage, false);
+                Instantiate(normalHitsParticlePrefab, enemy.transform);
+            }
+        }
+        if (isMainHero)
+        {
+            battleManager.CheckIfEnd();
         }
     }
 
@@ -469,11 +476,7 @@ public class CharacterBattle : MonoBehaviour
                     NormalAttack();
                     break;
             }
-        } else
-        {
-            playerSKills.CanAttack(true);
-        }
-        
+        } 
     }
 
     public void MainPlayerUseMana(int mana)

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Skeleton Champion
   m_EditorClassIdentifier: 
   equipment:
+  - {fileID: 11400000, guid: fc13cfddccca4ed43908d6a999455aa1, type: 2}
+  - {fileID: 11400000, guid: 41fea32562c48be42a17dbc72582e790, type: 2}
+  - {fileID: 11400000, guid: d4097331668ec2749870bea44deffa02, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 82495809f8b12cc46b1530d5104550aa, type: 2}
-  - {fileID: 11400000, guid: 699457b8b0f79d84f85268c44989811e, type: 2}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 46686e55f3e15c04ab7e57714858ba32, type: 2}
+  - {fileID: 11400000, guid: 302026607a2d39a48a8c8a97126b0ffd, type: 2}
   - {fileID: 0}

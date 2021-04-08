@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Henca
+  characterName: Zike
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -37,12 +37,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 8f56eaf0fc23438d83f7247e8b51def3, type: 3}
-  eyesSprites: {fileID: 21300000, guid: b1b914daccf84083841ce4ead5aac920, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 255aabca8d3540309160a197140f6584, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 2e842cd7daba41a392f535774e8096b3, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: f5ef33a9d6b34416b12a7870e77fd0fa, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 02a8b0a9d1ee42a59b340b69dc863dd7, type: 3}
+  mouthSprites: {fileID: 21300000, guid: dbe5af76dc2c49fbbc9f81705434657a, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.17155433, g: 0.58042115, b: 0.5796754, a: 1}
-  hairColor: {r: 0.24864113, g: 0.45285112, b: 0.69029534, a: 1}
+  bodyColor: {r: 0.21305752, g: 0.62476283, b: 0.2738456, a: 1}
+  hairColor: {r: 0.8641571, g: 0.9589317, b: 0.8602257, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

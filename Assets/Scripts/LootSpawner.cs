@@ -17,6 +17,7 @@ public class LootSpawner : MonoBehaviour
     private List<ItemScriptable> epicItems = new List<ItemScriptable>();
     private List<ItemScriptable> mythicalItems = new List<ItemScriptable>();
     private List<ItemScriptable> legendaryItems = new List<ItemScriptable>();
+    private bool shouldDropLoot = true;
 
     [SerializeField] private ScriptableItemManager inventory;
     private int goldDropped;
@@ -179,26 +180,34 @@ public class LootSpawner : MonoBehaviour
 
     public void SpawnItems()
     {
-        if (PlayerPrefs.GetInt("Tutorial2", -1) == -1)
+        if (shouldDropLoot)
         {
-            int random = Random.Range(1, spawnItemMaxCount);
-            for (int i = 0; i < random; i++)
+            shouldDropLoot = false;
+            if (PlayerPrefs.GetInt("Tutorial2", -1) != 0)
             {
-                GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
-                ItemScriptable item = GetRandomItems();
-                temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(item);
-                inventory.AddItem(item);
+                int random = Random.Range(1, spawnItemMaxCount);
+                for (int i = 0; i < random; i++)
+                {
+                    GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
+                    ItemScriptable item = GetRandomItems();
+                    temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(item);
+                    inventory.AddItem(item);
+                    goldDropped = Random.Range(10 * stageLevel, 50 * stageLevel);
+                    goldValue.text = goldDropped.ToString();
+                    inventory.Gold.value += goldDropped;
+                }
             }
-        } else
-        {
-            PlayerPrefs.SetInt("Tutorial2", -1);
-            GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
-            temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(staff);
-            inventory.AddItem(staff);
+            else
+            {
+                PlayerPrefs.SetInt("Tutorial2", -1);
+                GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
+                temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(staff);
+                inventory.AddItem(staff);
+                goldDropped = 200;
+                goldValue.text = goldDropped.ToString();
+                inventory.Gold.value += goldDropped;
+            }
         }
-        goldDropped = Random.Range(10 * stageLevel, 50 * stageLevel);
-        goldValue.text = goldDropped.ToString();
-        inventory.Gold.value += goldDropped;
     }
 
 }

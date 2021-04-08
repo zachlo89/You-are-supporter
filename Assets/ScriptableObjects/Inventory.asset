@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: []
   gold: {fileID: 11400000, guid: 6e52cd4856bed7e4fbd6ca18cea6e4d9, type: 2}
+  rubins: {fileID: 11400000, guid: 7e6d37430a2468641b707fcf8ad94da5, type: 2}

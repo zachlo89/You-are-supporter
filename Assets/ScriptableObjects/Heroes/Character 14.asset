@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Hintiz
+  characterName: Fragg
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -38,11 +38,11 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 9b4944d27ae14619a5bf5c0aa8708b3b, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 8869a8f2f8834c92b17fc996d332dd61, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 2cbb874f14d74b03bccda307d7ace60a, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 85462366a68b4e299562f2f1fa080285, type: 3}
+  hairsSprites: {fileID: 21300000, guid: e37f61d68c4148528a76bb93a91e3081, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 650dd2905fe545d286a661d95b1d0edf, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 036508a6c5394691b075a361f46c6061, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: d5096ce7d2504c2d84ded50078016447, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.09189987, g: 0.33137947, b: 0.10692656, a: 1}
-  hairColor: {r: 0.067264676, g: 0.8030859, b: 0.015310407, a: 1}
+  bodyColor: {r: 0.67243886, g: 0.9022523, b: 0.50661844, a: 1}
+  hairColor: {r: 0.8341576, g: 0.463391, b: 0.7792655, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

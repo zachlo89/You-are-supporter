@@ -15,6 +15,13 @@ public class ScriptableItemManager : ScriptableObject
     {
         get { return gold; }
     }
+
+    [SerializeField] private ScriptableInt rubins;
+
+    public ScriptableInt Rubins
+    {
+        get { return rubins; }
+    }
     public void AddItem(ItemScriptable item)
     {
         inventory.Insert(0, item);
