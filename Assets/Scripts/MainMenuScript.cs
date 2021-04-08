@@ -11,7 +11,8 @@ public class MainMenuScript : MonoBehaviour
         PlayerPrefs.SetInt("Tutorial2", 0);
         PlayerPrefs.SetInt("Tutorial3", 0);
         PlayerPrefs.SetInt("Tutorial4", 0);
-        Debug.Log("Tutorial1 " + (PlayerPrefs.GetInt("Tutorial1", -1)));
+        PlayerPrefs.SetInt("Tutorial5", -1);
+        PlayerPrefs.SetInt("Tutorial6", 0);
         SceneManager.LoadSceneAsync(1);
     }
 

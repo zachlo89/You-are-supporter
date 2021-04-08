@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slime
   m_EditorClassIdentifier: 
   isMainCharacter: 0
-  expToGiveToThePlayers: 40
+  expToGiveToThePlayers: 50
   characterName: 
   buyValue: 0
   isAlive: 1

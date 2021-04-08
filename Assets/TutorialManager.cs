@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 public class TutorialManager : MonoBehaviour
 {
+    [SerializeField] private Transform teams;
+    [SerializeField] private Transform tavern;
     [SerializeField] private Transform healSkill, rightArrow, buySkill, equipSkill, skillPanel;
     [SerializeField] private TutorialS1BlockButtons t1Buttons;
     [SerializeField] private GameObject tutorailPanel;
@@ -29,6 +31,11 @@ public class TutorialManager : MonoBehaviour
     {
         panel.GetComponent<TutorialS1>().NextStep4();
     }
+
+    public void NextStep6()
+    {
+        panel.GetComponent<TutorialS1>().NextStep6();
+    }
     private void Start()
     {
         if (PlayerPrefs.GetInt("Tutorial1", -1) == 0)
@@ -47,10 +54,16 @@ public class TutorialManager : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("Tutorial4", -1) == 0)
         {
+            PlayerPrefs.SetInt("Tutorial5", 0);
             panel = Instantiate(tutorailPanel, canvas1);
             panel.GetComponent<TutorialS1>().S4Constructor(healSkill, rightArrow, buySkill, equipSkill, skillPanel);
             t1Buttons.BlockButtons3();
             PlayerPrefs.SetInt("Tutorial4", -1);
+        }
+        else if (PlayerPrefs.GetInt("Tutorial6", -1) == 0)
+        {
+            panel = Instantiate(tutorailPanel, canvas1);
+            panel.GetComponent<TutorialS1>().S6Constructor(tavern,teams);
         }
         else Destroy(gameObject);
 

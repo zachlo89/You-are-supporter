@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Cyrin
+  characterName: Hyou
   buyValue: 205
   isAlive: 1
   damage: 40
@@ -38,11 +38,11 @@ MonoBehaviour:
   characterClass: 2
   prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d997e7c79e8e41068a423fe5335f6ddb, type: 3}
-  eyesSprites: {fileID: 21300000, guid: de601e997cfb460398b2a629315670d9, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: c9d211e491314116a005138cfcf15a92, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 83ee27d524834a16bd1005098434cfee, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 3c5718446b1f4eb795beabb39d7762e0, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 568b0544b9aa49c5827b767199fe103e, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: ac6704f167ff464fab94a433607272ad, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: 85462366a68b4e299562f2f1fa080285, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.7559813, g: 0.16227567, b: 0.011125088, a: 1}
-  hairColor: {r: 0.2634943, g: 0.47227865, b: 0.5432299, a: 1}
+  bodyColor: {r: 0.570393, g: 0.8860513, b: 0.18406045, a: 1}
+  hairColor: {r: 0.94971716, g: 0.56071156, b: 0.43020254, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

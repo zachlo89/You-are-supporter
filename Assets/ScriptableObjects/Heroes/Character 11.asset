@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Yoz
+  characterName: Dydan
   buyValue: 205
   isAlive: 1
   damage: 42
@@ -34,15 +34,15 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 344dda574e78eb743903cfa152189a6d, type: 2}
   isAvaliable: 0
-  avaliableSkillPoints: 1
+  avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
   headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d11298d729a54a82a2abc3e65294fcba, type: 3}
-  eyesSprites: {fileID: 21300000, guid: f8b750706502462da0c9cdb378eb28ff, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: a6322f50596f429889812f5f3ad23916, type: 3}
-  earsSprites: {fileID: 21300000, guid: 36ae1fa73ac04c6382beca077daf80df, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 6fe50e152624414d97efadf5155e4cb6, type: 3}
+  hairsSprites: {fileID: 21300000, guid: bf9e79cdc90a4170951fd17460f67840, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 1ad4b61218924dc5b659e55f517a82fe, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: f5ef33a9d6b34416b12a7870e77fd0fa, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.2639683, g: 0.20761013, b: 0.33617967, a: 1}
-  hairColor: {r: 0.082401276, g: 0.7739136, b: 0.47872835, a: 1}
+  bodyColor: {r: 0.21330678, g: 0.1427052, b: 0.8682132, a: 1}
+  hairColor: {r: 0.7439053, g: 0.39861912, b: 0.22021055, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

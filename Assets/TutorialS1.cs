@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 public class TutorialS1 : MonoBehaviour
 {
+    private Transform teams;
+    private Transform tavern;
+    private Transform manaBar;
     private Transform healSkill;
     private Transform rightArrow;
     private Transform buySkill;
@@ -16,6 +19,7 @@ public class TutorialS1 : MonoBehaviour
     private bool partThree;
     private bool partFour;
     private bool partFive;
+    private bool partSix;
     [SerializeField] private GameObject tutorailImage;
     [SerializeField] private GameObject tutrailText;
     private string chat1 = "Let's jump straight into the battle, the most fun!";
@@ -34,6 +38,14 @@ public class TutorialS1 : MonoBehaviour
     private string chat13 = "You can buy it now";
     private string chat14 = "Equip it into one of 4 avaliable slots";
     private string chat15 = "Time for another battle! If you want you can equip some more items";
+    private string chat16 = "On the top of screen purple bar indicate your magic energy.\n You can use speel independently from yellow stamina bar";
+    private string chat17 = "Now click your spell and use it on yourself";
+    private string chat18 = "Wonderful now, try to win battle";
+    private string chat19 = "Battles getting harder, it's time to hire sombody to help you";
+    private string chat20 = "Click on avaliable characters. Read description and hire team member";
+    private string chat21 = "Awesome you hire sombody! Go back to lobby";
+    private string chat22 = "To add new character go to team panel";
+    private string chat23 = "Choose avaliable slot, then choose new character. That's it. Tutorail finished, rest you'll figure out. Good luck!";
     [SerializeField] private TextMeshProUGUI tutorialText;
     [SerializeField] private GameObject hand;
     private Transform stageTransform;
@@ -47,22 +59,23 @@ public class TutorialS1 : MonoBehaviour
         partThree = false;
         partFour = false;
         partFive = false;
+        partSix = false;
         this.stageTransform = stageTransform;
         this.stageTransform2Parent = stageTransform2Parent;
         Step1();
     }
     public void Step1()
     {
-        if (!partTwo && partOne && !partThree && !partFour && !partFive)
+        if (!partTwo && partOne && !partThree && !partFour && !partFive && !partSix)
         {
             switch (counter)
             {
                 case 0:
+                    button.gameObject.SetActive(false);
                     hand.SetActive(true);
                     ChangeText(chat1);
                     break;
                 case 1:
-                    button.gameObject.SetActive(false);
                     hand.transform.position = stageTransform.transform.position;
                     hand.transform.SetParent(stageTransform);
                     hand.GetComponent<RectTransform>().pivot = new Vector2(1f, -0.5f);
@@ -92,6 +105,7 @@ public class TutorialS1 : MonoBehaviour
         partThree = false;
         partFour = false;
         partFive = false;
+        partSix = false;
         Step2();
     }
     public void Step2()
@@ -124,6 +138,7 @@ public class TutorialS1 : MonoBehaviour
         partOne = false;
         partFour = false;
         partFive = false;
+        partSix = false;
         gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         tutrailText.transform.rotation = Quaternion.Euler(0, 0, 0);
         counter = 0;
@@ -174,6 +189,7 @@ public class TutorialS1 : MonoBehaviour
         partOne = false;
         partFour = true;
         partFive = false;
+        partSix = false;
         gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         tutrailText.transform.rotation = Quaternion.Euler(0, 0, 0);
         NextStep4();
@@ -181,7 +197,7 @@ public class TutorialS1 : MonoBehaviour
     
     public void NextStep4()
     {
-        if (!partTwo && !partOne && !partThree && partFour && !partFive)
+        if (!partTwo && !partOne && !partThree && partFour && !partFive && !partSix)
         {
             switch (counter)
             {
@@ -201,6 +217,8 @@ public class TutorialS1 : MonoBehaviour
                     hand.SetActive(true);
                     hand.transform.position = rightArrow.transform.position;
                     hand.transform.SetParent(rightArrow);
+                    tutorailImage.gameObject.SetActive(false);
+                    tutorialText.transform.parent.GetComponent<RectTransform>().pivot = new Vector2(0.35f, 0f);
                     break;
                 case 3:
                     ChangeText(chat12);
@@ -227,4 +245,109 @@ public class TutorialS1 : MonoBehaviour
 
         }
     }
+
+    public void S5Constructor(Transform manabar)
+    {
+        partThree = false;
+        partTwo = false;
+        partOne = false;
+        partFour = false;
+        partFive = true;
+        partSix = false;
+        counter = 0;
+        this.manaBar = manabar;
+        NextStep5();
+    }
+
+    public void NextStep5()
+    {
+        if (!partTwo && !partOne && !partThree && !partFour && partFive && !partSix)
+        {
+            switch (counter)
+            {
+                case 0:
+                    GameObject temp = Instantiate(hand, manaBar);
+                    temp.transform.position = manaBar.position;
+                    temp.transform.rotation = Quaternion.Euler(0, 0, 100);
+                    temp.SetActive(true);
+                    temp.transform.SetParent(manaBar);
+                    temp.GetComponent<RectTransform>().pivot = new Vector2(.7f, -2f);
+                    ChangeText(chat16);
+                    Destroy(temp, 1.5f);
+                    break;
+                case 1:
+                    hand.SetActive(true);
+                    ChangeText(chat17);
+                    break;
+                case 2:
+                    ChangeText(chat18);
+                    StartCoroutine(Hide());
+                    PlayerPrefs.SetInt("Tutorial5", -1);
+                    break;
+
+            }
+            ++counter;
+        }
+    }
+
+    public void S6Constructor(Transform tawern, Transform teams)
+    {
+        partThree = false;
+        partTwo = false;
+        partOne = false;
+        partFour = false;
+        partFive = false;
+        partSix = true;
+        this.tavern = tawern;
+        this.teams = teams;
+        counter = 0;
+        NextStep6();
+    }
+
+    public void NextStep6()
+    {
+        if (!partTwo && !partOne && !partThree && !partFour && !partFive && partSix)
+        {
+            switch (counter)
+            {
+                case 0:
+                    tutorialText.transform.parent.GetComponent<RectTransform>().pivot = new Vector2(0.7f, 0f);
+                    tutorailImage.gameObject.SetActive(false);
+                    hand.SetActive(true);
+                    hand.transform.position = tavern.position;
+                    hand.SetActive(true);
+                    hand.transform.SetParent(tavern);
+                    hand.GetComponent<RectTransform>().pivot = new Vector2(1f, 0f);
+                    ChangeText(chat19);
+                    break;
+                case 1:
+                    hand.SetActive(false);
+                    tutorialText.transform.parent.GetComponent<RectTransform>().pivot = new Vector2(0.3f, 0f);
+                    ChangeText(chat20);
+                    break;
+                case 2:
+                    ChangeText(chat21);
+                    
+                    break;
+                case 3:
+                    hand.SetActive(true);
+                    hand.transform.position = teams.position;
+                    hand.SetActive(true);
+                    hand.transform.SetParent(teams);
+                    ChangeText(chat22);
+                    break;
+                case 4:
+                    hand.SetActive(false);
+                    ChangeText(chat23);
+                    break;
+                case 5:
+                    PlayerPrefs.SetInt("Tutorial6", -1);
+                    this.gameObject.SetActive(false);
+                    break;
+
+            }
+            ++counter;
+        }
+    }
+
 }

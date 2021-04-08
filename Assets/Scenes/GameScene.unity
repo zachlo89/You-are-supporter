@@ -27318,7 +27318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d716b6502807e08409ac9a1fa104a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTutorial: {fileID: 11400000, guid: 6bf667ac5412a3b4893c48d6a69404fd, type: 2}
   staff: {fileID: 11400000, guid: aea9d706ea3286944b563ddf645de486, type: 2}
   listOfAllItems: {fileID: 11400000, guid: 48a4d8fb725a5f9489e5b4e845d1fc88, type: 2}
   spawningPoint: {fileID: 1992468724}
@@ -42921,7 +42920,9 @@ MonoBehaviour:
   canvas1: {fileID: 844776761}
   tutorialPanel: {fileID: 3617385174366988742, guid: 1f16b6de3f9122b4d91c3cfb6b5435af,
     type: 3}
-  isTutorial1: {fileID: 11400000, guid: 6bf667ac5412a3b4893c48d6a69404fd, type: 2}
+  tutorail2Panel: {fileID: 3617385174366988742, guid: 69912162e23fc0a48b568f852ecc7db9,
+    type: 3}
+  manabar: {fileID: 1339562948}
 --- !u!4 &785965365
 Transform:
   m_ObjectHideFlags: 0
@@ -66128,6 +66129,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 168407419}
         m_MethodName: SelectSkill1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 785965364}
+        m_MethodName: Step5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
