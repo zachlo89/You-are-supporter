@@ -7,12 +7,12 @@ using UnityEngine.EventSystems;
 
 public class EquipmentPanel : MonoBehaviour
 {
+    [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private TutorialManager tutorialManager;
     [SerializeField] private Image armR, armL, accessories;
     [SerializeField] private List<Sprite> iconsList = new List<Sprite>();
     [SerializeField] private Sprite possibleEquipment, disabledEquipment;
     [SerializeField] private GameObject detailsPanel;
-    [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     private ScriptableCharacter hero;
     [SerializeField] private List<GameObject> equipmentList = new List<GameObject>();
     [SerializeField] private Transform spawningPoint;

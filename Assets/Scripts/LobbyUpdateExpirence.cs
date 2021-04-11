@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 public class LobbyUpdateExpirence : MonoBehaviour
 {
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
+    [SerializeField] private ScriptableInt questLeveledUp;
     [SerializeField] private Team team;
     [SerializeField] private TextMeshProUGUI characterName;
     [SerializeField] private TextMeshProUGUI level;
@@ -16,10 +17,14 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private TextMeshProUGUI rubinsValue;
     [SerializeField] private ScriptableItemManager inventory;
+    [SerializeField] private GameObject questAlarm;
+    [SerializeField] private GameObject skillsAlarm;
+    private bool isLeveledUp = false;
     private void Start()
     {
-        UpdateLobby();
+        delegator.levelUppp += AlarmLevelUp;
         delegator.changeSprites += UpdateLobby;
+        UpdateLobby();
     }
 
     private void UpdateLobby()
@@ -36,39 +41,40 @@ public class LobbyUpdateExpirence : MonoBehaviour
         temp.transform.localScale *= 1.5f;
         temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[0]);
         temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[0].equipment);
-        /*foreach (Transform child in temp.transform.GetChild(0))
-        {
-            if(child.GetComponent<SpriteRenderer>() != null)
-            {
-                child.GetComponent<SpriteRenderer>().sortingOrder /= 10;
-            }
-            foreach(Transform grandChild in child)
-            {
-                if (grandChild.GetComponent<SpriteRenderer>() != null)
-                {
-                    grandChild.GetComponent<SpriteRenderer>().sortingOrder /= 10;
-                }
-                foreach (Transform grandgrandChild in grandChild)
-                {
-                    if (grandgrandChild.GetComponent<SpriteRenderer>() != null)
-                    {
-                        grandgrandChild.GetComponent<SpriteRenderer>().sortingOrder /= 10;
-                    }
-                    foreach (Transform grandgrandgrandChild in grandgrandChild)
-                    {
-                        if (grandgrandgrandChild.GetComponent<SpriteRenderer>() != null)
-                        {
-                            grandgrandgrandChild.GetComponent<SpriteRenderer>().sortingOrder /= 10;
-                        }
-                    }
-                }
-            }
-        }
-        */
         temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
 
         goldValue.text = inventory.Gold.value.ToString();
         rubinsValue.text = inventory.Rubins.value.ToString();
+
+        if (isLeveledUp)
+        {
+            questAlarm.SetActive(true);
+        }
+        else questAlarm.SetActive(false);
+    }
+
+    public int ShowQuestAllert(int counter)
+    {
+        if(counter == 0)
+        {
+            questAlarm.SetActive(false);
+        } else
+        {
+            questAlarm.SetActive(true);
+            questAlarm.GetComponentInChildren<TextMeshProUGUI>().text = counter.ToString();
+        }
+        return counter;
+    }
+
+    private void AlarmLevelUp()
+    {
+        ++questLeveledUp.value;
+        isLeveledUp = true;
+    }
+
+    public void RemoveLevelUpAlarm()
+    {
+        isLeveledUp = false;
     }
 
 }

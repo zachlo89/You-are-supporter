@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class WinPanel : MonoBehaviour
 {
+    [SerializeField] private ScriptableInt questPlays;
     [SerializeField] private List<GameObject> starsList = new List<GameObject>();
     [SerializeField] private GameObject expPrefab;
     [SerializeField] private Transform expPrefabSpwaningPoint;
@@ -34,6 +35,7 @@ public class WinPanel : MonoBehaviour
         ShowExpBars();
         SpawnLoot();
         gm.MarkAsCompleted(stars);
+        questPlays.value += 1;
     }
 
     private void ShowStars(int starsCount)

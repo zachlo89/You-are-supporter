@@ -19,4 +19,4 @@ MonoBehaviour:
   isPassed: 0
   stars: 0
   isAvaliable: 0
-  hasGoldLevel: 1
+  hasGoldLevel: 0

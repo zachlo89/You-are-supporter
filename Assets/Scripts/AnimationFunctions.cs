@@ -14,7 +14,7 @@ public class AnimationFunctions : MonoBehaviour
     {
         characterBattle = GetComponentInParent<CharacterBattle>();
         changeExpresion = true;
-        if (defaultMouth == null)
+        if (defaultMouth == null && mouthRenderer != null)
         {
             defaultMouth = mouthRenderer.sprite;
         }
@@ -26,6 +26,8 @@ public class AnimationFunctions : MonoBehaviour
     }
     public void SetExpression()
     {
+        if(mouthRenderer != null)
+        {
             if (defaultMouth == null)
             {
                 defaultMouth = mouthRenderer.sprite;
@@ -36,7 +38,8 @@ public class AnimationFunctions : MonoBehaviour
             }
             else mouthRenderer.sprite = defaultMouth;
 
-            changeExpresion = !changeExpresion; 
+            changeExpresion = !changeExpresion;
+        }
     }
 
     public void NormalAttackEffect()

@@ -6207,6 +6207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcebee4f95dd544182b5afbea6cbfb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playersSkills: {fileID: 11400000, guid: 7b5cc4872f48d214da0c36a9222b9147, type: 2}
   normalHitParticleEffects: {fileID: 1954474933419612, guid: f213a31b42cd11e47aabf175095777d1,
     type: 3}
   critHitParticleEffects: {fileID: 100000, guid: 136682ab43d9f574183c3ee7dbe076fc,
@@ -27318,6 +27319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d716b6502807e08409ac9a1fa104a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questGold: {fileID: 11400000, guid: 5fffc232722fb4745a3c5cb3500555fb, type: 2}
   staff: {fileID: 11400000, guid: aea9d706ea3286944b563ddf645de486, type: 2}
   listOfAllItems: {fileID: 11400000, guid: 48a4d8fb725a5f9489e5b4e845d1fc88, type: 2}
   spawningPoint: {fileID: 1992468724}
@@ -42935,7 +42937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821181029
 GameObject:
@@ -57957,75 +57959,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1001 &949870161
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 612.63806
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 441.90067
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -221.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369196, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070860752380369198, guid: 5f2df2d4928432c458adab0fe9e98883,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5f2df2d4928432c458adab0fe9e98883, type: 3}
 --- !u!1 &960480874
 GameObject:
   m_ObjectHideFlags: 0
@@ -81390,6 +81323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c1e65aee32477409d46bf733ada4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questPlays: {fileID: 11400000, guid: f5bf1ebedb75d0e40b8c3cd9a0062e5b, type: 2}
   starsList:
   - {fileID: 708915265}
   - {fileID: 1001000292}

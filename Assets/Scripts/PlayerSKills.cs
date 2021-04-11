@@ -13,6 +13,7 @@ enum PlayerSkill
 
 public class PlayerSKills : MonoBehaviour
 {
+    [SerializeField] private ScriptableInt playersSkills;
     [SerializeField] private GameObject normalHitParticleEffects;
     [SerializeField] private GameObject critHitParticleEffects;
     [SerializeField] private Team team;
@@ -23,17 +24,8 @@ public class PlayerSKills : MonoBehaviour
     private int currentMana;
     private CharacterBattle mainCharacter;
     private List<bool> canInterac = new List<bool>();
-    private float criticalChance;
-    private float criticalDamage;
-    private int damage;
     [SerializeField] private float attackRate;
-    private bool canAttack;
-    private Animator heroAnimator;
 
-    public void CanAttack(bool canAttack)
-    {
-        this.canAttack = canAttack;
-    }
     private void Start()
     {
         for(int i = 0; i < team.heroesList.Count; i++)
@@ -51,7 +43,6 @@ public class PlayerSKills : MonoBehaviour
     public void SetUpMainCharacter(CharacterBattle mainCharacter)
     {
         this.mainCharacter = mainCharacter;
-        this.heroAnimator = mainCharacter.HeroAnimator;
     }
 
     public void SetCurrentMana(int currentMana)
@@ -107,6 +98,10 @@ public class PlayerSKills : MonoBehaviour
 
     public void UseSkill(CharacterBattle character)
     {
+        if(selectedSkill != PlayerSkill.Inactive)
+        {
+            ++playersSkills.value;
+        }
         switch (selectedSkill)
         {
             case PlayerSkill.Skill1:
@@ -157,6 +152,10 @@ public class PlayerSKills : MonoBehaviour
 
     public void UseNegativeSkill(CharacterBattle enemy)
     {
+        if (selectedSkill != PlayerSkill.Inactive)
+        {
+            ++playersSkills.value;
+        }
         switch (selectedSkill)
         {
             case PlayerSkill.Skill1:

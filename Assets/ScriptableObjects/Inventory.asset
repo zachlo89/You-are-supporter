@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e426b08aae191dd4a89871fcf1431ace, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
+  delegator: {fileID: 7904078521749577315, guid: 28e9f2fe428cfad41824859e80cccdbb,
+    type: 3}
   inventory: []
   gold: {fileID: 11400000, guid: 6e52cd4856bed7e4fbd6ca18cea6e4d9, type: 2}
   rubins: {fileID: 11400000, guid: 7e6d37430a2468641b707fcf8ad94da5, type: 2}
+  normalChestCount: {fileID: 11400000, guid: f033497a9a312164583ede1bfd77ab0f, type: 2}
+  epicChestsCount: {fileID: 11400000, guid: f047719cf03407d458e353dad31c5ad8, type: 2}

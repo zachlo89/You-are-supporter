@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
+  m_Name: Berserker 3
+  m_EditorClassIdentifier: 
+  isMainCharacter: 0
+  expToGiveToThePlayers: 0
+  characterName: Rizxer
+  buyValue: 205
+  isAlive: 1
+  damage: 42
+  armor: 5
+  maxHealt: 267
+  hpRegen: 2
+  maxMana: 100
+  manaRegen: 3
+  attackRate: 70
+  critChance: 2
+  critDamageMultiplay: 2
+  blockChance: 2
+  dogdeChance: 2
+  expirence: 0
+  toNextLevel: 100
+  level: 1
+  stars: 1
+  equipment: {fileID: 11400000, guid: ebc4de661229839438c39b5258b29977, type: 2}
+  isAvaliable: 0
+  avaliableSkillPoints: 0
+  characterClass: 1
+  prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
+  headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
+  hairsSprites: {fileID: 21300000, guid: a85607132bfc4f82972fa8a41ec8f36c, type: 3}
+  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: c769eeb489ca4efd911e48d34c81ae6a, type: 3}
+  earsSprites: {fileID: 0}
+  mouthSprites: {fileID: 21300000, guid: e69fabaf2f2c4847a360900c759e7a81, type: 3}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armL: {fileID: 21300004, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmoL: {fileID: 21300010, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armR: {fileID: 21300002, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmR: {fileID: 21300008, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handL: {fileID: 21300016, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handR: {fileID: 21300018, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legL: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  bodyColor: {r: 0.026909709, g: 0.17381084, b: 0.2501709, a: 1}
+  hairColor: {r: 0.47328228, g: 0.18604624, b: 0.30855948, a: 1}
+  playerSkillTree: []
+  activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: c11e6514a67e90547814cf3705eab6f5, type: 2}
+  characterActiveSkills: []

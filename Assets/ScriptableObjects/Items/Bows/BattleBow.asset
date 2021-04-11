@@ -12,22 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2d6e755076c1547a6c573d17a80db9, type: 3}
   m_Name: BattleBow
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 16
   armor: 0
-  attackRate: 0
+  attackRate: 10
   hp: 0
   blockChance: 0
   dodgeChance: 0
-  critChance: 0
-  critDamage: 0
+  critChance: 2
+  critDamage: 10
   mana: 0
   manaRegen: 0
   images:
   - {fileID: 21300000, guid: aeac6c28b23047bd96ee7f9c5ce008cf, type: 3}
   - {fileID: 21300002, guid: aeac6c28b23047bd96ee7f9c5ce008cf, type: 3}
-  border: {fileID: -7779772245507925811, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
+  - {fileID: 21300004, guid: aeac6c28b23047bd96ee7f9c5ce008cf, type: 3}
+  border: {fileID: -628012141879501752, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
   slotPosition: 6
-  rarity: 0
-  description: 
-  sellValue: 0
-  buyValue: 0
+  rarity: 2
+  description: Simple = battle bow
+  sellValue: 140
+  buyValue: 160

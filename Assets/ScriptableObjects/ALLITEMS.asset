@@ -107,3 +107,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 71520c78bf626b54aac08e0333d08271, type: 2}
   - {fileID: 11400000, guid: 2c1069701e0a6214aa4dc3fdad5dcab2, type: 2}
   gold: {fileID: 11400000, guid: 6e52cd4856bed7e4fbd6ca18cea6e4d9, type: 2}
+  rubins: {fileID: 11400000, guid: 7e6d37430a2468641b707fcf8ad94da5, type: 2}
+  normalChestCount: {fileID: 0}
+  epicChestsCount: {fileID: 0}

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class DisplayAndAddToTeam : MonoBehaviour
 {
-
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private ListOfHeroes listOfAvaliableHeroes;
     [SerializeField] private TextMeshProUGUI heroesCount;

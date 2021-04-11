@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "ScriptableObject/Inventory")]
 public class ScriptableItemManager : ScriptableObject
 {
+    [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private List<ItemScriptable> inventory = new List<ItemScriptable>();
     public List<ItemScriptable> GetInvevtory
     {
@@ -16,11 +17,63 @@ public class ScriptableItemManager : ScriptableObject
         get { return gold; }
     }
 
+    public void AddGold(int gold)
+    {
+        this.gold.value += gold;
+        if(delegator == null)
+        {
+            delegator = GameObject.FindObjectOfType<DelegateToUpdateCharacterEquipment>();
+        }
+        delegator.updateCount();
+    }
+
     [SerializeField] private ScriptableInt rubins;
 
     public ScriptableInt Rubins
     {
         get { return rubins; }
+    }
+
+    public void AddRubins(int rubins)
+    {
+        this.rubins.value += rubins;
+        if (delegator == null)
+        {
+            delegator = GameObject.FindObjectOfType<DelegateToUpdateCharacterEquipment>();
+        }
+        delegator.updateCount();
+    }
+
+    [SerializeField] private ScriptableInt normalChestCount;
+    public ScriptableInt GetNormalChestCount
+    {
+        get { return normalChestCount; }
+    }
+
+    public void AddNormalChest(int value)
+    {
+        this.normalChestCount.value += value;
+        if (delegator == null)
+        {
+            delegator = GameObject.FindObjectOfType<DelegateToUpdateCharacterEquipment>();
+        }
+        delegator.updateCount();
+    }
+
+    [SerializeField] private ScriptableInt epicChestsCount;
+    public ScriptableInt EpicChestsCount
+    {
+        get { return epicChestsCount; }
+    }
+
+    public void AddEipicChest(int value)
+    {
+        this.epicChestsCount.value += value;
+        if (delegator == null)
+        {
+            delegator = GameObject.FindObjectOfType<DelegateToUpdateCharacterEquipment>();
+        }
+        delegator.updateCount();
     }
     public void AddItem(ItemScriptable item)
     {
@@ -48,7 +101,7 @@ public class ScriptableItemManager : ScriptableObject
 
     public void SellItem(int index)
     {
-        gold.value += inventory[index].sellValue;
+        AddGold(inventory[index].sellValue);
         inventory.Remove(inventory[index]);
     }
 }

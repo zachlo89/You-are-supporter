@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 public class LootSpawner : MonoBehaviour
 {
+    [SerializeField] private ScriptableInt questGold;
     [SerializeField] private ItemScriptable staff;
     [SerializeField] private ScriptableItemManager listOfAllItems;
     private int stageLevel;
@@ -195,6 +196,7 @@ public class LootSpawner : MonoBehaviour
                     goldDropped = Random.Range(10 * stageLevel, 50 * stageLevel);
                     goldValue.text = goldDropped.ToString();
                     inventory.Gold.value += goldDropped;
+                    questGold.value += goldDropped;
                 }
             }
             else
@@ -206,6 +208,7 @@ public class LootSpawner : MonoBehaviour
                 goldDropped = 200;
                 goldValue.text = goldDropped.ToString();
                 inventory.Gold.value += goldDropped;
+                questGold.value += goldDropped;
             }
         }
     }
