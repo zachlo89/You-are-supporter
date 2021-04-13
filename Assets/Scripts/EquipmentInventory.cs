@@ -26,7 +26,14 @@ public class EquipmentInventory : MonoBehaviour
         }
         if(inventory.GetInvevtory.Count > 0)
         {
-            if(inventory.GetInvevtory.Count > 3)
+            for (int i = inventory.GetInvevtory.Count - 1; i >= 0; i--)
+            {
+                if (inventory.GetInvevtory[i] == null)
+                {
+                    inventory.GetInvevtory.RemoveAt(i);
+                }
+            }
+            if (inventory.GetInvevtory.Count > 3)
             {
                 inventory.GetInvevtory.Sort(delegate (ItemScriptable x, ItemScriptable y)
                 {

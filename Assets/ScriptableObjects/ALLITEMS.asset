@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e426b08aae191dd4a89871fcf1431ace, type: 3}
   m_Name: ALLITEMS
   m_EditorClassIdentifier: 
+  delegator: {fileID: 0}
   inventory:
-  - {fileID: 11400000, guid: 4715657610b4da841b81811e1bc69d35, type: 2}
+  - {fileID: 11400000, guid: aea9d706ea3286944b563ddf645de486, type: 2}
   - {fileID: 11400000, guid: 6a57c3bec24671c49b4a26025741e2b8, type: 2}
   - {fileID: 11400000, guid: 2f83baa603f4e5a4591ad71457aee561, type: 2}
   - {fileID: 11400000, guid: d30db7055927c4742a4ef1ed8ca5db5b, type: 2}
@@ -96,7 +97,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 415a5d4a6a28a084fbc2a9d90f5be383, type: 2}
   - {fileID: 11400000, guid: 690e9b29642035941ac0273305d4ac0b, type: 2}
   - {fileID: 11400000, guid: 8a22c27706e3c104f84ade9653c8827d, type: 2}
-  - {fileID: 11400000, guid: aea9d706ea3286944b563ddf645de486, type: 2}
+  - {fileID: 11400000, guid: 4715657610b4da841b81811e1bc69d35, type: 2}
   - {fileID: 11400000, guid: 351a645d329c95b4ab894f33647845be, type: 2}
   - {fileID: 11400000, guid: 6d698f3ddbc1b1e4da67d6ae347c664b, type: 2}
   - {fileID: 11400000, guid: ba87e204e9116ff4eb4c3506e154c076, type: 2}

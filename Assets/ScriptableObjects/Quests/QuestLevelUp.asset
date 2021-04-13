@@ -16,8 +16,9 @@ MonoBehaviour:
   questDescription: 5 Level up character
   questValue: 5
   questRewardValue: 1
-  questImage: {fileID: 21300000, guid: 658a4fdc592974780b58272c015e36e5, type: 3}
-  rewardImage: {fileID: 21300000, guid: 0194274b6383e402a8facb4fa8c8425a, type: 3}
+  questImage: {fileID: 21300000, guid: 24afcf316a3a944c3bf86bc27a2f93fb, type: 3}
+  rewardImage: {fileID: 0}
   currentValue: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
-  inventory: {fileID: 11400000, guid: 02f99c9640814d7478a938e9090c26b2, type: 2}
+  inventory: {fileID: 0}
   questReward: 2
+  beenClaimed: 0

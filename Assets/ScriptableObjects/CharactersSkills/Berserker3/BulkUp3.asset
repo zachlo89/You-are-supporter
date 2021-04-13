@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330f39e3ab3c7464baa6b3eb1a898c26, type: 3}
+  m_Name: BulkUp3
+  m_EditorClassIdentifier: 
+  particleEffects: {fileID: 0}
+  isPassive: 1
+  isBought: 0
+  isAvaliable: 0
+  isBuff: 1
+  skillName: Bulk Up
+  skillBorder: {fileID: 21300000, guid: 6e89577c7208241f8b2e979f467525d9, type: 3}
+  skillDifficultyLevel: 2
+  description: Good diet, exercise and water casusing positive effects on your body
+  level: 0
+  maxLevel: 5
+  coolDown: 0
+  manaCost: 0
+  notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
+  icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
+  defaultEffectValue: 10
+  effectValue: 0
+  nextLevelValue: 0

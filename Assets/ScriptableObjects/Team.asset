@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroesList:
   - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
+  - {fileID: 0}
   maxTeamSize: 4
   avaliabeTeamSize: 3

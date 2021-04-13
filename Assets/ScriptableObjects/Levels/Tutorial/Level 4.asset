@@ -15,7 +15,6 @@ MonoBehaviour:
   enemiesList:
   - {fileID: 11400000, guid: 3f0f52dcc66e3e04684aa472eb937ea3, type: 2}
   - {fileID: 11400000, guid: 3f0f52dcc66e3e04684aa472eb937ea3, type: 2}
-  - {fileID: 11400000, guid: 3f0f52dcc66e3e04684aa472eb937ea3, type: 2}
   itemsRarityDrop: 3
   background: {fileID: 21300000, guid: 2437969a2b17b41b0a10bef95252a284, type: 3}
   isPassed: 0

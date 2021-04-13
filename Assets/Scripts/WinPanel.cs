@@ -34,8 +34,8 @@ public class WinPanel : MonoBehaviour
         ShowStars(stars);
         ShowExpBars();
         SpawnLoot();
-        gm.MarkAsCompleted(stars);
         questPlays.value += 1;
+        gm.MarkAsCompleted(stars);
     }
 
     private void ShowStars(int starsCount)

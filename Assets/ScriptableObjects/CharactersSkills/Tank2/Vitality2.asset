@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd95c39e6a09e4f4fb7c74974086bb33, type: 3}
+  m_Name: Vitality2
+  m_EditorClassIdentifier: 
+  particleEffects: {fileID: 0}
+  isPassive: 1
+  isBought: 0
+  isAvaliable: 0
+  isBuff: 1
+  skillName: Vitality
+  skillBorder: {fileID: 21300000, guid: 97015b9c8e41d49de9b3b84779bcf5a7, type: 3}
+  skillDifficultyLevel: 1
+  description: With plenty hp you can sustain longer
+  level: 0
+  maxLevel: 10
+  coolDown: 0
+  manaCost: 0
+  notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
+  icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
+  defaultEffectValue: 1
+  effectValue: 0
+  nextLevelValue: 0

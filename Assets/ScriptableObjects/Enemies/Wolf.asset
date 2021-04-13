@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
+  questLevelUp: {fileID: 0}
   isMainCharacter: 0
   expToGiveToThePlayers: 60
   characterName: 
@@ -19,7 +20,7 @@ MonoBehaviour:
   isAlive: 0
   damage: 20
   armor: 5
-  maxHealt: 150
+  maxHealt: 15
   hpRegen: 0
   maxMana: 0
   manaRegen: 0

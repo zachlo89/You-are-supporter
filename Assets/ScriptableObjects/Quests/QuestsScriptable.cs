@@ -40,5 +40,6 @@ public class QuestsScriptable : ScriptableObject
                 inventory.AddEipicChest(questRewardValue);
                 break;
         }
+        beenClaimed = true;
     }
 }

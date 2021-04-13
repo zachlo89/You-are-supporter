@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: MainCharacter
   m_EditorClassIdentifier: 
+  questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
   isMainCharacter: 1
   expToGiveToThePlayers: 0
   characterName: Dunk
@@ -38,8 +39,8 @@ MonoBehaviour:
   characterClass: 3
   prefab: {fileID: 6857948205223096856, guid: 296efa15346af364581dead6ab7a818b, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d997e7c79e8e41068a423fe5335f6ddb, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9830a5e93d174dec89a098759997b4ad, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 8dfcd4f365dd431f8d29439f17887953, type: 3}
+  eyesSprites: {fileID: 21300000, guid: d0483a05d8744871b23e5a80bcee097b, type: 3}
   eyebrowsSprites: {fileID: 21300000, guid: 7da8c9e83a1744b4aac48e3f8b31a270, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
   mouthSprites: {fileID: 21300000, guid: 8266d7c75e5a482c9b63c3fad7701980, type: 3}

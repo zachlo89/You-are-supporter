@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1594d8c9015cff148a0f44b326beb91b, type: 3}
+  m_Name: SkeletonChampion
+  m_EditorClassIdentifier: 
+  equipment:
+  - {fileID: 11400000, guid: fc13cfddccca4ed43908d6a999455aa1, type: 2}
+  - {fileID: 11400000, guid: 41fea32562c48be42a17dbc72582e790, type: 2}
+  - {fileID: 11400000, guid: d4097331668ec2749870bea44deffa02, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 302026607a2d39a48a8c8a97126b0ffd, type: 2}
+  - {fileID: 0}

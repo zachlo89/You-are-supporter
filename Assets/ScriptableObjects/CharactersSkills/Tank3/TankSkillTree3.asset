@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed990f2c77ff3c347918cf6c749b12f7, type: 3}
+  m_Name: TankSkillTree3
+  m_EditorClassIdentifier: 
+  skillTree:
+  - {fileID: 11400000, guid: 87cc6bee51d2b1e4f8cfb7d7678bb9fe, type: 2}
+  - {fileID: 11400000, guid: 1750fcfbe1b356a49a354c7e49794d65, type: 2}
+  - {fileID: 11400000, guid: 7eece11b991b54d41bf63de972a3d943, type: 2}
+  - {fileID: 11400000, guid: 5dbe2e057161e1b4eb969a8770637650, type: 2}
+  - {fileID: 11400000, guid: 72116db016423254196ba7eb26b9f887, type: 2}
+  - {fileID: 11400000, guid: 9dfc3342e87c2354c9c11565aeb7434c, type: 2}
+  - {fileID: 11400000, guid: 0d986fb897901de44b87608a5842c3b3, type: 2}
+  counter: 0

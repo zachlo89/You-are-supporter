@@ -20,6 +20,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private GameObject questAlarm;
     [SerializeField] private GameObject skillsAlarm;
     private bool isLeveledUp = false;
+
     private void Start()
     {
         delegator.levelUppp += AlarmLevelUp;

@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 public class TawernPanel : MonoBehaviour
 {
+    [SerializeField] private List<ItemScriptable> defaultItems = new List<ItemScriptable>();
     [SerializeField] private Image characterClassLogo;
     [SerializeField] private List<Sprite> characterClassesIcons = new List<Sprite>();
     [SerializeField] private Button buyButton;
@@ -60,7 +61,7 @@ public class TawernPanel : MonoBehaviour
         {
             foreach (ScriptableCharacter character in allCharacter.heroesList)
             {
-                if (character.isAvaliable == false)
+                if (character.isAvaliable == false && !listOfNotOwnCharacters.Contains(character))
                 {
                     character.headSprites = randomGenerator.GetRandomBodyPart("Head");
                     character.beardSprites = randomGenerator.GetRandomBodyPart("Baerd");
@@ -85,6 +86,20 @@ public class TawernPanel : MonoBehaviour
                     randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
                     character.hairColor = randomColor;
                     listOfNotOwnCharacters.Add(character);
+
+                    switch (character.characterClass)
+                    {
+                        case CharacterClass.Archer:
+                            character.equipment.GetEquipment[3] = defaultItems[Random.Range(0, 3)];
+                            break;
+                        case CharacterClass.Berserker:
+                            character.equipment.GetEquipment[2] = defaultItems[Random.Range(3, 6)];
+                            break;
+                        case CharacterClass.Tank:
+                            character.equipment.GetEquipment[3] = defaultItems[Random.Range(6, 9)];
+                            break;
+                    }
+
                 }
             }
         }

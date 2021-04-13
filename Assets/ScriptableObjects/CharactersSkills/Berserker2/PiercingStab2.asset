@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93367fa7a0caa544fa0da8faab88193b, type: 3}
+  m_Name: PiercingStab2
+  m_EditorClassIdentifier: 
+  particleEffects: {fileID: 100000, guid: f71e7641f4394c44095cabfbc0c46ef9, type: 3}
+  isPassive: 0
+  isBought: 0
+  isAvaliable: 0
+  isBuff: 0
+  skillName: Piercing Stab
+  skillBorder: {fileID: 21300000, guid: 6e89577c7208241f8b2e979f467525d9, type: 3}
+  skillDifficultyLevel: 2
+  description: Rush at enemies with full force
+  level: 0
+  maxLevel: 10
+  coolDown: 25
+  manaCost: 70
+  notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
+  icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
+  defaultEffectValue: 275
+  effectValue: 300
+  nextLevelValue: 300

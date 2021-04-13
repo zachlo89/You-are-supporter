@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed990f2c77ff3c347918cf6c749b12f7, type: 3}
+  m_Name: BerserkerSkillTree1
+  m_EditorClassIdentifier: 
+  skillTree:
+  - {fileID: 11400000, guid: c6975c6ae3fcb024fb329ed4742afdba, type: 2}
+  - {fileID: 11400000, guid: 18ad426caaefcbb4f973bde0b14641a2, type: 2}
+  - {fileID: 11400000, guid: ba99f58dfc448b745a4eda685229744d, type: 2}
+  - {fileID: 11400000, guid: 277b880cdb97d9446a799087c579d436, type: 2}
+  - {fileID: 11400000, guid: ee959d8ead4c09142bac8f9e77a819f3, type: 2}
+  - {fileID: 11400000, guid: 4531097360ae3254fb0d31ff4cc6a985, type: 2}
+  - {fileID: 11400000, guid: ffd7719cadb595742b76d9a1f31738cb, type: 2}
+  counter: 0

@@ -25,4 +25,21 @@ public class Team : ScriptableObject
         heroesList.RemoveAt(position);
     }
 
+    public void ResetTeam()
+    {
+        for(int i = heroesList.Count - 1; i >= 0; i--)
+        {
+            try
+            {
+                if (!heroesList[i].isMainCharacter)
+                {
+                    RemoveCharacter(i);
+                }
+            }
+            catch
+            {
+                Debug.Log("Reset team, missing character");
+            }
+        }
+    }
 }

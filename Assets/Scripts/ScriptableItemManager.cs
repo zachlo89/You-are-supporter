@@ -7,6 +7,15 @@ public class ScriptableItemManager : ScriptableObject
 {
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private List<ItemScriptable> inventory = new List<ItemScriptable>();
+
+    public void ResetInventory()
+    {
+        inventory.Clear();
+        gold.value = 0;
+        rubins.value = 0;
+        normalChestCount.value = 0;
+        epicChestsCount.value = 0;
+    }
     public List<ItemScriptable> GetInvevtory
     {
         get { return inventory; }

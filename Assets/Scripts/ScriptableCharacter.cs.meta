@@ -3,7 +3,29 @@ guid: ea4bc2fa9b89965419a9cdc48746288e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
+  - equipment: {instanceID: 0}
+  - prefab: {instanceID: 0}
+  - headSprites: {instanceID: 0}
+  - hairsSprites: {instanceID: 0}
+  - eyesSprites: {instanceID: 0}
+  - eyebrowsSprites: {instanceID: 0}
+  - earsSprites: {instanceID: 0}
+  - mouthSprites: {instanceID: 0}
+  - beardSprites: {instanceID: 0}
+  - torso: {instanceID: 0}
+  - pelvis: {instanceID: 0}
+  - armL: {instanceID: 0}
+  - forearmoL: {instanceID: 0}
+  - armR: {instanceID: 0}
+  - forearmR: {instanceID: 0}
+  - handL: {instanceID: 0}
+  - handR: {instanceID: 0}
+  - legL: {instanceID: 0}
+  - legR: {instanceID: 0}
+  - shinL: {instanceID: 0}
+  - shinR: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

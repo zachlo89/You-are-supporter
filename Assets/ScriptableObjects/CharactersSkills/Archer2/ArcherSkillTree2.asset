@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed990f2c77ff3c347918cf6c749b12f7, type: 3}
+  m_Name: ArcherSkillTree2
+  m_EditorClassIdentifier: 
+  skillTree:
+  - {fileID: 11400000, guid: e67914880b4cb3d429f6832f4c6869fa, type: 2}
+  - {fileID: 11400000, guid: 3a29b72673b5b9c488cd8761e158893a, type: 2}
+  - {fileID: 11400000, guid: 43a4e8250aa62eb42b60540457d7a915, type: 2}
+  - {fileID: 11400000, guid: 3eea78fd4d9c1b845bb781c2ce3117b0, type: 2}
+  - {fileID: 11400000, guid: 13f76d4a0814e684589add47b4a531c7, type: 2}
+  - {fileID: 11400000, guid: f06026eeff3da1d4587099337452b0c4, type: 2}
+  - {fileID: 11400000, guid: 9aef6b17e07fb0941be105fbe56667bd, type: 2}
+  counter: 0

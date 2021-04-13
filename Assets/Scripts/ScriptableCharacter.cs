@@ -13,6 +13,7 @@ public enum CharacterClass
 [CreateAssetMenu (menuName = "ScriptableObject/Character")]
 public class ScriptableCharacter : ScriptableObject
 {
+    public ScriptableInt questLevelUp;
     public bool isMainCharacter;
     public int expToGiveToThePlayers;
     public string characterName;
@@ -213,6 +214,7 @@ public class ScriptableCharacter : ScriptableObject
 
     private void AdjustStatsToLevel()
     {
+        ++questLevelUp.value;
         ++avaliableSkillPoints;
         expirence -= toNextLevel;
         toNextLevel = (int)(toNextLevel * 1.5f);

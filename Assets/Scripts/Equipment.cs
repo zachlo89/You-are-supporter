@@ -21,4 +21,12 @@ public class Equipment : ScriptableObject
     {
         equipment[index] = null;
     }
+
+    public void ResetEquipment()
+    {
+        for(int i = 0; i < 6; i++)
+        {
+            equipment[i] = null;
+        }
+    }
 }

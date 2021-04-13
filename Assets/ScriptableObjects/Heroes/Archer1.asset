@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
+  m_Name: Archer1
+  m_EditorClassIdentifier: 
+  questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
+  isMainCharacter: 0
+  expToGiveToThePlayers: 0
+  characterName: Crix
+  buyValue: 205
+  isAlive: 1
+  damage: 60
+  armor: 5
+  maxHealt: 250
+  hpRegen: 2
+  maxMana: 100
+  manaRegen: 3
+  attackRate: 70
+  critChance: 2
+  critDamageMultiplay: 2
+  blockChance: 2
+  dogdeChance: 2
+  expirence: 0
+  toNextLevel: 100
+  level: 1
+  stars: 1
+  equipment: {fileID: 11400000, guid: 3d01e33f4d6264e42a1dd0923cad00ac, type: 2}
+  isAvaliable: 0
+  avaliableSkillPoints: 0
+  characterClass: 2
+  prefab: {fileID: 6857948205223096856, guid: ddc2553d88f570240b3bbee0caae67f4, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 060f6556d5684ec38653fb87d90951a8, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 268c96ca998647a5a918b6a88a9274ee, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 78e9ad35529c4051b29728186bcf864b, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 5f700754c3aa4a418c2d259d38c27d09, type: 3}
+  beardSprites: {fileID: 0}
+  torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armL: {fileID: 21300004, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmoL: {fileID: 21300010, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  armR: {fileID: 21300002, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  forearmR: {fileID: 21300008, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handL: {fileID: 21300016, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  handR: {fileID: 21300018, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legL: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
+  bodyColor: {r: 0.53016406, g: 0.15271282, b: 0.6347953, a: 1}
+  hairColor: {r: 0.82664895, g: 0.5931317, b: 0.30750364, a: 1}
+  playerSkillTree: []
+  activeSkills: []
+  characterSkillTree:
+  - {fileID: 11400000, guid: 6fec61ac051e306419e7c184b00ea03d, type: 2}
+  characterActiveSkills: []

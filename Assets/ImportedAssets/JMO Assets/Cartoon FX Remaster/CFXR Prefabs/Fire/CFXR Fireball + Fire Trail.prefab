@@ -7,10 +7,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8503596642471129455, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
+    - target: {fileID: 8503596642471129440, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
         type: 3}
-      propertyPath: m_Name
-      value: CFXR Fireball + Fire Trail
+      propertyPath: particleTime
+      value: 0.9999964
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503596642471129440, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
+        type: 3}
+      propertyPath: fadeOutReference
+      value: 
+      objectReference: {fileID: 5509305661840162659}
+    - target: {fileID: 8503596642471129442, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8503596642471129443, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
         type: 3}
@@ -20,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 8503596642471129443, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8503596642471129443, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
         type: 3}
@@ -67,20 +77,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8503596642471129440, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
+    - target: {fileID: 8503596642471129455, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
         type: 3}
-      propertyPath: particleTime
-      value: 0.9999964
-      objectReference: {fileID: 0}
-    - target: {fileID: 8503596642471129440, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
-        type: 3}
-      propertyPath: fadeOutReference
-      value: 
-      objectReference: {fileID: 5509305661840162659}
-    - target: {fileID: 8503596642471129442, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
+      propertyPath: m_Name
+      value: CFXR Fireball + Fire Trail
       objectReference: {fileID: 0}
     - target: {fileID: 8503596642769193703, guid: ae7fcf8e2f10ecc46b81d336f61a285f,
         type: 3}
@@ -113,10 +113,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5509305661840162658}
     m_Modifications:
+    - target: {fileID: 808793014479766226, guid: 34b62790d9d31c64ea200a261b6dba40,
+        type: 3}
+      propertyPath: particleTime
+      value: 0.21999852
+      objectReference: {fileID: 0}
+    - target: {fileID: 808793014479766226, guid: 34b62790d9d31c64ea200a261b6dba40,
+        type: 3}
+      propertyPath: clearBehavior
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7509569068035639639, guid: 34b62790d9d31c64ea200a261b6dba40,
         type: 3}
       propertyPath: m_Name
       value: CFXR Fire Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509569068035639641, guid: 34b62790d9d31c64ea200a261b6dba40,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7509569068035639642, guid: 34b62790d9d31c64ea200a261b6dba40,
         type: 3}
@@ -171,21 +186,6 @@ PrefabInstance:
     - target: {fileID: 7509569068035639642, guid: 34b62790d9d31c64ea200a261b6dba40,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7509569068035639641, guid: 34b62790d9d31c64ea200a261b6dba40,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 808793014479766226, guid: 34b62790d9d31c64ea200a261b6dba40,
-        type: 3}
-      propertyPath: particleTime
-      value: 0.21999852
-      objectReference: {fileID: 0}
-    - target: {fileID: 808793014479766226, guid: 34b62790d9d31c64ea200a261b6dba40,
-        type: 3}
-      propertyPath: clearBehavior
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

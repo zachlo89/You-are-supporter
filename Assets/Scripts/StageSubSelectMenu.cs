@@ -71,6 +71,7 @@ public class StageSubSelectMenu : MonoBehaviour
     private void MoveToGameScene()
     {
         gameManager.SetCurrentLevel(level);
+        gameManager.SaveGame();
         SceneManager.LoadSceneAsync(3);
     }
 

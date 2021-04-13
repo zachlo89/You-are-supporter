@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c461d291e22129046bddf9007b8a5567, type: 3}
+  m_Name: Bash1
+  m_EditorClassIdentifier: 
+  particleEffects: {fileID: 3308840082544497919, guid: af0ef20d9a41ee7479f76ea5c49918cf,
+    type: 3}
+  isPassive: 0
+  isBought: 0
+  isAvaliable: 1
+  isBuff: 0
+  skillName: Bash
+  skillBorder: {fileID: 21300000, guid: 6e89577c7208241f8b2e979f467525d9, type: 3}
+  skillDifficultyLevel: 2
+  description: Throw yourself on enemy
+  level: 0
+  maxLevel: 10
+  coolDown: 30
+  manaCost: 40
+  notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
+  icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
+  defaultEffectValue: 10
+  effectValue: 15
+  nextLevelValue: 15
+  stunDuration: 3

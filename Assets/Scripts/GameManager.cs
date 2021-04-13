@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private PersistableSO saveClass;
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
 
@@ -47,7 +48,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateCharactersLevel();
+        saveClass = GameObject.FindObjectOfType<PersistableSO>();
+        //UpdateCharactersLevel();
+    }
+
+    public void SaveGame()
+    {
+        saveClass.SaveAll();
     }
 
 
@@ -79,9 +86,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Ups something wrong with Game Manager function MarkAsCompleted");
         }
-        
-    }
+        saveClass.SaveAll();
 
+    }
+    /*
     private void UpdateCharactersLevel()
     {
         foreach(ScriptableCharacter character in listOfHeroes.heroesList)
@@ -148,4 +156,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    */
 }

@@ -6,4 +6,5 @@ using UnityEngine;
 public class ListOfHeroes : ScriptableObject
 {
     public List<ScriptableCharacter> heroesList = new List<ScriptableCharacter>();
+
 }

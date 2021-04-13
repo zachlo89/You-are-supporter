@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0ab5bef68320a4890f1822fec800a9, type: 3}
+  m_Name: Rage3
+  m_EditorClassIdentifier: 
+  particleEffects: {fileID: 100000, guid: 5afdb99db7d704443bfe5c2d479e5864, type: 3}
+  isPassive: 0
+  isBought: 0
+  isAvaliable: 0
+  isBuff: 1
+  skillName: Rage
+  skillBorder: {fileID: 21300000, guid: f4f151a5ee5d4481aa3b02b2d79d33b2, type: 3}
+  skillDifficultyLevel: 0
+  description: Quick temper can be as much helpful as much self-destroying
+  level: 0
+  maxLevel: 5
+  coolDown: 20
+  manaCost: 15
+  notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
+  icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
+  defaultEffectValue: 40
+  effectValue: 50
+  nextLevelValue: 60
+  duration: 15
