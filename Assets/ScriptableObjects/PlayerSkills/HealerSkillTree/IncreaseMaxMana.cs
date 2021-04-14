@@ -31,6 +31,7 @@ public class IncreaseMaxMana : PlayerScriptableSkill
                 hero.InreaseMaxMana((int)effectValue);
             }
         }
+        Debug.Log("Skill " + skillName + " used");
     }
 
     public override void Use(CharacterBattle character)
@@ -38,6 +39,7 @@ public class IncreaseMaxMana : PlayerScriptableSkill
         if (character != null && character.IsAlive)
         {
             character.InreaseMaxMana((int)effectValue);
+            Debug.Log("Skill " + skillName + " used");
         }
     }
 }

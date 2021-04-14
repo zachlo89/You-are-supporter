@@ -37,6 +37,7 @@ public class ManaRegen : PlayerScriptableSkill
         if (character != null && character.IsAlive)
         {
             character.ManaRegen((int)effectValue);
+            Debug.Log("Skill " + skillName + " used");
         }
     }
 }

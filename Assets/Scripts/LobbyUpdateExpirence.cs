@@ -21,8 +21,11 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private GameObject skillsAlarm;
     private bool isLeveledUp = false;
 
+    [SerializeField] private GameObject buttonNormalChest, buttonEpicChest;
+
     private void Start()
     {
+        delegator.updateCount += UpdateLobby;
         delegator.levelUppp += AlarmLevelUp;
         delegator.changeSprites += UpdateLobby;
         UpdateLobby();
@@ -52,6 +55,18 @@ public class LobbyUpdateExpirence : MonoBehaviour
             questAlarm.SetActive(true);
         }
         else questAlarm.SetActive(false);
+
+        if(inventory.GetNormalChestCount.value > 0)
+        {
+            buttonNormalChest.SetActive(true);
+            buttonNormalChest.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = inventory.GetNormalChestCount.value.ToString();
+        } else buttonNormalChest.SetActive(false);
+
+        if (inventory.EpicChestsCount.value > 0)
+        {
+            buttonEpicChest.SetActive(true);
+            buttonEpicChest.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = inventory.EpicChestsCount.value.ToString();
+        } else buttonEpicChest.SetActive(false);
     }
 
     public int ShowQuestAllert(int counter)

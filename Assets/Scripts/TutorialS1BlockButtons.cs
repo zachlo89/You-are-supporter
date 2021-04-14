@@ -14,6 +14,10 @@ public class TutorialS1BlockButtons : MonoBehaviour
         {
             button.interactable = false;
         }
+        blockButtons1[4].gameObject.SetActive(false);
+        blockButtons1[5].gameObject.SetActive(false);
+        blockButtons1[5].gameObject.SetActive(false);
+        blockButtons1[6].gameObject.SetActive(false);
     }
     public void BlockButtons2()
     {
@@ -21,6 +25,10 @@ public class TutorialS1BlockButtons : MonoBehaviour
         {
             button.interactable = false;
         }
+        blockButtons1[4].gameObject.SetActive(false);
+        blockButtons1[3].gameObject.SetActive(false);
+        blockButtons1[6].gameObject.SetActive(false);
+        blockButtons1[5].gameObject.SetActive(false);
     }
     public void BlockButtons3()
     {
@@ -28,5 +36,9 @@ public class TutorialS1BlockButtons : MonoBehaviour
         {
             button.interactable = false;
         }
+        blockButtons1[2].gameObject.SetActive(false);
+        blockButtons1[3].gameObject.SetActive(false);
+        blockButtons1[4].gameObject.SetActive(false);
+        blockButtons1[5].gameObject.SetActive(false);
     }
 }

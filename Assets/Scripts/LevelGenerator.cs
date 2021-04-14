@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField] private List<Vector3> spwaningPoints = new List<Vector3>();
     [SerializeField] private BattleManager battleManager;
-    [SerializeField] private SkillsManager skillsManager;
+    //[SerializeField] private SkillsManager skillsManager;
 
     [SerializeField] private Slider manabar;
     [SerializeField] private PlayerSKills playerSKills;
@@ -33,7 +33,7 @@ public class LevelGenerator : MonoBehaviour
     private void SpawnPlayers()
     {
         int counter = 0;
-        for(int i = team.heroesList.Count; i > -1; i--)
+        for(int i = team.heroesList.Count -1; i >= 0; i--)
         {
             try
             {
@@ -44,8 +44,9 @@ public class LevelGenerator : MonoBehaviour
                 temp.GetComponent<UpdateFaceAndBody>().SetUpFace(team.heroesList[i]);
                 temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[i].equipment);
                 temp.GetComponent<CharacterBattle>().enabled = true;
-                temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager, skillsManager);
+                temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager);
                 temp.AddComponent<PlayerSkillsEffect>();
+                Debug.Log("Hero: " + temp.name + "Added player skill effect component");
                 if (team.heroesList[i].isMainCharacter)
                 {
                     temp.GetComponent<CharacterBattle>().MainHeroSetUpManaBar(manabar);
@@ -79,7 +80,7 @@ public class LevelGenerator : MonoBehaviour
                 }
 
                 temp.GetComponent<CharacterBattle>().enabled = true;
-                temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager, skillsManager);
+                temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager);
                 temp.AddComponent<PlayerNegativeEffects>();
             }
         }

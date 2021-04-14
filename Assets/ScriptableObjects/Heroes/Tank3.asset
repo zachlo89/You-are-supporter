@@ -15,7 +15,7 @@ MonoBehaviour:
   questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Geron
+  characterName: Cyrin
   buyValue: 205
   isAlive: 1
   damage: 30
@@ -39,11 +39,11 @@ MonoBehaviour:
   characterClass: 0
   prefab: {fileID: 6857948205223096856, guid: a78794de3c429fb4c8098f2835176eb6, type: 3}
   headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: a6d4e6d111f34868b52b31fa94b76b5d, type: 3}
-  eyesSprites: {fileID: 21300000, guid: ab8ce33a207146c08197b150b8aadf2f, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 150f561c910541ebbbceda551a5e9b22, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: 0ce98b122b4048a0988bf48b4559e76e, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 71d40121debd41a39e699aa93925d9d8, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 5ede9bde629743b194abe6ecdac87e9a, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: 7da8c9e83a1744b4aac48e3f8b31a270, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 388f1dac72bb4d9c8e3bb34861a156bf, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -57,11 +57,10 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.1495384, g: 0.1778351, b: 0.71978664, a: 1}
-  hairColor: {r: 0.9627358, g: 0.650249, b: 0.1958561, a: 1}
+  bodyColor: {r: 0.061608553, g: 0.6706872, b: 0.7174481, a: 1}
+  hairColor: {r: 0.14577794, g: 0.08671844, b: 0.4909348, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:
   - {fileID: 11400000, guid: 4cba614d5ac88f34db6f074dddf80388, type: 2}
-  characterActiveSkills:
-  - {fileID: 0}
+  characterActiveSkills: []

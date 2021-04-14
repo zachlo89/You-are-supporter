@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class EquipmentPanel : MonoBehaviour
 {
+    private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
+    private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private TutorialManager tutorialManager;
     [SerializeField] private Image armR, armL, accessories;
@@ -119,10 +121,6 @@ public class EquipmentPanel : MonoBehaviour
                 GameObject item = Instantiate(itemPanel, equipmentList[i].transform);
                 item.GetComponent<SetItemIcon>().UpdateIconUI(hero.equipment.GetEquipment[i]);
                 item.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(hero.equipment.GetEquipment[i], hero, this, detailsPanel);
-                
-                //item.AddComponent<DraggableComponent>();
-                //Destroy(item.GetComponent<Button>());
-                //Destroy(item.GetComponent<EventTrigger>());
             }
 
         }
@@ -138,7 +136,6 @@ public class EquipmentPanel : MonoBehaviour
         critDamageMultiplay = hero.critDamageMultiplay;
         blockChance = hero.blockChance;
         dodgeChance = hero.dogdeChance;
-        //AdjustStatsToLevel();
 
         for (int i = 0; i<hero.equipment.GetEquipment.Count; i++)
         {
@@ -165,28 +162,6 @@ public class EquipmentPanel : MonoBehaviour
         dodgeChanceText.text = dodgeChance.ToString();
         heroPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
         delegator.changeSprites();
-    }
-
-    private void AdjustStatsToLevel()
-    {
-        switch (hero.characterClass)
-        {
-            case CharacterClass.Tank:
-                for (int i = 0; i < hero.level; i++)
-                {
-                    maxHealth += (int)(maxHealth * 8 / 100);
-                    damageValue += (int)(damageValue * 6 / 100);
-                }
-                break;
-            case CharacterClass.Archer:
-                maxHealth += (int)(maxHealth * 6 / 100);
-                damageValue += (int)(damageValue * 8 / 100);
-                break;
-            case CharacterClass.Berserker:
-                maxHealth += (int)(maxHealth * 7 / 100);
-                damageValue += (int)(damageValue * 7 / 100);
-                break;
-        }
     }
 
     public void EquipItem(ItemScriptable item, int index, int indexToRemove)

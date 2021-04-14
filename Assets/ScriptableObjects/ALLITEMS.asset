@@ -107,6 +107,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 707d8924d324b1b418b45b7e8b27b45a, type: 2}
   - {fileID: 11400000, guid: 71520c78bf626b54aac08e0333d08271, type: 2}
   - {fileID: 11400000, guid: 2c1069701e0a6214aa4dc3fdad5dcab2, type: 2}
+  - {fileID: 11400000, guid: 2baf19855b654e7409b2a6ca0659277d, type: 2}
+  - {fileID: 11400000, guid: 300dbc34d9b35f84fb4e194ccc5b9a59, type: 2}
+  - {fileID: 11400000, guid: c62541c9691207146b4a6500772c471d, type: 2}
+  - {fileID: 11400000, guid: 6a29d254c8c65c34c9f5c60bafb0372b, type: 2}
+  - {fileID: 11400000, guid: 0058d3c396da7c84e8b3797908efb575, type: 2}
+  - {fileID: 11400000, guid: cd37506a013754145b07cfdd0bda3a80, type: 2}
+  - {fileID: 11400000, guid: 301fecebfed2c0e45b3bddc3a0ca63b1, type: 2}
+  - {fileID: 11400000, guid: a88eafbd2a3cf5b4d8fda3d14d1f3663, type: 2}
+  - {fileID: 11400000, guid: 13441ab9e9526364a8ab296f5aabec76, type: 2}
+  - {fileID: 11400000, guid: c48ee14183079df4bbc286a3962f63c2, type: 2}
+  - {fileID: 11400000, guid: cf6d28ee8cf58d34d9fd2861f411551d, type: 2}
+  - {fileID: 11400000, guid: ec98023bb2487414ba39e7e5edf9d8b4, type: 2}
+  - {fileID: 11400000, guid: 4b1ddf33a6c7933408fed78e15430ab7, type: 2}
+  - {fileID: 11400000, guid: 0e59104256a10fd4185081326aa2fa31, type: 2}
+  - {fileID: 11400000, guid: 9cc1e739a2b1c944897b026a89f48199, type: 2}
+  - {fileID: 11400000, guid: e76fcbcbebebef046b3172e16d3a55f0, type: 2}
+  - {fileID: 11400000, guid: d8ca176731869ac4a9bce4091c8207fd, type: 2}
+  - {fileID: 11400000, guid: 2cd6ec279a4d7ea4e987af2a26512de4, type: 2}
+  - {fileID: 11400000, guid: 0d2604bfe4abf9e4fb79f5d98ef054bc, type: 2}
+  - {fileID: 11400000, guid: 1eb5550e4bb2293438bb65efc4d0727f, type: 2}
+  - {fileID: 11400000, guid: 428bfd9e7b0443b4c8e73e09dc0fbecf, type: 2}
+  - {fileID: 11400000, guid: ba01a381ecfa24443a03abb81026ef7e, type: 2}
+  - {fileID: 11400000, guid: 19909d1cb18561243b4656bc8eebd7a3, type: 2}
+  - {fileID: 11400000, guid: b3695ec348246e640a0b7a234323efb7, type: 2}
   gold: {fileID: 11400000, guid: 6e52cd4856bed7e4fbd6ca18cea6e4d9, type: 2}
   rubins: {fileID: 11400000, guid: 7e6d37430a2468641b707fcf8ad94da5, type: 2}
   normalChestCount: {fileID: 0}

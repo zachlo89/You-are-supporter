@@ -15,7 +15,7 @@ MonoBehaviour:
   questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Hintiz
+  characterName: Dydan
   buyValue: 205
   isAlive: 1
   damage: 50
@@ -38,12 +38,12 @@ MonoBehaviour:
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 117b02fbbf92420fae5f0c3d75e447a0, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 9fb20787124c478ca7223deb84370ce3, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: e0a727d44c1340d3bb56aad49d922e26, type: 3}
-  earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: c579c0bcc3cf4edfbeb58c934822d130, type: 3}
+  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
+  hairsSprites: {fileID: 21300000, guid: d11298d729a54a82a2abc3e65294fcba, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 5ede9bde629743b194abe6ecdac87e9a, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: b10c593362bc49e7853d665ed7f2aa78, type: 3}
+  earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -57,8 +57,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.08142233, g: 0.8610933, b: 0.56495875, a: 1}
-  hairColor: {r: 0.17088568, g: 0.6377717, b: 0.31104475, a: 1}
+  bodyColor: {r: 0.64017105, g: 0.76600885, b: 0.88547397, a: 1}
+  hairColor: {r: 0.22200179, g: 0.25110966, b: 0.2945605, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

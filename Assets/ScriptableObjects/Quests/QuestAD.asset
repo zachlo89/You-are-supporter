@@ -16,9 +16,9 @@ MonoBehaviour:
   questDescription: Watch 5 Ads
   questValue: 5
   questRewardValue: 1
-  questImage: {fileID: 0}
-  rewardImage: {fileID: 0}
+  questImage: {fileID: 21300000, guid: 4c78129e98b2f43ab97f160e39362aea, type: 3}
+  rewardImage: {fileID: 21300000, guid: 14bb7dbe03b4c4f1999e45ec89aafdb5, type: 3}
   currentValue: {fileID: 11400000, guid: ba4d0795fad710340b43df8ff18ba3bd, type: 2}
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: 02f99c9640814d7478a938e9090c26b2, type: 2}
   questReward: 3
   beenClaimed: 0

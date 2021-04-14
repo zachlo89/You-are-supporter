@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 public class TawernPanel : MonoBehaviour
 {
+    [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private List<ItemScriptable> defaultItems = new List<ItemScriptable>();
     [SerializeField] private Image characterClassLogo;
     [SerializeField] private List<Sprite> characterClassesIcons = new List<Sprite>();
@@ -30,7 +31,9 @@ public class TawernPanel : MonoBehaviour
     private TawernCharacterIcon tawernCharacterIcon;
     private void Start()
     {
+        delegator.updateCount += UpdateGoldValue;
         listOfNotOwnCharacters.Clear();
+        PopulateListOfNotOwnCharacter();
         PopulateTawern();
         rightPanel.SetActive(false);
         goldValue.text = inventory.Gold.value.ToString();
@@ -44,10 +47,20 @@ public class TawernPanel : MonoBehaviour
     {
         for(int i = 0; i < newCharactersCount; i++)
         {
-            listOfCharacters.Add(GetRandomCharacter());
+            ScriptableCharacter temp = GetRandomCharacter();
+            try
+            {
+                if (!listOfCharacters.Contains(temp) && temp != null)
+                {
+                    listOfCharacters.Add(temp);
+                }
+            }
+            catch
+            {
+                Debug.Log("Missing character");
+            }
         }
 
-        // TO DO create class to generate random heroes accordingly to level
         foreach(ScriptableCharacter character in listOfCharacters)
         {
             GameObject temp = Instantiate(heroPrefab, spawningPoint);
@@ -55,55 +68,53 @@ public class TawernPanel : MonoBehaviour
         }
     }
 
-    private ScriptableCharacter GetRandomCharacter()
+    private void PopulateListOfNotOwnCharacter()
     {
-        if(listOfNotOwnCharacters.Count <= 0)
+        foreach (ScriptableCharacter character in allCharacter.heroesList)
         {
-            foreach (ScriptableCharacter character in allCharacter.heroesList)
+            if (character.isAvaliable == false && !listOfNotOwnCharacters.Contains(character))
             {
-                if (character.isAvaliable == false && !listOfNotOwnCharacters.Contains(character))
+                character.headSprites = randomGenerator.GetRandomBodyPart("Head");
+                character.beardSprites = randomGenerator.GetRandomBodyPart("Baerd");
+                character.earsSprites = randomGenerator.GetRandomBodyPart("Ears");
+                character.eyebrowsSprites = randomGenerator.GetRandomBodyPart("Eyebrows");
+                character.eyesSprites = randomGenerator.GetRandomBodyPart("Eyes");
+                character.mouthSprites = randomGenerator.GetRandomBodyPart("Mouth");
+                character.hairsSprites = randomGenerator.GetRandomBodyPart("Hairs");
+                character.characterName = randomGenerator.GetRandomName();
+                if (character.level + 4 < allCharacter.heroesList[0].level)
                 {
-                    character.headSprites = randomGenerator.GetRandomBodyPart("Head");
-                    character.beardSprites = randomGenerator.GetRandomBodyPart("Baerd");
-                    character.earsSprites = randomGenerator.GetRandomBodyPart("Ears");
-                    character.eyebrowsSprites = randomGenerator.GetRandomBodyPart("Eyebrows");
-                    character.eyesSprites = randomGenerator.GetRandomBodyPart("Eyes");
-                    character.mouthSprites = randomGenerator.GetRandomBodyPart("Mouth");
-                    character.hairsSprites = randomGenerator.GetRandomBodyPart("Hairs");
-                    character.characterName = randomGenerator.GetRandomName();
-                    if(character.level + 4 < allCharacter.heroesList[0].level)
+                    int randoLevel = Random.Range(allCharacter.heroesList[0].level, allCharacter.heroesList[0].level + 4);
+                    for (int i = character.level; i < randoLevel; i++)
                     {
-                        int randoLevel = Random.Range(allCharacter.heroesList[0].level, allCharacter.heroesList[0].level + 4);
-                        for (int i = character.level; i < randoLevel; i++)
-                        {
-                            AdjustStatsToLevel(character);
-                        }
-                        character.level = randoLevel;
+                        AdjustStatsToLevel(character);
                     }
+                    character.level = randoLevel;
+                }
 
-                    Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-                    character.bodyColor = randomColor;
-                    randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-                    character.hairColor = randomColor;
-                    listOfNotOwnCharacters.Add(character);
+                Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+                character.bodyColor = randomColor;
+                randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+                character.hairColor = randomColor;
+                listOfNotOwnCharacters.Add(character);
 
-                    switch (character.characterClass)
-                    {
-                        case CharacterClass.Archer:
-                            character.equipment.GetEquipment[3] = defaultItems[Random.Range(0, 3)];
-                            break;
-                        case CharacterClass.Berserker:
-                            character.equipment.GetEquipment[2] = defaultItems[Random.Range(3, 6)];
-                            break;
-                        case CharacterClass.Tank:
-                            character.equipment.GetEquipment[3] = defaultItems[Random.Range(6, 9)];
-                            break;
-                    }
-
+                switch (character.characterClass)
+                {
+                    case CharacterClass.Archer:
+                        character.equipment.GetEquipment[3] = defaultItems[Random.Range(0, 3)];
+                        break;
+                    case CharacterClass.Berserker:
+                        character.equipment.GetEquipment[2] = defaultItems[Random.Range(3, 6)];
+                        break;
+                    case CharacterClass.Tank:
+                        character.equipment.GetEquipment[3] = defaultItems[Random.Range(6, 9)];
+                        break;
                 }
             }
         }
-        
+    }
+    private ScriptableCharacter GetRandomCharacter()
+    {
         if (listOfNotOwnCharacters.Count > 0)
         {
             int random = Random.Range(0, listOfNotOwnCharacters.Count);
@@ -111,7 +122,7 @@ public class TawernPanel : MonoBehaviour
             listOfNotOwnCharacters.RemoveAt(random);
             return temp;
         }
-        else return null;
+        return null;
     }
     public void CharacterClick(ScriptableCharacter character, int index, TawernCharacterIcon tawernCharacterIcon)
     {
@@ -218,5 +229,6 @@ public class TawernPanel : MonoBehaviour
             Destroy(spawningPoint.GetChild(index).gameObject);
         }
         rightPanel.SetActive(false);
+        delegator.updateCount();
     }
 }

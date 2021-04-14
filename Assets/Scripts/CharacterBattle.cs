@@ -6,6 +6,8 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+    private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
+    private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
     [SerializeField] private GameObject shadow;
     [SerializeField] private GameObject normalHitsParticlePrefab;
     [SerializeField] private AnimationFunctions animationFunctions;
@@ -229,9 +231,8 @@ public class CharacterBattle : MonoBehaviour
         manaBar.value = 1;
     }
 
-    public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager, SkillsManager skillsManager)
+    public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager)
     {
-       // this.skillsManager = skillsManager;
         this.hero = hero;
         this.level = hero.level;
         this.maxHP = hero.maxHealt;
@@ -264,9 +265,13 @@ public class CharacterBattle : MonoBehaviour
         {
             manaBar.gameObject.SetActive(false);
         }
-        
-        
-        if(hero.equipment != null)
+        if (!isMainHero)
+        {
+            manaBar.gameObject.SetActive(false);
+        }
+
+
+        if (hero.equipment != null)
         {
             for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)
             {
@@ -286,6 +291,7 @@ public class CharacterBattle : MonoBehaviour
         {
             playerSKills.SetCurrentMana(currentMana);
         }
+
         if (!hero.isMainCharacter)
         {
             activeSkills = hero.characterActiveSkills;
@@ -300,6 +306,48 @@ public class CharacterBattle : MonoBehaviour
                 activeSkills[i].SetUpHero(this);
                 activeSkills[i].SetUpBattleManager(battleManager);
                 skillsCooldowns.Add(0f);
+            }
+
+            if (hero.characterSkillTree.Count > 0)
+            {
+                for (int i = 0; i < hero.characterSkillTree[0].skillTree.Count; i++)
+                {
+                    if (hero.characterSkillTree[0].skillTree[i].isPassive && hero.characterSkillTree[0].skillTree[i].isBought && hero.characterSkillTree[0].skillTree[i].level > 0)
+                    {
+                        passiveCharacterSkill.Add(hero.characterSkillTree[0].skillTree[i]);
+                    }
+                }
+            }
+            if (passiveCharacterSkill.Count > 0)
+            {
+                foreach (CharacterSkill characterSkill in passiveCharacterSkill)
+                {
+                    characterSkill.SetUpHero(this);
+                    characterSkill.Use();
+                }
+            }
+        } else
+        {
+            if(hero.playerSkillTree.Count > 0)
+            {
+                foreach(PlayerSkillTree skillTree in hero.playerSkillTree)
+                {
+                    for(int i = 0; i < skillTree.skillTree.Count; i++)
+                    {
+                        if(skillTree.skillTree[i].isPassive && skillTree.skillTree[i].isBought && skillTree.skillTree[i].level > 0)
+                        {
+                            playerPassiveSkills.Add(skillTree.skillTree[i]);
+                        }
+                    }
+                }
+            }
+            if (playerPassiveSkills.Count > 0)
+            {
+                foreach (PlayerScriptableSkill passiveSKill in playerPassiveSkills)
+                {
+                    passiveSKill.Initialize(hero);
+                    passiveSKill.Use(this);
+                }
             }
         }
     }
@@ -598,6 +646,7 @@ public class CharacterBattle : MonoBehaviour
     public void InreaseMaxMana(int value)
     {
         maxMP += value;
+        currentMana = maxMP;
     }
 
     public void IncreaseBlockChance(int value, float duration)

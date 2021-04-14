@@ -15,7 +15,7 @@ MonoBehaviour:
   particleEffect: {fileID: 0}
   isPassive: 1
   isBought: 0
-  isAvaliable: 0
+  isAvaliable: 1
   isBuff: 1
   isDebuf: 0
   skillName: Mana regeneration
@@ -29,5 +29,5 @@ MonoBehaviour:
   notOwnSprite: {fileID: 21300000, guid: 98164c5d13ba46d47aef149beedba06f, type: 3}
   icon: {fileID: 21300000, guid: 1aba42c0ecc34844983e3442c05c9323, type: 3}
   defaultEffectValue: 2
-  effectValue: 2
-  nextLevelValue: 2
+  effectValue: 14.4
+  nextLevelValue: 16.8

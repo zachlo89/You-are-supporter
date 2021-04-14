@@ -252,12 +252,11 @@ public class SkillsPanel : MonoBehaviour
         } else if (listOfActiveHeroes[charactersCounter].CheckIfContainsSkill(skill) && skill.isBought && !skill.isPassive){
             buttonsList[2].gameObject.SetActive(true);
         }
-
-        if (!buttonsList[0].gameObject.activeInHierarchy && !buttonsList[1].gameObject.activeInHierarchy && !buttonsList[2].gameObject.activeInHierarchy)
+        if (skill.level == 0 && !skill.isAvaliable)
         {
             requrimentsText.gameObject.SetActive(true);
             int temp = 0;
-            switch (currentSkill.skillDifficultyLevel)
+            switch (skill.skillDifficultyLevel)
             {
                 case SkillDifficultyLevel.Apprentice:
                     temp = tresholds[0];
@@ -281,7 +280,7 @@ public class SkillsPanel : MonoBehaviour
 
         SpawnActiveSkills();
         avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
-    }
+    } 
 
     public void UpdateLeftSide(CharacterSkill skill)
     {
@@ -327,11 +326,11 @@ public class SkillsPanel : MonoBehaviour
             buttonsList[2].gameObject.SetActive(true);
         }
 
-        if (!buttonsList[0].gameObject.activeInHierarchy && !buttonsList[1].gameObject.activeInHierarchy && !buttonsList[2].gameObject.activeInHierarchy)
+        if (skill.level == 0 && !skill.isAvaliable)
         {
             requrimentsText.gameObject.SetActive(true);
             int temp = 0;
-            switch (currentSkill1.skillDifficultyLevel)
+            switch (skill.skillDifficultyLevel)
             {
                 case SkillDifficultyLevel.Apprentice:
                     temp = tresholds[0];
