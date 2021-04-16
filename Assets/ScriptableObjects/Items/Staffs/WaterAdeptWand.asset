@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Orb filled with magic water improve stats of hero
   sellValue: 60
   buyValue: 90
+  effects: {fileID: 6587720255358223169, guid: e85c46e5a1f7fcf4f9d9aecb40c37ebc, type: 3}
+  trialEffect: {fileID: 0}

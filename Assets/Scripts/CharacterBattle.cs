@@ -550,7 +550,7 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
-    private bool CritAttack()
+    public bool CritAttack()
     {
         int random = Random.Range(0, 100);
         if (random <= criticalChance)

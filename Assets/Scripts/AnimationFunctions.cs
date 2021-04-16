@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class AnimationFunctions : MonoBehaviour
 {
+    private BattleManager battleManager;
     private CharacterBattle characterBattle;
     private Sprite defaultMouth;
     [SerializeField] private Sprite attackingMouth;
     [SerializeField] private SpriteRenderer mouthRenderer;
     private bool changeExpresion;
     private int skillCount;
+
+    [SerializeField] private GameObject missleObject;
+    [SerializeField] private Transform spawningPoint;
     private void Start()
     {
+        battleManager = GameObject.FindObjectOfType<BattleManager>();
         characterBattle = GetComponentInParent<CharacterBattle>();
         changeExpresion = true;
         if (defaultMouth == null && mouthRenderer != null)
@@ -50,5 +55,22 @@ public class AnimationFunctions : MonoBehaviour
     {
         characterBattle.UseSkill(skillCount);
     }
+
+    public void SpawnMagicMissle()
+    {
+        CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
+        if (enemy != null && missleObject != null)
+        {
+            GameObject temp = Instantiate(missleObject, spawningPoint.transform.position, Quaternion.identity);
+            temp.GetComponent<MissleMovement>().SetTarget(enemy.transform, characterBattle);
+
+        }
+    }
+
+    public void MagicMIssleConstructor(GameObject magicMIssle)
+    {
+        this.missleObject = magicMIssle;
+    }
+    
 
 }

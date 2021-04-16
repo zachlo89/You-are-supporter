@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Great wand for long battles
   sellValue: 100
   buyValue: 130
+  effects: {fileID: 6587720255358223169, guid: 611d71e6ce725f041aa00de2ffef7604, type: 3}
+  trialEffect: {fileID: 0}

@@ -44,4 +44,6 @@ public class ItemScriptable : ScriptableObject
     public string description;
     public int sellValue;
     public int buyValue;
+    public GameObject effects;
+    public GameObject trialEffect;
 }

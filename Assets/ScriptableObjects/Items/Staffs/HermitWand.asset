@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Guessing it's upgraded hardwood wand
   sellValue: 55
   buyValue: 85
+  effects: {fileID: 6587720255358223169, guid: e85c46e5a1f7fcf4f9d9aecb40c37ebc, type: 3}
+  trialEffect: {fileID: 0}

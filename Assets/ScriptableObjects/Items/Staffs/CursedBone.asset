@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Bone... it belongs to somebody else
   sellValue: 30
   buyValue: 60
+  effects: {fileID: 6587720255358223169, guid: e4e2725a5e9e4134483479d40339533b, type: 3}
+  trialEffect: {fileID: 0}

@@ -15,12 +15,12 @@ MonoBehaviour:
   questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Dydan
+  characterName: Rizxer
   buyValue: 205
   isAlive: 1
-  damage: 50
+  damage: 53
   armor: 5
-  maxHealt: 300
+  maxHealt: 321
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
@@ -35,15 +35,15 @@ MonoBehaviour:
   stars: 1
   equipment: {fileID: 11400000, guid: 4f64dc34532f1e749885895fc5921ac2, type: 2}
   isAvaliable: 0
-  avaliableSkillPoints: 0
+  avaliableSkillPoints: 1
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
-  headSprites: {fileID: 21300000, guid: 77c1226f7de449de9a36e2f50109cf44, type: 3}
-  hairsSprites: {fileID: 21300000, guid: d11298d729a54a82a2abc3e65294fcba, type: 3}
-  eyesSprites: {fileID: 21300000, guid: 5ede9bde629743b194abe6ecdac87e9a, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: b10c593362bc49e7853d665ed7f2aa78, type: 3}
+  headSprites: {fileID: 21300000, guid: bb2a06c6e76141839b47dacf33e6b9c5, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 117b02fbbf92420fae5f0c3d75e447a0, type: 3}
+  eyesSprites: {fileID: 21300000, guid: 37608e2014754f0dae09b375d947d94a, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: d0b08b4a08f1459da468991cf0077514, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
-  mouthSprites: {fileID: 21300000, guid: 3d34e249a8184102854b2a12d87c9349, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 20e574079bb844de8202fbee9526d2e9, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
@@ -57,8 +57,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.64017105, g: 0.76600885, b: 0.88547397, a: 1}
-  hairColor: {r: 0.22200179, g: 0.25110966, b: 0.2945605, a: 1}
+  bodyColor: {r: 0.67909837, g: 0.71226263, b: 0.5705263, a: 1}
+  hairColor: {r: 0.061161876, g: 0.8246181, b: 0.57798094, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

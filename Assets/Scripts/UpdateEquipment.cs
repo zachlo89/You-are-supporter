@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class UpdateEquipment : MonoBehaviour
 {
     [SerializeField] private Equipment equipment;
@@ -16,6 +16,7 @@ public class UpdateEquipment : MonoBehaviour
     [SerializeField] private SpriteRenderer hair;
     [SerializeField] private List<Sprite> defaultEquipment = new List<Sprite>();
     [SerializeField] private Animator animator;
+    [SerializeField] private AnimationFunctions animationFunction;
 
     public void Equip(ItemScriptable item, int slotPosition)
     {
@@ -44,9 +45,26 @@ public class UpdateEquipment : MonoBehaviour
                     {
                         weaponRight.sprite = item.images[0];
                     }
-                    else if (item.slotPosition == SlotPosition.staff) {
+                    else if (item.slotPosition == SlotPosition.staff)
+                    {
                         staff.sprite = item.images[0];
-                    } else twoHandedWeapon.sprite = item.images[0];
+                        animationFunction.MagicMIssleConstructor(item.effects);
+                    }
+                    else
+                    {
+                        twoHandedWeapon.sprite = item.images[0];
+                    }
+                    try
+                    {
+                        twoHandedWeapon.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                        weaponRight.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                    }
+                    catch
+                    {
+
+                    }
+                    
+                    
                     break;
                 case 3:
                     animator.SetBool("hasWeapon", true);
@@ -147,4 +165,31 @@ public class UpdateEquipment : MonoBehaviour
         }
     }
 
+    private void DestroyFXEffects()
+    {
+        try
+        {
+            Destroy(twoHandedWeapon.transform.GetChild(0).GetChild(0));
+        }
+        catch
+        {
+            Debug.Log("No effects to destroy");
+        }
+        try
+        {
+            Destroy(weaponRight.transform.GetChild(0).GetChild(0));
+        }
+        catch
+        {
+            Debug.Log("No effects to destroy");
+        }
+        try
+        {
+            Destroy(staff.transform.GetChild(0).GetChild(0));
+        }
+        catch
+        {
+            Debug.Log("No effects to destroy");
+        }
+    }
 }

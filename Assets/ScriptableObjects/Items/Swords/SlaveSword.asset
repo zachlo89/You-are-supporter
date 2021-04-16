@@ -30,3 +30,6 @@ MonoBehaviour:
   description: Cursed sword, had many owners...
   sellValue: 35
   buyValue: 55
+  effects: {fileID: 0}
+  trialEffect: {fileID: 6122003877483447597, guid: d521cf5a3dd51a742a0bcde63b8d3cbf,
+    type: 3}

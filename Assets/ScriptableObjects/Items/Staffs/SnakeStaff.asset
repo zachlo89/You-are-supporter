@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Pharaon staff, still strong after soo many years
   sellValue: 170
   buyValue: 200
+  effects: {fileID: 6587720255358223169, guid: 0ed668eafe2e1a74e874b25777c07a76, type: 3}
+  trialEffect: {fileID: 0}

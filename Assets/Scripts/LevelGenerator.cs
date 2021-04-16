@@ -13,7 +13,6 @@ public class LevelGenerator : MonoBehaviour
 
     [SerializeField] private List<Vector3> spwaningPoints = new List<Vector3>();
     [SerializeField] private BattleManager battleManager;
-    //[SerializeField] private SkillsManager skillsManager;
 
     [SerializeField] private Slider manabar;
     [SerializeField] private PlayerSKills playerSKills;
@@ -46,7 +45,6 @@ public class LevelGenerator : MonoBehaviour
                 temp.GetComponent<CharacterBattle>().enabled = true;
                 temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager);
                 temp.AddComponent<PlayerSkillsEffect>();
-                Debug.Log("Hero: " + temp.name + "Added player skill effect component");
                 if (team.heroesList[i].isMainCharacter)
                 {
                     temp.GetComponent<CharacterBattle>().MainHeroSetUpManaBar(manabar);
