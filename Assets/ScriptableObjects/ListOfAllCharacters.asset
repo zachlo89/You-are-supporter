@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: ListOfAllCharacters
   m_EditorClassIdentifier: 
   heroesList:
-  - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
   - {fileID: 11400000, guid: a7fd082b640691743bf7cb37a0810e70, type: 2}
+  - {fileID: 11400000, guid: a72d15c7582a77a409c5d006e0c49391, type: 2}
+  - {fileID: 11400000, guid: 71f6420307e845149851ff5c185e580e, type: 2}
   - {fileID: 11400000, guid: 16a49cea63f9d0b4da1daf1528177e15, type: 2}
+  - {fileID: 11400000, guid: 89c9d120b07a5b24fb99c70c3b61f7bc, type: 2}
+  - {fileID: 11400000, guid: 3e64a25244bdefd4bbae38c5d7f3fe0b, type: 2}
+  - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
+  - {fileID: 11400000, guid: 3c0d09d93b1380b4f85c1a2ce7f71d8e, type: 2}
+  - {fileID: 11400000, guid: 3058d5fa267c48244950315a912af7a6, type: 2}
   - {fileID: 11400000, guid: 6703b876c5942a343934bd237e14b2ea, type: 2}

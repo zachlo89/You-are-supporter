@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Blacksmithed at the bottom of volcano
   sellValue: 1205
   buyValue: 2005
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

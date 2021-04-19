@@ -20,11 +20,11 @@ MonoBehaviour:
   isAlive: 0
   damage: 20
   armor: 5
-  maxHealt: 15
+  maxHealt: 200
   hpRegen: 0
   maxMana: 0
   manaRegen: 0
-  attackRate: 80
+  attackRate: 250
   critChance: 50
   critDamageMultiplay: 1.5
   blockChance: 0

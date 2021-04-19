@@ -6,6 +6,7 @@ using TMPro;
 
 public class SkillsPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject newSkillAlarm;
     [SerializeField] private ListOfHeroes listOfHeroes;
     [SerializeField] private Transform characterSpawningPoint;
     public Transform CharacterSpawningPoint
@@ -40,10 +41,11 @@ public class SkillsPanel : MonoBehaviour
     private bool isAvaliable;
     private int mainCharacterSkillsTree = 0;
 
-    private void Awake()
+    private void Start()
     {
         gameObject.SetActive(false);
     }
+
     private void OnEnable()
     {
         listOfActiveHeroes.Clear();
@@ -57,6 +59,23 @@ public class SkillsPanel : MonoBehaviour
         SpawnCharacter();
     }
 
+    private void OnDisable()
+    {
+        int counter = 0;
+        foreach (ScriptableCharacter hero in listOfHeroes.heroesList)
+        {
+            if (hero.avaliableSkillPoints > 0)
+            {
+                newSkillAlarm.SetActive(true);
+                counter += hero.avaliableSkillPoints;
+            }
+        }
+        if (counter > 0)
+        {
+            newSkillAlarm.GetComponentInChildren<TextMeshProUGUI>().text = counter.ToString();
+        }
+        else newSkillAlarm.SetActive(false);
+    }
     private void SpawnCharacter()
     {
         foreach (Transform child in characterSpawningPoint)

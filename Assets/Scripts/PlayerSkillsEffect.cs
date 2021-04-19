@@ -17,5 +17,4 @@ public class PlayerSkillsEffect : MonoBehaviour
     {
         playerSKills.UseSkill(character);
     }
-
 }

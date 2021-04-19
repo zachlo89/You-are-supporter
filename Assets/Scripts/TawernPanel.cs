@@ -35,10 +35,13 @@ public class TawernPanel : MonoBehaviour
         listOfNotOwnCharacters.Clear();
         PopulateListOfNotOwnCharacter();
         PopulateTawern();
+    }
+
+    private void OnEnable()
+    {
         rightPanel.SetActive(false);
         goldValue.text = inventory.Gold.value.ToString();
     }
-
     public void UpdateGoldValue()
     {
         goldValue.text = inventory.Gold.value.ToString();
@@ -177,7 +180,7 @@ public class TawernPanel : MonoBehaviour
 
         damageText.text = damage.ToString();
         armorText.text = armor.ToString();
-        attackRateText.text = (100/ attackRate).ToString();
+        attackRateText.text = (attackRate / 100).ToString();
         healthText.text = hp.ToString();
         critChanceText.text = critChance.ToString();
         critDamageText.text = critDamage.ToString();

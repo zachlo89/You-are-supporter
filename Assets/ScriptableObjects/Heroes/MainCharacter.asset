@@ -18,12 +18,12 @@ MonoBehaviour:
   characterName: Dunk
   buyValue: 200
   isAlive: 1
-  damage: 5
+  damage: 9
   armor: 5
-  maxHealt: 400
+  maxHealt: 250
   hpRegen: 5
-  maxMana: 100
-  manaRegen: 3
+  maxMana: 900
+  manaRegen: 7
   attackRate: 100
   critChance: 1.5
   critDamageMultiplay: 1.5
@@ -41,7 +41,7 @@ MonoBehaviour:
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
   hairsSprites: {fileID: 21300000, guid: 8dfcd4f365dd431f8d29439f17887953, type: 3}
   eyesSprites: {fileID: 21300000, guid: d0483a05d8744871b23e5a80bcee097b, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: 7da8c9e83a1744b4aac48e3f8b31a270, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: d0b08b4a08f1459da468991cf0077514, type: 3}
   earsSprites: {fileID: 21300000, guid: 7e5b762ea8bf4dc6a2f9d1598eb3c6ea, type: 3}
   mouthSprites: {fileID: 21300000, guid: 8266d7c75e5a482c9b63c3fad7701980, type: 3}
   beardSprites: {fileID: 0}
@@ -57,8 +57,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.90196085, g: 0.67058825, b: 0.42352945, a: 1}
-  hairColor: {r: 0.4433962, g: 0, b: 0, a: 1}
+  bodyColor: {r: 0.8867924, g: 0.5823181, b: 0.20496619, a: 1}
+  hairColor: {r: 0.38679248, g: 0.3496089, b: 0.17697582, a: 1}
   playerSkillTree:
   - {fileID: 11400000, guid: ba1d5a25bda316a40a76a553ef6a88f7, type: 2}
   activeSkills: []

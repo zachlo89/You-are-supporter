@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Only strongest can use it as weapon
   sellValue: 130
   buyValue: 160
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

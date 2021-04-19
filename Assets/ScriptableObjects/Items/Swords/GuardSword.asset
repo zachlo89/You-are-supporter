@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Sword used by caste guards
   sellValue: 175
   buyValue: 215
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

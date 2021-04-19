@@ -10,7 +10,6 @@ public class EquipmentPanel : MonoBehaviour
     private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
     private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
-    [SerializeField] private TutorialManager tutorialManager;
     [SerializeField] private Image armR, armL, accessories;
     [SerializeField] private List<Sprite> iconsList = new List<Sprite>();
     [SerializeField] private Sprite possibleEquipment, disabledEquipment;
@@ -143,7 +142,7 @@ public class EquipmentPanel : MonoBehaviour
             {
                 damageValue += hero.equipment.GetEquipment[i].damage;
                 armorValue += hero.equipment.GetEquipment[i].armor;
-                attackSpeedValue += hero.equipment.GetEquipment[i].attackRate;
+                attackSpeedValue -= hero.equipment.GetEquipment[i].attackRate;
                 maxHealth += hero.equipment.GetEquipment[i].hp;
                 critChance += hero.equipment.GetEquipment[i].critChance;
                 critDamageMultiplay += hero.equipment.GetEquipment[i].critDamage;
@@ -166,10 +165,6 @@ public class EquipmentPanel : MonoBehaviour
 
     public void EquipItem(ItemScriptable item, int index, int indexToRemove)
     {
-        if(tutorialManager != null)
-        {
-            tutorialManager.NextStep3();
-        }
         if(item != null)
         {
             hero.equipment.AddItem(item, index);

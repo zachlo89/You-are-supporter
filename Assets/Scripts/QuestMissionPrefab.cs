@@ -25,13 +25,13 @@ public class QuestMissionPrefab : MonoBehaviour
         questDescription.text = quest.questDescription;
         textSlider.text = quest.currentValue.value + "/" + quest.questValue;
         textAmount.text = quest.questRewardValue.ToString();
-        slider.value = (float)quest.currentValue.value / float.Parse(quest.questValue);
+        slider.value = (float)quest.currentValue.value / quest.questValue;
 
         getPanel.GetComponentInChildren<TextMeshProUGUI>().text = quest.questRewardValue.ToString();
         getPanel.transform.GetChild(0).GetComponent<Image>().sprite = quest.rewardImage;
 
 
-        if(quest.currentValue.value >= int.Parse(quest.questValue))
+        if(quest.currentValue.value >= quest.questValue)
         {
             GetComponent<Image>().sprite = missionFininshed;
             slider.gameObject.SetActive(false);

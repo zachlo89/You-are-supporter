@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ArcherSkillTree1
   m_EditorClassIdentifier: 
   skillTree:
-  - {fileID: 11400000, guid: 3929e1e597c64c14c8f3762cb799564f, type: 2}
-  - {fileID: 11400000, guid: 6df0363f5c5c6474887e043d3cfa1bab, type: 2}
-  - {fileID: 11400000, guid: 7fa47f2d71da15d4ba6527ffe56cdacd, type: 2}
-  - {fileID: 11400000, guid: 20d476ffe046e184c88ebb2463c03146, type: 2}
-  - {fileID: 11400000, guid: d3564429b9e390c4cb946961e3b9b6c7, type: 2}
-  - {fileID: 11400000, guid: 75c6521e06a5f6b41b8e6780f13fea82, type: 2}
-  - {fileID: 11400000, guid: 6e033a4ac8ea92644bc172ad21d3a876, type: 2}
+  - {fileID: 11400000, guid: 9ce8707e906730f47bba3bc39fcb44c7, type: 2}
+  - {fileID: 11400000, guid: 304011f932c8dec408bac97e67837ab3, type: 2}
+  - {fileID: 11400000, guid: ab64f33df4c9cc64eadcda91a84e8f7b, type: 2}
+  - {fileID: 11400000, guid: 8eaf28a590ace884a89bb3b8960429e2, type: 2}
+  - {fileID: 11400000, guid: 01bf4701297601849adb6b99b2809fde, type: 2}
+  - {fileID: 11400000, guid: dedac6c2f6bdfc64eb6514b1eec9cc98, type: 2}
+  - {fileID: 11400000, guid: aadd6eaa698d29b4bae1efc1e020d652, type: 2}
   counter: 0

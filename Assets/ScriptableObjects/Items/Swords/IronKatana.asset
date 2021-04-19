@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Made with the greates iron from mount Tshichka
   sellValue: 325
   buyValue: 405
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

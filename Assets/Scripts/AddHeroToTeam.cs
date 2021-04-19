@@ -17,8 +17,8 @@ public class AddHeroToTeam : MonoBehaviour
 
     public void OpenHeroesList()
     {
-        selectHeroPanel.GetComponent<Animator>().SetTrigger("FadeOutRight");
-        heroesPanel.GetComponent<Animator>().SetTrigger("FadeIn");
+        selectHeroPanel.SetActive(false);
+        heroesPanel.SetActive(true);
         heroesPanel.GetComponent<DisplayAndAddToTeam>().SetIndex(transform.GetSiblingIndex());
         heroesPanel.GetComponent<DisplayAndAddToTeam>().PopulatePanel();
     }

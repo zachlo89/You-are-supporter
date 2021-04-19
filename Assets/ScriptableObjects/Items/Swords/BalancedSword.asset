@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Good quality sword, great for novice and expert adventrues
   sellValue: 160
   buyValue: 200
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

@@ -17,16 +17,12 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private TextMeshProUGUI rubinsValue;
     [SerializeField] private ScriptableItemManager inventory;
-    [SerializeField] private GameObject questAlarm;
-    [SerializeField] private GameObject skillsAlarm;
-    private bool isLeveledUp = false;
 
     [SerializeField] private GameObject buttonNormalChest, buttonEpicChest;
 
     private void Start()
     {
         delegator.updateCount += UpdateLobby;
-        delegator.levelUppp += AlarmLevelUp;
         delegator.changeSprites += UpdateLobby;
         UpdateLobby();
     }
@@ -50,12 +46,6 @@ public class LobbyUpdateExpirence : MonoBehaviour
         goldValue.text = inventory.Gold.value.ToString();
         rubinsValue.text = inventory.Rubins.value.ToString();
 
-        if (isLeveledUp)
-        {
-            questAlarm.SetActive(true);
-        }
-        else questAlarm.SetActive(false);
-
         if(inventory.GetNormalChestCount.value > 0)
         {
             buttonNormalChest.SetActive(true);
@@ -68,29 +58,4 @@ public class LobbyUpdateExpirence : MonoBehaviour
             buttonEpicChest.transform.GetChild(0).GetChild(0).GetComponentInChildren<TextMeshProUGUI>().text = inventory.EpicChestsCount.value.ToString();
         } else buttonEpicChest.SetActive(false);
     }
-
-    public int ShowQuestAllert(int counter)
-    {
-        if(counter == 0)
-        {
-            questAlarm.SetActive(false);
-        } else
-        {
-            questAlarm.SetActive(true);
-            questAlarm.GetComponentInChildren<TextMeshProUGUI>().text = counter.ToString();
-        }
-        return counter;
-    }
-
-    private void AlarmLevelUp()
-    {
-        ++questLeveledUp.value;
-        isLeveledUp = true;
-    }
-
-    public void RemoveLevelUpAlarm()
-    {
-        isLeveledUp = false;
-    }
-
 }

@@ -15,19 +15,19 @@ MonoBehaviour:
   particleEffect: {fileID: 0}
   isPassive: 0
   isBought: 0
-  isAvaliable: 0
+  isAvaliable: 1
   isBuff: 1
   isDebuf: 0
   skillName: Dispel
   skillBorder: {fileID: 21300000, guid: 97015b9c8e41d49de9b3b84779bcf5a7, type: 3}
-  skillDifficultyLevel: 0
+  skillDifficultyLevel: 1
   description: Remove all negative effects from hero
   level: 0
   maxLevel: 1
   coolDown: 15
   manaCost: 20
   notOwnSprite: {fileID: 21300000, guid: b59d030d7bce947c1b48796b36939a1b, type: 3}
-  icon: {fileID: 21300000, guid: 68dff65e5c93f48da84e0319396c9e1d, type: 3}
+  icon: {fileID: 21300000, guid: f4268d9db1c2b4662a75c5ec35f9b852, type: 3}
   defaultEffectValue: 0
   effectValue: 0
   nextLevelValue: 0

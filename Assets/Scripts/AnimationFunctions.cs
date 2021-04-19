@@ -37,12 +37,14 @@ public class AnimationFunctions : MonoBehaviour
             {
                 defaultMouth = mouthRenderer.sprite;
             }
-            if (changeExpresion)
+            if(mouthRenderer != null)
             {
-                mouthRenderer.sprite = attackingMouth;
+                if (changeExpresion)
+                {
+                    mouthRenderer.sprite = attackingMouth;
+                }
+                else mouthRenderer.sprite = defaultMouth;
             }
-            else mouthRenderer.sprite = defaultMouth;
-
             changeExpresion = !changeExpresion;
         }
     }

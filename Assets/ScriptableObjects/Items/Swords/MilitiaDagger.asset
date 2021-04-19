@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Basic weapon to defence
   sellValue: 75
   buyValue: 115
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

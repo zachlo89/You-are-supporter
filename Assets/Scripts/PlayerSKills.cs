@@ -56,11 +56,23 @@ public class PlayerSKills : MonoBehaviour
         this.currentMana = currentMana;
         for(int i = 0; i < skillsCost.Count; i++)
         {
-            if(skillsCost[i] <= currentMana && canInterac[i])
+            if(skillsCost[i] <= currentMana && canInterac[i] && !mainCharacter.IsStunned && !mainCharacter.Blinded)
             {
                 skillsListButtons[i].interactable = true;
             } else skillsListButtons[i].interactable = false;
         }
+    }
+
+    public void BlockSkills(float duration)
+    {
+        StartCoroutine(BlockSKillUsage(duration));
+    }
+
+    IEnumerator BlockSKillUsage(float duration)
+    {
+        CheckIfSufficentMana(currentMana);
+        yield return new WaitForSeconds(duration + .2f);
+        CheckIfSufficentMana(currentMana);
     }
 
     private void SwapItemIcons()
@@ -199,7 +211,10 @@ public class PlayerSKills : MonoBehaviour
                 }
                 break;
             default:
-                mainCharacter.NormalAttack();
+                if(!mainCharacter.IsStunned && !mainCharacter.Blinded)
+                {
+                    mainCharacter.NormalAttack();
+                }
                 return;
         }
         selectedSkill = PlayerSkill.Inactive;

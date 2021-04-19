@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DisplayAndAddToTeam : MonoBehaviour
 {
+    [SerializeField] private GameObject selectionPanel;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private ListOfHeroes listOfAvaliableHeroes;
     [SerializeField] private TextMeshProUGUI heroesCount;
@@ -37,12 +38,14 @@ public class DisplayAndAddToTeam : MonoBehaviour
             if (listOfAvaliableHeroes.heroesList[i].isAvaliable && !team.heroesList.Contains(listOfAvaliableHeroes.heroesList[i]))
             {
                 GameObject panel = Instantiate(panelPrefab, spawnPanelParent);
+                panel.GetComponent<CharacterSlot>().SetSelectionPanel(selectionPanel, gameObject);
                 panel.GetComponent<CharacterSlot>().PopulateHeroPanel(listOfAvaliableHeroes.heroesList[i], team, index);
                 ++counter;
             }
         }
 
         GameObject panel1 = Instantiate(panelPrefab, spawnPanelParent);
+        panel1.GetComponent<CharacterSlot>().SetSelectionPanel(selectionPanel, gameObject);
         panel1.GetComponent<CharacterSlot>().PopulateHeroPanel(null, team, index);
 
         heroesCount.text = "Heroes " + counter + "/" + listOfAvaliableHeroes.heroesList.Count;

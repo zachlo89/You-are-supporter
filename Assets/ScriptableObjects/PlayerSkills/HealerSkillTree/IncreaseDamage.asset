@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2e4f36b1628c394c927ca574715d51d, type: 3}
   m_Name: IncreaseDamage
   m_EditorClassIdentifier: 
-  particleEffect: {fileID: 100002, guid: dfbe39a62fdeda146a0e1f280e3fbf8e, type: 3}
+  particleEffect: {fileID: 100004, guid: 757ea848010b746469253132d7372759, type: 3}
   isPassive: 0
   isBought: 0
-  isAvaliable: 1
+  isAvaliable: 0
   isBuff: 1
   isDebuf: 0
   skillName: Attack  Buff
@@ -29,6 +29,6 @@ MonoBehaviour:
   notOwnSprite: {fileID: 21300000, guid: 58b4b0657ad1f4473b181614294c2252, type: 3}
   icon: {fileID: 21300000, guid: f5a9593619cae42d3a04061c5e684d47, type: 3}
   defaultEffectValue: 5
-  effectValue: 6
-  nextLevelValue: 6
+  effectValue: 6.5
+  nextLevelValue: 6.5
   buffDuration: 10

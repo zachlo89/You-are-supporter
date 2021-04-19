@@ -222,16 +222,20 @@ public class ScriptableCharacter : ScriptableObject
         switch (characterClass)
         {
             case CharacterClass.Tank:
-                maxHealt += (int)(maxHealt * 8 / 100);
-                damage += (int)(damage * 6 / 100);
+                maxHealt += (int)(maxHealt * 13 / 100);
+                damage += (int)(damage * 38 / 100);
                 break;
             case CharacterClass.Archer:
-                maxHealt += (int)(maxHealt * 6 / 100);
-                damage += (int)(damage * 8 / 100);
+                maxHealt += (int)(maxHealt * 19 / 100);
+                damage += (int)(damage * 43 / 100);
                 break;
             case CharacterClass.Berserker:
-                maxHealt += (int)(maxHealt * 7 / 100);
-                damage += (int)(damage * 7 / 100);
+                maxHealt += (int)(maxHealt * 22 / 100);
+                damage += (int)(damage * 36 / 100);
+                break;
+            case CharacterClass.Supporter:
+                maxHealt += (int)(maxHealt * 21 / 100);
+                damage += (int)(damage * 33 / 100);
                 break;
         }
     }

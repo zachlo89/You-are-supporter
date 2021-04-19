@@ -6,7 +6,7 @@ using TMPro;
 
 public class QuestPanel : MonoBehaviour
 {
-
+    [SerializeField] private GameObject questAlarm;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private LobbyUpdateExpirence lobby;
     [SerializeField] private List<QuestsScriptable> questList = new List<QuestsScriptable>();
@@ -21,9 +21,24 @@ public class QuestPanel : MonoBehaviour
     [SerializeField] private List<QuestReward> rewardsList = new List<QuestReward>();
     [SerializeField] private List<GameObject> multiRewardsList = new List<GameObject>();
     private bool multiRewardRecived = false;
+
     private void Start()
     {
-        CheckQuestCount();
+        delegator.updateCount += UpdateGoldAndRubins;
+        gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        int counter = CheckQuestCount();
+        if(counter > 0)
+        {
+            questAlarm.SetActive(true);
+            questAlarm.GetComponentInChildren<TextMeshProUGUI>().text = counter.ToString();
+        } else
+        {
+            questAlarm.SetActive(false);
+        }
         foreach (Transform child in questMissionsSpawningPoint)
         {
             GameObject.Destroy(child.gameObject);
@@ -37,11 +52,8 @@ public class QuestPanel : MonoBehaviour
             }
         }
         UpdateGoldAndRubins();
-        delegator.updateCount += UpdateGoldAndRubins;
-        gameObject.SetActive(false);
         RightSidePanel();
     }
-
     private void UpdateGoldAndRubins()
     {
         gold.text = inventory.Gold.value.ToString();
@@ -86,19 +98,17 @@ public class QuestPanel : MonoBehaviour
         int counter = 0;
         for (int i = 0; i < questList.Count; i++)
         {
-            if (!questList[i].beenClaimed)
+            if (!questList[i].beenClaimed && (questList[i].currentValue.value >= questList[i].questValue))
             {
                 ++counter;
             }
         }
         if (counter == 0 && !multiRewardRecived)
         {
-            lobby.ShowQuestAllert(counter + 1);
             rightSidePanelButton.interactable = true;
         }
         else
         {
-            lobby.ShowQuestAllert(counter);
             rightSidePanelButton.interactable = false;
         }
         

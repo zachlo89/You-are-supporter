@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5571fdd899cb9cd45b062ae417e2cdac, type: 3}
   m_Name: DefenseBuff
   m_EditorClassIdentifier: 
-  particleEffect: {fileID: 100006, guid: 4b96e0d8d9e130042b36e3d4a2a647d6, type: 3}
+  particleEffect: {fileID: 100000, guid: 0a8f0138979026948830f1a9dbe60763, type: 3}
   isPassive: 0
   isBought: 0
   isAvaliable: 0
@@ -30,5 +30,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 4c528c391fc1b7246a7045a76e89269d, type: 3}
   defaultEffectValue: 10
   effectValue: 13
-  nextLevelValue: 26
+  nextLevelValue: 13
   buffDuration: 10

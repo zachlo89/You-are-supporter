@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Enhanced by essence of hell
   sellValue: 1200
   buyValue: 2000
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

@@ -16,6 +16,12 @@ MonoBehaviour:
   armor: 0
   attackRate: -40
   hp: 0
+  blockChance: 0
+  dodgeChance: 0
+  critChance: 0
+  critDamage: 0
+  mana: 0
+  manaRegen: 0
   images:
   - {fileID: 21300000, guid: 9e6df519424345b6bd7783cdc9fbb5ee, type: 3}
   border: {fileID: 8262077947868551193, guid: 3e613529364386c42bdf8205a9e88c25, type: 3}
@@ -24,3 +30,5 @@ MonoBehaviour:
   description: Ancient weapon, still powerfull but difficult to handle
   sellValue: 315
   buyValue: 395
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

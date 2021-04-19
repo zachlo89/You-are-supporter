@@ -6,6 +6,7 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+    private float timer;
     private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
     private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
     [SerializeField] private GameObject shadow;
@@ -103,7 +104,15 @@ public class CharacterBattle : MonoBehaviour
 
     //List of varaible to possible use with diespealing negative effects
     private bool stunned = false;
+    public bool IsStunned
+    {
+        get { return stunned; }
+    }
     private bool blinded = false;
+    public bool Blinded
+    {
+        get { return blinded; }
+    }
     private bool bleeding = false;
 
 
@@ -117,10 +126,11 @@ public class CharacterBattle : MonoBehaviour
 
     private void Start()
     {
+        timer = 0;
         attackRateSlider.value = Random.Range(0f, 0.2f);
         if (!isMainHero)
         {
-            StartCoroutine(AttackRateSlider());
+            StartCoroutine("AttackRateSlider");
         } else
         {
             attackRateSlider.gameObject.SetActive(false);
@@ -144,13 +154,16 @@ public class CharacterBattle : MonoBehaviour
 
     IEnumerator AttackRateSlider()
     {
-        while(isAlive && battleManager.CheckIfEnd())
+        while(isAlive && battleManager.CheckIfEnd() && !isMainHero)
         {
-            yield return new WaitForSeconds((100f / attackRate)/100f);
-            attackRateSlider.value += 0.01f;
-            if(attackRateSlider.value == 1)
+            timer += Time.deltaTime;
+            var percent = timer / (attackRate / 100);
+            attackRateSlider.value = percent;
+            yield return new WaitForEndOfFrame();
+            if (percent >= 1)
             {
                 Attack();
+                timer = 0;
             }
         }
 
@@ -229,6 +242,10 @@ public class CharacterBattle : MonoBehaviour
         manaBar = manabar;
         manaBar.gameObject.SetActive(true);
         manaBar.value = 1;
+        if(hero.activeSkills.Count < 1)
+        {
+            manaBar.gameObject.SetActive(false);
+        }
     }
 
     public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager)
@@ -348,7 +365,7 @@ public class CharacterBattle : MonoBehaviour
                     passiveSKill.Initialize(hero);
                     passiveSKill.Use(this);
                 }
-            }
+            } 
         }
     }
 
@@ -360,7 +377,7 @@ public class CharacterBattle : MonoBehaviour
             {
                 damage += hero.equipment.GetEquipment[i].damage;
                 armor += hero.equipment.GetEquipment[i].armor;
-                attackRate += hero.equipment.GetEquipment[i].attackRate;
+                attackRate -= hero.equipment.GetEquipment[i].attackRate;
                 maxHP += hero.equipment.GetEquipment[i].hp;
             }
         }
@@ -400,6 +417,7 @@ public class CharacterBattle : MonoBehaviour
             {
                 shadow.SetActive(false);
             }
+            DestroyParticles();
             
             CancelInvoke();
         }
@@ -449,7 +467,7 @@ public class CharacterBattle : MonoBehaviour
 
     public void UseSkill(int skillCount)
     {
-        if(battleManager != null && activeSkills[skillCount] != null)
+        if (battleManager != null && activeSkills[skillCount] != null)
         {
             activeSkills[skillCount].Use();
             currentMana -= activeSkills[0].manaCost;
@@ -633,7 +651,6 @@ public class CharacterBattle : MonoBehaviour
 
     IEnumerator RegenHPBuff(int value, float duration)
     {
-        Debug.Log("Start coroutine");
         while (duration > 0)
         {
             Heal(value);
@@ -663,19 +680,26 @@ public class CharacterBattle : MonoBehaviour
 
     public void Stunned(float duration)
     {
+        stunned = true;
         StartCoroutine(StunningEffects(duration));
     }
 
     IEnumerator StunningEffects(float duration)
     {
-        stunned = true;
         while (stunned)
         {
-            StopCoroutine(AttackRateSlider());
+            StopCoroutine("AttackRateSlider");
+            if (isMainHero)
+            {
+                Debug.Log("BlockSkillUsage");
+                playerSKills.BlockSkills(duration);
+                Debug.Log("BlockSkillUsage");
+            }
             yield return new WaitForSeconds(duration);
             stunned = false;
-            StartCoroutine(AttackRateSlider());
+            StartCoroutine("AttackRateSlider");
         }
+       
     }
 
     public void SetNewCriticalDamage(float value)
@@ -738,6 +762,17 @@ public class CharacterBattle : MonoBehaviour
             if(duration <= 0)
             {
                 bleeding = false;
+            }
+        }
+    }
+
+    private void DestroyParticles()
+    {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            if(transform.GetChild(i).GetComponent<ParticleSystem>() != null)
+            {
+                Destroy(transform.GetChild(i).gameObject);
             }
         }
     }

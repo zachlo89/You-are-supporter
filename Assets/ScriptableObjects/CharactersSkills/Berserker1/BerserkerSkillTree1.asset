@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: BerserkerSkillTree1
   m_EditorClassIdentifier: 
   skillTree:
-  - {fileID: 11400000, guid: c6975c6ae3fcb024fb329ed4742afdba, type: 2}
-  - {fileID: 11400000, guid: 18ad426caaefcbb4f973bde0b14641a2, type: 2}
-  - {fileID: 11400000, guid: ba99f58dfc448b745a4eda685229744d, type: 2}
-  - {fileID: 11400000, guid: 277b880cdb97d9446a799087c579d436, type: 2}
-  - {fileID: 11400000, guid: ee959d8ead4c09142bac8f9e77a819f3, type: 2}
-  - {fileID: 11400000, guid: 4531097360ae3254fb0d31ff4cc6a985, type: 2}
-  - {fileID: 11400000, guid: ffd7719cadb595742b76d9a1f31738cb, type: 2}
+  - {fileID: 11400000, guid: d15fe0877b12c4a4ea8456c676e33c5b, type: 2}
+  - {fileID: 11400000, guid: 9356e09addf34234da2bab2c54ddd1ad, type: 2}
+  - {fileID: 11400000, guid: 3f0eae3fd9cc9d840a65465bab463261, type: 2}
+  - {fileID: 11400000, guid: 1dddac6c05c3ab4458874dd8e4b889fd, type: 2}
+  - {fileID: 11400000, guid: 16912c1c516b7c44191ce87986e0cec6, type: 2}
+  - {fileID: 11400000, guid: ceaebb1e3bd738a4f8510c6295241019, type: 2}
+  - {fileID: 11400000, guid: c649aba8f6de8ea44af533039c4fb832, type: 2}
   counter: 0

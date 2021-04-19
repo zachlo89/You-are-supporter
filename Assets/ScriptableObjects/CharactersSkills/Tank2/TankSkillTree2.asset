@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: TankSkillTree2
   m_EditorClassIdentifier: 
   skillTree:
-  - {fileID: 11400000, guid: 2b1cb7a596f4e344195acbf7d5430c78, type: 2}
-  - {fileID: 11400000, guid: 6b481cfbb44533d4b9a63cb86bdd932f, type: 2}
-  - {fileID: 11400000, guid: 91dd1473bd7d2f1419b69c5047549d54, type: 2}
-  - {fileID: 11400000, guid: a9380d467e1f5f2498c3c831784379f8, type: 2}
-  - {fileID: 11400000, guid: 3f81e56a7c4a9a945aae90f45700879e, type: 2}
-  - {fileID: 11400000, guid: 89f927f8c231bda499e75a62b6998e6e, type: 2}
-  - {fileID: 11400000, guid: 2ffc60e541b570f40a20be57ae955688, type: 2}
+  - {fileID: 11400000, guid: d2c48036fd2d8c046968a063ff1c1b7e, type: 2}
+  - {fileID: 11400000, guid: 7ca89b3129f32fd40b8cc924790b5873, type: 2}
+  - {fileID: 11400000, guid: d131745bb55f34c49b6a431fdbf1b267, type: 2}
+  - {fileID: 11400000, guid: 64ba2857237eed94cabb1e9db8502305, type: 2}
+  - {fileID: 11400000, guid: 5f05d0e00b89fd14fa09d99566d90847, type: 2}
+  - {fileID: 11400000, guid: a5356ebfe1a4e744190767895ef31238, type: 2}
+  - {fileID: 11400000, guid: f1a580301d8cd46489388e323004391a, type: 2}
   counter: 0

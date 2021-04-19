@@ -15,6 +15,7 @@ public class CharacterSlot : MonoBehaviour
     [SerializeField] private Transform spawnigngPoint;
     [SerializeField] private GameObject equipmentPanel;
     [SerializeField] private GameObject heroSelectPanel;
+    private GameObject selectHeroPanel, dispalyAndAddToTeamPanel;
     private ScriptableCharacter hero;
     private Team team;
     private int index;
@@ -45,9 +46,10 @@ public class CharacterSlot : MonoBehaviour
     }
 
     // Called when pressed (move from HeroesPanel to EquipmentPanel)
+
     public void SetEquipmentPanel()
     {
-        equipmentPanel.GetComponent<Animator>().SetTrigger("FadeIn");
+        equipmentPanel.SetActive(true);
         equipmentPanel.GetComponent<EquipmentPanel>().UpdateUI(hero);
     }
 
@@ -85,13 +87,18 @@ public class CharacterSlot : MonoBehaviour
 
     }
 
-// Used when you want to add avaliable hero to the team in DispalyAndAddToTheTeam
+    // Used when you want to add avaliable hero to the team in DispalyAndAddToTheTeam
     private void AddToTeam(int index, Team team)
     {
         team.AddCharacter(hero, index);
-        SelectHeroes selectHeroPanel = FindObjectOfType<SelectHeroes>();
-        selectHeroPanel.PopulatePanel();
-        selectHeroPanel.gameObject.GetComponent<Animator>().SetTrigger("FadeIn");
-        GetComponentInParent<Animator>().SetTrigger("FadeOut");
+        selectHeroPanel.gameObject.SetActive(true);
+        selectHeroPanel.GetComponent<SelectHeroes>().PopulatePanel();
+        dispalyAndAddToTeamPanel.SetActive(false);
+    }
+
+    public void SetSelectionPanel(GameObject selectionPanel, GameObject dispalyAndAddToTeamPanel)
+    {
+        this.selectHeroPanel = selectionPanel;
+        this.dispalyAndAddToTeamPanel = dispalyAndAddToTeamPanel;
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleEffect: {fileID: 100006, guid: 4b96e0d8d9e130042b36e3d4a2a647d6, type: 3}
   isPassive: 0
-  isBought: 0
+  isBought: 1
   isAvaliable: 1
   isBuff: 1
   isDebuf: 0
@@ -24,10 +24,10 @@ MonoBehaviour:
   description: Support injured hero
   level: 0
   maxLevel: 10
-  coolDown: 5
-  manaCost: 10
+  coolDown: 1.2
+  manaCost: 38
   notOwnSprite: {fileID: 21300000, guid: 532b473d3117a4bfea1c0a9b6ddc1cc2, type: 3}
   icon: {fileID: 21300000, guid: 2485c9e6454994b36a896bc87d27d1b3, type: 3}
-  defaultEffectValue: 20
-  effectValue: 52
-  nextLevelValue: 78
+  defaultEffectValue: 75
+  effectValue: 330
+  nextLevelValue: 412.5

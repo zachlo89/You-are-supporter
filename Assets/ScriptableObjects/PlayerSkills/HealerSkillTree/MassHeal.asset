@@ -19,15 +19,15 @@ MonoBehaviour:
   isBuff: 1
   isDebuf: 0
   skillName: Mass Heal
-  skillBorder: {fileID: 21300000, guid: 97015b9c8e41d49de9b3b84779bcf5a7, type: 3}
-  skillDifficultyLevel: 1
+  skillBorder: {fileID: 21300000, guid: f4f151a5ee5d4481aa3b02b2d79d33b2, type: 3}
+  skillDifficultyLevel: 0
   description: Support all alies with minior healing
   level: 0
   maxLevel: 10
-  coolDown: 45
-  manaCost: 40
+  coolDown: 6.5
+  manaCost: 110
   notOwnSprite: {fileID: 21300000, guid: 0964041bd237bfa4dac94b3b63f325e7, type: 3}
   icon: {fileID: 21300000, guid: b9ad62fb094cc174f96f3033295bdd7e, type: 3}
-  defaultEffectValue: 40
-  effectValue: 52
-  nextLevelValue: 104
+  defaultEffectValue: 95
+  effectValue: 123.5
+  nextLevelValue: 123.5

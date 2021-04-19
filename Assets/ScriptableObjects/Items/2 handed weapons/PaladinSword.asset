@@ -30,3 +30,5 @@ MonoBehaviour:
   description: Enhanced with holy light
   sellValue: 480
   buyValue: 510
+  effects: {fileID: 0}
+  trialEffect: {fileID: 0}

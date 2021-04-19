@@ -24,11 +24,11 @@ MonoBehaviour:
   description: If you mean sustainability in chaos, better get it
   level: 0
   maxLevel: 5
-  coolDown: 15
-  manaCost: 20
+  coolDown: 9
+  manaCost: 57
   notOwnSprite: {fileID: 21300000, guid: 716c5c569c9049042845fbb5aac99f5d, type: 3}
   icon: {fileID: 21300000, guid: 82182c20a9ccc55449d15f8407602d45, type: 3}
-  defaultEffectValue: 15
-  effectValue: 19.5
-  nextLevelValue: 39
+  defaultEffectValue: 25
+  effectValue: 32.5
+  nextLevelValue: 32.5
   duration: 10

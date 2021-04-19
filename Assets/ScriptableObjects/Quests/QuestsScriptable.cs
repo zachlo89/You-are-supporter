@@ -15,7 +15,7 @@ public class QuestsScriptable : ScriptableObject
 {
     public string questName;
     public string questDescription;
-    public string questValue;
+    public int questValue;
     public int questRewardValue;
     public Sprite questImage;
     public Sprite rewardImage;
