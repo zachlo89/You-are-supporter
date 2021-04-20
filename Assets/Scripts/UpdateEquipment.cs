@@ -32,7 +32,39 @@ public class UpdateEquipment : MonoBehaviour
                     }
                     break;
                 case 2:
+<<<<<<< Updated upstream
                     weaponRight.sprite = item.images[0];
+=======
+                    animator.SetBool("hasWeapon", true);
+                    if (item.slotPosition == SlotPosition.meelWeapon)
+                    {
+                        weaponRight.sprite = item.images[0];
+                    }
+                    else if (item.slotPosition == SlotPosition.staff)
+                    {
+                        staff.sprite = item.images[0];
+                        animationFunction.MagicMIssleConstructor(item.effects);
+                    }
+                    else
+                    {
+                        twoHandedWeapon.sprite = item.images[0];
+                    }
+                    try
+                    {
+                        DestroyFXEffects();
+                        if(SceneManager.GetActiveScene().name == "GameScene")
+                        {
+                            twoHandedWeapon.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                            weaponRight.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                    
+                    
+>>>>>>> Stashed changes
                     break;
                 case 3:
                     shield.sprite = item.images[0];
@@ -64,6 +96,7 @@ public class UpdateEquipment : MonoBehaviour
                     }
                     break;
                 case 2:
+<<<<<<< Updated upstream
                     weaponRight.sprite = null;
                     break;
                 case 3:
@@ -72,6 +105,49 @@ public class UpdateEquipment : MonoBehaviour
                 case 99:
                     twoHandedWeapon.sprite = null;
                     break;
+=======
+                    if(equipment.GetEquipment[3] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                        DestroyFXEffects();
+                    }
+                    weaponRight.sprite = null;
+                    break;
+                case 3:
+                    if (equipment.GetEquipment[2] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                        DestroyFXEffects();
+                    }
+                    shield.sprite = null;
+                    break;
+                case 99:
+                    if (equipment.GetEquipment[3] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                        DestroyFXEffects();
+                    }
+                    twoHandedWeapon.sprite = null;
+                    break;
+                case 98:
+                    if (equipment.GetEquipment[2] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                        DestroyFXEffects();
+                    }
+                    bow[0].sprite = null;
+                    bow[1].sprite = null;
+                    bow[2].sprite = null;
+                    break;
+                case 97:
+                    if (equipment.GetEquipment[3] == null)
+                    {
+                        animator.SetBool("hasWeapon", false);
+                        DestroyFXEffects();
+                    }
+                    staff.sprite = null;
+                    break;
+>>>>>>> Stashed changes
                 case 4:
                     legs[0].sprite = defaultEquipment[8];
                     legs[1].sprite = defaultEquipment[8];
@@ -94,4 +170,27 @@ public class UpdateEquipment : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    private void DestroyFXEffects()
+    {
+        StopAllCoroutines();
+        try
+        {
+            Destroy(twoHandedWeapon.transform.GetChild(0).GetChild(0));
+        }
+        catch
+        {
+            Debug.Log("No effects to destroy");
+        }
+        try
+        {
+            Destroy(weaponRight.transform.GetChild(0).GetChild(0));
+        }
+        catch
+        {
+            Debug.Log("No effects to destroy");
+        }
+    }
+>>>>>>> Stashed changes
 }

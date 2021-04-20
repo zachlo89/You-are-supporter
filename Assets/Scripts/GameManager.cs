@@ -48,7 +48,16 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< Updated upstream
         UpdateCharactersLevel();
+=======
+        saveClass = GameObject.FindObjectOfType<PersistableSO>();
+    }
+
+    public void SaveGame()
+    {
+        saveClass.SaveAll();
+>>>>>>> Stashed changes
     }
 
 
@@ -71,6 +80,7 @@ public class GameManager : MonoBehaviour
         int index = levelList.IndexOf(currentLevel);
         levelList[index + 1].isAvaliable = true;
     }
+<<<<<<< Updated upstream
 
     private void UpdateCharactersLevel()
     {
@@ -138,4 +148,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+=======
+>>>>>>> Stashed changes
 }

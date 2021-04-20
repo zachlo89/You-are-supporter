@@ -6,6 +6,7 @@ using TMPro;
 
 public class LobbyUpdateExpirence : MonoBehaviour
 {
+    [SerializeField] private GameObject newEquipemntAlert;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private Team team;
     [SerializeField] private TextMeshProUGUI characterName;
@@ -18,7 +19,15 @@ public class LobbyUpdateExpirence : MonoBehaviour
     private void Start()
     {
         UpdateLobby();
+<<<<<<< Updated upstream
         delegator.changeSprites += UpdateLobby;
+=======
+        if (inventory.GetInvevtory.Count > 0)
+        {
+            newEquipemntAlert.SetActive(true);
+        }
+        else newEquipemntAlert.SetActive(false);
+>>>>>>> Stashed changes
     }
 
     private void UpdateLobby()
@@ -35,6 +44,12 @@ public class LobbyUpdateExpirence : MonoBehaviour
         temp.transform.localScale *= 1.5f;
         temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[0]);
         temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[0].equipment);
+<<<<<<< Updated upstream
+=======
+        temp.GetComponentInChildren<Animator>().Play("IdleMelee");
+        temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
+
+>>>>>>> Stashed changes
         goldValue.text = inventory.Gold.value.ToString();
     }
 }

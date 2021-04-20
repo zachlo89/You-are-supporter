@@ -4,6 +4,12 @@ using UnityEngine;
 using TMPro;
 public class LootSpawner : MonoBehaviour
 {
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private ScriptableInt questGold;
+    [SerializeField] private ItemScriptable staff;
+    [SerializeField] private ItemScriptable sword;
+>>>>>>> Stashed changes
     [SerializeField] private ScriptableItemManager listOfAllItems;
     [SerializeField] private int stageLevel;
     [SerializeField] private GameObject spawningPoint;
@@ -180,11 +186,44 @@ public class LootSpawner : MonoBehaviour
         int random = Random.Range(1, spawnItemMaxCount);
         for(int i = 0; i < random; i++)
         {
+<<<<<<< Updated upstream
             GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
             ItemScriptable item = GetRandomItems();
             droopedItems.Add(item);
             temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
             temp.GetComponent<CommunicateWitEndPanel>().SetUpCommunciationWithEndPanel(endDetailPanel, item);
+=======
+            shouldDropLoot = false;
+            if (PlayerPrefs.GetInt("Tutorial2", -1) != 0)
+            {
+                int random = Random.Range(1, spawnItemMaxCount);
+                for (int i = 0; i < random; i++)
+                {
+                    GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
+                    ItemScriptable item = GetRandomItems();
+                    temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(item);
+                    inventory.AddItem(item);
+                    goldDropped = Random.Range(10 * stageLevel, 50 * stageLevel);
+                    goldValue.text = goldDropped.ToString();
+                    inventory.Gold.value += goldDropped;
+                    questGold.value += goldDropped;
+                }
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Tutorial2", -1);
+                GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
+                temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(staff);
+                GameObject temp1 = Instantiate(iconPrefab, spawningPoint.transform);
+                temp1.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(sword);
+                inventory.AddItem(staff);
+                inventory.AddItem(sword);
+                goldDropped = 200;
+                goldValue.text = goldDropped.ToString();
+                inventory.Gold.value += goldDropped;
+                questGold.value += goldDropped;
+            }
+>>>>>>> Stashed changes
         }
         goldDropped = Random.Range(10 * stageLevel, 100 * stageLevel);
         goldValue.text = goldDropped.ToString();

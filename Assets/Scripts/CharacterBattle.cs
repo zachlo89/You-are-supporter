@@ -6,6 +6,16 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private GameObject stunnEffects;
+    private float timer;
+    private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
+    private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
+    [SerializeField] private GameObject shadow;
+    [SerializeField] private GameObject normalHitsParticlePrefab;
+    [SerializeField] private AnimationFunctions animationFunctions;
+>>>>>>> Stashed changes
     [SerializeField] private GameObject canvasPanel;
     [SerializeField] private Image healthBar;
     [SerializeField] private Image manaBar;
@@ -77,15 +87,66 @@ public class CharacterBattle : MonoBehaviour
 
     private void Start()
     {
+<<<<<<< Updated upstream
         StartCoroutine(Attack());
+=======
+        
+    }
+
+    public void StartBattle()
+    {
+        timer = 0;
+        attackRateSlider.value = Random.Range(0f, 0.2f);
+        if (!isMainHero)
+        {
+            StartCoroutine("AttackRateSlider");
+        }
+        else
+        {
+            attackRateSlider.gameObject.SetActive(false);
+        }
+>>>>>>> Stashed changes
 
         animator = GetComponent<Animator>();
-        if(animator == null)
+        if (animator == null)
         {
             animator = GetComponentInChildren<Animator>();
         }
         canvasPanel.SetActive(true);
         InvokeRepeating("RegenMana", 1, 1);
+<<<<<<< Updated upstream
+=======
+        InvokeRepeating("RegenHP", 1, 1);
+        Debug.Log("StartBattle");
+    }
+
+    public void ResetSlider()
+    {
+        attackRateSlider.value = 0;
+    }
+    
+
+    IEnumerator AttackRateSlider()
+    {
+        while(isAlive && battleManager.CheckIfEnd() && !isMainHero)
+        {
+            timer += Time.deltaTime;
+            var percent = timer / (attackRate / 100);
+            attackRateSlider.value = percent;
+            yield return new WaitForEndOfFrame();
+            if (percent >= 1)
+            {
+                Attack();
+                timer = 0;
+            }
+        }
+
+    }
+    public void SetUpPlayerSkills(PlayerSKills playerSKills)
+    {
+        this.playerSKills = playerSKills;
+        playerSKills.SetUpMainCharacter(this);
+>>>>>>> Stashed changes
     }
 
     public void AddRegeneration(int regeneration)
@@ -226,7 +287,8 @@ public class CharacterBattle : MonoBehaviour
 
     public void GetDamage(int recievedDamage, bool crit)
     {
-        GameObject tempDamage = Instantiate(damagePopUp, transform.position , Quaternion.identity);
+        Vector3 temp = new Vector3(transform.position.x, 0, transform.position.z);
+        GameObject tempDamage = Instantiate(damagePopUp, temp, Quaternion.identity);
         int avoidBlock = Random.Range(0, 100);
         int aboidMiss = Random.Range(0, 100);
         if(aboidMiss <= dodgeChance)
@@ -315,7 +377,12 @@ public class CharacterBattle : MonoBehaviour
 
     IEnumerator Skill2Avaliable()
     {
+<<<<<<< Updated upstream
         while (skill2Cooldown > 0)
+=======
+        skillsCooldowns[i] = activeSkills[i].coolDown;
+        while(skillsCooldowns[i] > 0)
+>>>>>>> Stashed changes
         {
             skill2Cooldown -= Time.deltaTime;
             yield return new WaitForSeconds(Time.deltaTime);
@@ -394,7 +461,17 @@ public class CharacterBattle : MonoBehaviour
         }
 
         UpdateHealthBar();
+<<<<<<< Updated upstream
     }
+=======
+
+        GameObject temp = Instantiate(damagePopUp, transform.position, Quaternion.identity);
+        temp.GetComponentInChildren<TextMeshPro>().outlineColor = Color.green;
+        temp.GetComponentInChildren<TextMeshPro>().text = value.ToString();
+        temp.GetComponent<Animator>().SetTrigger("Heal");
+        Destroy(temp, .5f);
+}
+>>>>>>> Stashed changes
 
     public void Defence(int value, float duration)
     {
@@ -419,4 +496,170 @@ public class CharacterBattle : MonoBehaviour
         yield return new WaitForSeconds(duration);
         attackRate -= value;
     }
+<<<<<<< Updated upstream
+=======
+
+    public void AttackBuff(int value, float duration)
+    {
+        StartCoroutine(AttackIncrease(value, duration));
+    }
+
+    IEnumerator AttackIncrease(int value, float duration)
+    {
+        damage += value;
+        yield return new WaitForSeconds(duration);
+        damage -= value;
+    }
+
+    public void Dispel()
+    {
+        //TO DO remove all negative buffs
+    }
+
+    public void ManaRegen(int mana)
+    {
+        manaRegen += mana;
+    }
+
+    public void HpRegenBuff(int value, float duration)
+    {
+        StartCoroutine(RegenHPBuff(value, duration));
+    }
+
+    IEnumerator RegenHPBuff(int value, float duration)
+    {
+        while (duration > 0)
+        {
+            Heal(value);
+            yield return new WaitForSeconds(1f);
+            duration -= 1f;
+        }
+        
+    }
+
+    public void InreaseMaxMana(int value)
+    {
+        maxMP += value;
+        currentMana = maxMP;
+    }
+
+    public void IncreaseBlockChance(int value, float duration)
+    {
+        StartCoroutine(BlockChanceBuff(value, duration));
+    }
+
+    IEnumerator BlockChanceBuff(int value, float duration)
+    {
+        blockChance += value;
+        yield return new WaitForSeconds(duration);
+        blockChance -= value;
+    }
+
+    public void Stunned(float duration)
+    {
+        stunned = true;
+        StartCoroutine(StunningEffects(duration));
+    }
+
+    IEnumerator StunningEffects(float duration)
+    {
+        while (stunned)
+        {
+            animationFunctions.SetDizzyExpresion();
+            if(stunnEffects != null)
+            {
+                GameObject temp = Instantiate(stunnEffects, transform);
+                Destroy(temp, duration);
+            }
+            StopCoroutine("AttackRateSlider");
+            if (isMainHero)
+            {
+                Debug.Log("BlockSkillUsage");
+                playerSKills.BlockSkills(duration);
+                Debug.Log("BlockSkillUsage");
+            }
+            yield return new WaitForSeconds(duration);
+            stunned = false;
+            StartCoroutine("AttackRateSlider");
+            animationFunctions.SetDizzyExpresion();
+        }
+       
+    }
+
+    public void SetNewCriticalDamage(float value)
+    {
+        criticalMultiply = value;
+    }
+
+    public void SetNewDodgeChance(int value)
+    {
+        dodgeChance = value;
+    }
+
+    public void SetNewCriticalChance(float value)
+    {
+        criticalChance = value;
+    }
+    
+    public void Blind(float duration)
+    {
+        StartCoroutine(LoseSight(duration));
+    }
+
+    IEnumerator LoseSight(float duration)
+    {
+        blinded = true;
+        while (blinded)
+        {
+            StopCoroutine(AttackRateSlider());
+            yield return new WaitForSeconds(duration);
+            blinded = false;
+            StartCoroutine(AttackRateSlider());
+        }
+    }
+
+    public void BloodLust(float effectValue)
+    {
+        bloodLust = true;
+        defaultAttack = damage;
+        this.bloodLustEffect = effectValue;
+    }
+
+    private void EffectOfBloodLust()
+    {
+        damage = defaultAttack + (int)(maxHP / currentHealth * bloodLustEffect);
+    }
+
+    public void Bleed(float duration)
+    {
+        StartCoroutine(BleedStatus(duration));
+    }
+
+    IEnumerator BleedStatus(float duration)
+    {
+        bleeding = true;
+        while (bleeding)
+        {
+            this.GetDamage((int)(maxHP * .5 / 100), false);
+            yield return new WaitForSeconds(1f);
+            duration -= 1;
+            if(duration <= 0)
+            {
+                bleeding = false;
+            }
+        }
+    }
+
+    private void DestroyParticles()
+    {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            if(transform.GetChild(i).GetComponent<ParticleSystem>() != null)
+            {
+                Destroy(transform.GetChild(i).gameObject);
+            }
+        }
+    }
+
+>>>>>>> Stashed changes
 }

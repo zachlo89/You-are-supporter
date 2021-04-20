@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ListOfAllCharacters
   m_EditorClassIdentifier: 
   heroesList:
+<<<<<<< Updated upstream
   - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
   - {fileID: 11400000, guid: a7fd082b640691743bf7cb37a0810e70, type: 2}
   - {fileID: 11400000, guid: 3c0d09d93b1380b4f85c1a2ce7f71d8e, type: 2}
@@ -35,3 +36,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54295fefc6a5dce4d9c8cbfe5e213564, type: 2}
   - {fileID: 11400000, guid: 9714cd2e9eea93246bf8bafba87fa2e8, type: 2}
   - {fileID: 11400000, guid: cfd1d635a9c1bc549ad27758277e606a, type: 2}
+=======
+  - {fileID: 11400000, guid: 3c0d09d93b1380b4f85c1a2ce7f71d8e, type: 2}
+  - {fileID: 11400000, guid: 3058d5fa267c48244950315a912af7a6, type: 2}
+  - {fileID: 11400000, guid: 6703b876c5942a343934bd237e14b2ea, type: 2}
+  - {fileID: 11400000, guid: 16a49cea63f9d0b4da1daf1528177e15, type: 2}
+  - {fileID: 11400000, guid: 89c9d120b07a5b24fb99c70c3b61f7bc, type: 2}
+  - {fileID: 11400000, guid: 3e64a25244bdefd4bbae38c5d7f3fe0b, type: 2}
+  - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
+>>>>>>> Stashed changes

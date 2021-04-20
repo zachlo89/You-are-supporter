@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4bc2fa9b89965419a9cdc48746288e, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   expToGiveToThePlayers: 100
+=======
+  questLevelUp: {fileID: 0}
+  isMainCharacter: 0
+  expToGiveToThePlayers: 125
+>>>>>>> Stashed changes
   characterName: 
   buyValue: 0
   isAlive: 0

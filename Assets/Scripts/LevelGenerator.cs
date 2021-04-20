@@ -16,8 +16,10 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private SkillsManager skillsManager;
 
 
+    private Vector3 offset;
     private void Start()
     {
+        offset = new Vector3(8, 0, 0);
         gameManager = GameObject.FindObjectOfType<GameManager>();
 
         level = gameManager.CurrentLevel;
