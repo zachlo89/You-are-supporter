@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine.Rendering;
 public class LobbyUpdateExpirence : MonoBehaviour
 {
+    [SerializeField] private GameObject equipmentPanel;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private ScriptableInt questLeveledUp;
     [SerializeField] private Team team;
@@ -25,6 +26,10 @@ public class LobbyUpdateExpirence : MonoBehaviour
         delegator.updateCount += UpdateLobby;
         delegator.changeSprites += UpdateLobby;
         UpdateLobby();
+        if(inventory.GetInvevtory.Count > 0)
+        {
+            equipmentPanel.SetActive(true);
+        }
     }
 
     private void UpdateLobby()
@@ -41,6 +46,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
         temp.transform.localScale *= 1.5f;
         temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[0]);
         temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[0].equipment);
+        temp.GetComponentInChildren<Animator>().Play("IdleMelee");
         temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
 
         goldValue.text = inventory.Gold.value.ToString();

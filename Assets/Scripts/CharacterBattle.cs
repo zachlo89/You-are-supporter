@@ -6,6 +6,7 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+    [SerializeField] private GameObject dizzyParticle;
     private float timer;
     private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
     private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
@@ -124,20 +125,21 @@ public class CharacterBattle : MonoBehaviour
 
     private int defaultAttack = 0;
 
-    private void Start()
+    public void StartBattle()
     {
         timer = 0;
         attackRateSlider.value = Random.Range(0f, 0.2f);
         if (!isMainHero)
         {
             StartCoroutine("AttackRateSlider");
-        } else
+        }
+        else
         {
             attackRateSlider.gameObject.SetActive(false);
         }
 
         animator = GetComponent<Animator>();
-        if(animator == null)
+        if (animator == null)
         {
             animator = GetComponentInChildren<Animator>();
         }
@@ -595,7 +597,8 @@ public class CharacterBattle : MonoBehaviour
         GameObject temp = Instantiate(damagePopUp, transform.position, Quaternion.identity);
         temp.GetComponentInChildren<TextMeshPro>().outlineColor = Color.green;
         temp.GetComponentInChildren<TextMeshPro>().text = value.ToString();
-
+        temp.GetComponent<Animator>().SetTrigger("Heal");
+        Destroy(temp, .5f);
 }
 
     public void Defence(int value, float duration)
@@ -688,6 +691,11 @@ public class CharacterBattle : MonoBehaviour
     {
         while (stunned)
         {
+            if(dizzyParticle != null)
+            {
+                GameObject temp = Instantiate(dizzyParticle, transform);
+                Destroy(temp, duration);
+            }
             StopCoroutine("AttackRateSlider");
             if (isMainHero)
             {

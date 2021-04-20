@@ -43,6 +43,7 @@ public class CharacterSlot : MonoBehaviour
         GameObject temp = Instantiate(hero.prefab, spawnigngPoint);
         temp.GetComponent<UpdateFaceAndBody>().SetUpFace(hero);
         temp.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
+        temp.GetComponentInChildren<Animator>().Play("IdleMelee");
     }
 
     // Called when pressed (move from HeroesPanel to EquipmentPanel)
@@ -79,6 +80,7 @@ public class CharacterSlot : MonoBehaviour
             GameObject temp = Instantiate(hero.prefab, spawnigngPoint);
             temp.GetComponent<UpdateFaceAndBody>().SetUpFace(hero);
             temp.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
+            temp.GetComponentInChildren<Animator>().Play("IdleMelee");
         }
         
         

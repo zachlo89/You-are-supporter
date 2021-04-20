@@ -85,6 +85,7 @@ public class SkillsPanel : MonoBehaviour
         GameObject temp = Instantiate(listOfActiveHeroes[charactersCounter].prefab, characterSpawningPoint);
         temp.GetComponent<UpdateFaceAndBody>().SetUpFace(listOfActiveHeroes[charactersCounter]);
         temp.GetComponent<UpdateEquipment>().EquipAll(listOfActiveHeroes[charactersCounter].equipment);
+        temp.GetComponentInChildren<Animator>().Play("IdleMelee");
         temp.transform.localScale *= 3;
         characterAnimator = temp.GetComponentInChildren<Animator>();
         PopulateSkillTree();

@@ -71,5 +71,6 @@ public class ChestRewardPanel : MonoBehaviour
         ItemScriptable item = looter.GetRandomItems(i);
         GameObject temp = Instantiate(rewardPrefab, rewardSpawningPoint);
         temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
+        inventory.AddItem(item);
     }
 }

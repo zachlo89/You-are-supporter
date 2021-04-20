@@ -9,6 +9,10 @@ public class AnimationFunctions : MonoBehaviour
     private Sprite defaultMouth;
     [SerializeField] private Sprite attackingMouth;
     [SerializeField] private SpriteRenderer mouthRenderer;
+    private Sprite defaultEyes;
+    [SerializeField] private Sprite dizzyEyes;
+    [SerializeField] private SpriteRenderer eyesRenderer;
+    private bool changeDizzyExpresion;
     private bool changeExpresion;
     private int skillCount;
 
@@ -19,6 +23,7 @@ public class AnimationFunctions : MonoBehaviour
         battleManager = GameObject.FindObjectOfType<BattleManager>();
         characterBattle = GetComponentInParent<CharacterBattle>();
         changeExpresion = true;
+        changeDizzyExpresion = true;
         if (defaultMouth == null && mouthRenderer != null)
         {
             defaultMouth = mouthRenderer.sprite;
@@ -49,6 +54,26 @@ public class AnimationFunctions : MonoBehaviour
         }
     }
 
+    public void SetDizzyExpression()
+    {
+        if (eyesRenderer != null)
+        {
+            if (defaultEyes == null)
+            {
+                defaultEyes = eyesRenderer.sprite;
+            }
+            if (eyesRenderer != null)
+            {
+                if (changeDizzyExpresion)
+                {
+                    eyesRenderer.sprite = dizzyEyes;
+                }
+                else eyesRenderer.sprite = defaultEyes;
+            }
+            changeDizzyExpresion = !changeDizzyExpresion;
+        }
+    }
+
     public void NormalAttackEffect()
     {
         characterBattle.NormalAttackEffect();
@@ -74,5 +99,9 @@ public class AnimationFunctions : MonoBehaviour
         this.missleObject = magicMIssle;
     }
     
+    public void StartBattle()
+    {
+        characterBattle.StartBattle();
+    }
 
 }

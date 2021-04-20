@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleEffect: {fileID: 100006, guid: 4b96e0d8d9e130042b36e3d4a2a647d6, type: 3}
   isPassive: 0
-  isBought: 1
+  isBought: 0
   isAvaliable: 1
   isBuff: 1
   isDebuf: 0

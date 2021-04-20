@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 public class TawernPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject teamAlarm;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private List<ItemScriptable> defaultItems = new List<ItemScriptable>();
     [SerializeField] private Image characterClassLogo;
@@ -68,6 +69,7 @@ public class TawernPanel : MonoBehaviour
         {
             GameObject temp = Instantiate(heroPrefab, spawningPoint);
             temp.GetComponent<TawernCharacterIcon>().SetUpCharacter(character, this);
+            temp.GetComponentInChildren<Animator>().Play("IdleMelee");
         }
     }
 
@@ -231,6 +233,7 @@ public class TawernPanel : MonoBehaviour
             spawningPoint.GetChild(index).gameObject.SetActive(false);
             Destroy(spawningPoint.GetChild(index).gameObject);
         }
+        teamAlarm.SetActive(true);
         rightPanel.SetActive(false);
         delegator.updateCount();
     }

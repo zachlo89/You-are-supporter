@@ -66,6 +66,7 @@ public class LevelGenerator : MonoBehaviour
                 GameObject temp = Instantiate(level.enemiesList[i].prefab);
                 temp.transform.localScale /= 100;
                 temp.transform.rotation = Quaternion.Euler(0, 180, 0);
+                temp.transform.GetChild(1).rotation = Quaternion.Euler(0, 0, 0);
                 temp.transform.position = new Vector3(-spwaningPoints[i].x, spwaningPoints[i].y, spwaningPoints[i].z);
                 temp.tag = "Enemy";
                 try

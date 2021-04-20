@@ -56,8 +56,12 @@ public class UpdateEquipment : MonoBehaviour
                     }
                     try
                     {
-                        twoHandedWeapon.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
-                        weaponRight.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                        if(SceneManager.GetActiveScene().name == "GameScene")
+                        {
+                            DestroyFXEffects();
+                            twoHandedWeapon.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                            weaponRight.transform.GetChild(0).gameObject.GetComponent<Assets.SimpleSpriteTrails.Scripts.MeleeWeaponTrail>().Build();
+                        }
                     }
                     catch
                     {

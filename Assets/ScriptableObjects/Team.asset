@@ -15,6 +15,6 @@ MonoBehaviour:
   heroesList:
   - {fileID: 11400000, guid: 5fb1cfd1b41298d4cb59486694afef72, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3c0d09d93b1380b4f85c1a2ce7f71d8e, type: 2}
   maxTeamSize: 4
   avaliabeTeamSize: 3

@@ -28,6 +28,7 @@ public class UpdateSlotCharacterUI : MonoBehaviour
         characterPrefab.GetComponent<UpdateFaceAndBody>().SetUpFace(hero);
         characterPrefab.transform.localScale *= 1.5f;
         characterPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
+        characterPrefab.GetComponentInChildren<Animator>().Play("IdleMelee");
         slider.value = hero.expirence / hero.toNextLevel;
         for(int i = 0; i < hero.stars; i++)
         {

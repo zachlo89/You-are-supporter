@@ -7,8 +7,6 @@ using UnityEngine.EventSystems;
 
 public class EquipmentPanel : MonoBehaviour
 {
-    private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
-    private List<CharacterSkill> passiveCharacterSkill = new List<CharacterSkill>();
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private Image armR, armL, accessories;
     [SerializeField] private List<Sprite> iconsList = new List<Sprite>();
@@ -79,6 +77,7 @@ public class EquipmentPanel : MonoBehaviour
         heroPrefab = Instantiate(hero.prefab, spawningPoint);
         heroPrefab.GetComponent<UpdateFaceAndBody>().SetUpFace(hero);
         heroPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
+        heroPrefab.GetComponentInChildren<Animator>().Play("IdleMelee");
         heroPrefab.transform.localScale *= 2;
         heroName.text = hero.characterName;
         levelText.text = hero.level.ToString();
