@@ -23,10 +23,20 @@ public class MissleMovement : MonoBehaviour
     {
         if(target != null)
         {
-            if (target.position.x <= transform.position.x)
+            if(hero.CompareTag("Enemy"))
             {
-                hero.NormalAttackEffect();
-                Destroy(gameObject);
+                if (transform.position.x <= target.position.x)
+                {
+                    hero.NormalAttackEffect();
+                    Destroy(gameObject);
+                }
+            } else
+            {
+                if (target.position.x <= transform.position.x)
+                {
+                    hero.NormalAttackEffect();
+                    Destroy(gameObject);
+                }
             }
         }
     }

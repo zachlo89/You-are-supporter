@@ -33,7 +33,7 @@ MonoBehaviour:
   toNextLevel: 100
   level: 1
   stars: 1
-  equipment: {fileID: 11400000, guid: ebc4de661229839438c39b5258b29977, type: 2}
+  equipment: {fileID: 11400000, guid: 66a4921a7c759ae488f14757380ef4a2, type: 2}
   isAvaliable: 0
   avaliableSkillPoints: 0
   characterClass: 1

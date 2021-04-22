@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1594d8c9015cff148a0f44b326beb91b, type: 3}
+  m_Name: SkeletonMageEquipment
+  m_EditorClassIdentifier: 
+  equipment:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: f7f6392fbda80754bb4e1629e7b0012c, type: 2}
+  - {fileID: 11400000, guid: 5248ea8253fea7446868eda537a53fb9, type: 2}
+  - {fileID: 11400000, guid: 1dacc38f4f83eab4ba40ab266abc9ed2, type: 2}
+  - {fileID: 11400000, guid: 606a3ff08aca66a4692d09df36900be3, type: 2}
+  - {fileID: 0}

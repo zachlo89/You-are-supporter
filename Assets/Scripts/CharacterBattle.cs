@@ -472,7 +472,7 @@ public class CharacterBattle : MonoBehaviour
         if (battleManager != null && activeSkills[skillCount] != null)
         {
             activeSkills[skillCount].Use();
-            currentMana -= activeSkills[0].manaCost;
+            currentMana -= activeSkills[skillCount].manaCost;
             UpdateManaBar();
             StartCoroutine(SkillCooldown(skillCount));
         }
@@ -620,9 +620,9 @@ public class CharacterBattle : MonoBehaviour
 
     IEnumerator HasteBuff(int value, float duration)
     {
-        attackRate += value;
-        yield return new WaitForSeconds(duration);
         attackRate -= value;
+        yield return new WaitForSeconds(duration);
+        attackRate += value;
     }
 
     public void AttackBuff(int value, float duration)
@@ -691,6 +691,7 @@ public class CharacterBattle : MonoBehaviour
     {
         while (stunned)
         {
+            animationFunctions.SetDizzyExpression();
             if(dizzyParticle != null)
             {
                 GameObject temp = Instantiate(dizzyParticle, transform);
@@ -699,13 +700,12 @@ public class CharacterBattle : MonoBehaviour
             StopCoroutine("AttackRateSlider");
             if (isMainHero)
             {
-                Debug.Log("BlockSkillUsage");
                 playerSKills.BlockSkills(duration);
-                Debug.Log("BlockSkillUsage");
             }
             yield return new WaitForSeconds(duration);
             stunned = false;
             StartCoroutine("AttackRateSlider");
+            animationFunctions.SetDizzyExpression();
         }
        
     }
@@ -774,6 +774,26 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
+    public void Bleed2(float duration, int damage)
+    {
+        StartCoroutine(BleedStatus2(duration, damage));
+    }
+
+    IEnumerator BleedStatus2(float duration, int damage)
+    {
+        bleeding = true;
+        while (bleeding)
+        {
+            this.GetDamage(damage, false);
+            yield return new WaitForSeconds(1f);
+            duration -= 1;
+            if (duration <= 0)
+            {
+                bleeding = false;
+            }
+        }
+    }
+
     private void DestroyParticles()
     {
         for(int i = 0; i < transform.childCount; i++)
@@ -785,4 +805,17 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
+    public void Ressurection()
+    {
+        if(currentHealth <= 0)
+        {
+            animator.SetTrigger("Resurection");
+            currentHealth = (int)(maxHP / 5);
+            isAlive = true;
+            StartBattle();
+        } else
+        {
+            Heal((int)(maxHP / 4));
+        }
+    }
 }

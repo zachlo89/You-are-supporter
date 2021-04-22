@@ -24841,7 +24841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adda248837df86419534197d6ed8a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dizzyParticle: {fileID: 0}
+  dizzyParticle: {fileID: 7822805851003857071, guid: 259243b4d4f9c724b9cbae340b7fcb09,
+    type: 3}
   shadow: {fileID: 6857776907867696906}
   normalHitsParticlePrefab: {fileID: 100000, guid: bb24fa1a8c34a19499547533720cea99,
     type: 3}

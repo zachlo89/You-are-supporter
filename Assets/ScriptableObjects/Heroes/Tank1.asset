@@ -33,7 +33,7 @@ MonoBehaviour:
   toNextLevel: 100
   level: 1
   stars: 1
-  equipment: {fileID: 11400000, guid: f67a16f37293eb644aa4c9f7699c3e57, type: 2}
+  equipment: {fileID: 11400000, guid: a196ec896a313c146944bb78c9815a2c, type: 2}
   isAvaliable: 1
   avaliableSkillPoints: 0
   characterClass: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   eyesSprites: {fileID: 21300000, guid: da9a1aed608040728e7066b0538decb1, type: 3}
   eyebrowsSprites: {fileID: 21300000, guid: d3acd862a54c4750a8f934507e1b9269, type: 3}
   earsSprites: {fileID: 0}
-  mouthSprites: {fileID: 21300000, guid: f92e9ef275934c9da5096dd5b3b0da0c, type: 3}
+  mouthSprites: {fileID: 21300000, guid: 21394407d57a46f986da64499893f5d1, type: 3}
   beardSprites: {fileID: 0}
   torso: {fileID: 21300000, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   pelvis: {fileID: 21300006, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}

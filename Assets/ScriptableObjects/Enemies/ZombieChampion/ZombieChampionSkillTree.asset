@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed990f2c77ff3c347918cf6c749b12f7, type: 3}
+  m_Name: ZombieChampionSkillTree
+  m_EditorClassIdentifier: 
+  skillTree:
+  - {fileID: 11400000, guid: 8db642de77f254c4f9cc11cefb92249e, type: 2}
+  - {fileID: 11400000, guid: 530aeeea8a16e6248a151005fa4fbf77, type: 2}
+  counter: 0

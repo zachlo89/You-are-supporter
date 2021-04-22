@@ -7,13 +7,20 @@ public class StageSelectionPanel : MonoBehaviour
 {
     [SerializeField] private List<GameObject> locks = new List<GameObject>();
     [SerializeField] private List<Button> stageButtons = new List<Button>();
+    [SerializeField] private List<Stage> stageList = new List<Stage>();
     private void Start()
     {
-        if(PlayerPrefs.GetInt("Tutorial1", 1) == -1 && PlayerPrefs.GetInt("Tutorial2", 1) == -1 && PlayerPrefs.GetInt("Tutorial3", 1) == -1
-            && PlayerPrefs.GetInt("Tutorial4", 1) == -1 && PlayerPrefs.GetInt("Tutorial5", 1) == -1 && PlayerPrefs.GetInt("Tutorial6", 1) == -1)
+        for(int i = 0; i < stageList.Count; i++)
         {
-            locks[1].SetActive(false);
-            stageButtons[1].interactable = true;
+            if (stageList[i].levelsList[0].isAvaliable)
+            {
+                locks[i].SetActive(false);
+                stageButtons[i].interactable = true;
+            } else
+            {
+                locks[i].SetActive(true);
+                stageButtons[i].interactable = false;
+            }
         }
     }
 }

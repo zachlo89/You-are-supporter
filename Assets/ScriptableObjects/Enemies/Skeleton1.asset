@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questLevelUp: {fileID: 0}
   isMainCharacter: 0
-  expToGiveToThePlayers: 75
+  expToGiveToThePlayers: 100
   characterName: 
   buyValue: 0
   isAlive: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   toNextLevel: 100
   level: 1
   stars: 1
-  equipment: {fileID: 11400000, guid: 9bdea76b8cc493440bfba34c62ded877, type: 2}
+  equipment: {fileID: 11400000, guid: 3cff036c318a099428b78d9b2cd0916e, type: 2}
   isAvaliable: 1
   avaliableSkillPoints: 0
   characterClass: 0

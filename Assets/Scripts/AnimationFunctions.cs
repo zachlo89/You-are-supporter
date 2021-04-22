@@ -85,12 +85,11 @@ public class AnimationFunctions : MonoBehaviour
 
     public void SpawnMagicMissle()
     {
-        CharacterBattle enemy = battleManager.GetFrontCharacter(gameObject.tag);
+        CharacterBattle enemy = battleManager.GetFrontCharacter(transform.parent.gameObject.tag);
         if (enemy != null && missleObject != null)
         {
             GameObject temp = Instantiate(missleObject, spawningPoint.transform.position, Quaternion.identity);
             temp.GetComponent<MissleMovement>().SetTarget(enemy.transform, characterBattle);
-
         }
     }
 

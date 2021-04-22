@@ -87,6 +87,30 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    public CharacterBattle GetFrontCharacterDeadOrAlive(string tag)
+    {
+        if (tag == "Enemy")
+        {
+            for (int i = 0; i < playerCharacters.Count; i++)
+            {
+                return playerCharacters[i];
+            }
+            return null;
+        }
+        else
+        {
+            for (int i = 0; i < enemiesCharacters.Count; i++)
+            {
+                if (enemiesCharacters[i].IsAlive)
+                {
+                    return enemiesCharacters[i+1];
+                }
+                return enemiesCharacters[i];
+            }
+            return null;
+        }
+    }
+
     //Use for skills
     public CharacterBattle GetMiddleCharacter(string tag)
     {

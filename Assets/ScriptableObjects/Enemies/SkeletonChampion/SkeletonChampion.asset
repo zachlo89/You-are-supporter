@@ -23,7 +23,7 @@ MonoBehaviour:
   maxHealt: 2000
   hpRegen: 0
   maxMana: 100
-  manaRegen: 1
+  manaRegen: 10
   attackRate: 250
   critChance: 0
   critDamageMultiplay: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
   toNextLevel: 100
   level: 1
   stars: 1
-  equipment: {fileID: 11400000, guid: f038741a9192d5743a180a9005313c09, type: 2}
+  equipment: {fileID: 11400000, guid: 0ab2d35fe5816594082109d23af23f9c, type: 2}
   isAvaliable: 1
   avaliableSkillPoints: 0
   characterClass: 1

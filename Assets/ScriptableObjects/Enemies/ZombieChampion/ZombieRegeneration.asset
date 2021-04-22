@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9571b88afcf38343bd9a264bc3bbb06, type: 3}
+  m_Name: ZombieRegeneration
+  m_EditorClassIdentifier: 
+  particleEffects: {fileID: 100006, guid: 3fe0497ba17d3334392941e67852131d, type: 3}
+  isPassive: 0
+  isBought: 1
+  isAvaliable: 1
+  isBuff: 1
+  skillName: ZombieRegeneration
+  skillBorder: {fileID: 0}
+  skillDifficultyLevel: 0
+  description: 
+  level: 1
+  maxLevel: 1
+  coolDown: 30
+  manaCost: 50
+  notOwnSprite: {fileID: 0}
+  icon: {fileID: 0}
+  defaultEffectValue: 1
+  effectValue: 1
+  nextLevelValue: 0
+  duration: 15
