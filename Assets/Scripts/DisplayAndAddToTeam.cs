@@ -22,6 +22,11 @@ public class DisplayAndAddToTeam : MonoBehaviour
         delegator.changeSprites += PopulatePanel;
     }
 
+    private void OnEnable()
+    {
+        PopulatePanel();
+    }
+
     public void SetIndex(int index)
     {
         this.index = index;

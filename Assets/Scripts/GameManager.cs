@@ -52,6 +52,13 @@ public class GameManager : MonoBehaviour
         //UpdateCharactersLevel();
     }
 
+    void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            SaveGame();
+        }
+    }
     public void SaveGame()
     {
         saveClass.SaveAll();
@@ -89,73 +96,4 @@ public class GameManager : MonoBehaviour
         saveClass.SaveAll();
 
     }
-    /*
-    private void UpdateCharactersLevel()
-    {
-        foreach(ScriptableCharacter character in listOfHeroes.heroesList)
-        {
-            if (character.isAvaliable && character.expirence > 0)
-            {
-                int toNextLevel = character.toNextLevel;
-                int newLevel = character.level;
-                for(int i = 0; i < 11; i++)
-                {
-                    if(character.expirence >= toNextLevel)
-                    {
-                        character.expirence -= toNextLevel;
-                        toNextLevel = (int)(toNextLevel * 1.5f);
-                        ++newLevel;
-                        character.level = newLevel;
-                        character.toNextLevel = toNextLevel;
-                        UpdateCharacterStats(character);
-                    }  
-                }
-            }
-        }
-    }
-
-    private void UpdateCharacterStats(ScriptableCharacter character)
-    {
-        switch (character.characterClass)
-        {
-            case CharacterClass.Tank:
-                    character.maxHealt += (int)(character.maxHealt * 8 / 100);
-                    character.damage += (int)(character.damage * 6 / 100);
-                break;
-            case CharacterClass.Archer:
-                character.maxHealt += (int)(character.maxHealt * 6 / 100);
-                character.damage += (int)(character.damage * 8 / 100);
-                break;
-            case CharacterClass.Berserker:
-                character.maxHealt += (int)(character.maxHealt * 7 / 100);
-                character.damage += (int)(character.damage * 7 / 100);
-                break;
-        }
-    }
-
-    public void UpdateTeamCharactersAfterBattle()
-    {
-        for(int j = 0; j < team.heroesList.Count; j ++)
-        {
-            if(team.heroesList[j] != null)
-            {
-                int toNextLevel = team.heroesList[j].toNextLevel;
-                int newLevel = team.heroesList[j].level;
-                for (int i = 0; i < 11; i++)
-                {
-                    if (team.heroesList[j].expirence >= toNextLevel)
-                    {
-                        team.heroesList[j].expirence -= toNextLevel;
-                        toNextLevel = (int)(toNextLevel * 1.5f);
-                        ++newLevel;
-                        team.heroesList[j].level = newLevel;
-                        team.heroesList[j].toNextLevel = toNextLevel;
-                        UpdateCharacterStats(team.heroesList[j]);
-                    }
-                }
-            }
-        }
-    }
-
-    */
 }

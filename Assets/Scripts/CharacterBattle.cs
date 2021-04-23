@@ -480,7 +480,7 @@ public class CharacterBattle : MonoBehaviour
 
     IEnumerator SkillCooldown(int i)
     {
-        skillsCooldowns[i] = activeSkills[0].coolDown;
+        skillsCooldowns[i] = activeSkills[i].coolDown;
         while(skillsCooldowns[i] > 0)
         {
             skillsCooldowns[i] -= Time.deltaTime;

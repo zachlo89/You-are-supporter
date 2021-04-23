@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
     private Level level;
     [SerializeField] private Team team;
     [SerializeField] private Sprite backgroundSprite;
-    [SerializeField] private Image backgroundImage;
+    [SerializeField] private SpriteRenderer backgroundImage;
 
     [SerializeField] private List<Vector3> spwaningPoints = new List<Vector3>();
     [SerializeField] private BattleManager battleManager;

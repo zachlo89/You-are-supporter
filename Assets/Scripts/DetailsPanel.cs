@@ -118,6 +118,10 @@ public class DetailsPanel : MonoBehaviour
         {
             buttonEquip.GetComponent<Button>().interactable = false;
         }
+        if(item.slotPosition == SlotPosition.meelWeapon && hero.characterClass == CharacterClass.Supporter)
+        {
+            buttonEquip.GetComponent<Button>().interactable = false;
+        }
         buttonSell.SetActive(true);
         List<ItemScriptable> itemsToCheck = new List<ItemScriptable>();
         itemsToCheck.Clear();

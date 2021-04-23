@@ -9,4 +9,9 @@ public class LosePanelScript : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Lobby");
+    }
 }

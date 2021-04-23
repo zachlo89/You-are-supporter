@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level 3A
   m_EditorClassIdentifier: 
   enemiesList:
-  - {fileID: 11400000, guid: b6e096cdb2ce18e439c355814a88683c, type: 2}
-  - {fileID: 11400000, guid: 3f0f52dcc66e3e04684aa472eb937ea3, type: 2}
+  - {fileID: 11400000, guid: 756d4524bf615b6479cb4e6881e1db87, type: 2}
+  - {fileID: 11400000, guid: 1933fc22c90014c41a3dec978b214135, type: 2}
   - {fileID: 11400000, guid: 119c1b4d7df7a0a4b8ee5c28dca4e5ef, type: 2}
   itemsRarityDrop: 2
   background: {fileID: 21300000, guid: 03f0513cf9924497c8eb042e999d16dd, type: 3}

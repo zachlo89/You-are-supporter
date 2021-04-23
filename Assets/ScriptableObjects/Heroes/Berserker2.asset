@@ -15,7 +15,7 @@ MonoBehaviour:
   questLevelUp: {fileID: 11400000, guid: d11c72dd5c9d3fa4fbbf0b868081f6c4, type: 2}
   isMainCharacter: 0
   expToGiveToThePlayers: 0
-  characterName: Timian
+  characterName: Varlog
   buyValue: 205
   isAlive: 1
   damage: 36
@@ -39,9 +39,9 @@ MonoBehaviour:
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}
   headSprites: {fileID: 21300000, guid: 174bc157635e4532914988ddbf569498, type: 3}
-  hairsSprites: {fileID: 21300000, guid: 3cf352e64a654f11bde351e0ba740a18, type: 3}
-  eyesSprites: {fileID: 21300000, guid: d0483a05d8744871b23e5a80bcee097b, type: 3}
-  eyebrowsSprites: {fileID: 21300000, guid: b18765057a3a4f728d75c7d74bf36b6a, type: 3}
+  hairsSprites: {fileID: 21300000, guid: 2fe13f78cbe648edb11eea503cd69814, type: 3}
+  eyesSprites: {fileID: 21300000, guid: f2f1a3888c5c4f9ea2f7dd4407983826, type: 3}
+  eyebrowsSprites: {fileID: 21300000, guid: e0a727d44c1340d3bb56aad49d922e26, type: 3}
   earsSprites: {fileID: 0}
   mouthSprites: {fileID: 21300000, guid: dbe5af76dc2c49fbbc9f81705434657a, type: 3}
   beardSprites: {fileID: 0}
@@ -57,8 +57,8 @@ MonoBehaviour:
   legR: {fileID: 21300012, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinL: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
   shinR: {fileID: 21300014, guid: 7f049dfc29eb4a27a35fe07f89e20e2a, type: 3}
-  bodyColor: {r: 0.06246507, g: 0.65864694, b: 0.42565006, a: 1}
-  hairColor: {r: 0.5652998, g: 0.7540014, b: 0.14239144, a: 1}
+  bodyColor: {r: 0.88006806, g: 0.29316896, b: 0.9567057, a: 1}
+  hairColor: {r: 0.29300016, g: 0.67878675, b: 0.082219005, a: 1}
   playerSkillTree: []
   activeSkills: []
   characterSkillTree:

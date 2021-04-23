@@ -30,8 +30,10 @@ public class TawernPanel : MonoBehaviour
     private float critChance, critDamage;
     private int newCharactersCount = 3;
     private TawernCharacterIcon tawernCharacterIcon;
+    private bool beenLookedAt;
     private void Start()
     {
+        beenLookedAt = false;
         delegator.updateCount += UpdateGoldValue;
         listOfNotOwnCharacters.Clear();
         PopulateListOfNotOwnCharacter();
@@ -42,6 +44,8 @@ public class TawernPanel : MonoBehaviour
     {
         rightPanel.SetActive(false);
         goldValue.text = inventory.Gold.value.ToString();
+        PopulateTawern();
+
     }
     public void UpdateGoldValue()
     {
@@ -49,28 +53,50 @@ public class TawernPanel : MonoBehaviour
     }
     public void PopulateTawern()
     {
-        for(int i = 0; i < newCharactersCount; i++)
+        if (!beenLookedAt)
         {
-            ScriptableCharacter temp = GetRandomCharacter();
-            try
+            for (int i = 0; i < newCharactersCount; i++)
             {
-                if (!listOfCharacters.Contains(temp) && temp != null)
+                ScriptableCharacter temp = GetRandomCharacter();
+                try
                 {
-                    listOfCharacters.Add(temp);
+                    if (!listOfCharacters.Contains(temp) && temp != null)
+                    {
+                        listOfCharacters.Add(temp);
+                    }
+                }
+                catch
+                {
+                    Debug.Log("Missing character");
                 }
             }
-            catch
+
+            foreach (ScriptableCharacter character in listOfCharacters)
             {
-                Debug.Log("Missing character");
+                if (!character.isAvaliable)
+                {
+                    GameObject temp = Instantiate(heroPrefab, spawningPoint);
+                    temp.GetComponent<TawernCharacterIcon>().SetUpCharacter(character, this);
+                    temp.GetComponentInChildren<Animator>().Play("IdleMelee");
+                }
+            }
+        } else
+        {
+            foreach (Transform child in spawningPoint)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            foreach (ScriptableCharacter character in listOfCharacters)
+            {
+                if (!character.isAvaliable)
+                {
+                    GameObject temp = Instantiate(heroPrefab, spawningPoint);
+                    temp.GetComponent<TawernCharacterIcon>().SetUpCharacter(character, this);
+                    temp.GetComponentInChildren<Animator>().Play("IdleMelee");
+                }
             }
         }
-
-        foreach(ScriptableCharacter character in listOfCharacters)
-        {
-            GameObject temp = Instantiate(heroPrefab, spawningPoint);
-            temp.GetComponent<TawernCharacterIcon>().SetUpCharacter(character, this);
-            temp.GetComponentInChildren<Animator>().Play("IdleMelee");
-        }
+        beenLookedAt = true;
     }
 
     private void PopulateListOfNotOwnCharacter()

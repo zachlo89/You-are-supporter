@@ -50,4 +50,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9563e07b9af0b304e8f6c1de5f6cd348, type: 2}
   - {fileID: 11400000, guid: 16e7ffc59b0193a4aa1da924cc928e66, type: 2}
   - {fileID: 11400000, guid: 5e13cd57a25e3b443bfca11f3226b4bc, type: 2}
+  - {fileID: 11400000, guid: 3e71d345a082ab3478ab1e255fb5ff60, type: 2}
+  - {fileID: 11400000, guid: 05002f422b99f174097629c9083954a6, type: 2}
   team: {fileID: 11400000, guid: 5900bd9d491da5340be377694e6361d1, type: 2}

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-
+using UnityEngine.Experimental.Rendering.Universal;
 public class EquipmentPanel : MonoBehaviour
 {
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
@@ -78,6 +78,7 @@ public class EquipmentPanel : MonoBehaviour
         heroPrefab.GetComponent<UpdateFaceAndBody>().SetUpFace(hero);
         heroPrefab.GetComponent<UpdateEquipment>().EquipAll(hero.equipment);
         heroPrefab.GetComponentInChildren<Animator>().Play("IdleMelee");
+        heroPrefab.GetComponentInChildren<Light2D>().enabled = false;
         heroPrefab.transform.localScale *= 2;
         heroName.text = hero.characterName;
         levelText.text = hero.level.ToString();

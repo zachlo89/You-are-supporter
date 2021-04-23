@@ -18,6 +18,11 @@ public class SelectHeroes : MonoBehaviour
         delegator.changeSprites += PopulatePanel;
     }
 
+    private void OnEnable()
+    {
+        PopulatePanel();
+    }
+
     public void PopulatePanel()
     {
         foreach (Transform child in parent.transform)

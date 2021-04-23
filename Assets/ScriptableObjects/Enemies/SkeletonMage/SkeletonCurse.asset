@@ -23,8 +23,8 @@ MonoBehaviour:
   description: 
   level: 1
   maxLevel: 1
-  coolDown: 60
-  manaCost: 100
+  coolDown: 20
+  manaCost: 50
   notOwnSprite: {fileID: 0}
   icon: {fileID: 0}
   defaultEffectValue: 10
