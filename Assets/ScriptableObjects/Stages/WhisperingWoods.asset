@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd524486da6920a48a96d1872360078b, type: 3}
-  m_Name: Tutorial
+  m_Name: WhisperingWoods
   m_EditorClassIdentifier: 
   levelsList:
   - {fileID: 11400000, guid: 64268d42fd301c24aa28be6bd972b2c1, type: 2}
