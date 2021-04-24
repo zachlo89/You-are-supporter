@@ -11,12 +11,15 @@ public class IncreaseMaxMana : PlayerScriptableSkill
         string stats = "<color=white>Passive skill:\n</color>";
         if (level < 1)
         {
-            stats += "Increase max mana: <color=cyan>" + effectValue + "</color>";
+            stats += "Increase max mana: <color=blue>" + effectValue + "</color>";
         }
         else
         {
-            stats += "Increase max mana: <color=cyan>" + effectValue + "</color>\n";
-            stats += "Next level: <color=cyan>" + nextLevelValue + "</color>";
+            stats += "Increase max mana: <color=blue>" + effectValue + "</color>\n";
+            if(level < maxLevel)
+            {
+                stats += "Next level: <color=blue>" + nextLevelValue + "</color>";
+            }
         }
 
         return stats;

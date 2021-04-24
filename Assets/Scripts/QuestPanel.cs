@@ -103,15 +103,34 @@ public class QuestPanel : MonoBehaviour
                 ++counter;
             }
         }
-        if (counter == 0 && !multiRewardRecived)
+        if (CheckIfAllQuestBeenMade())
+        {
+            ++counter;
+        } 
+        
+        return counter;
+    }
+
+    private bool CheckIfAllQuestBeenMade()
+    {
+        int counter = 0;
+        for (int i = 0; i < questList.Count; i++)
+        {
+            if (questList[i].beenClaimed)
+            {
+                ++counter;
+            }
+        }
+        if (counter == questList.Count && !multiRewardRecived)
         {
             rightSidePanelButton.interactable = true;
+            return true;
         }
         else
         {
             rightSidePanelButton.interactable = false;
+            return false;
         }
         
-        return counter;
     }
 }

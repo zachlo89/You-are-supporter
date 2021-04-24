@@ -25,8 +25,8 @@ MonoBehaviour:
   maxLevel: 10
   coolDown: 0
   manaCost: 0
-  notOwnSprite: {fileID: 21300000, guid: a027709a0b577f043bb06ebdf457220c, type: 3}
-  icon: {fileID: 21300000, guid: b754a82c659edd84a84374bdc99e017e, type: 3}
+  notOwnSprite: {fileID: 21300000, guid: 3422aa7d1ec2af14ab3b4824ddf4f431, type: 3}
+  icon: {fileID: 21300000, guid: 9ebc8050efc860841975219ab22b9af0, type: 3}
   defaultEffectValue: 0
   effectValue: 2
   nextLevelValue: 2

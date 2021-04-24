@@ -6,7 +6,9 @@ public class Dispel : PlayerScriptableSkill
 {
     public override string StatsDescription()
     {
-        return "Single target";
+        string stats = "Single target\n";
+        stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
+        return stats;
     }
 
     public override void Use(List<CharacterBattle> characters)

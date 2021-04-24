@@ -9,8 +9,8 @@ public class DetailsPanel : MonoBehaviour
     [SerializeField] private TextMeshPro rarity;
     [SerializeField] private TextMeshPro itemName;
     [SerializeField] private TextMeshPro descritpion;
-    [SerializeField] private TextMeshPro damageText, defenceText, attackSpeedText, healthText, critRateText, critDamageText, blockChanceText, dodgeChanceText;
-    [SerializeField] private GameObject damage, defence, attackSpeed, health, critRate, critDamage, blockChance, dodgeChance;
+    [SerializeField] private TextMeshPro damageText, defenceText, attackSpeedText, healthText, critRateText, critDamageText, blockChanceText, dodgeChanceText, manaText, manaRegenText;
+    [SerializeField] private GameObject damage, defence, attackSpeed, health, critRate, critDamage, blockChance, dodgeChance, mana, manaRegen;
     [SerializeField] private GameObject buttonEquip;
     [SerializeField] private GameObject buttonSell;
     [SerializeField] private GameObject buttonUnEquip;
@@ -251,6 +251,16 @@ public class DetailsPanel : MonoBehaviour
                 dodgeChance.SetActive(true);
                 dodgeChanceText.text = item.dodgeChance.ToString();
             } else dodgeChance.SetActive(false);
+            if(item.mana != 0)
+            {
+                mana.SetActive(true);
+                manaText.text = item.mana.ToString();
+            }
+            if (item.manaRegen != 0)
+            {
+                manaRegen.SetActive(true);
+                manaRegenText.text = item.manaRegen.ToString();
+            }
         }
     }
 
@@ -362,6 +372,32 @@ public class DetailsPanel : MonoBehaviour
                     dodgeChanceText.text += "<color=red> (" + (this.item.dodgeChance - items[0].dodgeChance) + ")";
                 }
                 else dodgeChanceText.text += "<color=green> (" + (this.item.dodgeChance - items[0].dodgeChance) + ")";
+            }
+            if(items[0].mana != 0 || this.item.mana != 0)
+            {
+                mana.SetActive(true);
+                if (this.item.mana == 0)
+                {
+                    manaText.text += "0";
+                }
+                if (this.item.mana < items[0].mana)
+                {
+                    manaText.text += "<color=red> (" + (this.item.mana - items[0].mana) + ")";
+                }
+                else manaText.text += "<color=green> (" + (this.item.mana - items[0].mana) + ")";
+            }
+            if (items[0].manaRegen != 0 || this.item.manaRegen != 0)
+            {
+                mana.SetActive(true);
+                if (this.item.manaRegen == 0)
+                {
+                    manaRegenText.text += "0";
+                }
+                if (this.item.manaRegen < items[0].manaRegen)
+                {
+                    manaRegenText.text += "<color=red> (" + (this.item.manaRegen - items[0].manaRegen) + ")";
+                }
+                else manaRegenText.text += "<color=green> (" + (this.item.manaRegen - items[0].manaRegen) + ")";
             }
         }
         else if (items[0] != null && (this.item.slotPosition == SlotPosition.twoHandedWeapon || this.item.slotPosition == SlotPosition.bow))
@@ -541,6 +577,50 @@ public class DetailsPanel : MonoBehaviour
                     dodgeChanceText.text += "<color=red> (" + (this.item.dodgeChance - temp) + ")";
                 }
                 else dodgeChanceText.text += "<color=green> (" + (this.item.dodgeChance - temp) + ")";
+            }
+            if (items[0].mana != 0 || items[1].mana != 0 || this.item.mana != 0)
+            {
+                int temp = 0;
+                if (items[0] != null)
+                {
+                    temp = items[0].mana;
+                }
+                if (items[1] != null)
+                {
+                    temp += items[1].mana;
+                }
+                mana.SetActive(true);
+                if (this.item.mana == 0)
+                {
+                    manaText.text += "0";
+                }
+                if (this.item.mana < items[0].mana)
+                {
+                    manaText.text += "<color=red> (" + (this.item.mana - temp) + ")";
+                }
+                else manaText.text += "<color=green> (" + (this.item.mana - temp) + ")";
+            }
+            if (items[0].manaRegen != 0 || items[1].manaRegen != 0 || this.item.manaRegen != 0)
+            {
+                int temp = 0;
+                if (items[0] != null)
+                {
+                    temp = items[0].manaRegen;
+                }
+                if (items[1] != null)
+                {
+                    temp += items[1].manaRegen;
+                }
+                manaRegen.SetActive(true);
+                if (this.item.manaRegen == 0)
+                {
+                    manaRegenText.text += "0";
+                }
+                if (this.item.manaRegen < items[0].manaRegen)
+                {
+                    manaRegenText.text += "<color=red> (" + (this.item.manaRegen - temp) + ")";
+                }
+                else manaRegenText.text += "<color=green> (" + (this.item.manaRegen - temp) + ")";
             }
         }
     }

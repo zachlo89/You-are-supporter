@@ -8,17 +8,20 @@ public class DefenseBuff : PlayerScriptableSkill
     public float buffDuration;
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Increase defense: <color=yellow>" + effectValue + "</color> for " + buffDuration + " seconds";
+            stats += "Increase defense: <color=yellow>" + effectValue + "</color> for " + buffDuration + " seconds\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
         }
         else
         {
-            stats = "Increase defense: <color=yellow>" + effectValue + "</color> for " + buffDuration + " seconds\n";
-            if(level < maxLevel)
+            stats += "Increase defense: <color=yellow>" + effectValue + "</color> for " + buffDuration + " seconds\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
+            if (level < maxLevel)
             {
-                stats += "Next level: <color=yellow>" + nextLevelValue + "</color>";
+                stats += "Next level: <color=yellow>" + nextLevelValue + "</color>\n";
+                stats += "Mana cost: <color=blue>" + nextLevelManaCost + "</color>\n";
             }
         }
         return stats;

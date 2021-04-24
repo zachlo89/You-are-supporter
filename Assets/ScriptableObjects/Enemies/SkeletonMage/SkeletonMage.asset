@@ -20,7 +20,7 @@ MonoBehaviour:
   isAlive: 0
   damage: 300
   armor: 50
-  maxHealt: 2500
+  maxHealt: 3000
   hpRegen: 0
   maxMana: 200
   manaRegen: 10

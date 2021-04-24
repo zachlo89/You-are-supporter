@@ -14,7 +14,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private TextMeshProUGUI level;
     [SerializeField] private TextMeshProUGUI expirience;
     [SerializeField] private Slider slider;
-    [SerializeField] private Transform spawningPoint;
+    [SerializeField] private List<Transform> spawningPoints = new List<Transform>();
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private TextMeshProUGUI rubinsValue;
     [SerializeField] private ScriptableItemManager inventory;
@@ -34,20 +34,34 @@ public class LobbyUpdateExpirence : MonoBehaviour
 
     private void UpdateLobby()
     {
-        foreach (Transform child in spawningPoint)
+        for(int i = 0; i < spawningPoints.Count; i++)
         {
-            GameObject.Destroy(child.gameObject);
+            foreach (Transform child in spawningPoints[i])
+            {
+                GameObject.Destroy(child.gameObject);
+            }
         }
         characterName.text = team.heroesList[0].characterName;
         level.text = team.heroesList[0].level.ToString();
         expirience.text = team.heroesList[0].expirence + "/" + team.heroesList[0].toNextLevel;
         slider.value = team.heroesList[0].expirence / team.heroesList[0].toNextLevel;
-        GameObject temp = Instantiate(team.heroesList[0].prefab, spawningPoint);
-        temp.transform.localScale *= 1.5f;
-        temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[0]);
-        temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[0].equipment);
-        temp.GetComponentInChildren<Animator>().Play("IdleMelee");
-        temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
+        for(int i = 0; i < team.heroesList.Count; i++)
+        {
+            try
+            {
+                GameObject temp = Instantiate(team.heroesList[i].prefab, spawningPoints[i]);
+                temp.transform.localScale *= 1.5f;
+                temp.GetComponent<UpdateFaceAndBody>().SetCharacter(team.heroesList[i]);
+                temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[i].equipment);
+                temp.GetComponentInChildren<Animator>().Play("IdleMelee");
+                temp.transform.GetChild(0).GetChild(0).GetComponent<SortingGroup>().sortingOrder = 20;
+            }
+            catch
+            {
+                Debug.Log("Missing hero");
+            }
+        }
+        
 
         goldValue.text = inventory.Gold.value.ToString();
         rubinsValue.text = inventory.Rubins.value.ToString();

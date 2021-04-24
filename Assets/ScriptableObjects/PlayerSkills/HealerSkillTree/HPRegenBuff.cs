@@ -12,11 +12,17 @@ public class HPRegenBuff : PlayerScriptableSkill
         if (level < 1)
         {
             stats += "Increase hp regeneration: <color=green>" + effectValue + "</color> for " + duration + " seconds\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
         }
         else
         {
             stats += "Increase hp regeneration: <color=green>" + effectValue + "</color> for " + duration + " seconds\n";
-            stats += "Next level: <color=green>" + nextLevelValue + "</color>";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
+            if(level < maxLevel)
+            {
+                stats += "Next level: <color=green>" + nextLevelValue + "</color>\n";
+                stats += "Mana cost: <color+blue>" + manaCost + "</color>\n";
+            }
         }
 
         return stats;

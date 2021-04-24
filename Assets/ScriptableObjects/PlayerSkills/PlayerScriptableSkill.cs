@@ -28,6 +28,7 @@ public abstract class PlayerScriptableSkill : ScriptableObject
     public int maxLevel;
     public float coolDown;
     public int manaCost;
+    public int nextLevelManaCost;
     public Sprite notOwnSprite;
     public Sprite icon;
     public float defaultEffectValue;
@@ -36,7 +37,9 @@ public abstract class PlayerScriptableSkill : ScriptableObject
     public void Initialize(ScriptableCharacter character)
     {
         effectValue = (1 + (character.level / 10f)) * defaultEffectValue * Mathf.Clamp(level, 1, maxLevel);
+        manaCost = (int)((1 + (level / 10)) * manaCost);
         nextLevelValue = (1 + (character.level / 10f)) * defaultEffectValue * (level+1);
+        nextLevelManaCost = (int)((1 + ((level+1) / 10)) * manaCost);
     }
 
     public abstract void Use(List<CharacterBattle> characters);

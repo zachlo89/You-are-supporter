@@ -381,6 +381,8 @@ public class CharacterBattle : MonoBehaviour
                 armor += hero.equipment.GetEquipment[i].armor;
                 attackRate -= hero.equipment.GetEquipment[i].attackRate;
                 maxHP += hero.equipment.GetEquipment[i].hp;
+                maxMP += hero.equipment.GetEquipment[i].mana;
+                manaRegen += hero.equipment.GetEquipment[i].manaRegen;
             }
         }
     }

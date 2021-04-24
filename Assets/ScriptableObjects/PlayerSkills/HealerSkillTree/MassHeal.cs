@@ -7,15 +7,21 @@ public class MassHeal : PlayerScriptableSkill
 {
     public override string StatsDescription()
     {
-        string stats = "Multitarget";
+        string stats = "Multitarget\n";
         if (level < 1)
         {
-            stats = "Heal: <color=green>" + effectValue + "</color>";
+            stats += "Heal: <color=green>" + effectValue + "</color>\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
         }
         else
         {
-            stats = "Heal: <color=green>" + effectValue + "</color> single target\n";
-            stats += "Next level: <color=green>" + nextLevelValue + "</color>";
+            stats += "Heal: <color=green>" + effectValue + "</color> single target\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
+            if(level < maxLevel)
+            {
+                stats += "Next level: <color=green>" + nextLevelValue + "</color>\n";
+                stats += "Mana cost: <color=blue>" + nextLevelManaCost + "</color>\n";
+            }
         }
 
         return stats;

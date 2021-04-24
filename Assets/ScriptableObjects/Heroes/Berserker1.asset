@@ -34,7 +34,7 @@ MonoBehaviour:
   level: 1
   stars: 1
   equipment: {fileID: 11400000, guid: f5d719c52c28e3948b554ccedc76fa54, type: 2}
-  isAvaliable: 1
+  isAvaliable: 0
   avaliableSkillPoints: 0
   characterClass: 1
   prefab: {fileID: 6857948205223096856, guid: f3f2cf2627ae9ac4b90cab5ba9cfb114, type: 3}

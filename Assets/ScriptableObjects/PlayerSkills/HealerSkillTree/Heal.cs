@@ -7,15 +7,21 @@ public class Heal : PlayerScriptableSkill
 {
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Heal: <color=green>" + effectValue + "</color>";
+            stats += "Heal: <color=green>" + effectValue + "</color>\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
         }
         else
         {
-            stats = "Heal: <color=green>" + effectValue + "</color>\n";
-            stats += "Next level: <color=green>" + nextLevelValue + "</color>";
+            stats += "Heal: <color=green>" + effectValue + "</color>\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
+            if(level < maxLevel)
+            {
+                stats += "Next level: <color=green>" + nextLevelValue + "</color>\n";
+                stats += "Mana cost: <color=blue>" + nextLevelManaCost + "</color>\n";
+            }
         }
 
         return stats;

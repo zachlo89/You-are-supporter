@@ -15,7 +15,10 @@ public class ManaRegen : PlayerScriptableSkill
         else
         {
             stats += "Increase mana regeneration: <color=purple>" + effectValue + "</color> \n";
-            stats += "Next level: <color=purple>" + nextLevelValue + "</color>";
+            if(level < maxLevel)
+            {
+                stats += "Next level: <color=purple>" + nextLevelValue + "</color>";
+            }
         }
 
         return stats;

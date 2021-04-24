@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 enum PlayerSkill
 {
     Skill1,
@@ -25,7 +26,7 @@ public class PlayerSKills : MonoBehaviour
     private CharacterBattle mainCharacter;
     private List<bool> canInterac = new List<bool>();
     [SerializeField] private float attackRate;
-
+    [SerializeField] private TextMeshProUGUI manaText;
     private void Start()
     {
         for(int i = 0; i < team.heroesList.Count; i++)
@@ -43,12 +44,14 @@ public class PlayerSKills : MonoBehaviour
     public void SetUpMainCharacter(CharacterBattle mainCharacter)
     {
         this.mainCharacter = mainCharacter;
+        SetCurrentMana(mainCharacter.MaxMP);
     }
 
     public void SetCurrentMana(int currentMana)
     {
         this.currentMana = currentMana;
         CheckIfSufficentMana(currentMana);
+        manaText.text = currentMana + "/" + mainCharacter.MaxMP;
     }
 
     public void CheckIfSufficentMana(int currentMana)

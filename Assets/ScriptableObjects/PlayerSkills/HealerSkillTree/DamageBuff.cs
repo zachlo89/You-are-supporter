@@ -8,15 +8,21 @@ public class DamageBuff : PlayerScriptableSkill
     public float buffDuration;
     public override string StatsDescription()
     {
-        string stats = "Single target";
+        string stats = "Single target\n";
         if (level < 1)
         {
-            stats = "Increase attack: <color=red>" + effectValue + "</color> single target for " + buffDuration + " seconds";
+            stats += "Increase attack: <color=red>" + effectValue + "</color> single target for " + buffDuration + " seconds\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
         }
         else
         {
-            stats = "Increase attack: <color=red>" + effectValue + "</color> single target for " + buffDuration + " seconds\n";
-            stats += "Next level: <color=red>" + nextLevelValue + "</color>";
+            stats += "Increase attack: <color=red>" + effectValue + "</color> single target for " + buffDuration + " seconds\n";
+            stats += "Mana cost: <color=blue>" + manaCost + "</color>\n";
+            if(level < maxLevel)
+            {
+                stats += "Next level: <color=red>" + nextLevelValue + "</color>\n";
+                stats += "Mana cost: <color=blue>" + nextLevelManaCost + "</color>";
+            } 
         }
         return stats;
     }

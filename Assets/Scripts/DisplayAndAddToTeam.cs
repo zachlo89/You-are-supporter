@@ -27,6 +27,11 @@ public class DisplayAndAddToTeam : MonoBehaviour
         PopulatePanel();
     }
 
+    private void OnDisable()
+    {
+        delegator.changeSprites();
+    }
+
     public void SetIndex(int index)
     {
         this.index = index;
