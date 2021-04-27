@@ -8,6 +8,7 @@ public class ShopPanel : MonoBehaviour
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private TextMeshProUGUI rubinsValue;
+    [SerializeField] private TextMeshProUGUI energyValue;
     [SerializeField] private ScriptableItemManager inventory;
     [SerializeField] private List<ShopRewardIcon> buttonsList = new List<ShopRewardIcon>();
 
@@ -21,6 +22,7 @@ public class ShopPanel : MonoBehaviour
     {
         goldValue.text = inventory.Gold.value.ToString();
         rubinsValue.text = inventory.Rubins.value.ToString();
+        energyValue.text = inventory.Energy.value + "/" + inventory.MaxEnergy.value;
         foreach (ShopRewardIcon reward in buttonsList)
         {
             reward.CheckIfAvaliable();

@@ -7,6 +7,7 @@ public class Slam : CharacterSkill
 {
     public override void Initialize(ScriptableCharacter character)
     {
+        InitializeSkillCost();
         effectValue = (1 + (character.level / 10f)) * defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 5);
         nextLevelValue = (1 + (character.level / 10f)) * defaultEffectValue + (level + 1) * 5;
     }

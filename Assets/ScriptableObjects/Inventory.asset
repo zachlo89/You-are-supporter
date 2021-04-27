@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delegator: {fileID: 0}
   inventory: []
+  questGold: {fileID: 11400000, guid: 5fffc232722fb4745a3c5cb3500555fb, type: 2}
   gold: {fileID: 11400000, guid: 6e52cd4856bed7e4fbd6ca18cea6e4d9, type: 2}
   rubins: {fileID: 11400000, guid: 7e6d37430a2468641b707fcf8ad94da5, type: 2}
   normalChestCount: {fileID: 11400000, guid: f033497a9a312164583ede1bfd77ab0f, type: 2}
+  energy: {fileID: 11400000, guid: 1d084e81e61bc6b4a8c342c18d0fd236, type: 2}
+  maxEnergy: {fileID: 11400000, guid: e1b5ae48e3d0ead41a8634bbae65160e, type: 2}
   epicChestsCount: {fileID: 11400000, guid: f047719cf03407d458e353dad31c5ad8, type: 2}

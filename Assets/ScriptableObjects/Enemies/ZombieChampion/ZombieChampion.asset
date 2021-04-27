@@ -18,13 +18,13 @@ MonoBehaviour:
   characterName: Zombie Champion
   buyValue: 0
   isAlive: 0
-  damage: 330
+  damage: 240
   armor: 20
   maxHealt: 5300
   hpRegen: 1
   maxMana: 200
   manaRegen: 10
-  attackRate: 430
+  attackRate: 215
   critChance: 0
   critDamageMultiplay: 0
   blockChance: 0

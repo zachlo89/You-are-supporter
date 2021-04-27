@@ -6,9 +6,11 @@ using TMPro;
 
 public class SkillsPanel : MonoBehaviour
 {
+    [SerializeField] private ScriptableItemManager inventory;
     [SerializeField] private GameObject newSkillAlarm;
     [SerializeField] private ListOfHeroes listOfHeroes;
     [SerializeField] private Transform characterSpawningPoint;
+    [SerializeField] private TextMeshProUGUI goldValue;
     public Transform CharacterSpawningPoint
     {
         get { return characterSpawningPoint; }
@@ -44,6 +46,7 @@ public class SkillsPanel : MonoBehaviour
     private void Start()
     {
         gameObject.SetActive(false);
+        goldValue.text = inventory.Gold.value.ToString();
     }
 
     private void OnEnable()
@@ -252,10 +255,6 @@ public class SkillsPanel : MonoBehaviour
         if(skill.isAvaliable && skill.level < skill.maxLevel)
         {
             buttonsList[0].gameObject.SetActive(true);
-            if(skill.level == 0)
-            {
-                buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "BUY";
-            } else buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "UPGRADE";
             if (skill.level < skill.maxLevel)
             {
                 upgradeButtonText.text = "Lvl " + (skill.level + 1) + " Upgrade";
@@ -298,6 +297,12 @@ public class SkillsPanel : MonoBehaviour
         }
         else requrimentsText.gameObject.SetActive(false);
 
+        buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = currentSkill.cost.ToString();
+        if (currentSkill.cost > inventory.Gold.value)
+        {
+            buttonsList[0].interactable = false;
+        }
+
         SpawnActiveSkills();
         avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
     } 
@@ -322,11 +327,6 @@ public class SkillsPanel : MonoBehaviour
         if (skill.isAvaliable && skill.level < skill.maxLevel)
         {
             buttonsList[0].gameObject.SetActive(true);
-            if (skill.level == 0)
-            {
-                buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "BUY";
-            }
-            else buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = "UPGRADE";
             if (skill.level < skill.maxLevel)
             {
                 upgradeButtonText.text = "Lvl " + (skill.level + 1) + " Upgrade";
@@ -371,7 +371,12 @@ public class SkillsPanel : MonoBehaviour
             requrimentsText.text = "Require " + temp + " skill points invested in this skill tree";
         }
         else requrimentsText.gameObject.SetActive(false);
-
+        
+        buttonsList[0].GetComponentInChildren<TextMeshProUGUI>().text = currentSkill1.cost.ToString();
+        if(currentSkill1.cost > inventory.Gold.value)
+        {
+            buttonsList[0].interactable = false;
+        }
         SpawnActiveSkills();
         avaliablePointText.text = "Avaliable skill points: " + listOfActiveHeroes[charactersCounter].avaliableSkillPoints;
     }
@@ -387,6 +392,7 @@ public class SkillsPanel : MonoBehaviour
                 currentSkill.isBought = true;
                 PopulateSkillTree();
             }
+            inventory.AddGold(-currentSkill.cost);
             UpdateLeftSide(currentSkill);
         } else
         {
@@ -397,9 +403,10 @@ public class SkillsPanel : MonoBehaviour
                 currentSkill1.isBought = true;
                 PopulateSkillTree();
             }
+            inventory.AddGold(-currentSkill1.cost);
             UpdateLeftSide(currentSkill1);
         }
-            
+        goldValue.text = inventory.Gold.value.ToString();
     }
 
     public void EquipSkill()

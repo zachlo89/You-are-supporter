@@ -24,7 +24,7 @@ MonoBehaviour:
   hpRegen: 2
   maxMana: 100
   manaRegen: 3
-  attackRate: 460
+  attackRate: 230
   critChance: 2
   critDamageMultiplay: 2
   blockChance: 2

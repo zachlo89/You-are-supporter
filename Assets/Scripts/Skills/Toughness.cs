@@ -7,6 +7,8 @@ public class Toughness : CharacterSkill
 {
     public override void Initialize(ScriptableCharacter character)
     {
+        Debug.Log("Initialized");
+        InitializeSkillCost();
         effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 2);
         nextLevelValue = defaultEffectValue + (level + 1) * 2;
     }

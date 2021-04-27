@@ -9,6 +9,7 @@ public class QuickSlash : CharacterSkill
     public int slashesCount;
     public override void Initialize(ScriptableCharacter character)
     {
+        InitializeSkillCost();
         effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 5);
         nextLevelValue = defaultEffectValue + (level + 1) * 5;
     }

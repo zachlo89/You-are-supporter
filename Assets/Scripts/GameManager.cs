@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Level> levelList = new List<Level>();
     [SerializeField] private Team team;
 
-    private int counter;
 
     private void Awake()
     {
@@ -49,7 +48,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         saveClass = GameObject.FindObjectOfType<PersistableSO>();
-        //UpdateCharactersLevel();
     }
 
     void OnApplicationPause(bool pauseStatus)

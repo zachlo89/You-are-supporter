@@ -14,13 +14,13 @@ public class QuestPanel : MonoBehaviour
     [SerializeField] private GameObject questMissionPrefab;
     [SerializeField] private Transform questMissionsSpawningPoint;
     [SerializeField] private ScriptableItemManager inventory;
-    [SerializeField] private TextMeshProUGUI gold, rubins;
+    [SerializeField] private TextMeshProUGUI gold, rubins, energy;
     
     [SerializeField] private Button rightSidePanelButton;
     [SerializeField] private List<int> rightSideRewardsAmount = new List<int>();
     [SerializeField] private List<QuestReward> rewardsList = new List<QuestReward>();
     [SerializeField] private List<GameObject> multiRewardsList = new List<GameObject>();
-    private bool multiRewardRecived = false;
+    [SerializeField] private ScriptableBool multiRewardRecived;
 
     private void Start()
     {
@@ -54,10 +54,15 @@ public class QuestPanel : MonoBehaviour
         UpdateGoldAndRubins();
         RightSidePanel();
     }
+    private void OnEnable()
+    {
+        CheckQuestCount();
+    }
     private void UpdateGoldAndRubins()
     {
         gold.text = inventory.Gold.value.ToString();
         rubins.text = inventory.Rubins.value.ToString();
+        energy.text = inventory.Energy.value + "/" + inventory.MaxEnergy.value;
     }
 
     private void RightSidePanel()
@@ -70,7 +75,7 @@ public class QuestPanel : MonoBehaviour
 
     public void CollectReward()
     {
-        multiRewardRecived = true;
+        multiRewardRecived.value = true;
         for(int i = 0; i < rewardsList.Count; i++)
         {
             switch (rewardsList[i])

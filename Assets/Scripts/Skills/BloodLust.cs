@@ -7,6 +7,7 @@ public class BloodLust : CharacterSkill
 {
     public override void Initialize(ScriptableCharacter character)
     {
+        InitializeSkillCost();
         effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 0.1f);
         nextLevelValue = defaultEffectValue + (level + 1) * 0.1f;
     }

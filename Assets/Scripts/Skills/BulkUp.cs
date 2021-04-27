@@ -7,6 +7,7 @@ public class BulkUp : CharacterSkill
 {
     public override void Initialize(ScriptableCharacter character)
     {
+        InitializeSkillCost();
         effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 2);
         nextLevelValue = defaultEffectValue + (level + 1) * 2;
     }

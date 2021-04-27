@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class StageSubSelectMenu : MonoBehaviour
 {
+    private GameObject popupPanel;
     private GameManager gameManager;
     private Level level;
     [SerializeField] private Image image;
@@ -26,10 +27,14 @@ public class StageSubSelectMenu : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
+    public void SetPopupPanel(GameObject popupPanel)
+    {
+        this.popupPanel = popupPanel;
+    }
     public void UpdateSubStageMenuUI(Level level, int index, bool hasPrevious, bool hasNext)
     {
         this.level = level;
-        button.onClick.AddListener(() => MoveToGameScene());
+        button.onClick.AddListener(() => OpenPopupPanel());
         if (!level.isAvaliable)
         {
             image.sprite = dimIcon;
@@ -68,11 +73,11 @@ public class StageSubSelectMenu : MonoBehaviour
         }
     }
 
-    private void MoveToGameScene()
+    private void OpenPopupPanel()
     {
+        popupPanel.SetActive(true);
+        popupPanel.GetComponent<Animator>().Play("Default");
+        popupPanel.GetComponent<LevelPopupPanel>().Constructor(level);
         gameManager.SetCurrentLevel(level);
-        gameManager.SaveGame();
-        SceneManager.LoadSceneAsync(3);
     }
-
 }

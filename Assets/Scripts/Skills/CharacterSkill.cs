@@ -24,6 +24,8 @@ public abstract class CharacterSkill : ScriptableObject
     public float nextLevelValue;
     protected BattleManager battleManager;
     protected CharacterBattle hero;
+    public int basicCost;
+    public int cost;
 
     public abstract void Initialize(ScriptableCharacter character);
 
@@ -40,5 +42,28 @@ public abstract class CharacterSkill : ScriptableObject
     public abstract void Use();
 
     public abstract string StatsDescription();
+
+    protected void InitializeSkillCost()
+    {
+        switch (skillDifficultyLevel)
+        {
+            case SkillDifficultyLevel.Novice:
+                basicCost = 100;
+                break;
+            case SkillDifficultyLevel.Apprentice:
+                basicCost = 500;
+                break;
+            case SkillDifficultyLevel.Adept:
+                basicCost = 1000;
+                break;
+            case SkillDifficultyLevel.Expert:
+                basicCost = 2000;
+                break;
+            case SkillDifficultyLevel.Master:
+                basicCost = 5000;
+                break;
+        }
+        cost = basicCost * (level + 1);
+    }
 
 }

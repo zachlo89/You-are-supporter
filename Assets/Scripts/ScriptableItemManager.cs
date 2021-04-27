@@ -7,6 +7,7 @@ public class ScriptableItemManager : ScriptableObject
 {
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private List<ItemScriptable> inventory = new List<ItemScriptable>();
+    [SerializeField] private ScriptableInt questGold;
 
     public void ResetInventory()
     {
@@ -33,6 +34,10 @@ public class ScriptableItemManager : ScriptableObject
         {
             delegator = GameObject.FindObjectOfType<DelegateToUpdateCharacterEquipment>();
         }
+        if(gold > 0)
+        {
+            questGold.value += gold;
+        }
         delegator.updateCount();
     }
 
@@ -57,6 +62,18 @@ public class ScriptableItemManager : ScriptableObject
     public ScriptableInt GetNormalChestCount
     {
         get { return normalChestCount; }
+    }
+
+    [SerializeField] private ScriptableInt energy;
+    public ScriptableInt Energy
+    {
+        get { return energy; }
+    }
+
+    [SerializeField] private ScriptableInt maxEnergy;
+    public ScriptableInt MaxEnergy
+    {
+        get { return maxEnergy; }
     }
 
     public void AddNormalChest(int value)
@@ -112,5 +129,19 @@ public class ScriptableItemManager : ScriptableObject
     {
         AddGold(inventory[index].sellValue);
         inventory.Remove(inventory[index]);
+    }
+
+    public void AddEnergy(int energy)
+    {
+        this.energy.value += energy;
+        if(this.energy.value > maxEnergy.value)
+        {
+            this.energy.value = maxEnergy.value;
+        }
+        if (delegator == null)
+        {
+            delegator = GameObject.FindObjectOfType<DelegateToUpdateCharacterEquipment>();
+        }
+        delegator.updateCount();
     }
 }

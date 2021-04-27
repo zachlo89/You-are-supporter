@@ -12,7 +12,6 @@ public class EquipmentInventory : MonoBehaviour
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] private GameObject emptyPrefab;
     [SerializeField] private GameObject parentLocation;
-    [SerializeField] private TextMeshProUGUI inventoryCount;
     [SerializeField] private EquipmentPanel equipmentPanel;
     [SerializeField] private TextMeshProUGUI goldValue;
 
@@ -46,12 +45,7 @@ public class EquipmentInventory : MonoBehaviour
                 GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                 temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
                 temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
-                //temp.AddComponent<DraggableComponent>();
-                //Destroy(temp.GetComponent<Button>());
-                //Destroy(temp.GetComponent<EventTrigger>());
             }
-
-            inventoryCount.text = inventory.GetInvevtory.Count + "/200";
         }
         goldValue.text = inventory.Gold.value.ToString();
     }
@@ -73,9 +67,6 @@ public class EquipmentInventory : MonoBehaviour
                         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                         temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
                         temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
-                        //temp.AddComponent<DraggableComponent>();
-                        //Destroy(temp.GetComponent<Button>());
-                        //Destroy(temp.GetComponent<EventTrigger>());
                     }
                 }
                 break;
@@ -89,9 +80,6 @@ public class EquipmentInventory : MonoBehaviour
                         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                         temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
                         temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
-                        //temp.AddComponent<DraggableComponent>();
-                        //Destroy(temp.GetComponent<Button>());
-                        //Destroy(temp.GetComponent<EventTrigger>());
                     }
                 }
                 break;
@@ -103,9 +91,6 @@ public class EquipmentInventory : MonoBehaviour
                         GameObject temp = Instantiate(iconPrefab, parentLocation.transform);
                         temp.GetComponent<SetItemIcon>().UpdateIconUI(inventory.GetInvevtory[i]);
                         temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(inventory.GetInvevtory[i], equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
-                        //temp.AddComponent<DraggableComponent>();
-                        //Destroy(temp.GetComponent<Button>());
-                        //Destroy(temp.GetComponent<EventTrigger>());
                     }
                 }
                 break;
@@ -122,7 +107,6 @@ public class EquipmentInventory : MonoBehaviour
         temp.GetComponent<SetItemIcon>().UpdateIconUI(item);
         temp.GetComponent<CompareAndDisplayDetails>().SetItemAndEquipment(item, equipmentPanel.GetHero(), equipmentPanel, detailsPanel);
         temp.transform.SetSiblingIndex(0);
-        inventoryCount.text = inventory.GetInvevtory.Count + "/200";
     }
 
     public void SwapItems(ItemScriptable item, int index)
@@ -138,7 +122,6 @@ public class EquipmentInventory : MonoBehaviour
         inventory.RemoveItem(index);
         Transform temp = parentLocation.transform.GetChild(index);
         Destroy(temp.gameObject);
-        inventoryCount.text = inventory.GetInvevtory.Count + "/200";
     }
 
     public void SellItem(int index)
@@ -146,7 +129,6 @@ public class EquipmentInventory : MonoBehaviour
         inventory.SellItem(index);
         Transform temp = parentLocation.transform.GetChild(index);
         Destroy(temp.gameObject);
-        inventoryCount.text = inventory.GetInvevtory.Count + "/200";
         goldValue.text = inventory.Gold.value.ToString();
     }
 }

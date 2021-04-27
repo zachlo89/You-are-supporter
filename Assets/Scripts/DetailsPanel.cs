@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 public class DetailsPanel : MonoBehaviour
 {
-    private Camera cam;
+    private AudioManager audioManager;
+
     [SerializeField] private TextMeshPro rarity;
     [SerializeField] private TextMeshPro itemName;
     [SerializeField] private TextMeshPro descritpion;
@@ -25,7 +26,7 @@ public class DetailsPanel : MonoBehaviour
 
     private void Start()
     {
-        cam = Camera.main;
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     public void SetUpDetailsPanel(ScriptableCharacter hero)
@@ -197,6 +198,8 @@ public class DetailsPanel : MonoBehaviour
         critDamageText.text = "";
         blockChanceText.text = "";
         dodgeChanceText.text = "";
+        manaText.text = "";
+        manaRegenText.text = "";
     }
 
     private void ChangeText()
@@ -255,12 +258,12 @@ public class DetailsPanel : MonoBehaviour
             {
                 mana.SetActive(true);
                 manaText.text = item.mana.ToString();
-            }
+            }   else mana.SetActive(false);
             if (item.manaRegen != 0)
             {
                 manaRegen.SetActive(true);
                 manaRegenText.text = item.manaRegen.ToString();
-            }
+            }   else manaRegen.SetActive(false);
         }
     }
 
@@ -641,6 +644,7 @@ public class DetailsPanel : MonoBehaviour
         }
         compareAndDisplayDetails.EquipItem(slotIndex);
         gameObject.SetActive(false);
+        audioManager.Play("Equip");
     }
 
     public void Unequip()
@@ -659,12 +663,14 @@ public class DetailsPanel : MonoBehaviour
         }
         compareAndDisplayDetails.UnEquip(slotIndex);
         gameObject.SetActive(false);
+        audioManager.Play("Equip");
     }
 
     public void SellItem()
     {
         compareAndDisplayDetails.SellItem();
         gameObject.SetActive(false);
+        audioManager.Play("Trade");
     }
 
 

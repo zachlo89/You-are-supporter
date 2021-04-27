@@ -31,4 +31,6 @@ MonoBehaviour:
   defaultEffectValue: 10
   effectValue: 15
   nextLevelValue: 15
+  basicCost: 1000
+  cost: 1000
   stunDuration: 3

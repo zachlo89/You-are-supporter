@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.Experimental.Rendering.Universal;
 public class EquipmentPanel : MonoBehaviour
 {
+    private bool groupSellPickerEnabled;
+    [SerializeField] private GameObject groupSellPicker;
     [SerializeField] private DelegateToUpdateCharacterEquipment delegator;
     [SerializeField] private Image armR, armL, accessories;
     [SerializeField] private List<Sprite> iconsList = new List<Sprite>();
@@ -36,6 +38,12 @@ public class EquipmentPanel : MonoBehaviour
     public ScriptableCharacter GetHero()
     {
         return hero;
+    }
+
+    private void OnEnable()
+    {
+        groupSellPickerEnabled = false;
+        groupSellPicker.SetActive(groupSellPickerEnabled);
     }
 
     public void UpdateUI(ScriptableCharacter hero)
@@ -198,4 +206,9 @@ public class EquipmentPanel : MonoBehaviour
         delegator.changeSprites();
     }
 
+    public void ShowHideGroupSell()
+    {
+        groupSellPickerEnabled = !groupSellPickerEnabled;
+        groupSellPicker.SetActive(groupSellPickerEnabled);
+    }
 }

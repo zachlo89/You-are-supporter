@@ -7,6 +7,7 @@ public class SnipeShoot : CharacterSkill
 {
     public override void Initialize(ScriptableCharacter character)
     {
+        InitializeSkillCost();
         effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel) * 25);
         nextLevelValue = defaultEffectValue + (level + 1) * 25;
     }

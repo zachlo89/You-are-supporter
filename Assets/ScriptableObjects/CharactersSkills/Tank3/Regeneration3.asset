@@ -30,4 +30,6 @@ MonoBehaviour:
   defaultEffectValue: 0
   effectValue: 2
   nextLevelValue: 2
+  basicCost: 0
+  cost: 200
   duration: 25

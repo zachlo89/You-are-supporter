@@ -403,7 +403,7 @@ public class CharacterBattle : MonoBehaviour
             Destroy(tempDamage, .5f);
             return;
         }
-        int attack = recievedDamage - (int)(recievedDamage * armor / 100);
+        int attack = recievedDamage - (int)(recievedDamage - armor);
         attack = attack > 0 ? attack : 5;
         currentHealth -= attack;
         if(currentHealth <= 0)

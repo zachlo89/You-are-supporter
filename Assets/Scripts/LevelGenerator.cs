@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LevelGenerator : MonoBehaviour
 {
+    private AudioManager audioManager;
     private GameManager gameManager;
     private Level level;
     [SerializeField] private Team team;
@@ -20,6 +21,10 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
+
+        audioManager.StopPlaying();
+        audioManager.Play("BattleSoundTrack");
 
         level = gameManager.CurrentLevel;
         backgroundSprite = level.background;

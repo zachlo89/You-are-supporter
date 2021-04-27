@@ -29,5 +29,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: a7e50d33eb5b45e4bb9bb393a9e2ce1e, type: 3}
   defaultEffectValue: 10
   effectValue: 15
-  nextLevelValue: 15
+  nextLevelValue: 20
+  basicCost: 100
+  cost: 200
   duration: 15

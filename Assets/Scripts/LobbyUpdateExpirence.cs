@@ -17,6 +17,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
     [SerializeField] private List<Transform> spawningPoints = new List<Transform>();
     [SerializeField] private TextMeshProUGUI goldValue;
     [SerializeField] private TextMeshProUGUI rubinsValue;
+    [SerializeField] private TextMeshProUGUI energy;
     [SerializeField] private ScriptableItemManager inventory;
 
     [SerializeField] private GameObject buttonNormalChest, buttonEpicChest;
@@ -65,6 +66,7 @@ public class LobbyUpdateExpirence : MonoBehaviour
 
         goldValue.text = inventory.Gold.value.ToString();
         rubinsValue.text = inventory.Rubins.value.ToString();
+        energy.text = inventory.Energy.value + "/" + inventory.MaxEnergy.value;
 
         if(inventory.GetNormalChestCount.value > 0)
         {

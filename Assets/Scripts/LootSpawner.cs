@@ -4,8 +4,6 @@ using UnityEngine;
 using TMPro;
 public class LootSpawner : MonoBehaviour
 {
-    [SerializeField] private ScriptableInt questGold;
-    [SerializeField] private ItemScriptable staff;
     [SerializeField] private ItemScriptable sword;
     [SerializeField] private ScriptableItemManager listOfAllItems;
     private int stageLevel;
@@ -197,22 +195,17 @@ public class LootSpawner : MonoBehaviour
                     goldDropped = Random.Range(10 * stageLevel, 50 * stageLevel);
                     goldValue.text = goldDropped.ToString();
                     inventory.Gold.value += goldDropped;
-                    questGold.value += goldDropped;
                 }
             }
             else
             {
                 PlayerPrefs.SetInt("Tutorial2", -1);
-                GameObject temp = Instantiate(iconPrefab, spawningPoint.transform);
-                temp.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(staff);
-                inventory.AddItem(staff);
                 GameObject temp1 = Instantiate(iconPrefab, spawningPoint.transform);
                 temp1.GetComponentInChildren<RewardItemIcon>().PopulateRewardIcon(sword);
                 inventory.AddItem(sword);
                 goldDropped = 200;
                 goldValue.text = goldDropped.ToString();
                 inventory.Gold.value += goldDropped;
-                questGold.value += goldDropped;
             }
         }
     }

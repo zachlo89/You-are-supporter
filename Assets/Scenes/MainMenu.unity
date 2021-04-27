@@ -781,6 +781,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaveAndLoadData
       objectReference: {fileID: 0}
+    - target: {fileID: 1396918454228451326, guid: 3f8adcc43a736cd41b0312975f503677,
+        type: 3}
+      propertyPath: variablesToPesist.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396918454228451326, guid: 3f8adcc43a736cd41b0312975f503677,
+        type: 3}
+      propertyPath: variablesToPesist.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d084e81e61bc6b4a8c342c18d0fd236,
+        type: 2}
+    - target: {fileID: 1396918454228451326, guid: 3f8adcc43a736cd41b0312975f503677,
+        type: 3}
+      propertyPath: variablesToPesist.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: e1b5ae48e3d0ead41a8634bbae65160e,
+        type: 2}
     - target: {fileID: 1396918454228451327, guid: 3f8adcc43a736cd41b0312975f503677,
         type: 3}
       propertyPath: m_LocalPosition.x

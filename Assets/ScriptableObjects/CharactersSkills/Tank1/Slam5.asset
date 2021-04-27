@@ -29,5 +29,7 @@ MonoBehaviour:
   notOwnSprite: {fileID: 21300000, guid: 1e2a1338d7b73f949b6c8ce30e6b7340, type: 3}
   icon: {fileID: 21300000, guid: 9a198e39ac68ff2468a556b44538807f, type: 3}
   defaultEffectValue: 130
-  effectValue: 161
-  nextLevelValue: 166
+  effectValue: 174
+  nextLevelValue: 179
+  basicCost: 100
+  cost: 200

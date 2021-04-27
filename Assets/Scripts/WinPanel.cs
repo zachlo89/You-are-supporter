@@ -15,13 +15,15 @@ public class WinPanel : MonoBehaviour
     [SerializeField] private LootSpawner lootSpawner;
     [SerializeField] private int maxItemCount;
     private GameManager gm;
-
+    private AudioManager audioManager;
     private void Awake()
     {
         gm = FindObjectOfType<GameManager>();
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
     public void WinPanelConstructor()
     {
+        audioManager.Play("Win");
         List<CharacterBattle> listOfHeroes = battleManager.GetAllPlayersCharacters();
         int stars = 3;
         for(int i = 0; i < listOfHeroes.Count; i++)
@@ -71,6 +73,8 @@ public class WinPanel : MonoBehaviour
 
     public void BackToMenu()
     {
+        audioManager.StopPlaying();
+        audioManager.Play("Lobby");
         SceneManager.LoadScene("Lobby");
     }
 }

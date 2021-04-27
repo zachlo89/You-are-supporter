@@ -6,6 +6,9 @@ using UnityEngine.Advertisements;
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
     [SerializeField] private ScriptableItemManager inventory;
+    [SerializeField] private ScriptableInt watchedAdsQuest;
+    [SerializeField] private QuestsScriptable quest;
+    [SerializeField] private GameObject alarm;
     #if UNITY_IOS
     private string gameId = "4102412";
     #elif UNITY_ANDROID
@@ -63,7 +66,12 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
+            watchedAdsQuest.value += 1;
             inventory.AddRubins(3);
+            if(watchedAdsQuest.value >= quest.questValue && !quest.beenClaimed)
+            {
+                alarm.SetActive(true);
+            } 
         }
         else if (showResult == ShowResult.Skipped)
         {

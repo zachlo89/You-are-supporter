@@ -7,6 +7,7 @@ public class Vitality : CharacterSkill
 {
     public override void Initialize(ScriptableCharacter character)
     {
+        InitializeSkillCost();
         effectValue = defaultEffectValue + (Mathf.Clamp(level, 1, maxLevel));
         nextLevelValue = defaultEffectValue + (level + 1);
     }
