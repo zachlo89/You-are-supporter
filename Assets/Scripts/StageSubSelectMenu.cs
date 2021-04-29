@@ -76,7 +76,6 @@ public class StageSubSelectMenu : MonoBehaviour
     private void OpenPopupPanel()
     {
         popupPanel.SetActive(true);
-        popupPanel.GetComponent<Animator>().Play("Default");
         popupPanel.GetComponent<LevelPopupPanel>().Constructor(level);
         gameManager.SetCurrentLevel(level);
     }

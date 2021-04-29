@@ -14,6 +14,7 @@ enum PlayerSkill
 
 public class PlayerSKills : MonoBehaviour
 {
+    private AudioManager audioManager;
     [SerializeField] private ScriptableInt playersSkills;
     [SerializeField] private GameObject normalHitParticleEffects;
     [SerializeField] private GameObject critHitParticleEffects;
@@ -29,6 +30,7 @@ public class PlayerSKills : MonoBehaviour
     [SerializeField] private TextMeshProUGUI manaText;
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         for(int i = 0; i < team.heroesList.Count; i++)
         {
             if (team.heroesList[i].isMainCharacter)
@@ -127,6 +129,7 @@ public class PlayerSKills : MonoBehaviour
                     selectedSkill = PlayerSkill.Inactive;
                     CheckIfSufficentMana(currentMana);
                     StartCoroutine(ButtonCooldown(0));
+                    audioManager.Play(activeSkills[0].skillName);
                 }
                 break;
             case PlayerSkill.Skill2:

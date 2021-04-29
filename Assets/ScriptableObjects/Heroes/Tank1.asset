@@ -18,7 +18,7 @@ MonoBehaviour:
   characterName: Btorik
   buyValue: 205
   isAlive: 1
-  damage: 13
+  damage: 15
   armor: 5
   maxHealt: 450
   hpRegen: 2

@@ -1063,7 +1063,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Trade
-    clip: {fileID: 8300000, guid: 335c6daa1ddad3143938c43d50b95946, type: 3}
+    clip: {fileID: 8300000, guid: 17ba99a667fe1e94d94d9a7037292cc8, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Click
-    clip: {fileID: 8300000, guid: 732dacfb33bf1fe4dbdb2d86b9307e1b, type: 3}
+    clip: {fileID: 8300000, guid: 76900dfe0d15dc34fb621e6ab0cf8466, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -1086,6 +1086,39 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Heal
+    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: NormalAttack1
+    clip: {fileID: 8300000, guid: b524756f7431253499c398b335f459de, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: NormalAttack
+    clip: {fileID: 8300000, guid: d115d83fdc9b34f4a89e55e8013f21f1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: NormalAttackMagic
+    clip: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MassHeal
+    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  allVolume: 0.5
+  backgroundVolume: 0.5
+  effectsVolume: 1
 --- !u!4 &1732702660
 Transform:
   m_ObjectHideFlags: 0

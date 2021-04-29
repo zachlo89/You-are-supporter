@@ -28,6 +28,7 @@ public class AnimationFunctions : MonoBehaviour
         {
             defaultMouth = mouthRenderer.sprite;
         }
+        
     }
 
     public void SetSkill(int skill)
@@ -85,6 +86,7 @@ public class AnimationFunctions : MonoBehaviour
 
     public void SpawnMagicMissle()
     {
+
         CharacterBattle enemy = battleManager.GetFrontCharacter(transform.parent.gameObject.tag);
         if (enemy != null && missleObject != null)
         {

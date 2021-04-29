@@ -6,6 +6,7 @@ using TMPro;
 
 public class CharacterBattle : MonoBehaviour
 {
+    private AudioManager audioManager;
     [SerializeField] private GameObject dizzyParticle;
     private float timer;
     private List<PlayerScriptableSkill> playerPassiveSkills = new List<PlayerScriptableSkill>();
@@ -250,8 +251,9 @@ public class CharacterBattle : MonoBehaviour
         }
     }
 
-    public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager)
+    public void SetUpHero(ScriptableCharacter hero, BattleManager battleManager, AudioManager audioManager)
     {
+        this.audioManager = audioManager;
         this.hero = hero;
         this.level = hero.level;
         this.maxHP = hero.maxHealt;
@@ -263,7 +265,6 @@ public class CharacterBattle : MonoBehaviour
         {
             AdjustStatsToEquipment();
         }
-
 
         this.battleManager = battleManager;
         this.hpRegen = hero.hpRegen;
@@ -289,21 +290,6 @@ public class CharacterBattle : MonoBehaviour
             manaBar.gameObject.SetActive(false);
         }
 
-
-        if (hero.equipment != null)
-        {
-            for (int i = 0; i < hero.equipment.GetEquipment.Count; i++)
-            {
-                if (hero.equipment.GetEquipment[i] != null)
-                {
-                    currentHealth += hero.equipment.GetEquipment[i].hp;
-                    damage += hero.equipment.GetEquipment[i].damage;
-                    armor += hero.equipment.GetEquipment[i].armor;
-                    attackRate += hero.equipment.GetEquipment[i].attackRate;
-
-                }
-            }
-        }
         battleManager.PopulateList(gameObject.tag, this);
         UpdateManaBar();
         if (isMainHero && playerSKills != null)
@@ -355,6 +341,7 @@ public class CharacterBattle : MonoBehaviour
                     {
                         if(skillTree.skillTree[i].isPassive && skillTree.skillTree[i].isBought && skillTree.skillTree[i].level > 0)
                         {
+                            skillTree.skillTree[i].Initialize(hero);
                             playerPassiveSkills.Add(skillTree.skillTree[i]);
                         }
                     }
@@ -403,8 +390,8 @@ public class CharacterBattle : MonoBehaviour
             Destroy(tempDamage, .5f);
             return;
         }
-        int attack = recievedDamage - (int)(recievedDamage - armor);
-        attack = attack > 0 ? attack : 5;
+        int attack = recievedDamage - armor;
+        attack = attack > 5 ? attack : 5;
         currentHealth -= attack;
         if(currentHealth <= 0)
         {
@@ -439,6 +426,16 @@ public class CharacterBattle : MonoBehaviour
     public void NormalAttack()
     {
         animator.SetTrigger("NormalAttack");
+        if(characterClass == CharacterClass.Berserker)
+        {
+            audioManager.Play("NormalAttack1");
+        }else if(characterClass == CharacterClass.Supporter)
+        {
+            
+        } else
+        {
+            audioManager.Play("NormalAttack");
+        }
     }
 
     public void NormalAttackEffect()

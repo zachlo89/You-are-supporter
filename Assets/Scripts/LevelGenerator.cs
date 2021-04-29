@@ -48,7 +48,7 @@ public class LevelGenerator : MonoBehaviour
                 temp.GetComponent<UpdateFaceAndBody>().SetUpFace(team.heroesList[i]);
                 temp.GetComponent<UpdateEquipment>().EquipAll(team.heroesList[i].equipment);
                 temp.GetComponent<CharacterBattle>().enabled = true;
-                temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager);
+                temp.GetComponent<CharacterBattle>().SetUpHero(team.heroesList[i], battleManager, audioManager);
                 temp.AddComponent<PlayerSkillsEffect>();
                 if (team.heroesList[i].isMainCharacter)
                 {
@@ -84,7 +84,7 @@ public class LevelGenerator : MonoBehaviour
                 }
 
                 temp.GetComponent<CharacterBattle>().enabled = true;
-                temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager);
+                temp.GetComponent<CharacterBattle>().SetUpHero(level.enemiesList[i], battleManager, audioManager);
                 temp.AddComponent<PlayerNegativeEffects>();
             }
         }

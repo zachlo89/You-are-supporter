@@ -5,6 +5,7 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
+    [SerializeField] private ButtonSound buttonSound;
     [SerializeField] private ScriptableItemManager inventory;
     [SerializeField] private ScriptableInt watchedAdsQuest;
     [SerializeField] private QuestsScriptable quest;
@@ -71,7 +72,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             if(watchedAdsQuest.value >= quest.questValue && !quest.beenClaimed)
             {
                 alarm.SetActive(true);
-            } 
+            }
+            buttonSound.PlayWinSound();
         }
         else if (showResult == ShowResult.Skipped)
         {

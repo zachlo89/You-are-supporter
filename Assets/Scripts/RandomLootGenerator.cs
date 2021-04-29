@@ -19,7 +19,7 @@ public class RandomLootGenerator : MonoBehaviour
     private void LoadItems()
     {
         foreach(ItemScriptable item in listOfAllItems.GetInvevtory)
-                {
+        {
             if (item.rarity == Rarity.Common)
             {
                 commonItems.Add(item);

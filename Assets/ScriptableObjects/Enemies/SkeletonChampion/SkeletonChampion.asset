@@ -18,8 +18,8 @@ MonoBehaviour:
   characterName: 
   buyValue: 0
   isAlive: 0
-  damage: 50
-  armor: 50
+  damage: 90
+  armor: 0
   maxHealt: 2000
   hpRegen: 0
   maxMana: 100

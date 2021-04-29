@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 public class LevelPopupPanel : MonoBehaviour
 {
     private GameManager gameManager;
@@ -13,6 +14,7 @@ public class LevelPopupPanel : MonoBehaviour
     [SerializeField] private GameObject locker;
     [SerializeField] private ScriptableItemManager inventory;
     [SerializeField] private FastClearLootDrooper drooper;
+    [SerializeField] private TextMeshProUGUI energyCost;
     private Animator anim;
     private void Start()
     {
@@ -23,6 +25,12 @@ public class LevelPopupPanel : MonoBehaviour
     public void Constructor(Level level)
     {
         this.level = level;
+        if(anim != null)
+        {
+            anim.ResetTrigger("Expand");
+            anim.SetTrigger("Shrink");
+        }
+        energyCost.text = (level.itemsRarityDrop * 3).ToString();
         foreach (Transform child in spawningPoint)
         {
             GameObject.Destroy(child.gameObject);
@@ -40,6 +48,15 @@ public class LevelPopupPanel : MonoBehaviour
         {
             finishNow.interactable = false;
             locker.SetActive(true);
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (anim != null)
+        {
+            anim.ResetTrigger("Expand");
+            anim.SetTrigger("Shrink");
         }
     }
 
